@@ -18,5 +18,6 @@
       // "savePath": "/assets/vendors/bootstrap-5.1.3/css"
     }
   ],
-  "liveSassCompile.settings.generateMap": true
+  "liveSassCompile.settings.generateMap": true,
+  "liveServer.settings.port": 5502
 }
