@@ -29,7 +29,7 @@
 })(window.jQuery);
 
 
-/** DASHBOARD SIDE NAVBAR CLASS MEDIA QUERIE ARRANGEMENT **/
+/** DASHBOARD SIDE NAVBAR CLASS MEDIA QUERIE TOOLTIP ARRANGEMENT **/
 $(document).ready(function () {
     /** MEDIA QUIERY */
     function mdWindowWidth(md) {
@@ -60,6 +60,9 @@ $(document).ready(function () {
             $("#side-navbar").removeClass("min");
             $("#side-navbar").addClass("max");
 
+            $("#header").removeClass("min");
+            $("#header").addClass("max");
+
             $("#main-content").removeClass("min");
             $("#main-content").addClass("max");
 
@@ -74,6 +77,9 @@ $(document).ready(function () {
         } else if ($("#side-navbar").hasClass("max")) {
             $("#side-navbar").removeClass("max");
             $("#side-navbar").addClass("min");
+
+            $("#header").removeClass("max");
+            $("#header").addClass("min");
 
             $("#main-content").removeClass("max");
             $("#main-content").addClass("min");
@@ -102,5 +108,10 @@ $(document).ready(function () {
         }
     }
     tooltips(); // Call listener function at run time
+});
+
+// SIDEBAR FUNCTIONS 
+$(document).ready(funtion () {
+    
 });
 

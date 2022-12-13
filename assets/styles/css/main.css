@@ -748,14 +748,59 @@ p {
   list-style-position: inside !important;
 }
 
+header {
+  z-index: 3 !important;
+}
+header .brand {
+  height: 100px;
+}
+
+header.max .brand {
+  transition: 3000 !important;
+  width: 300px !important;
+}
+@media (max-width: 1200px) {
+  header.max .brand {
+    transition: 3000 !important;
+    width: 240px !important;
+  }
+}
+@media (max-width: 768px) {
+  header.max .brand {
+    transition: 3000 !important;
+    width: 80px !important;
+  }
+}
+header.max .brand .brand-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  header.max .brand .brand-icon {
+    display: block;
+  }
+}
+
+header.min .brand {
+  transition: 3000 !important;
+  width: 80px !important;
+}
+header.min .brand .brand-full {
+  display: none;
+}
+header.min .brand .brand-icon {
+  display: block;
+}
+
 aside.side-navbar {
   user-select: none;
   position: fixed;
+  margin-top: 100px !important;
   height: 100%;
   background-color: #003AC9;
   transition: 0.5s;
   overflow-y: auto;
   overflow-x: hidden;
+  height: calc(100vh - 100px) !important;
 }
 aside.side-navbar .side-navbar_tabs {
   display: flex;
@@ -763,6 +808,7 @@ aside.side-navbar .side-navbar_tabs {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: calc(100vh - 100px - 2rem - 6rem) !important;
 }
 aside.side-navbar .side-navbar_tabs.list-group {
   transition: 0.5s;
@@ -1035,6 +1081,7 @@ aside.side-navbar .side-navbar_tabs .side-navbar_tabs_bot .accordion .accordion-
 aside.max {
   transition: 3000 !important;
   width: 300px !important;
+  min-height: calc(100vh - 100px) !important;
 }
 @media (max-width: 1200px) {
   aside.max {
@@ -1048,27 +1095,6 @@ aside.max {
     width: 80px !important;
   }
 }
-aside.max .brand {
-  transition: 3000 !important;
-}
-aside.max .brand .brand-full {
-  transition: 3000 !important;
-  display: block;
-}
-@media (max-width: 768px) {
-  aside.max .brand .brand-full {
-    transition: 3000 !important;
-    display: none;
-  }
-}
-aside.max .brand .brand-icon {
-  display: none;
-}
-@media (max-width: 768px) {
-  aside.max .brand .brand-icon {
-    display: block;
-  }
-}
 aside.max .profile {
   width: inherit;
   transition: 3000 !important;
@@ -1080,18 +1106,6 @@ aside.max .profile span {
   aside.max .profile span {
     transition: 3000 !important;
     display: none;
-  }
-}
-@media (min-width: 769px) {
-  aside.max .side-navbar_tabs {
-    transition: 3000 !important;
-    min-height: calc(100vh - 100px - 3rem - 44px) !important;
-  }
-}
-@media (max-width: 768px) {
-  aside.max .side-navbar_tabs {
-    transition: 3000 !important;
-    min-height: calc(100vh - 100px - 1rem - 44px) !important;
   }
 }
 aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion {

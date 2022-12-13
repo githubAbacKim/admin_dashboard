@@ -1,0 +1,45 @@
+header {
+    z-index: 3 !important;
+    .brand {
+        height: 100px;
+    }
+}
+
+header.max {
+    .brand {
+        @include transition (3000);
+        width: 300px !important;
+
+        @include breakpoint-xl {
+            @include transition (3000);
+            width: 240px !important;
+        }
+
+        @include breakpoint-md {
+            @include transition (3000);
+            width: 80px !important;
+        }
+
+        .brand-icon {
+            display: none;
+
+            @include breakpoint-md {
+                display: block;
+            }
+        }
+    }
+}
+
+header.min {
+    .brand {
+        @include transition (3000);
+        width: 80px !important;
+
+        .brand-full {
+            display: none;
+        }
+        .brand-icon {
+            display: block;
+        }
+    }
+}

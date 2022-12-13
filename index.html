@@ -24,8 +24,8 @@
 </head>
 <body class="container-fluid bg-light vh-100">
 
-    <aside id="side-navbar" class="max side-navbar  bg-light">
-        <div class="brand brand d-flex justify-content-between align-items-center flex-column p-2 bg-primary" style="height: 100px;">
+    <header id="header" class="max bg-primary position-fixed fixed-top" style="height: 100px;">
+        <div class="brand d-flex justify-content-between align-items-center flex-column py-2" >
             <div class="toggle">
                 <div id="btn-toggle-collapse" class="btn-toggle toggle-collapse btn btn-primary shadow active rounded-circle">
                     <i id="icon-collapse" class="fa-solid fa-chevron-left"></i>
@@ -37,8 +37,14 @@
                 <img class="brand-icon" src="/assets/img/logo/logo-icon.png" alt="" height="30px">
             </div>
         </div>
+        <div class="">
 
-        <a class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light">
+        </div>
+    </header>
+    
+    <aside id="side-navbar" class="max side-navbar  bg-light">
+        <!-- profile -->
+        <a id="profilebtn" class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light">
             <img src="/assets/img/images/tree.png" alt="" height="44px" width="44px">
             <span class="h5 ms-2 text-dark">시공사 이름</span>
         </a>
@@ -47,21 +53,21 @@
             <div class="side-navbar_tabs_top">
                 <div class="accordion accordion-flush">
                     <!-- Main -->
-                    <a href="#" class="list-group-item active"
+                    <a id="mainbtn" href="#" class="list-group-item active"
                         aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="일정">
                         <i class="fa-regular fa-calendar-check"></i>
                         <span class="ms-2"> 일정 </span>
                     </a>
 
                     <!-- Card Usage History -->
-                    <a href="#" class="list-group-item"
+                    <a id="cardusagebtn" href="#" class="list-group-item "
                         aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="카드 사용 내역">
                         <i class="fa-regular fa-address-book"></i>
                         <span class="ms-2">카드 사용 내역</span>
                     </a>
 
                     <!-- Order status -->
-                    <a href="#" class="list-group-item"
+                    <a id="orderstatusbtn" href="#" class="list-group-item "
                         aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="발주 현황">
                         <i class="fa-regular fa-table"></i>
                         <span class="ms-2">발주 현황</span>
@@ -71,7 +77,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne" data-bs-toggle="tooltip"
                             data-bs-placement="right" title="설정">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            <button id="setbtn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                 <i class="fa-regular fa-gear"></i>
                                 <span class="ms-2 me-3">설정</span> 
@@ -81,29 +87,30 @@
                             aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body shadow">
                                 <!-- Payment request -->
-                                <a href="#"
-                                    class="accordion-body-item"
+                                <a id="paymentrequestbtn" href="#"
+                                    class="accordion-body-item active"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="결제 요청">
                                     <i class="fa-regular fa-square-1"></i>
                                     <span>결제 요청</span> 
                                     
                                 </a>
+
                                 <!-- service management -->
-                                <a href="#"
+                                <a id="servicemanagementbtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="서비스 관리">
                                     <i class="fa-regular fa-square-2"></i>
                                     <span>서비스 관리</span> 
                                 </a>
                                 <!-- order management -->
-                                <a href="#"
+                                <a  id="ordermanagementbtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="주문 관리">
                                     <i class="fa-regular fa-square-3"></i>
                                     <span>주문 관리</span> 
                                 </a>
                                 <!-- send photo -->
-                                <a href="#"
+                                <a id="sendphotobtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="사진 보내기">
                                     <i class="fa-regular fa-square-4"></i>
@@ -111,7 +118,7 @@
                                 </a>
                                 
                                 <!-- technician management -->
-                                <a href="#"
+                                <a id="technicianmanagementbtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="기술자 관리">
                                     <i class="fa-regular fa-square-5"></i>
@@ -129,7 +136,7 @@
             <div class="side-navbar_tabs_bot my-4">
                 <div class="accordion accordion-flush">
                     <!-- Log out -->
-                    <a href="#" class="list-group-item"
+                    <a id="logoutbtn" href="#" class="list-group-item"
                         aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="로그아웃">
                         로그아웃
                     </a>
@@ -140,35 +147,35 @@
                             aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <!-- Fair -->
-                                <a href="#"
+                                <a id="fairbtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="박람회">
                                     <i class="fa-regular fa-circle-5"></i>
                                     <span>박람회</span>
                                 </a>
                                 <!-- fair management -->
-                                <a href="#"
+                                <a id="fairmanagementbtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="박람회 관리">
                                     <i class="fa-regular fa-circle-4"></i>
                                     <span>박람회 관리</span> 
                                 </a>
                                 <!-- contract -->
-                                <a href="#"
+                                <a id="contractbtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="계약서">
                                     <i class="fa-regular fa-circle-3"></i>
                                     <span>계약서</span> 
                                 </a> 
                                 <!-- three words -->
-                                <a href="#"
+                                <a id="threewordsbtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="삼담">
                                     <i class="fa-regular fa-circle-2"></i>
                                     <span>삼담</span> 
                                 </a>
                                 <!-- master -->
-                                <a href="#"
+                                <a id="masterbtn" href="#"
                                     class="accordion-body-item"
                                     data-bs-toggle="tooltip" data-bs-placement="right" title="마스터">
                                     <i class="fa-regular fa-circle-1"></i>
@@ -180,7 +187,7 @@
                             
                         <h2 class="accordion-header" id="flush-headingTwo" data-bs-toggle="tooltip"
                             data-bs-placement="right" title="메뉴">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            <button id="menubtn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                 메뉴
                             </button>
@@ -191,14 +198,938 @@
             </div>
             
         </div>
-        
     </aside>
 
-    <main id="main-content" class="max ">
-        <header class="top-navbar bg-primary" style="height: 100px;"></header>
+    <main id="main-content" class="max">
+
+        <!-- profile -->
+        <section id="profilesec" class="content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-12">
+                <!-- INSIDE CONTENTS -->
+                <h2 class="mb-2">일정</h2>
+                <h5 class="mb-2">작업내용</h5>
+                
+                <div class="row g-0 border border-danger">
+                    <div class="col-md-6 mb-2 border border-danger">
+                        <nav class="nav align-items-end h-100 fw-bold">
+                            <a  href="#" class="nav-link text-start active pb-0 ps-0 pe-5 link-dark" aria-current="page">
+                                아파트 단지별로 보기
+                            </a>
+                            <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark">미수금 보기</a>
+                            <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark" >기간별 보기</a>
+                        </nav>
+                    </div>
+                    <div class="col-md-6 mb-2 border border-danger">
+                        <div class="d-flex justify-content-between align-items-center flex-column">
+                            <div class="w-100 d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="me-3 border border-danger">
+                                    <span class="text-primary fw-bold">총123건</span> 
+                                    <span class="text-dark">(총매출금액기준)</span> 
+                                </p>
+                                <div class="text-end fw-bold text-primary d-flex justify-content-between align-items-center flex-wrap border border-danger">
+                                    <span>완료율 27%</span>
+                                    <span class="ms-4">회수율 23%</span>
+                                </div>
+                            </div>
+                            <div class="w-100 progress mt-2" style="height: 26px;">
+                                <div class="progress-bar bg-info" role="progressbar" aria-label="Segment one" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" aria-label="Segment two" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-light" role="progressbar" aria-label="Segment three" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <div class="w-100 my-3 rounded overflow-x-auto text-nowrap card-table">
+                    <table class="table text-center">
+                        <thead class="bg-primary">
+                            <tr class="text-white border-bottom-0 ">
+                                <th class="rounded-start"> 생성 날짜</th>
+                                <th> 아파트 단지 </th>
+                                <th> 동 </th>
+                                <th> 호수 </th>
+                                <th> 유형 </th>
+                                <th> 전화 번호 </th>
+                                <th> 신청 서비스 </th>
+                                <th> 견적가 </th>
+                                <th> 고객 </th>
+                                <th> 신청일정 </th>
+                                <th> 비고 </th>
+                                <th> 시공일정 </th>
+                                <th> 시공담당자 </th>
+                                <th> 시공여부 </th>
+                                <th> 결제여부 </th>
+                                <th class="rounded-end"> 취소 </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 class="mb-2">일정</h2>
+                <h5 class="mb-2">작업내용</h5>
+                
+                <div class="row g-0 border border-danger">
+                    <div class="col-md-6 mb-2 border border-danger">
+                        <nav class="nav align-items-end h-100 fw-bold">
+                            <a  href="#" class="nav-link text-start active pb-0 ps-0 pe-5 link-dark" aria-current="page">
+                                아파트 단지별로 보기
+                            </a>
+                            <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark">미수금 보기</a>
+                            <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark" >기간별 보기</a>
+                        </nav>
+                    </div>
+                    <div class="col-md-6 mb-2 border border-danger">
+                        <div class="d-flex justify-content-between align-items-center flex-column">
+                            <div class="w-100 d-flex justify-content-between align-items-center flex-wrap">
+                                <p class="me-3 border border-danger">
+                                    <span class="text-primary fw-bold">총123건</span> 
+                                    <span class="text-dark">(총매출금액기준)</span> 
+                                </p>
+                                <div class="text-end fw-bold text-primary d-flex justify-content-between align-items-center flex-wrap border border-danger">
+                                    <span>완료율 27%</span>
+                                    <span class="ms-4">회수율 23%</span>
+                                </div>
+                            </div>
+                            <div class="w-100 progress mt-2" style="height: 26px;">
+                                <div class="progress-bar bg-info" role="progressbar" aria-label="Segment one" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" aria-label="Segment two" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-light" role="progressbar" aria-label="Segment three" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                <div class="w-100 my-3 rounded overflow-x-auto text-nowrap card-table">
+                    <table class="table text-center">
+                        <thead class="bg-primary">
+                            <tr class="text-white border-bottom-0 ">
+                                <th class="rounded-start"> 생성 날짜</th>
+                                <th> 아파트 단지 </th>
+                                <th> 동 </th>
+                                <th> 호수 </th>
+                                <th> 유형 </th>
+                                <th> 전화 번호 </th>
+                                <th> 신청 서비스 </th>
+                                <th> 견적가 </th>
+                                <th> 고객 </th>
+                                <th> 신청일정 </th>
+                                <th> 비고 </th>
+                                <th> 시공일정 </th>
+                                <th> 시공담당자 </th>
+                                <th> 시공여부 </th>
+                                <th> 결제여부 </th>
+                                <th class="rounded-end"> 취소 </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                            <tr class="text-primary fs-7">
+                                <td> 2022-12-14 </td>
+                                <td> 작동 테스트 </td>
+                                <td> 101 </td>
+                                <td> 2902 </td>
+                                <td> 97 </td>
+                                <td> 010-9857-1143 </td>
+                                <td> 휴먼 프론트 차지 </td>
+                                <td> 600,000 </td>
+                                <td> 이지연 </td>
+                                <td class="text-danger"> 2022.08.13 </td>
+                                <td> - </td>
+                                <td class="text-info"> 2022.09.18 </td>
+                                <td> 네 왜 아픈가요 </td>
+                                <td class="text-info text-center"> O </td>
+                                <td class="text-danger text-center"> X </td>
+                                <td class="text-center"> - </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
         <!-- main -->
-        <section id="main" class="content">
+        <section id="mainsec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-6">
                 <!-- INSIDE CONTENTS -->
                 main
@@ -206,7 +1137,7 @@
         </section>
 
         <!-- card usage history -->
-        <section id="cardusagehistory" class="d-none content">
+        <section id="cardusagesec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 card usage history
@@ -214,7 +1145,7 @@
         </section>
 
         <!-- order status -->
-        <section id="orderstatus" class="d-none content">
+        <section id="orderstatussec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 order status
@@ -223,7 +1154,7 @@
 
         <!-- SET -->
         <!-- payment request -->
-        <section id="paymentrequest" class="d-none content">
+        <section id="paymentrequestsec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 payment request
@@ -231,7 +1162,7 @@
         </section>
 
         <!-- service management -->
-        <section id="servicemanagement" class="d-none content">
+        <section id="servicemanagementsec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 service management
@@ -239,7 +1170,7 @@
         </section>
 
         <!-- order management -->
-        <section id="ordermanagement" class="d-none content">
+        <section id="ordermanagementsec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 order management
@@ -247,7 +1178,7 @@
         </section>
 
         <!-- send photo -->
-        <section id="sendphoto" class="d-none content">
+        <section id="sendphotosec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                  send photo
@@ -255,7 +1186,7 @@
         </section>
 
         <!-- technician management -->
-        <section id="technicianmanagement" class="d-none content">
+        <section id="technicianmanagementsec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 technician management
@@ -264,7 +1195,7 @@
 
         <!-- MENU -->
         <!-- fair -->
-        <section id="fair" class="d-none content">
+        <section id="fairsec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                  fair
@@ -272,7 +1203,7 @@
         </section>
 
         <!-- fair management -->
-        <section id="fairmanagement" class="d-none content">
+        <section id="fairmanagementsec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 fair management
@@ -280,7 +1211,7 @@
         </section>
 
         <!-- contract -->
-        <section id="contract" class="d-none content">
+        <section id="contractsec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 contract
@@ -288,7 +1219,7 @@
         </section>
 
         <!-- three words -->
-        <section id="threewords" class="d-none content">
+        <section id="threewordssec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 three words
@@ -296,7 +1227,7 @@
         </section>
 
         <!-- master -->
-        <section id="master" class="d-none content">
+        <section id="mastersec" class="d-none content">
             <div class="card-main shadow bg-white col-12 p-3 p-md-5">
                 <!-- INSIDE CONTENTS -->
                 master
