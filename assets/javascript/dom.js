@@ -1,9 +1,7 @@
-!(function ($) {
-    /** PASSWORD TOGGLE */
-    //eyeOpenClass: 'fa-eye',
-    //eyeCloseClass: 'fa-eye-slash',
-    "use strict";
 
+/** PASSWORD TOGGLE */
+!(function ($) {
+    "use strict";
     $(function () {
         $('[data-toggle="password"]').each(function () {
             var input = $(this);
@@ -28,8 +26,7 @@
     });
 })(window.jQuery);
 
-
-/** DASHBOARD SIDE NAVBAR CLASS MEDIA QUERIE TOOLTIP ARRANGEMENT **/
+/** DASHBOARD SIDE NAVBAR CLASS MEDIA QUERY TOOLTIP ARRANGEMENT **/
 $(document).ready(function () {
     /** MEDIA QUIERY */
     function mdWindowWidth(md) {
@@ -100,7 +97,7 @@ $(document).ready(function () {
 
 });
 
-/** TOOLTIP FOR MAIN CONTENT**/
+/** TOOLTIP FOR SIDE BAR BUTTONS**/
 $(document).ready(function () {
     function tooltips() {
         if (($("#side-navbar").hasClass("max")) && ($("#main-content").hasClass("max"))) {
@@ -114,7 +111,7 @@ $(document).ready(function () {
     tooltips(); // Call listener function at run time
 });
 
-// SIDEBAR FUNCTIONS 
+/** SIDEBAR BUTTON FUNCTIONS  **/
 $(document).ready(function () {
     $("#profilebtn").click(function () {
         if ($("#profilesec").hasClass("d-none")) {
