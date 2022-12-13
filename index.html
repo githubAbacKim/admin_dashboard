@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    
+    <!-- Bootstrap 5.1.3 -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap-5.1.3/css/bootstrap.css" />
+    
+    <!-- Font-Awesome-Pro 6 -->
+    <link rel="stylesheet" href="assets/vendors/font_awesome-6pro/font-awesome.min.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/styles/css/main.css" />
+    
+    <title>Keflavik</title>
+</head>
+<body class="container-fluid bg-light vh-100">
+
+    <aside id="side-navbar" class="max side-navbar  bg-light">
+        <div class="brand brand d-flex justify-content-between align-items-center flex-column p-2 bg-primary" style="height: 100px;">
+            <div class="toggle">
+                <div id="btn-toggle-collapse" class="btn-toggle toggle-collapse btn btn-primary shadow active rounded-circle">
+                    <i id="icon-collapse" class="fa-solid fa-chevron-left"></i>
+                </div>
+            </div>
+
+            <div>
+                <img class="brand-full" src="/assets/img/logo/logo-full.png" alt="" height="30px">
+                <img class="brand-icon" src="/assets/img/logo/logo-icon.png" alt="" height="30px">
+            </div>
+        </div>
+
+        <a class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light">
+            <img src="/assets/img/images/tree.png" alt="" height="44px" width="44px">
+            <span class="h5 ms-2 text-dark">시공사 이름</span>
+        </a>
+
+        <div class="side-navbar_tabs list-group bg-light">
+            <div class="side-navbar_tabs_top">
+                <div class="accordion accordion-flush">
+                    <!-- Main -->
+                    <a href="#" class="list-group-item active"
+                        aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="일정">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span class="ms-2"> 일정 </span>
+                    </a>
+
+                    <!-- Card Usage History -->
+                    <a href="#" class="list-group-item"
+                        aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="카드 사용 내역">
+                        <i class="fa-regular fa-address-book"></i>
+                        <span class="ms-2">카드 사용 내역</span>
+                    </a>
+
+                    <!-- Order status -->
+                    <a href="#" class="list-group-item"
+                        aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="발주 현황">
+                        <i class="fa-regular fa-table"></i>
+                        <span class="ms-2">발주 현황</span>
+                    </a>
+
+                    <!-- Set -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne" data-bs-toggle="tooltip"
+                            data-bs-placement="right" title="설정">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <i class="fa-regular fa-gear"></i>
+                                <span class="ms-2 me-3">설정</span> 
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body shadow">
+                                <!-- Payment request -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="결제 요청">
+                                    <i class="fa-regular fa-square-1"></i>
+                                    <span>결제 요청</span> 
+                                    
+                                </a>
+                                <!-- service management -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="서비스 관리">
+                                    <i class="fa-regular fa-square-2"></i>
+                                    <span>서비스 관리</span> 
+                                </a>
+                                <!-- order management -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="주문 관리">
+                                    <i class="fa-regular fa-square-3"></i>
+                                    <span>주문 관리</span> 
+                                </a>
+                                <!-- send photo -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="사진 보내기">
+                                    <i class="fa-regular fa-square-4"></i>
+                                    <span>사진 보내기</span> 
+                                </a>
+                                
+                                <!-- technician management -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="기술자 관리">
+                                    <i class="fa-regular fa-square-5"></i>
+                                    <span>기술자 관리</span> 
+                                </a>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="side-navbar_tabs_bot my-4">
+                <div class="accordion accordion-flush">
+                    <!-- Log out -->
+                    <a href="#" class="list-group-item"
+                        aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="로그아웃">
+                        로그아웃
+                    </a>
+
+                    <!-- menu -->
+                    <div class="accordion-item">
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <!-- Fair -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="박람회">
+                                    <i class="fa-regular fa-circle-5"></i>
+                                    <span>박람회</span>
+                                </a>
+                                <!-- fair management -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="박람회 관리">
+                                    <i class="fa-regular fa-circle-4"></i>
+                                    <span>박람회 관리</span> 
+                                </a>
+                                <!-- contract -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="계약서">
+                                    <i class="fa-regular fa-circle-3"></i>
+                                    <span>계약서</span> 
+                                </a> 
+                                <!-- three words -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="삼담">
+                                    <i class="fa-regular fa-circle-2"></i>
+                                    <span>삼담</span> 
+                                </a>
+                                <!-- master -->
+                                <a href="#"
+                                    class="accordion-body-item"
+                                    data-bs-toggle="tooltip" data-bs-placement="right" title="마스터">
+                                    <i class="fa-regular fa-circle-1"></i>
+                                    <span>마스터</span> 
+                                </a>
+                                
+                            </div>
+                        </div>
+                            
+                        <h2 class="accordion-header" id="flush-headingTwo" data-bs-toggle="tooltip"
+                            data-bs-placement="right" title="메뉴">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                메뉴
+                            </button>
+                        </h2>
+                            
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </aside>
+
+    <main id="main-content" class="max ">
+        <header class="top-navbar bg-primary" style="height: 100px;"></header>
+
+        <!-- main -->
+        <section id="main" class="content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-6">
+                <!-- INSIDE CONTENTS -->
+                main
+            </div>
+        </section>
+
+        <!-- card usage history -->
+        <section id="cardusagehistory" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                card usage history
+            </div>
+        </section>
+
+        <!-- order status -->
+        <section id="orderstatus" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                order status
+            </div>
+        </section>
+
+        <!-- SET -->
+        <!-- payment request -->
+        <section id="paymentrequest" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                payment request
+            </div>
+        </section>
+
+        <!-- service management -->
+        <section id="servicemanagement" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                service management
+            </div>
+        </section>
+
+        <!-- order management -->
+        <section id="ordermanagement" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                order management
+            </div>
+        </section>
+
+        <!-- send photo -->
+        <section id="sendphoto" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                 send photo
+            </div>
+        </section>
+
+        <!-- technician management -->
+        <section id="technicianmanagement" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                technician management
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <!-- fair -->
+        <section id="fair" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                 fair
+            </div>
+        </section>
+
+        <!-- fair management -->
+        <section id="fairmanagement" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                fair management
+            </div>
+        </section>
+
+        <!-- contract -->
+        <section id="contract" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                contract
+            </div>
+        </section>
+
+        <!-- three words -->
+        <section id="threewords" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                three words
+            </div>
+        </section>
+
+        <!-- master -->
+        <section id="master" class="d-none content">
+            <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+                <!-- INSIDE CONTENTS -->
+                master
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPTS -->
+    <script src="assets/vendors/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap-5.1.3/js/bootstrap.bundle.js"></script>
+    <script src="assets/javascript/dom.js"></script>
+    <script src="assets/javascript/main.js"></script>
+    
+</body>
+</html>
