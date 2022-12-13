@@ -1,7 +1,28 @@
 header {
     z-index: 3 !important;
     .brand {
+        @include transition (3000);
         height: 100px;
+
+        .brand-full {
+            @include transition (3000);
+            display: block;
+
+            @include breakpoint-md {
+                @include transition (3000);
+                display: none;
+            }
+        }
+
+        .brand-icon {
+            @include transition (3000);
+            display: none;
+
+            @include breakpoint-md {
+                @include transition (3000);
+                display: block;
+            }
+        }
     }
 }
 
@@ -20,10 +41,21 @@ header.max {
             width: 80px !important;
         }
 
+        .brand-full {
+            @include transition (3000);
+            display: block;
+
+            @include breakpoint-md {
+                display: none;
+            }
+        }
+
         .brand-icon {
+            @include transition (3000);
             display: none;
 
             @include breakpoint-md {
+                @include transition (3000);
                 display: block;
             }
         }

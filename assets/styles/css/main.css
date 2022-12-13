@@ -752,7 +752,28 @@ header {
   z-index: 3 !important;
 }
 header .brand {
+  transition: 3000 !important;
   height: 100px;
+}
+header .brand .brand-full {
+  transition: 3000 !important;
+  display: block;
+}
+@media (max-width: 768px) {
+  header .brand .brand-full {
+    transition: 3000 !important;
+    display: none;
+  }
+}
+header .brand .brand-icon {
+  transition: 3000 !important;
+  display: none;
+}
+@media (max-width: 768px) {
+  header .brand .brand-icon {
+    transition: 3000 !important;
+    display: block;
+  }
 }
 
 header.max .brand {
@@ -771,11 +792,22 @@ header.max .brand {
     width: 80px !important;
   }
 }
+header.max .brand .brand-full {
+  transition: 3000 !important;
+  display: block;
+}
+@media (max-width: 768px) {
+  header.max .brand .brand-full {
+    display: none;
+  }
+}
 header.max .brand .brand-icon {
+  transition: 3000 !important;
   display: none;
 }
 @media (max-width: 768px) {
   header.max .brand .brand-icon {
+    transition: 3000 !important;
     display: block;
   }
 }
