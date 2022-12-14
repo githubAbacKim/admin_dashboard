@@ -1498,3 +1498,7 @@ $(document).ready(function () {
     })
 });
 
+$(document).ready(function () {
+    $('[data-bs-toggle="tooltip-progress"]').tooltip("enable");
+});
+
