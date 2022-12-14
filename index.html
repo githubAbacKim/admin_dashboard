@@ -399,7 +399,7 @@
                 <label for="" class="col-sm-2 col-form-label fs-17px text-gray300"> 회사소개 </label>
                 <div class="col-sm-10">
                   <div class="input-group">
-                    <textarea class="form-control border-secondary textarea-7">벌레 차단을 위한 미세촘촘망.소중한 아이/반려견/반려묘의 추락사고 방지를 위한  안전망 저층 보안을 위한 방범망까지 다양한 용도와 목적에 맞는  튼튼하고 안전한 국산 방충망을 10년간 시공해온 윈케어 입니다.</textarea>
+                    <textarea class="form-control border-secondary textarea-9">벌레 차단을 위한 미세촘촘망.소중한 아이/반려견/반려묘의 추락사고 방지를 위한  안전망 저층 보안을 위한 방범망까지 다양한 용도와 목적에 맞는  튼튼하고 안전한 국산 방충망을 10년간 시공해온 윈케어 입니다.</textarea>
 
                     <button type="button" class="btn btn-outline-secondary text-gray300 fs-10px">
                       <i class="fa-light fa-pen"></i>
@@ -1130,52 +1130,51 @@
       <!-- SET -->
       <!-- payment request -->
       <section id="paymentrequestsec" class="d-none content">
-        <div class="card-main shadow bg-white col-6 p-3 p-md-5">
+        <div class="card-main shadow bg-white col-md-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">결제요청</h2>
+          <h2> 결제요청 </h2>
           
-          <div class="my-5 ms-1">
-            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <h1 style="font-size:15px"> 결제요청 </h1>
-                <div>
-                    <a href="#" class="d-flex flow-row text-muted" style="font-size: 15px;"> 
-                        <i class=" fa fa-pencil"></i>
-                        <h1 class="ms-2" style="font-size: 15px;">수정하기</h1>
-                    </a>
+          <div class="my-5">
+            <form action="">
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center flex-row">
+                  <label for="formGroupExampleInput" class="form-label">
+                    결제요청
+                  </label>
+                  <button type="button" class="btn shadow-none fs-15px text-gray300"> 
+                    <i class="fa-light fa-pen"></i>
+                    <span class="ms-1">수정하기</span>
+                  </button>
                 </div>
-            </div>
-      
-         <div class="border rounded p-2 my-3" style="font-size: 12px; ">
-          <p> (고객 이름)님, (업체명)입니다.</p>
-          <h5> 
-              금일 시공 받으신 (작업명)은 만족스러우셨나요?
-          </h5>
-          <br>
-          <p>
-              결제는 (계정정보)로 (견적)을 입금 부탁드립니다.
-          </p>
-          <br>
-          <p>감사합니다.</p>
-      </div>
-      <div class="my-3 ms-1">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <h1 style="font-size:12px">결제요청 템플릿 </h1>
+                <textarea class="form-control textarea-12">(고객 이름)님, (업체명)입니다.
 
-        
-        </div>
-        </div>
-        <form class="">
-          <div class="mb-3">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+금일 시공 받으신 (작업명)은 만족스러우셨나요?
+
+결제는 (계정정보)로 (견적)을 입금 부탁드립니다.
+
+감사합니다.
+                </textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">
+                  결제요청 템플릿
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected hidden>은행 선택</option>
+                  <option value="1">Land Bank</option>
+                  <option value="2">BDO</option>
+                  <option value="3">BPI</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="계좌번호를 입력해주세요.">
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100"> 입력완료 </button>
+            </form>
           </div>
-          <div class="mb-3">
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="d-grid gap-2">
-          <button class="btn btn-primary" type="button">입력완료</button>
-          </div>
-        </form>
-        </div>
       </section>
 
       <!-- service management -->
@@ -1187,6 +1186,13 @@
             <div class="d-flex justify-content-start align-items-center flex-wrap">
                 <h1 style="font-size:20px;font-weight: 700;">발주서 발송 </h1>
                
+                <a href="#"  class="d-flex flow-row text-muted">
+                <label class="switch" >
+                  <input class="switch-input" type="checkbox" />
+                  <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                  <span class="switch-handle"></span> 
+                </label>
+              </a>
           
           </div>
          <form class=" my-3">
@@ -1226,172 +1232,27 @@
 
       <!-- order management -->
       <section id="ordermanagementsec" class="d-none content">
-        <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+        <div class="card-main shadow bg-white col-md-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <div class="row">
-            <div class="col-md-6">
-           <h2 class="mb-2 fs-5">주소지 상세페이지</h2>
-           </div>
-           <div class="col-md-6">
-           <h2 class="mb-2 fs-5">주소지 상세페이지</h2>
-           </div>
-           </div>
-              <div class="row">
-            <div class="col-md-6">
-          <form class="row my-3 mt-5">
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-            </div>
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-            </div>
-            
-           
-          </form>
-          <form class="row my-2">
-            <div class="col-md-2">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-            </div>
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-            </div>
-            <div class="col-md-4">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-            </div>
+          <h2> 발주관리 </h2>
 
-          </form>
-          <form class="row my-1">
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-            </div>
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-            </div>
-          </form>
-          <form class="row my-1">
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="date" class="form-control " style="height: 30px;">
-            </div>
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="time" class="form-control " style="height: 30px;">
-            </div>
-            
-          </form>
-          <form class="row my-1">
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="date" class="form-control " style="height: 30px;">
-            </div>
-            <div class="col-md-6">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="time" class="form-control " style="height: 30px;">
-            </div>
-            
-          </form>
-          <form class="row my-1">
-            <div class="col-md-12">
-              <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 80px;">
-            </div>
+          <div class="mt-5">
+            <form action="">
 
-          </form>
-            </div>
-            <div class="col-sm-6 ">
-              <div class=" row  ">
-                <div class="col-md-12 ">
-                  <div class="card border-0 p-2" style="background-color: #FAFBFF;border-radius: 20px;
-            
-                  box-shadow: 0 20px 35px rgb(0 0 0 / 10%);">
-                  <form class="row my-3 mt-5">
-                    <div class="col-md-6">
-                      <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                    </div>
-                    <div class="col-md-6">
-                      <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                    </div>
-                   
-                    
-                   
-                  </form>
-                  <form class="row my-1">
-                    <div class="col-md-6">
-                      <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                    </div>
-                    <div class="col-md-6">
-                      <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                    </div>
-                   
-                    
-                   
-                  </form>
-                  <form class="row my-1">
-                    <div class="col-md-6">
-                      <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                    </div>
+              <a href="#"  class="d-flex flow-row text-muted">
+                <label class="switch" >
+                  <input class="switch-input" type="checkbox" />
+                  <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                  <span class="switch-handle"></span> 
+                </label>
+              </a>
 
-                   
-                    
-                   
-                  </form>
-                  </div>
-                 </div>
-                 <div class="col-md-12 my-2 ">
-                  <div class="card border-0 p-2 " style="background-color: #FAFBFF;border-radius: 20px;
-            
-                  box-shadow: 0 20px 35px rgb(0 0 0 / 10%);">
-                    <form class="row ">
-                      <div class="col-md-6">
-                        <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                      </div>
-                      <div class="col-md-6">
-                        <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                      </div>
-                     
-                      
-                     
-                    </form>
-                    <form class="row my-1">
-                      <div class="col-md-6">
-                        <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                      </div>
-                      <div class="col-md-6">
-                        <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                      </div>
-                     
-                      
-                     
-                    </form>
-                    <form class="row my-1">
-                      <div class="col-md-6">
-                        <label for="firstname" class="form-label" style="font-weight: 700;"> 단지명</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 30px;">
-                      </div>
-                        
-                     
-                      
-                     
-                    </form>
-    
-              </div>
-              </div>
+              
+
+
+
+
+            </form>
           </div>
 
         </div>
@@ -1517,6 +1378,8 @@
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
          <h2 class="mb-2">설정</h2>
+
+
         </div>
       </section>
 
@@ -1769,225 +1632,8 @@
       <section id="contractsec" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-         <h2 class="mb-2">계약서 목록</h2>
-          <div class="row my-4">
-          <div class="col-md-12">
-            <h2 class="fs-14px p-4"> 시공사 선택<i class="fa fa-angle-down" aria-hidden="true"></i></h2>
-          </div>
-        </div>
-        
-          <div class="row row-cols-1 row-cols-md-3 g-4  pe-5">
-            <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                
-            <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                <div class="col-md-4 ">
-              <div class="border rounded p-2">
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                  <h2 class="fs-13px text-dark fw-bold"> 이민지 고객님 </h2>
-              
-              <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                <button type="button" class=" btn btn-outline-primary ms-1" style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="btn btn-primary mx-2  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-                        <button type="button" class=" btn btn-secondary  " style="font-size: 6px;">
-                          계약서 보기
-                        </button>
-              </div>
-
-              </div>
-                </div>
-                </div>
-                </div>
-            
-            <div class=" row justify-content-center my-5">
-                            <div class=" col-4 ">
-                      
-                              <nav aria-label="Page navigation example"></nav>
-                                <ul class="pagination">
-                                  <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                      <span aria-hidden="true">«</span>
-                                    </a>
-                                  </li>
-                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                  <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                      <span aria-hidden="true">»</span>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </nav>
-                          
-          
-                            </div>
-                  
-        
-
+         
+                       
         </div>
       </section>
 
