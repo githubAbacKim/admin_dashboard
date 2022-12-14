@@ -42,6 +42,7 @@ aside.side-navbar {
                     font-family: $title;
                     margin-top: 2px !important;
                     margin-bottom: 2px !important;
+                    // border: 1px solid red;
 
                     &:hover,
                     &.active {
@@ -60,7 +61,8 @@ aside.side-navbar {
                     @include mp(0);
                     border: 0px solid $transparent !important;
                     background-color: $transparent !important;
-                    width: 100% !important;
+                    // width: 100% !important;
+                    // border: 1px solid red !important;
 
                     &:first-of-type {
                         border-top-left-radius: $s2;
@@ -156,15 +158,16 @@ aside.side-navbar {
                     }
 
                     .accordion-body {
-                        width: 100% !important;
+                        // width: 100% !important;
                         background-color: $white !important;
                         display: block !important;
-                        margin-left: $s3 !important;
                         border-bottom-left-radius: $s2;
+                        // border:1px solid red;
+                        padding-top: 0;
+                        padding-bottom: 0;
 
                         .accordion-body-item {
                             display: block !important;
-                            
                             color: $dark;
                             transition: 0.5s;
 
@@ -385,6 +388,7 @@ aside.max {
         .side-navbar_tabs_top {
             .accordion {
                 @include transition (3000);
+
                 .list-group-item {
                     @include transition (3000);
                     @include breakpoint-md-up {
@@ -418,6 +422,7 @@ aside.max {
                 }
 
                 .accordion-item {
+                    
                     @include breakpoint-md-up {
                         margin-left: $s5 !important;
                     }
@@ -479,17 +484,26 @@ aside.max {
                     }
 
                     .accordion-body {
+                        @include breakpoint-md-up {
+                            margin-left: $s3 !important;
+                        }
+                        @include breakpoint-md {
+                            margin-left: $s2 !important;
+                        }
                         .accordion-body-item {
+                            // width: 100% !important;
                             @include transition (3000);
 
                             @include breakpoint-md-up {
                                 @include transition (3000);
-                                padding: $s2 $s4 !important;
+                                padding: $s2 !important;
+                                // border: 1px solid red;
                             }
 
                             @include breakpoint-md {
                                 @include transition (3000);
-                                padding: $s2 calc($s3 + 4px) !important;
+                                padding: $s1 0 !important;
+                                // border: 1px solid red;
                             }
 
                             span {
@@ -607,19 +621,6 @@ aside.min {
     @include transition (3000);
     width: 80px !important;
     
-    .brand {
-        @include transition (3000);
-        .brand-full {
-            @include transition (3000);
-            display: none;
-        }
-
-        .brand-icon {
-            @include transition (3000);
-            display: block;
-        }
-    }
-
     .profile {
         width: inherit;
         padding-top: $s2 !important;
@@ -665,6 +666,7 @@ aside.min {
                 }
 
                 .accordion-item {
+                    // border: 1px solid red !important;
                     @include transition (3000);
                     margin-left: $s2 !important;
 
@@ -703,9 +705,11 @@ aside.min {
                     }
 
                     .accordion-body {
+                        margin-left: $s2 !important;
                         .accordion-body-item {
+                            // border: 1px solid red;
                             @include transition (3000);
-                            padding: $s2 calc($s3 + 4px) !important;
+                            padding: $s1 0 !important;  
                             
                             span {
                                 @include transition (3000);
