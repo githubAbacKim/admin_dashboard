@@ -1665,5 +1665,5 @@ main.min .content {
 }
 
 .card-submain {
-  height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 6rem + 1rem)) !important;
+  height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 6rem)) !important;
 }/*# sourceMappingURL=main.css.map */
