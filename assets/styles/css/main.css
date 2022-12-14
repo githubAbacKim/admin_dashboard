@@ -1,7 +1,3 @@
-.text-darkprimary {
-  color: #33588E;
-}
-
 @font-face {
   font-family: "Font Awesome 6 Pro";
   font-style: normal;
@@ -59,8 +55,6 @@
 *::after {
   box-sizing: border-box;
   transition: 3000 !important;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
 body {
@@ -118,6 +112,10 @@ p {
   color: #000;
 }
 
+.text-darkprimary {
+  color: #33588E;
+}
+
 .font-title {
   font-family: "Noto Sans KR" !important;
 }
@@ -126,12 +124,60 @@ p {
   font-family: "Noto Sans KR" !important;
 }
 
-.fs-7 {
-  font-size: 0.875rem !important;
+.fs-22px {
+  font-size: 22px !important;
 }
 
-.fs-8 {
-  font-size: 0.75rem !important;
+.fs-21px {
+  font-size: 21px !important;
+}
+
+.fs-20px {
+  font-size: 20px !important;
+}
+
+.fs-19px {
+  font-size: 19px !important;
+}
+
+.fs-18px {
+  font-size: 18px !important;
+}
+
+.fs-17px {
+  font-size: 17px !important;
+}
+
+.fs-16px {
+  font-size: 16px !important;
+}
+
+.fs-15px {
+  font-size: 15px !important;
+}
+
+.fs-14px {
+  font-size: 14px !important;
+}
+
+.fs-13px {
+  font-size: 13px !important;
+}
+
+.fs-12px {
+  font-size: 12px !important;
+}
+
+.fs-11px {
+  font-size: 11px !important;
+}
+
+.fs-9px {
+  font-size: 9px !important;
+}
+
+.fs-8px {
+  font-size: 8px !important;
 }
 
 .cursor-pointer {
@@ -140,25 +186,6 @@ p {
 
 .cursor-default {
   cursor: default !important;
-}
-
-.outline-0 {
-  outline: 0 !important;
-}
-
-.align-middle {
-  vertical-align: middle !important;
-}
-
-@media (min-width: 769px) {
-  .md-column {
-    flex-direction: row !important;
-  }
-}
-@media (max-width: 768px) {
-  .md-column {
-    flex-direction: column !important;
-  }
 }
 
 .overflow-x-hidden {
@@ -203,6 +230,25 @@ p {
   .fluid-padding {
     padding-right: 0.5rem !important;
     padding-left: 0.5rem !important;
+  }
+}
+
+.outline-0 {
+  outline: 0 !important;
+}
+
+.align-middle {
+  vertical-align: middle !important;
+}
+
+@media (min-width: 769px) {
+  .md-column {
+    flex-direction: row !important;
+  }
+}
+@media (max-width: 768px) {
+  .md-column {
+    flex-direction: column !important;
   }
 }
 
@@ -409,6 +455,7 @@ p {
 .hr-1 {
   height: 1px;
   width: 100%;
+  background-color: #b4b4b4;
 }
 
 .hr-2 {
@@ -748,14 +795,91 @@ p {
   list-style-position: inside !important;
 }
 
+header {
+  z-index: 3 !important;
+}
+header .brand {
+  transition: 3000 !important;
+  height: 100px;
+}
+header .brand .brand-full {
+  transition: 3000 !important;
+  display: block;
+}
+@media (max-width: 768px) {
+  header .brand .brand-full {
+    transition: 3000 !important;
+    display: none;
+  }
+}
+header .brand .brand-icon {
+  transition: 3000 !important;
+  display: none;
+}
+@media (max-width: 768px) {
+  header .brand .brand-icon {
+    transition: 3000 !important;
+    display: block;
+  }
+}
+
+header.max .brand {
+  transition: 3000 !important;
+  width: 300px !important;
+}
+@media (max-width: 1200px) {
+  header.max .brand {
+    transition: 3000 !important;
+    width: 240px !important;
+  }
+}
+@media (max-width: 768px) {
+  header.max .brand {
+    transition: 3000 !important;
+    width: 80px !important;
+  }
+}
+header.max .brand .brand-full {
+  transition: 3000 !important;
+  display: block;
+}
+@media (max-width: 768px) {
+  header.max .brand .brand-full {
+    display: none;
+  }
+}
+header.max .brand .brand-icon {
+  transition: 3000 !important;
+  display: none;
+}
+@media (max-width: 768px) {
+  header.max .brand .brand-icon {
+    transition: 3000 !important;
+    display: block;
+  }
+}
+
+header.min .brand {
+  transition: 3000 !important;
+  width: 80px !important;
+}
+header.min .brand .brand-full {
+  display: none;
+}
+header.min .brand .brand-icon {
+  display: block;
+}
+
 aside.side-navbar {
   user-select: none;
   position: fixed;
+  margin-top: 100px !important;
   height: 100%;
   background-color: #003AC9;
   transition: 0.5s;
   overflow-y: auto;
   overflow-x: hidden;
+  height: calc(100vh - 100px) !important;
 }
 aside.side-navbar .side-navbar_tabs {
   display: flex;
@@ -763,6 +887,7 @@ aside.side-navbar .side-navbar_tabs {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: calc(100vh - 100px - 2rem - 6rem) !important;
 }
 aside.side-navbar .side-navbar_tabs.list-group {
   transition: 0.5s;
@@ -1035,6 +1160,7 @@ aside.side-navbar .side-navbar_tabs .side-navbar_tabs_bot .accordion .accordion-
 aside.max {
   transition: 3000 !important;
   width: 300px !important;
+  min-height: calc(100vh - 100px) !important;
 }
 @media (max-width: 1200px) {
   aside.max {
@@ -1048,27 +1174,6 @@ aside.max {
     width: 80px !important;
   }
 }
-aside.max .brand {
-  transition: 3000 !important;
-}
-aside.max .brand .brand-full {
-  transition: 3000 !important;
-  display: block;
-}
-@media (max-width: 768px) {
-  aside.max .brand .brand-full {
-    transition: 3000 !important;
-    display: none;
-  }
-}
-aside.max .brand .brand-icon {
-  display: none;
-}
-@media (max-width: 768px) {
-  aside.max .brand .brand-icon {
-    display: block;
-  }
-}
 aside.max .profile {
   width: inherit;
   transition: 3000 !important;
@@ -1080,18 +1185,6 @@ aside.max .profile span {
   aside.max .profile span {
     transition: 3000 !important;
     display: none;
-  }
-}
-@media (min-width: 769px) {
-  aside.max .side-navbar_tabs {
-    transition: 3000 !important;
-    min-height: calc(100vh - 100px - 3rem - 44px) !important;
-  }
-}
-@media (max-width: 768px) {
-  aside.max .side-navbar_tabs {
-    transition: 3000 !important;
-    min-height: calc(100vh - 100px - 1rem - 44px) !important;
   }
 }
 aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion {

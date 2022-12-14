@@ -1,11 +1,13 @@
 aside.side-navbar {
     user-select: none;
     position: fixed;
+    margin-top: 100px !important;
     height: 100%;
     background-color: $primary;
     transition: 0.5s;
     overflow-y: auto;
     overflow-x: hidden;
+    height: calc(100vh - 100px) !important;
 
     .side-navbar_tabs {
         display: flex;
@@ -13,6 +15,8 @@ aside.side-navbar {
         align-items: center;
         flex-direction: column;
         width: 100%;
+        // border: 1px solid red;
+        height: calc(100vh - 100px - (2 * $s3) - (2 * $s5)) !important;
 
         &.list-group {
             transition: 0.5s;
@@ -350,6 +354,7 @@ aside.side-navbar {
 aside.max {
     @include transition (3000);
     width: 300px !important;
+    min-height: calc(100vh - 100px) !important;
 
     @include breakpoint-xl {
         @include transition (3000);
@@ -361,27 +366,7 @@ aside.max {
         width: 80px !important;
     }
 
-    .brand {
-        @include transition (3000);
-        .brand-full {
-            @include transition (3000);
-            display: block;
-
-            @include breakpoint-md {
-                @include transition (3000);
-                display: none;
-            }
-        }
-
-        .brand-icon {
-            display: none;
-
-            @include breakpoint-md {
-                display: block;
-            }
-        }
-    }
-
+    
     .profile {
         width: inherit;
         @include transition (3000);
@@ -396,15 +381,6 @@ aside.max {
     }
 
     .side-navbar_tabs {
-        @include breakpoint-md-up {
-            @include transition (3000);
-            min-height: calc(100vh - 100px - (2 * $s4) - 44px) !important;
-        }
-
-        @include breakpoint-md {
-            @include transition (3000);
-            min-height: calc(100vh - 100px - (2 * $s2) - 44px) !important;
-        }
 
         .side-navbar_tabs_top {
             .accordion {
