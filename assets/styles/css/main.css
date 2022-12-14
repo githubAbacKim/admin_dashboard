@@ -124,6 +124,10 @@ p {
   color: #888888;
 }
 
+.text-gray300 {
+  color: #767676;
+}
+
 .font-title {
   font-family: "Noto Sans KR" !important;
 }
@@ -857,6 +861,38 @@ p {
 #alert {
   list-style-type: disc !important;
   list-style-position: inside !important;
+}
+
+.textarea-1 {
+  min-height: 1rem !important;
+}
+
+.textarea-2 {
+  min-height: 2rem !important;
+}
+
+.textarea-3 {
+  min-height: 3rem !important;
+}
+
+.textarea-4 {
+  min-height: 4rem !important;
+}
+
+.textarea-5 {
+  min-height: 5rem !important;
+}
+
+.textarea-6 {
+  min-height: 6rem !important;
+}
+
+.textarea-7 {
+  min-height: 7rem !important;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .toggle .btn-toggle {
@@ -1680,6 +1716,6 @@ main.min .content {
   max-width: calc(100vw - 80px - 1rem);
 }
 
-.card-submain {
+#mainsec .card-submain {
   height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 6rem)) !important;
 }/*# sourceMappingURL=main.css.map */
