@@ -9,3 +9,21 @@
         @include px($s2);
     }
 }
+
+.outline-0 {
+    outline: 0 !important;
+}
+
+.align-middle {
+    vertical-align: middle !important;
+}
+
+.md-column {
+    @include breakpoint-md-up {
+        flex-direction: row !important;
+    }
+
+    @include breakpoint-md {
+        flex-direction: column !important;
+    }
+}

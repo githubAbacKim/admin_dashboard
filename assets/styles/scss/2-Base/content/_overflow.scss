@@ -1,0 +1,22 @@
+.overflow-x-hidden {
+    overflow-x: hidden !important;
+}
+
+.overflow-y-hidden {
+    overflow-y: hidden !important;
+}
+
+.overflow-x-auto {
+    overflow-x: auto !important;
+    // overflow-y: hidden !important;
+}
+
+.overflow-auto {
+    @include breakpoint-md-up {
+        overflow: hidden !important;
+    }
+
+    @include breakpoint-md {
+        overflow: auto !important;
+    }
+}

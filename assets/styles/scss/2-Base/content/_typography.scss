@@ -6,77 +6,76 @@
     color: $black;
 }
 
+.text-darkprimary {
+    color: $darkprimary;
+}
+
 .font-title {
     font-family: $title !important;
 }
-
 
 .font-text {
     font-family: $text !important;
 }
 
-.fs-7 {
-    font-size: 0.875rem !important; //14px
+.fs-22px {
+    font-size: 22px !important;
 }
 
-.fs-8 {
-    font-size: 0.75rem !important; //12px
+.fs-21px {
+    font-size: 21px !important;
 }
 
-.cursor-pointer {
-    cursor: pointer !important;
+.fs-20px {
+    font-size: 20px !important;
 }
 
-.cursor-default {
-    cursor: default !important;
+.fs-19px {
+    font-size: 19px !important;
 }
 
-.outline-0 {
-    outline: 0 !important;
+.fs-18px {
+    font-size: 18px !important;
 }
 
-.align-middle {
-    vertical-align: middle !important;
+.fs-17px {
+    font-size: 17px !important;
 }
 
-.md-column {
-    @include breakpoint-md-up {
-        flex-direction: row !important;
-    }
-
-    @include breakpoint-md {
-        flex-direction: column !important;
-    }
+.fs-16px {
+    font-size: 16px !important;
 }
 
-.overflow-x-hidden {
-    overflow-x: hidden !important;
+
+.fs-15px {
+    font-size: 15px !important;
 }
 
-.overflow-y-hidden {
-    overflow-y: hidden !important;
+.fs-14px {
+    font-size: 14px !important;
 }
 
-.overflow-x-auto {
-    overflow-x: auto !important;
-    // overflow-y: hidden !important;
+.fs-13px {
+    font-size: 13px !important;
 }
 
-.overflow-auto {
-    @include breakpoint-md-up {
-        overflow: hidden !important;
-    }
-
-    @include breakpoint-md {
-        overflow: auto !important;
-    }
+.fs-12px {
+    font-size: 12px !important;
 }
 
-.list-style-disc {
-    list-style-type: disc !important;
-    list-style-position: inside !important;
+.fs-11px {
+    font-size: 11px !important;
 }
 
-// input[type=number] {
-//     -moz-appearance: textfield;
-// }
+.fs-9px {
+    font-size: 9px !important;
+}
+
+
+.fs-8px {
+    font-size: 8px !important;
+}
+
+
+
+

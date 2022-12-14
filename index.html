@@ -12,20 +12,35 @@
       rel="stylesheet"
     />
 
+
+    <!-- CSS  -->
     <!-- Bootstrap 5.1.3 -->
     <link
       rel="stylesheet"
       href="assets/vendors/bootstrap-5.1.3/css/bootstrap.css"
     />
-
+    <!-- DataTables 1.13.1 -->
+    <link
+      rel="stylesheet"
+      href="assets/vendors/DataTables-1.13.1/css/datatables.min.css"
+    />
     <!-- Font-Awesome-Pro 6 -->
     <link
       rel="stylesheet"
       href="assets/vendors/font_awesome-6pro/font-awesome.min.css"
     />
-
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/styles/css/main.css" />
+
+
+
+    <!-- JAVASCRIPTS -->
+    <script src="assets/vendors/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/DataTables-1.13.1/js/datatables.min.js"></script>
+    <script src="assets/vendors/bootstrap-5.1.3/js/bootstrap.bundle.js"></script>
+    <script src="assets/javascript/dom.js"></script>
+    <script src="assets/javascript/main.js"></script>
+    <script src="assets/javascript/script.js"></script>
 
     <title>Keflavik</title>
   </head>
@@ -336,35 +351,19 @@
 
     <main id="main-content" class="max">
       <!-- profile -->
+      <section id="profilesec" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+          <!-- INSIDE CONTENTS -->
+         <h2 class="mb-2">profile</h2>
+        </div>
+      </section>
 
       <!-- main -->
       <section id="mainsec" class="d-block content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">일정</h2>
-          <h5 class="mb-2">작업내용</h5>
-
           <div class="row g-0">
-            <div class="col-md-6 mb-2">
-              <nav
-                class="nav align-items-end h-100 fw-bold"
-                style="font-size: 12px"
-              >
-                <a
-                  href="#"
-                  class="nav-link text-start active pb-0 ps-0 pe-5 link-dark"
-                  aria-current="page"
-                >
-                  아파트 단지별로 보기
-                </a>
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark"
-                  >미수금 보기</a
-                >
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark"
-                  >기간별 보기</a
-                >
-              </nav>
-            </div>
+            
             <div class="col-md-6 mb-2">
               <div
                 class="d-flex justify-content-between align-items-center flex-column"
@@ -374,7 +373,6 @@
                 >
                   <p class="me-3" style="font-size: 12px">
                     <span class="text-primary fw-bold">총123건</span>
-                    <span class="text-dark">(총매출금액기준)</span>
                   </p>
                   <div
                     class="text-end fw-bold text-primary d-flex justify-content-between align-items-center flex-wrap"
@@ -1935,12 +1933,6 @@
       </section>
     </main>
 
-    <!-- JAVASCRIPTS -->
-    <script src="assets/vendors/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <script src="assets/vendors/bootstrap-5.1.3/js/bootstrap.bundle.js"></script>
-    <script src="assets/javascript/dom.js"></script>
-    <script src="assets/javascript/main.js"></script>
-     <script src="assets/javascript/script.js"></script>
-
+    
   </body>
 </html>
