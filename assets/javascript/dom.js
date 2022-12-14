@@ -26,6 +26,22 @@
     });
 })(window.jQuery);
 
+/** TEXTAREA AUTO CHANGE HEIGHT **/
+$(document).ready(function () {
+    $("textarea")
+    .each(function () {
+        this.setAttribute(
+            "style",
+            "height:" + this.scrollHeight + "px;overflow-y:hidden;"
+        );
+    })
+    .on("input", function () {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    });
+});
+
+
 /** DASHBOARD SIDE NAVBAR CLASS MEDIA QUERY TOOLTIP ARRANGEMENT **/
 $(document).ready(function () {
     /** MEDIA QUIERY */
