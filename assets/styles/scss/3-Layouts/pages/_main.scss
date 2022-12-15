@@ -3,3 +3,131 @@
         height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (2 * $s5))) !important;
     }
 }
+
+#contractsec {
+    .card-submain {
+        height: calc(100vh - (50px + (2 * $s5) + $s3 + 14px + (18 * $s3))) !important;
+        // border: 1px solid red;
+        overflow: hidden;
+    }
+
+    .pagination {
+        margin-bottom: 0 !important;
+        .page-item {
+            margin: 0 $s1 !important;
+
+            .page-link {
+                padding-top: $s1 !important;
+                padding-bottom: $s1 !important;
+                padding-left: .6rem !important;
+                padding-right: .6rem !important;
+                border-radius: 0.5rem !important;
+                color: $gray-700 !important;
+                font-size: 14px !important;
+
+                &:hover, &:focus {
+                    color: $primary !important;
+                    border-color: $primary !important;
+                    background: $transparent !important;
+                }
+            }
+
+            &:first-child {
+                .page-link {
+                    padding-top: calc($s2 + 0px) !important;
+                    padding-bottom: calc($s2 + 0px) !important;
+                    font-size: 9px !important;
+                }
+            }
+            &:last-child {
+                .page-link {
+                    padding-top: calc($s2 + 0px) !important;
+                    padding-bottom: calc($s2 + 0px) !important;
+                    font-size: 9px !important;
+                }
+            }
+
+            .active {
+                .page-link {
+                    color: $primary !important;
+                    border-color: $primary !important;
+                    background: $transparent !important;
+                }
+
+            }
+        }
+    }
+}
+
+#mastersec {
+    .card-main {
+        min-height: calc(100vh - 50px) !important;
+        background: $white !important;
+        z-index: 101;
+
+        @include breakpoint-lg-up {
+            border-top-left-radius: $s4;
+            border-top-right-radius: $s4;
+            border-bottom-right-radius: $s4;
+        }
+
+        @include breakpoint-lg {
+            border-top-left-radius: $s4;
+            border-top-right-radius: $s4;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    .card-main1 {
+        height: 4px;
+        z-index: 102;
+        background-color: $white;
+        @include breakpoint-lg-up {
+            display: none;
+        }
+
+        @include breakpoint-lg {
+            display: flex;
+        }
+    }
+
+    .card-main2 {
+        z-index: 101;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        height: calc(100vh - 50px) !important;
+
+        @include breakpoint-lg-up {
+            background: $transparent !important;
+        }
+
+        @include breakpoint-lg { 
+            border-bottom-right-radius: $s4;
+            background: $white !important;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        .card-main2-content {
+            border-radius: $s4 !important;
+            padding: $s5 !important;
+            
+            @include breakpoint-lg-up {
+                // height: calc(100vh - 50px) !important;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+                background: $white !important;
+                // border: 1px solid red;
+                // height: fit-content !important;
+            }
+            
+            @include breakpoint-lg { 
+                background: $transparent !important;
+                // height: calc(100vh - 50px) !important;
+                box-shadow: none !important;
+                // border: 1px solid red;
+            }
+        }
+    }
+    
+}

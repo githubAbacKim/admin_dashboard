@@ -328,15 +328,16 @@ aside.side-navbar {
                     }
         
                     .accordion-body {
-                        width: 100% !important;
+                        // width: 100% !important;
                         background-color: $transparent !important;
                         display: block !important;
                         text-align: center;
+                        padding: 0;
                         // margin-left: 0 !important;
         
                         .accordion-body-item {
                             display: block !important;
-                            padding: $s1 $s4 !important;
+                            padding: $s1 0 !important;
                             color: $dark;
                             transition: 0.5s;
         
