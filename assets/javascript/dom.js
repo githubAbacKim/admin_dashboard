@@ -135,117 +135,21 @@ $(document).ready(function () {
             $("#profilesec").addClass("d-block");
             $("#profilesec").removeClass("d-none");
 
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -256,117 +160,21 @@ $(document).ready(function () {
             $("#mainsec").removeClass("d-none");
             $("#mainbtn").addClass('active');
 
-
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_profilesec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -377,116 +185,21 @@ $(document).ready(function () {
             $("#cardusagesec").removeClass("d-none");
             $("#cardusagebtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -497,117 +210,21 @@ $(document).ready(function () {
             $("#orderstatussec").removeClass("d-none");
             $("#orderstatusbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -618,106 +235,21 @@ $(document).ready(function () {
             $("#paymentrequestsec").removeClass("d-none");
             $("#paymentrequestbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -728,443 +260,96 @@ $(document).ready(function () {
             $("#servicemanagementsec").removeClass("d-none");
             $("#servicemanagementbtn").addClass('active');
 
-            // 0
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-            }
-
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-            }
-
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-            }
-
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-            }
-
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
+    // 4.3
     $("#ordermanagementbtn").click(function () {
         if ($("#ordermanagementsec").hasClass("d-none")) {
             $("#ordermanagementsec").addClass("d-block");
             $("#ordermanagementsec").removeClass("d-none");
             $("#ordermanagementbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
+    // 4.4
     $("#sendphotobtn").click(function () {
         if ($("#sendphotosec").hasClass("d-none")) {
             $("#sendphotosec").addClass("d-block");
             $("#sendphotosec").removeClass("d-none");
             $("#sendphotobtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
+    // 4.5
     $("#technicianmanagementbtn").click(function () {
         if ($("#technicianmanagementsec").hasClass("d-none")) {
             $("#technicianmanagementsec").addClass("d-block");
             $("#technicianmanagementsec").removeClass("d-none");
             $("#technicianmanagementbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-                $("#menubtn").addClass('collapsed');
-                $("#menu-collapse").removeClass('show');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -1174,106 +359,21 @@ $(document).ready(function () {
             $("#fairsec").removeClass("d-none");
             $("#fairbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -1283,106 +383,21 @@ $(document).ready(function () {
             $("#fairmanagementsec").removeClass("d-none");
             $("#fairmanagementbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_contractsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -1392,106 +407,22 @@ $(document).ready(function () {
             $("#contractsec").removeClass("d-none");
             $("#contractbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
 
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_threewordssec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -1501,106 +432,21 @@ $(document).ready(function () {
             $("#threewordssec").removeClass("d-none");
             $("#threewordsbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-            }
-
-            // 5.5
-            if ($("#mastersec").hasClass("d-block")) {
-                $("#mastersec").addClass("d-none");
-                $("#mastersec").removeClass("d-block");
-                $("#masterbtn").removeClass('active');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_mastersec();
+            set_accordion();
+            menu_accordion();
         }
     })
 
@@ -1610,106 +456,21 @@ $(document).ready(function () {
             $("#mastersec").removeClass("d-none");
             $("#masterbtn").addClass('active');
 
-            // 0
-            if ($("#profilesec").hasClass("d-block")) {
-                $("#profilesec").addClass("d-none");
-                $("#profilesec").removeClass("d-block");
-                // $("#mainbtn").removeClass('active');
-            }
-
-            // 1
-            if ($("#mainsec").hasClass("d-block")) {
-                $("#mainsec").addClass("d-none");
-                $("#mainsec").removeClass("d-block");
-                $("#mainbtn").removeClass('active');
-            }
-
-            // 2
-            if ($("#cardusagesec").hasClass("d-block")) {
-                $("#cardusagesec").addClass("d-none");
-                $("#cardusagesec").removeClass("d-block");
-                $("#cardusagebtn").removeClass('active');
-            }
-
-            // 3
-            if ($("#orderstatussec").hasClass("d-block")) {
-                $("#orderstatussec").addClass("d-none");
-                $("#orderstatussec").removeClass("d-block");
-                $("#orderstatusbtn").removeClass('active');
-            }
-
-            // 4.1
-            if ($("#paymentrequestsec").hasClass("d-block")) {
-                $("#paymentrequestsec").addClass("d-none");
-                $("#paymentrequestsec").removeClass("d-block");
-                $("#paymentrequestbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.2
-            if ($("#servicemanagementsec").hasClass("d-block")) {
-                $("#servicemanagementsec").addClass("d-none");
-                $("#servicemanagementsec").removeClass("d-block");
-                $("#servicemanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.3
-            if ($("#ordermanagementsec").hasClass("d-block")) {
-                $("#ordermanagementsec").addClass("d-none");
-                $("#ordermanagementsec").removeClass("d-block");
-                $("#ordermanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.4
-            if ($("#sendphotosec").hasClass("d-block")) {
-                $("#sendphotosec").addClass("d-none");
-                $("#sendphotosec").removeClass("d-block");
-                $("#sendphotobtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 4.5
-            if ($("#technicianmanagementsec").hasClass("d-block")) {
-                $("#technicianmanagementsec").addClass("d-none");
-                $("#technicianmanagementsec").removeClass("d-block");
-                $("#technicianmanagementbtn").removeClass('active');
-                $("#setbtn").addClass('collapsed');
-                $("#set-collapse").removeClass('show');
-            }
-
-            // 5.1
-            if ($("#fairsec").hasClass("d-block")) {
-                $("#fairsec").addClass("d-none");
-                $("#fairsec").removeClass("d-block");
-                $("#fairbtn").removeClass('active');
-            }
-
-            // 5.2
-            if ($("#fairmanagementsec").hasClass("d-block")) {
-                $("#fairmanagementsec").addClass("d-none");
-                $("#fairmanagementsec").removeClass("d-block");
-                $("#fairmanagementbtn").removeClass('active');
-            }
-
-            // 5.3
-            if ($("#contractsec").hasClass("d-block")) {
-                $("#contractsec").addClass("d-none");
-                $("#contractsec").removeClass("d-block");
-                $("#contractbtn").removeClass('active');
-            }
-
-            // 5.4
-            if ($("#threewordssec").hasClass("d-block")) {
-                $("#threewordssec").addClass("d-none");
-                $("#threewordssec").removeClass("d-block");
-                $("#threewordsbtn").removeClass('active');
-            }
+            check_profilesec();
+            check_mainsec();
+            check_cardusagesec();
+            check_orderstatussec();
+            check_paymentrequestsec();
+            check_servicemanagementsec();
+            check_ordermanagementsec();
+            check_sendphotosec();
+            check_technicianmanagementsec();
+            check_fairsec();
+            check_fairmanagementsec();
+            check_contractsec();
+            check_threewordssec();
+            set_accordion();
+            menu_accordion();
         }
     })
 });
