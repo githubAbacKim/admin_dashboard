@@ -151,7 +151,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -176,7 +176,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -201,7 +201,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -226,7 +226,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -251,7 +251,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -276,7 +276,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -301,7 +301,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -326,7 +326,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -351,7 +351,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -376,7 +376,7 @@ $(document).ready(function () {
             check_technicianmanagementsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -401,7 +401,7 @@ $(document).ready(function () {
             check_technicianmanagementsec();
             check_fairsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -427,7 +427,7 @@ $(document).ready(function () {
             check_technicianmanagementsec();
             check_fairsec();
             check_fairmanagementsec();
-            check_threewordssec();
+            check_counsellingsec();
             check_mastersec();
             set_accordion();
             menu_accordion();
@@ -435,11 +435,11 @@ $(document).ready(function () {
     })
 
     // 5.2
-    $("#threewordsbtn").click(function () {
-        if ($("#threewordssec").hasClass("d-none")) {
-            $("#threewordssec").addClass("d-block");
-            $("#threewordssec").removeClass("d-none");
-            $("#threewordsbtn").addClass('active');
+    $("#counsellingbtn").click(function () {
+        if ($("#counsellingsec").hasClass("d-none")) {
+            $("#counsellingsec").addClass("d-block");
+            $("#counsellingsec").removeClass("d-none");
+            $("#counsellingbtn").addClass('active');
 
             check_profilesec();
             check_mainsec();
@@ -478,7 +478,7 @@ $(document).ready(function () {
             check_fairsec();
             check_fairmanagementsec();
             check_contractsec();
-            check_threewordssec();
+            check_counsellingsec();
             set_accordion();
             menu_accordion();
         }

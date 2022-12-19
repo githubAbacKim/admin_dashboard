@@ -1116,6 +1116,37 @@ p {
   align-items: center;
 }
 
+.pagination.page {
+  margin-bottom: 0 !important;
+}
+.pagination.page .page-item {
+  margin: 0 0.25rem !important;
+}
+.pagination.page .page-item .page-link {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  padding-left: 0.6rem !important;
+  padding-right: 0.6rem !important;
+  border-radius: 0.5rem !important;
+  color: #6c757d !important;
+  font-size: 14px !important;
+}
+.pagination.page .page-item .page-link:hover, .pagination.page .page-item .page-link:focus, .pagination.page .page-item .page-link.active {
+  color: #003AC9 !important;
+  border-color: #003AC9 !important;
+  background: transparent !important;
+}
+.pagination.page .page-item:first-child .page-link {
+  padding-top: calc(0.5rem + 0px) !important;
+  padding-bottom: calc(0.5rem + 0px) !important;
+  font-size: 9px !important;
+}
+.pagination.page .page-item:last-child .page-link {
+  padding-top: calc(0.5rem + 0px) !important;
+  padding-bottom: calc(0.5rem + 0px) !important;
+  font-size: 9px !important;
+}
+
 .data-table {
   overflow: auto !important;
 }
@@ -2063,35 +2094,152 @@ main.min .content {
   height: calc(100vh - (50px + 6rem + 1rem + 14px + 18rem)) !important;
   overflow: hidden;
 }
-#contractsec .pagination {
-  margin-bottom: 0 !important;
+
+#counsellingsec .counselling {
+  min-height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 4.5rem)) !important;
+  max-height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 4.5rem)) !important;
+  border-color: #707070;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-#contractsec .pagination .page-item {
-  margin: 0 0.25rem !important;
+#counsellingsec .counselling .counselling-left {
+  min-width: 250px;
+  border-right: 1px solid #707070;
+  max-height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 4.5rem + 1px)) !important;
+  min-height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 4.5rem + 1px)) !important;
 }
-#contractsec .pagination .page-item .page-link {
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.25rem !important;
-  padding-left: 0.6rem !important;
-  padding-right: 0.6rem !important;
-  border-radius: 0.5rem !important;
-  color: #6c757d !important;
-  font-size: 14px !important;
+#counsellingsec .counselling .counselling-left .counselling-left_top {
+  height: 100px;
+  border-bottom: 1px solid #707070 !important;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
 }
-#contractsec .pagination .page-item .page-link:hover, #contractsec .pagination .page-item .page-link:focus, #contractsec .pagination .page-item .page-link.active {
-  color: #003AC9 !important;
-  border-color: #003AC9 !important;
-  background: transparent !important;
+#counsellingsec .counselling .counselling-left .counselling-left_bot .chats {
+  border-bottom: 1px solid #707070;
 }
-#contractsec .pagination .page-item:first-child .page-link {
-  padding-top: calc(0.5rem + 0px) !important;
-  padding-bottom: calc(0.5rem + 0px) !important;
-  font-size: 9px !important;
+#counsellingsec .counselling .counselling-left .counselling-left_bot .chats:first-of-type {
+  border-bottom: 1px solid #707070 !important;
 }
-#contractsec .pagination .page-item:last-child .page-link {
-  padding-top: calc(0.5rem + 0px) !important;
-  padding-bottom: calc(0.5rem + 0px) !important;
-  font-size: 9px !important;
+#counsellingsec .counselling .counselling-left .counselling-left_bot .chats:not(:first-of-type) {
+  border-bottom: 1px solid #707070 !important;
+}
+#counsellingsec .counselling .counselling-left .counselling-left_bot .chats:last-of-type {
+  border-bottom: 0px solid #707070;
+}
+#counsellingsec .counselling .counselling-left .counselling-left_bot .chats:hover, #counsellingsec .counselling .counselling-left .counselling-left_bot .chats.active {
+  background-color: #F1F2FA;
+}
+#counsellingsec .counselling .counselling-right {
+  max-height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 4.5rem)) !important;
+  min-height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 4.5rem)) !important;
+  width: 100%;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_top {
+  height: 100px;
+  border-bottom: 1px solid #707070 !important;
+  vertical-align: middle;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_top .counselling-right_top-content {
+  height: 100px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist {
+  flex-grow: 2;
+  max-height: calc(100vh - (50px + 2rem + 42px + 2rem + 13px + 15rem)) !important;
+  min-height: calc(100vh - (50px + 2rem + 42px + 2rem + 13px + 15rem)) !important;
+  padding: 1rem;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  width: 100%;
+  display: block;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist .mgssend {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist .mgssend .mgssend-content {
+  max-width: 48%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist .mgssend .mgssend-content .mgssend-time {
+  text-align: right;
+  padding: 0 0.5rem;
+  font-size: 12px;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist .mgssend .mgssend-content .mgssend-mgs {
+  background-color: #E2E8F0;
+  color: #000;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  width: auto !important;
+  word-wrap: break-word !important;
+  margin-right: 0.5rem;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist .mgsread {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist .mgsread .mgsread-content {
+  max-width: 48%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist .mgsread .mgsread-content .mgsread-mgs {
+  border-radius: 1.5rem;
+  background-color: transparent;
+  border: 1px solid #dee2e6;
+  color: #000;
+  padding: 1rem 1.5rem;
+  width: auto;
+  word-wrap: break-word;
+  margin-left: 0.5rem;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messagelist .mgsread .mgsread-content .mgsread-time {
+  text-align: left;
+  padding: 0 0.5rem;
+  font-size: 12px;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messageform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #707070;
+  max-height: 76px !important;
+  height: 76px !important;
+  padding: auto 1.5rem;
+}
+#counsellingsec .counselling .counselling-right .counselling-right_bot .messageform form {
+  max-height: 76px !important;
+  height: 76px !important;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #mastersec .card-main {

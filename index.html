@@ -45,6 +45,8 @@
     <script src="assets/javascript/function.js"></script>
     <script src="assets/javascript/dom.js"></script>
     <script src="assets/javascript/main.js"></script>
+    <script src="assets/javascript/scroll.js"></script>
+
 
     <title>Keflavik</title>
   </head>
@@ -90,12 +92,7 @@
         id="profilebtn"
         class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light"
       >
-        <img
-          src="assets/img/images/tree.png"
-          alt=""
-          height="44px"
-          width="44px"
-        />
+        <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
         <span class="h5 ms-2 text-dark">시공사 이름</span>
       </a>
 
@@ -301,9 +298,9 @@
                     <i class="fa-regular fa-circle-3"></i>
                     <span>계약서</span>
                   </a>
-                  <!-- three words -->
+                  <!-- counselling -->
                   <a
-                    id="threewordsbtn"
+                    id="counsellingbtn"
                     href="#"
                     class="accordion-body-item"
                     data-bs-toggle="tooltip"
@@ -1792,7 +1789,7 @@
      </div>
        
     
-    </section>
+      </section>
 
       <!-- send photo -->
       <section id="sendphotosec" class="d-none content">
@@ -1928,8 +1925,34 @@
       <section id="fairmanagementsec" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">박람회 관리</h2>
-             <div class="row g-0">
+          <h2>박람회 관리</h2>
+          <div class="navigation mt-3 mb-4">
+            <nav class="nav-list nav">
+              <a id="fairmanagement-01_btn" class="nav-link active" href="#"> 박람회 생성 </a>
+              <a id="fairmanagement-02_btn" class="nav-link" href="#"> 입주자 관리 </a>
+            </nav>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center flex-row ">
+            <div class="d-flex justify-content-between align-items-center flex-column w-80 border border-danger">
+              <p class="fw-bold fs-20px"> 일정 관리 </p>
+              <div>
+                <form action="">
+                  
+                </form>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center flex-column w-20 border border-danger">
+              <p class="fw-bold fs-20px"> 시간 관리 </p>
+              <div>
+                <form action="">
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row g-0">
             <div class="col-md-6 mb-2 p-2">
               <nav class="nav align-items-end h-100 fw-bold fs-12px">
                 <a href="#" aria-current="page"
@@ -2156,7 +2179,8 @@
 
             </div>
         </div>
-         </div>
+         </div> -->
+             
         </div>
       </section>
 
@@ -2471,7 +2495,7 @@
           
           <div class="d-flex justify-content-center align-items-center my-5">
             <nav aria-label="Page navigation example">
-              <ul class="pagination pagination-sm">
+              <ul class="pagination pagination-sm page">
                 <li class="page-item">
                   <a class="page-link" href="#" aria-label="Previous">
                     <i class="fa-solid fa-chevrons-left"></i>
@@ -2514,11 +2538,245 @@
         </div>
       </section>
 
-      <!-- three words -->
-      <section id="threewordssec" class="d-none content">
+      <!-- counselling -->
+      <section id="counsellingsec" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">박람회 관리</h2>
+          <h2>삼담</h2>
+          <div class="counselling card my-4 rounded-10">
+            <div class="counselling-left">
+              <div class="counselling-left_top">
+                <span class="h5"> 한규석 <i class="ms-2 fa-regular fa-chevron-down"></i></span>
+                <button type="button" class="btn px-1 py-0 shadow-none">
+                  <i class="fa-light fa-pen-to-square"></i>
+                </button>
+              </div>
+              <div class="counselling-left_bot overflow-y-auto overflow-x-hidden">
+                <!-- contact chats  -->
+                <div class="chats cursor-pointer active">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="counselling-right ">
+              <div class="counselling-right_top d-block">
+                <div class="counselling-right_top-content ps-3">
+                  <img src="assets/img/images/tree.png" alt="" height="60px" width="60px" />
+                  <p class="fw-bold fs-22px ms-2"> 김은하 </p>
+                </div>
+              </div>
+              <div class="counselling-right_bot">
+                
+                <div id="messagelist" class="messagelist">
+                  <!-- <a href="#" target="#mgslast" class="to-top btn btn-primary rounded-circle">
+                    <i class="fa-regular fa-arrow-down"></i>
+                  </a> -->
+
+                  <div class="mgssend">
+                    <div class="mgssend-content">
+                      <div class="mgssend-time fs-8">
+                        10:37
+                      </div>
+                      <div class="mgssend-mgs text-right">
+                        고객이 매우 똑똑하다면 원하는 결과를 얻을 수 있을 것입니다. 또한 그는 자신의 고통을 덜어 줄 것입니다. 그리고 말하자면 삶을 거부하는 시간에 그는 여기서 어떤 고난을 견뎌야 하는가. 우리를 위해 사물이 선택되었기 때문입니다.
+                      </div>
+                      <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                    </div>
+                  </div>
+
+                  <div class="mgsread">
+                    <div class="mgsread-content">
+                        <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                        <div class="mgsread-mgs">
+                          고객이 매우 똑똑하다면 원하는 결과를 얻을 수 있을 것입니다. 또한 그는 자신의 고통을 덜어 줄 것입니다. 그리고 말하자면 삶을 거부하는 시간에 그는 여기서 어떤 고난을 견뎌야 하는가. 우리를 위해 사물이 선택되었기 때문입니다.
+                        </div>
+                        <div class="mgsread-time fs-8">
+                          10:36
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="mgsread">
+                    <div class="mgsread-content">
+                        <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                        <div class="mgsread-mgs">
+                          고객이 매우 똑똑하다면 원하는 결과를 얻을 수 있을 것입니다. 또한 그는 자신의 고통을 덜어 줄 것입니다. 그리고 말하자면 삶을 거부하는 시간에 그는 여기서 어떤 고난을 견뎌야 하는가. 우리를 위해 사물이 선택되었기 때문입니다.
+                        </div>
+                        <div class="mgsread-time fs-8">
+                          10:36
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="mgsread">
+                    <div class="mgsread-content">
+                        <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                        <div class="mgsread-mgs">
+                          나는 당신에게 메시지를 보냈습니다
+                        </div>
+                        <div class="mgsread-time fs-8">
+                          10:36
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="mgssend">
+                    <div class="mgssend-content">
+                      <div class="mgssend-time fs-8">
+                        10:37
+                      </div>
+                      <div class="mgssend-mgs text-right">
+                        고객이 매우 똑똑하다면 원하는 결과를 얻을 수 있을 것입니다. 또한 그는 자신의 고통을 덜어 줄 것입니다. 그리고 말하자면 삶을 거부하는 시간에 그는 여기서 어떤 고난을 견뎌야 하는가. 우리를 위해 사물이 선택되었기 때문입니다.
+                      </div>
+                      <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                    </div>
+                  </div>
+
+                  <div class="mgssend">
+                    <div class="mgssend-content">
+                      <div class="mgssend-time fs-8">
+                        10:37
+                      </div>
+                      <div class="mgssend-mgs text-right">
+                        나는 당신에게 메시지를 보냈습니다
+                      </div>
+                      <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                    </div>
+                  </div>
+
+                  <div class="mgssend">
+                    <div class="mgssend-content">
+                      <div class="mgssend-time fs-8">
+                        10:37
+                      </div>
+                      <div class="mgssend-mgs text-right">
+                        고객이 매우 똑똑하다면 원하는 결과를 얻을 수 있을 것입니다. 또한 그는 자신의 고통을 덜어 줄 것입니다. 그리고 말하자면 삶을 거부하는 시간에 그는 여기서 어떤 고난을 견뎌야 하는가. 우리를 위해 사물이 선택되었기 때문입니다.
+                      </div>
+                      <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                    </div>
+                  </div>
+
+                  <div class="mgsread">
+                    <div class="mgsread-content">
+                        <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                        <div class="mgsread-mgs">
+                          고객이 매우 똑똑하다면 원하는 결과를 얻을 수 있을 것입니다. 또한 그는 자신의 고통을 덜어 줄 것입니다. 그리고 말하자면 삶을 거부하는 시간에 그는 여기서 어떤 고난을 견뎌야 하는가. 우리를 위해 사물이 선택되었기 때문입니다.
+                        </div>
+                        <div class="mgsread-time fs-8">
+                          10:36
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="mgsread">
+                    <div class="mgsread-content">
+                        <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                        <div class="mgsread-mgs">
+                          고객이 매우 똑똑하다면 원하는 결과를 얻을 수 있을 것입니다. 또한 그는 자신의 고통을 덜어 줄 것입니다. 그리고 말하자면 삶을 거부하는 시간에 그는 여기서 어떤 고난을 견뎌야 하는가. 우리를 위해 사물이 선택되었기 때문입니다.
+                        </div>
+                        <div class="mgsread-time fs-8">
+                          10:36
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="mgsread">
+                    <div class="mgsread-content">
+                        <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                        <div class="mgsread-mgs">
+                          나는 당신에게 메시지를 보냈습니다
+                        </div>
+                        <div class="mgsread-time fs-8">
+                          10:36
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="mgssend">
+                    <div class="mgssend-content">
+                      <div class="mgssend-time fs-8">
+                        10:37
+                      </div>
+                      <div class="mgssend-mgs text-right">
+                        고객이 매우 똑똑하다면 원하는 결과를 얻을 수 있을 것입니다. 또한 그는 자신의 고통을 덜어 줄 것입니다. 그리고 말하자면 삶을 거부하는 시간에 그는 여기서 어떤 고난을 견뎌야 하는가. 우리를 위해 사물이 선택되었기 때문입니다.
+                      </div>
+                      <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                    </div>
+                  </div>
+
+                  <div class="mgssend">
+                    <div class="mgssend-content">
+                      <div class="mgssend-time fs-8">
+                        10:37
+                      </div>
+                      <div class="mgssend-mgs text-right">
+                        나는 당신에게 메시지를 보냈습니다
+                      </div>
+                      <img src="assets/img/images/tree.png" alt="" height="30px" width="30px" />
+                    </div>
+                  </div>
+                  
+              
+                  <div id="#mgslast"></div>
+                </div>
+                <div id="messageform" class="messageform w-100">
+                  <form  action="" class="w-100">
+                      <input type="text" class="form-control flex-grow" id="MessageSender" name="MessageSender" value="" hidden>
+                      <input type="text" class="form-control flex-grow" id="MessageReceiver" name="MessageReceiver" value="" hidden>
+                      <input type="text" class="form-control flex-grow rounded-pill" id="MessageContext" name="MessageContext">
+                      <button type="button" id="MessageSend" class="ms-2 btn btn-primary rounded-circle">
+                        <i class="fa-regular fa-arrow-up"></i>
+                      </button>
+                  </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
           
         </div>
       </section>
@@ -2594,9 +2852,153 @@
 
               <div id="master-02_div" class="d-none card my-3 border-0">
                 <!-- content here -->
-                2
+                <div class="input-group rounded-pill"> 
+                  <input type="search" class="form-control rounded-pill"  placeholder="시공사 검색" aria-label="Search" aria-describedby="search-addon"   />
+                </div>
+                
+                <div class="my-4">
+                  <div class="row g-3">
+
+                    <div class="col-6"> 
+                      <div class="card p-3 cursor-pointer"> 
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-18px fw-500"> 시공사 1</p>
+                              <p class="fs-16px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6"> 
+                      <div class="card p-3 cursor-pointer"> 
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-18px fw-500"> 시공사 1</p>
+                              <p class="fs-16px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6"> 
+                      <div class="card p-3 cursor-pointer"> 
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-18px fw-500"> 시공사 1</p>
+                              <p class="fs-16px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6"> 
+                      <div class="card p-3 cursor-pointer"> 
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-18px fw-500"> 시공사 1</p>
+                              <p class="fs-16px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6"> 
+                      <div class="card p-3 cursor-pointer"> 
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-18px fw-500"> 시공사 1</p>
+                              <p class="fs-16px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6"> 
+                      <div class="card p-3 cursor-pointer"> 
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-18px fw-500"> 시공사 1</p>
+                              <p class="fs-16px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                        
+                    
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center my-5">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-sm page">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <i class="fa-solid fa-chevrons-left"></i>
+                        </a>
+                      </li>
+                      <li class="page-item ">
+                        <a class="page-link active " href="#">
+                          1
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          2
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          3
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          4
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          5
+                        </a>
+                        </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <i class="fa-solid fa-chevrons-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
               </div>
 
+
+              
               <div id="master-03_div" class="d-none card my-3 border-0">
                 <!-- content here  -->
                 3

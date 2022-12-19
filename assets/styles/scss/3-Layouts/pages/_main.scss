@@ -11,44 +11,196 @@
         overflow: hidden;
     }
 
-    .pagination {
-        margin-bottom: 0 !important;
-        .page-item {
-            margin: 0 $s1 !important;
+    
+}
 
-            .page-link {
-                padding-top: $s1 !important;
-                padding-bottom: $s1 !important;
-                padding-left: .6rem !important;
-                padding-right: .6rem !important;
-                border-radius: 0.5rem !important;
-                color: $gray-700 !important;
-                font-size: 14px !important;
+#counsellingsec {
+    .counselling {
+        min-height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (1.5 * $s5))) !important;
+        max-height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (1.5 * $s5))) !important;
+        border-color: $gray-800;
 
-                &:hover, &:focus, &.active {
-                    color: $primary !important;
-                    border-color: $primary !important;
-                    background: $transparent !important;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .counselling-left{
+            min-width: 250px;
+            border-right: 1px solid $gray-800;
+            max-height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (1.5 * $s5) + 1px)) !important;
+            min-height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (1.5 * $s5) + 1px)) !important;
+
+            .counselling-left_top {
+                height: 100px;
+                border-bottom: 1px solid $gray-800 !important;
+                vertical-align: middle;
+                display: flex;
+                justify-content: space-around;
+                align-items: end;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                padding-bottom: $s3;
+            }
+
+            .counselling-left_bot {
+
+            
+                .chats {
+                    border-bottom: 1px solid $gray-800;
+
+                    &:first-of-type {
+                        border-bottom: 1px solid $gray-800 !important;
+                    }
+
+                    &:not(:first-of-type) {
+                        border-bottom: 1px solid $gray-800 !important;
+                    }
+
+                    &:last-of-type {
+                        border-bottom: 0px solid $gray-800;
+                    }
+
+                    &:hover, &.active {
+                        background-color: $gray-100;
+                    }
+
+                }
+            }
+        }
+
+        .counselling-right{
+            max-height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (1.5 * $s5))) !important;
+            min-height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (1.5 * $s5))) !important;
+            width: 100%;
+
+            .counselling-right_top {
+                height: 100px;
+                border-bottom: 1px solid $gray-800 !important;
+                vertical-align: middle;
+
+                .counselling-right_top-content {
+                    height: 100px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
                 }
             }
 
-            &:first-child {
-                .page-link {
-                    padding-top: calc($s2 + 0px) !important;
-                    padding-bottom: calc($s2 + 0px) !important;
-                    font-size: 9px !important;
+            .counselling-right_bot {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+
+                .messagelist {
+                    flex-grow: 2;
+                    max-height: calc(100vh - (50px + (2 * $s3) + 42px + (2 * $s3) + 13px + (5 * $s5))) !important;
+                    min-height: calc(100vh - (50px + (2 * $s3) + 42px + (2 * $s3) + 13px + (5 * $s5))) !important;
+                    padding: $s3;
+                    overflow-x: hidden !important;
+                    overflow-y: auto !important;
+
+                    width: 100%;
+                    display: block;
+
+                    .mgssend {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        margin-bottom: $s2;
+
+                        .mgssend-content {
+                            max-width: 48%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            
+
+                            .mgssend-time {
+                                text-align: right;
+                                padding: 0 $s2;
+                                font-size: 12px;
+                            }
+
+                            .mgssend-mgs {
+                                background-color: $blueGray-200;
+                                color: $dark;
+                                padding: $s3 $s4;
+                                border-radius: $s4;
+                                width: auto !important;
+                                word-wrap: break-word !important;
+                                margin-right: $s2;
+                            }
+                        }
+                    }
+
+                    .mgsread {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        margin-bottom: $s2;
+
+
+                        .mgsread-content {
+                            max-width: 48%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+
+                            .mgsread-mgs {
+                                border-radius: $s4;
+                                background-color: $transparent;
+                                border: 1px solid $gray-300;
+                                color: $dark;
+                                padding: $s3 $s4;
+                                width: auto;
+                                word-wrap: break-word;
+                                margin-left: $s2;
+                            }
+
+                            .mgsread-time {
+                                text-align: left;
+                                padding: 0 $s2;
+                                // font-weight: lighter;
+                                font-size: 12px;
+                            }
+                        }
+
+                    }
                 }
-            }
-            &:last-child {
-                .page-link {
-                    padding-top: calc($s2 + 0px) !important;
-                    padding-bottom: calc($s2 + 0px) !important;
-                    font-size: 9px !important;
+
+                .messageform {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-top: 1px solid $gray-800;
+
+                    max-height: 76px !important;
+                    height: 76px !important;
+                    // border: 1px solid red;
+                    padding: auto $s4;
+                    
+
+                    form {
+                        // border: 1px solid red;
+                        max-height: 76px !important;
+                        height: 76px !important;
+                        padding: 0 $s4;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
             }
         }
     }
 }
+
 
 #mastersec {
     .card-main {

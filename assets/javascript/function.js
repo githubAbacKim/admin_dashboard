@@ -21,14 +21,14 @@ function menu_accordion() {
     if ($("#fairsec").hasClass("d-block") ||
         $("#fairmanagementsec").hasClass("d-block") ||
         $("#contractsec").hasClass("d-block") ||
-        $("#threewordssec").hasClass("d-block") ||
+        $("#counsellingsec").hasClass("d-block") ||
         $("#mastersec").hasClass("d-block")) {
         // do nothing
     }
     else if ($("#fairsec").hasClass("d-none") ||
         $("#fairmanagementsec").hasClass("d-none") ||
         $("#contractsec").hasClass("d-none") ||
-        $("#threewordssec").hasClass("d-none") ||
+        $("#counsellingsec").hasClass("d-none") ||
         $("#mastersec").hasClass("d-none")) {
 
             $("#menubtn").addClass('collapsed');
@@ -144,11 +144,11 @@ function check_contractsec() {
 }
 
 // 5.2
-function check_threewordssec() {
-    if ($("#threewordssec").hasClass("d-block")) {
-        $("#threewordssec").addClass("d-none");
-        $("#threewordssec").removeClass("d-block");
-        $("#threewordsbtn").removeClass('active');
+function check_counsellingsec() {
+    if ($("#counsellingsec").hasClass("d-block")) {
+        $("#counsellingsec").addClass("d-none");
+        $("#counsellingsec").removeClass("d-block");
+        $("#counsellingbtn").removeClass('active');
     }
 }
 
