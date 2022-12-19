@@ -127,6 +127,11 @@ $(document).ready(function () {
     tooltips(); // Call listener function at run time
 });
 
+/** TOOLTIP FOR PROGRESS BAR */
+$(document).ready(function () {
+    $('[data-bs-toggle="tooltip-progress"]').tooltip("enable");
+});
+
 /** SIDEBAR BUTTON FUNCTIONS  **/
 $(document).ready(function () {
     // 0
@@ -353,6 +358,7 @@ $(document).ready(function () {
         }
     })
 
+    // 5.5
     $("#fairbtn").click(function () {
         if ($("#fairsec").hasClass("d-none")) {
             $("#fairsec").addClass("d-block");
@@ -377,6 +383,7 @@ $(document).ready(function () {
         }
     })
 
+    // 5.4
     $("#fairmanagementbtn").click(function () {
         if ($("#fairmanagementsec").hasClass("d-none")) {
             $("#fairmanagementsec").addClass("d-block");
@@ -401,6 +408,7 @@ $(document).ready(function () {
         }
     })
 
+    // 5.3
     $("#contractbtn").click(function () {
         if ($("#contractsec").hasClass("d-none")) {
             $("#contractsec").addClass("d-block");
@@ -426,6 +434,7 @@ $(document).ready(function () {
         }
     })
 
+    // 5.2
     $("#threewordsbtn").click(function () {
         if ($("#threewordssec").hasClass("d-none")) {
             $("#threewordssec").addClass("d-block");
@@ -450,6 +459,7 @@ $(document).ready(function () {
         }
     })
 
+    // 5.1
     $("#masterbtn").click(function () {
         if ($("#mastersec").hasClass("d-none")) {
             $("#mastersec").addClass("d-block");
@@ -475,7 +485,77 @@ $(document).ready(function () {
     })
 });
 
+
+/** BUTTONS OF MASTER PAGE */
 $(document).ready(function () {
-    $('[data-bs-toggle="tooltip-progress"]').tooltip("enable");
+    // 1
+    $("#master-01_btn").click(function () {
+        if ($("#master-01_div").hasClass("d-none")) {
+            $("#master-01_div").addClass("d-block");
+            $("#master-01_div").removeClass("d-none");
+            $("#master-01-card1").addClass("");
+            $("#master-01-card2").addClass("d-flex");
+            $("#master-01-card2").removeClass("d-none");
+            $("#master-01_btn").addClass("active");
+
+            if ($("#master-02_div").hasClass("d-block")) {
+                $("#master-02_div").addClass("d-none");
+                $("#master-02_div").removeClass("d-block");
+                $("#master-02_btn").removeClass("active");
+            }
+
+            if ($("#master-03_div").hasClass("d-block")) {
+                $("#master-03_div").addClass("d-none");
+                $("#master-03_div").removeClass("d-block");
+                $("#master-03_btn").removeClass("active");
+            }
+        }
+    })
+
+    $("#master-02_btn").click(function () {
+        if ($("#master-02_div").hasClass("d-none")) {
+            $("#master-02_div").addClass("d-block");
+            $("#master-02_div").removeClass("d-none");
+            $("#master-02_btn").addClass("active");
+
+            if ($("#master-01_div").hasClass("d-block")) { 
+                $("#master-01_div").addClass("d-none");
+                $("#master-01_div").removeClass("d-block");
+                $("#master-01-card1").addClass("d-none");
+                $("#master-01-card2").addClass("d-none");
+                $("#master-01-card2").removeClass("d-flex");
+                $("#master-01_btn").removeClass("active");
+            }
+
+            if ($("#master-03_div").hasClass("d-block")) {
+                $("#master-03_div").addClass("d-none");
+                $("#master-03_div").removeClass("d-block");
+                $("#master-03_btn").removeClass("active");
+            }
+        }
+    })
+
+    $("#master-03_btn").click(function () {
+        if ($("#master-03_div").hasClass("d-none")) {
+            $("#master-03_div").addClass("d-block");
+            $("#master-03_div").removeClass("d-none");
+            $("#master-03_btn").addClass("active");
+
+            if ($("#master-01_div").hasClass("d-block")) {
+                $("#master-01_div").addClass("d-none");
+                $("#master-01_div").removeClass("d-block");
+                $("#master-01-card1").addClass("d-none");
+                $("#master-01-card2").addClass("d-none");
+                $("#master-01-card2").removeClass("d-flex");
+                $("#master-01_btn").removeClass("active");
+            }
+
+            if ($("#master-02_div").hasClass("d-block")) {
+                $("#master-02_div").addClass("d-none");
+                $("#master-02_div").removeClass("d-block");
+                $("#master-02_btn").removeClass("active");
+            }
+        }
+    })
 });
 

@@ -42,6 +42,7 @@
     <script src="assets/vendors/fullcalendar-scheduler-5.11.3/js/main.min.js"></script>
     <script src="assets/vendors/fullcalendar-scheduler-5.11.3/js/locales-all.min.js"></script>
     <script src="assets/vendors/bootstrap-5.1.3/js/bootstrap.bundle.js"></script>
+    <script src="assets/javascript/function.js"></script>
     <script src="assets/javascript/dom.js"></script>
     <script src="assets/javascript/main.js"></script>
 
@@ -891,27 +892,14 @@
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
           <h2 class="mb-2">카드 사용 내역</h2>
-          <div class="row g-0">
-            <div class="col-md-12 col-lg-7">
-              <nav class="nav align-items-end h-100 fw-bold p-2 my-3">
-                <a
-                  href="#"
-                  class="nav-link text-start active pb-0 ps-0 pe-5 link-dark"
-                  aria-current="page"
-                >
-                  날짜별로 보기
-                </a>
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark"
-                  >카드로 보기</a
-                >
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark"
-                  >계정으로 보기</a
-                >
-              </nav>
-            </div>
-            <div class="col-md-0 col-lg-5"></div>
+
+          <div class="navigation mt-3 mb-4">
+            <nav class="nav-list nav">
+              <a class="nav-link active" href="#"> 날짜별로 보기 </a>
+              <a class="nav-link" href="#"> 카드로 보기 </a>
+              <a class="nav-link" href="#"> 계정으로 보기 </a>
+            </nav>
           </div>
-          <br />
 
           <div class="w-95 my-3 rounded overflow-x-auto text-nowrap card-table">
             <table class="table text-center">
@@ -1001,27 +989,15 @@
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
           <h2 class="mb-2">카드 사용 내역</h2>
-          <div class="row g-0">
-            <div class="col-md-12 col-lg-7">
-              <nav class="nav align-items-end h-100 fw-bold p-2 my-3">
-                <a
-                  href="#"
-                  class="nav-link text-start active pb-0 ps-0 pe-5 link-dark"
-                  aria-current="page"
-                >
-                  날짜별로 보기
-                </a>
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark"
-                  >카드로 보기</a
-                >
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark"
-                  >계정으로 보기</a
-                >
-              </nav>
-            </div>
-            <div class="col-md-0 col-lg-5"></div>
+
+          <div class="navigation mt-3 mb-4">
+            <nav class="nav-list nav">
+              <a class="nav-link active" href="#"> 날짜별로 보기 </a>
+              <a class="nav-link" href="#"> 카드로 보기 </a>
+              <a class="nav-link" href="#"> 계정으로 보기 </a>
+            </nav>
           </div>
-          <br />
+
           <div class="w-99 my-3 rounded overflow-x-auto text-nowrap card-table">
             <table class="table text-center">
               <thead class="bg-primary">
@@ -2125,8 +2101,8 @@
                     <i class="fa-solid fa-chevrons-left"></i>
                   </a>
                 </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">
+                <li class="page-item ">
+                  <a class="page-link active " href="#">
                     1
                   </a>
                 </li>
@@ -2178,70 +2154,84 @@
             <div class="card-main shadow bg-white col-12 col-lg-6 col-xl-6 p-3 p-md-5">
               <h2>시공사 검색</h2>
 
-              <nav class="nav align-items-end fw-bold p-2 my-3">
-                <a href="#" class="nav-link text-start active pb-0 ps-0 pe-5 fs-13px " aria-current="page">
-                    구독 정보
-                </a>
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 fs-13px link-dark">시공사 관리</a>
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 fs-13px link-dark">박람회 할당</a>
-              </nav>
-          
-              <div class="my-5 rounded overflow-x-auto text-nowrap card-table">
-                <table class="table text-center">
-                  <thead class="bg-primary">
-                    <tr class="text-white border-bottom-0">
-                      <th class="rounded-start text-center">이름</th>
-                        <th  class="text-center"> 첫구독시작일</th>
-                        <th  class="text-center"> 최근결제날짜</th>
-                        <th class="rounded-end text-center"> 매월 결제일 </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="text-primary fs-7">
-                      <td  >현식</td>
-                      <td >2022/10/24</td>
-                      <td >2022/10/03</td>
-                      <td >3천</td>
-                    </tr>
-                    <tr class="text-primary fs-7">
-                      <td  >현식</td>
-                      <td >2022/10/24</td>
-                      <td >2022/10/03</td>
-                      <td >3천</td>
-                    </tr>
-                    <tr class="text-primary fs-7">
-                      <td  >현식</td>
-                      <td >2022/10/24</td>
-                      <td >2022/10/03</td>
-                      <td >3천</td>
-                    </tr>
-                    <tr class="text-primary fs-7">
-                      <td  >현식</td>
-                      <td >2022/10/24</td>
-                      <td >2022/10/03</td>
-                      <td >3천</td>
-                    </tr>
-                    <tr class="text-primary fs-7">
-                      <td  >현식</td>
-                      <td >2022/10/24</td>
-                      <td >2022/10/03</td>
-                      <td >3천</td>
-                    </tr>
-                    <tr class="text-primary fs-7">
-                      <td  >현식</td>
-                      <td >2022/10/24</td>
-                      <td >2022/10/03</td>
-                      <td >3천</td>
-                    </tr>
-                      
-                  </tbody>
-                </table>
+              <div class="navigation mt-3 mb-4">
+                <nav class="nav-list nav">
+                  <a id="master-01_btn" class="nav-link active" href="#">구독 정보</a>
+                  <a id="master-02_btn" class="nav-link" href="#">시공사 관리</a>
+                  <a id="master-03_btn" class="nav-link" href="#">박람회 할당</a>
+                </nav>
               </div>
+          
+              <!-- datatables -->
+              <div id="master-01_div" class="d-block card my-3 border-0">
+                <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+                  <table id="" class="display table table-hover">
+                      <thead class="text-center bg-primary">
+                          <tr class="text-white border-bottom-0">
+                            <th class="rounded-start text-center">이름</th>
+                            <th  class="text-center"> 첫구독시작일</th>
+                            <th  class="text-center"> 최근결제날짜</th>
+                            <th class="rounded-end text-center"> 매월 결제일 </th>
+                          </tr>
+                      </thead>
+                      <tbody class="text-center text-darkprimary">
+                        <tr class="fs-14px">
+                          <td >현식</td>
+                          <td >2022/10/24</td>
+                          <td >2022/10/03</td>
+                          <td >3천</td>
+                        </tr>
+                        <tr class="fs-14px">
+                          <td  >현식</td>
+                          <td >2022/10/24</td>
+                          <td >2022/10/03</td>
+                          <td >3천</td>
+                        </tr>
+                        <tr class="fs-14px">
+                          <td  >현식</td>
+                          <td >2022/10/24</td>
+                          <td >2022/10/03</td>
+                          <td >3천</td>
+                        </tr>
+                        <tr class="fs-14px">
+                          <td  >현식</td>
+                          <td >2022/10/24</td>
+                          <td >2022/10/03</td>
+                          <td >3천</td>
+                        </tr>
+                        <tr class="fs-14px">
+                          <td  >현식</td>
+                          <td >2022/10/24</td>
+                          <td >2022/10/03</td>
+                          <td >3천</td>
+                        </tr>
+                        <tr class="fs-14px">
+                          <td  >현식</td>
+                          <td >2022/10/24</td>
+                          <td >2022/10/03</td>
+                          <td >3천</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div id="master-02_div" class="d-none card my-3 border-0">
+                <!-- content here -->
+                2
+              </div>
+
+              <div id="master-03_div" class="d-none card my-3 border-0">
+                <!-- content here  -->
+                3
+              </div>
+
             </div>
 
+            <div id="master-01-card1" class="card-main1">
+            </div>
 
-            <div class="card-main1"></div>
-            <div class="card-main2 col-12 col-lg-6 col-xl-5 p-3 p-md-5">
+            <div id="master-01-card2" class="d-flex card-main2 col-12 col-lg-6 col-xl-5 p-3 p-md-5">
             <!-- INSIDE CONTENTS -->
               <div class="card-main2-content">
                 <h1 class="fs-25px fw-bolder text-center"> 시공사 검색</h1> 
