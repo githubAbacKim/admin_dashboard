@@ -895,91 +895,263 @@
 
           <div class="navigation mt-3 mb-4">
             <nav class="nav-list nav">
-              <a class="nav-link active" href="#"> 날짜별로 보기 </a>
-              <a class="nav-link" href="#"> 카드로 보기 </a>
-              <a class="nav-link" href="#"> 계정으로 보기 </a>
+              <a id="cardusage-01_btn" class="nav-link" href="#"> 날짜별로 보기 </a>
+              <a id="cardusage-02_btn" class="nav-link" href="#"> 카드로 보기 </a>
+              <a id="cardusage-03_btn" class="nav-link" href="#"> 계정으로 보기 </a>
             </nav>
           </div>
 
-          <div class="w-95 my-3 rounded overflow-x-auto text-nowrap card-table">
-            <table class="table text-center">
-              <thead class="bg-primary">
-                <tr class="text-white border-bottom-0">
-                  <th class="rounded-start text-center">카드번호(뒤 4자리)</th>
-                  <th class="text-center">날짜</th>
-                  <th class="text-center">시간</th>
-                  <th class="text-center">금액</th>
-                  <th class="text-center">상호</th>
-                  <th class="rounded-end text-center">계정(관리자가 직접 입력)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="text-primary fs-7">
-                  <td>5806</td>
-                  <td>2022-12-14</td>
-                  <td>20.15</td>
-                  <td>30,000</td>
-                  <td>작동 테스트</td>
-                  <td>상호</td>
-                </tr>
-                <tr class="text-primary fs-7">
-                  <td>5806</td>
-                  <td>2022-12-14</td>
-                  <td>20.15</td>
-                  <td>30,000</td>
-                  <td>작동 테스트</td>
-                  <td>상호</td>
-                </tr>
-                <tr class="text-primary fs-7">
-                  <td>5806</td>
-                  <td>2022-12-14</td>
-                  <td>20.15</td>
-                  <td>30,000</td>
-                  <td>작동 테스트</td>
-                  <td>상호</td>
-                </tr>
-                <tr class="text-primary fs-7">
-                  <td>5806</td>
-                  <td>2022-12-14</td>
-                  <td>20.15</td>
-                  <td>30,000</td>
-                  <td>작동 테스트</td>
-                  <td>상호</td>
-                </tr>
-                <tr class="text-primary fs-7">
-                  <td>5806</td>
-                  <td>2022-12-14</td>
-                  <td>20.15</td>
-                  <td>30,000</td>
-                  <td>작동 테스트</td>
-                  <td>상호</td>
-                </tr>
-                <tr class="text-primary fs-7">
-                  <td>5806</td>
-                  <td>2022-12-14</td>
-                  <td>20.15</td>
-                  <td>30,000</td>
-                  <td>작동 테스트</td>
-                  <td>상호</td>
-                </tr>
-                <tr class="text-primary fs-7">
-                  <td>5806</td>
-                  <td>2022-12-14</td>
-                  <td>20.15</td>
-                  <td>30,000</td>
-                  <td>작동 테스트</td>
-                  <td>상호</td>
-                </tr>
-                <tr class="text-primary fs-7">
-                  <td>5806</td>
-                  <td>2022-12-14</td>
-                  <td>20.15</td>
-                  <td>30,000</td>
-                  <td>작동 테스트</td>
-                  <td>상호</td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- datatables -->
+          <div id="cardusage-01_div" class="d-block card my-3 border-0">
+            1
+            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+              <table id="" class="display table table-hover">
+                  <thead class="text-center bg-primary">
+                      <tr class="text-white border-bottom-0">
+                        <th class="rounded-start text-center">카드번호(뒤 4자리)</th>
+                        <th class="text-center">날짜</th>
+                        <th class="text-center">시간</th>
+                        <th class="text-center">금액</th>
+                        <th class="text-center">상호</th>
+                        <th class="rounded-end text-center">계정(관리자가 직접 입력)</th>
+                      </tr>
+                  </thead>
+                  <tbody class="text-center text-darkprimary fs-14px">
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="cardusage-02_div" class="d-none card my-3 border-0">
+            2
+            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+              <table id="" class="display table table-hover">
+                  <thead class="text-center bg-primary">
+                      <tr class="text-white border-bottom-0">
+                        <th class="rounded-start text-center">카드번호(뒤 4자리)</th>
+                        <th class="text-center">날짜</th>
+                        <th class="text-center">시간</th>
+                        <th class="text-center">금액</th>
+                        <th class="text-center">상호</th>
+                        <th class="rounded-end text-center">계정(관리자가 직접 입력)</th>
+                      </tr>
+                  </thead>
+                  <tbody class="text-center text-darkprimary fs-14px">
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="cardusage-03_div" class="d-none card my-3 border-0">
+            3
+            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+              <table id="" class="display table table-hover">
+                  <thead class="text-center bg-primary">
+                      <tr class="text-white border-bottom-0">
+                        <th class="rounded-start text-center">카드번호(뒤 4자리)</th>
+                        <th class="text-center">날짜</th>
+                        <th class="text-center">시간</th>
+                        <th class="text-center">금액</th>
+                        <th class="text-center">상호</th>
+                        <th class="rounded-end text-center">계정(관리자가 직접 입력)</th>
+                      </tr>
+                  </thead>
+                  <tbody class="text-center text-darkprimary fs-14px">
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                    <tr>
+                      <td>5806</td>
+                      <td>2022-12-14</td>
+                      <td>20.15</td>
+                      <td>30,000</td>
+                      <td>작동 테스트</td>
+                      <td>상호</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -992,107 +1164,311 @@
 
           <div class="navigation mt-3 mb-4">
             <nav class="nav-list nav">
-              <a class="nav-link active" href="#"> 날짜별로 보기 </a>
-              <a class="nav-link" href="#"> 카드로 보기 </a>
-              <a class="nav-link" href="#"> 계정으로 보기 </a>
+              <a id="orderstatus-01_btn" class="nav-link" href="#"> 날짜별로 보기 </a>
+              <a id="orderstatus-02_btn" class="nav-link" href="#"> 카드로 보기 </a>
+              <a id="orderstatus-03_btn" class="nav-link" href="#"> 계정으로 보기 </a>
             </nav>
           </div>
 
-          <div class="w-99 my-3 rounded overflow-x-auto text-nowrap card-table">
-            <table class="table text-center">
-              <thead class="bg-primary">
-                <tr class="text-white border-bottom-0">
-                  <th class="rounded-start text-center">주소명</th>
-                  <th class="text-center">실측일자</th>
-                  <th  class="text-center">발주일자</th>
-                  <th  class="text-center">제작완료일자</th>
-                  <th  class="text-center">출고 여부</th>
-                  <th  class="text-center">시공여부</th>
-                  <th  class="text-center">발주서 보기</th>
-                  <th  class="text-center">견적서 보기</th>
-                  <th class="rounded-end text-center">보기</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="text-dark fs-7">
-                  <td>작동 테스트</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>97</td>
-                  <td>010-9857-1143</td>
-                  <td>휴먼 프론트 차지</td>
-                  <td>보다</td>
-                  <td>이지연</td>
-                </tr>
-                <tr class="text-dark fs-7">
-                  <td>작동 테스트</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>97</td>
-                  <td>010-9857-1143</td>
-                  <td>휴먼 프론트 차지</td>
-                  <td>보다</td>
-                  <td>이지연</td>
-                </tr>
-                <tr class="text-dark fs-7">
-                  <td>작동 테스트</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>97</td>
-                  <td>010-9857-1143</td>
-                  <td>휴먼 프론트 차지</td>
-                  <td>보다</td>
-                  <td>이지연</td>
-                </tr>
-                <tr class="text-dark fs-7">
-                  <td>작동 테스트</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>97</td>
-                  <td>010-9857-1143</td>
-                  <td>휴먼 프론트 차지</td>
-                  <td>보다</td>
-                  <td>이지연</td>
-                </tr>
-                <tr class="text-dark fs-7">
-                  <td>작동 테스트</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>97</td>
-                  <td>010-9857-1143</td>
-                  <td>휴먼 프론트 차지</td>
-                  <td>보다</td>
-                  <td>이지연</td>
-                </tr>
-                <tr class="text-dark fs-7">
-                  <td>작동 테스트</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>97</td>
-                  <td>010-9857-1143</td>
-                  <td>휴먼 프론트 차지</td>
-                  <td>보다</td>
-                  <td>이지연</td>
-                </tr>
-                <tr class="text-dark fs-7">
-                  <td>작동 테스트</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>2022-10-04</td>
-                  <td>97</td>
-                  <td>010-9857-1143</td>
-                  <td>휴먼 프론트 차지</td>
-                  <td>보다</td>
-                  <td>이지연</td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- datatables -->
+          <div id="orderstatus-01_div" class="d-block card my-3 border-0">
+            1
+            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+              <table id="" class="display table table-hover">
+                  <thead class="text-center bg-primary">
+                    <tr class="text-white border-bottom-0">
+                      <th class="rounded-start text-center">주소명</th>
+                      <th class="text-center">실측일자</th>
+                      <th  class="text-center">발주일자</th>
+                      <th  class="text-center">제작완료일자</th>
+                      <th  class="text-center">출고 여부</th>
+                      <th  class="text-center">시공여부</th>
+                      <th  class="text-center">발주서 보기</th>
+                      <th  class="text-center">견적서 보기</th>
+                      <th class="rounded-end text-center">보기</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-center text-darkprimary fs-14px">
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="orderstatus-02_div" class="d-none card my-3 border-0">
+            2
+            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+              <table id="" class="display table table-hover">
+                  <thead class="text-center bg-primary">
+                    <tr class="text-white border-bottom-0">
+                      <th class="rounded-start text-center">주소명</th>
+                      <th class="text-center">실측일자</th>
+                      <th  class="text-center">발주일자</th>
+                      <th  class="text-center">제작완료일자</th>
+                      <th  class="text-center">출고 여부</th>
+                      <th  class="text-center">시공여부</th>
+                      <th  class="text-center">발주서 보기</th>
+                      <th  class="text-center">견적서 보기</th>
+                      <th class="rounded-end text-center">보기</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-center text-darkprimary fs-14px">
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="orderstatus-03_div" class="d-none card my-3 border-0">
+            3
+            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+              <table id="" class="display table table-hover">
+                  <thead class="text-center bg-primary">
+                    <tr class="text-white border-bottom-0">
+                      <th class="rounded-start text-center">주소명</th>
+                      <th class="text-center">실측일자</th>
+                      <th  class="text-center">발주일자</th>
+                      <th  class="text-center">제작완료일자</th>
+                      <th  class="text-center">출고 여부</th>
+                      <th  class="text-center">시공여부</th>
+                      <th  class="text-center">발주서 보기</th>
+                      <th  class="text-center">견적서 보기</th>
+                      <th class="rounded-end text-center">보기</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-center text-darkprimary fs-14px">
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                    <tr>
+                      <td>작동 테스트</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>2022-10-04</td>
+                      <td>97</td>
+                      <td>010-9857-1143</td>
+                      <td>휴먼 프론트 차지</td>
+                      <td>보다</td>
+                      <td>이지연</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -1152,7 +1528,7 @@
         <div class="card-main shadow bg-white col-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
           <h2>발주관리</h2>
-          <div class="my-5  p-2"> 
+          <div class="my-5 p-2"> 
             <div class="d-flex justify-content-start align-items-center flex-wrap">
               <h1 class="fs-20px fw-bold"> 발송 </h1>
               <a href="#"  class="d-flex flow-row text-muted">
@@ -1794,7 +2170,7 @@
             <i class="fa-regular fa-chevron-down"></i>
           </h6>
 
-          <div class="card-submain">
+          <div class="card-submain border border-danger">
             <div class="row g-4">
               <div class="col-md-12 col-lg-6 col-xxl-4">
                 <div class="border rounded-2 p-3">

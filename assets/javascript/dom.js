@@ -498,64 +498,109 @@ $(document).ready(function () {
             $("#master-01-card2").removeClass("d-none");
             $("#master-01_btn").addClass("active");
 
-            if ($("#master-02_div").hasClass("d-block")) {
-                $("#master-02_div").addClass("d-none");
-                $("#master-02_div").removeClass("d-block");
-                $("#master-02_btn").removeClass("active");
-            }
-
-            if ($("#master-03_div").hasClass("d-block")) {
-                $("#master-03_div").addClass("d-none");
-                $("#master-03_div").removeClass("d-block");
-                $("#master-03_btn").removeClass("active");
-            }
+            check_master02div();
+            check_master03div();
         }
     })
 
+    // 2
     $("#master-02_btn").click(function () {
         if ($("#master-02_div").hasClass("d-none")) {
             $("#master-02_div").addClass("d-block");
             $("#master-02_div").removeClass("d-none");
             $("#master-02_btn").addClass("active");
 
-            if ($("#master-01_div").hasClass("d-block")) { 
-                $("#master-01_div").addClass("d-none");
-                $("#master-01_div").removeClass("d-block");
-                $("#master-01-card1").addClass("d-none");
-                $("#master-01-card2").addClass("d-none");
-                $("#master-01-card2").removeClass("d-flex");
-                $("#master-01_btn").removeClass("active");
-            }
-
-            if ($("#master-03_div").hasClass("d-block")) {
-                $("#master-03_div").addClass("d-none");
-                $("#master-03_div").removeClass("d-block");
-                $("#master-03_btn").removeClass("active");
-            }
+            check_master01div();
+            check_master03div();
         }
     })
 
+    // 3
     $("#master-03_btn").click(function () {
         if ($("#master-03_div").hasClass("d-none")) {
             $("#master-03_div").addClass("d-block");
             $("#master-03_div").removeClass("d-none");
             $("#master-03_btn").addClass("active");
 
-            if ($("#master-01_div").hasClass("d-block")) {
-                $("#master-01_div").addClass("d-none");
-                $("#master-01_div").removeClass("d-block");
-                $("#master-01-card1").addClass("d-none");
-                $("#master-01-card2").addClass("d-none");
-                $("#master-01-card2").removeClass("d-flex");
-                $("#master-01_btn").removeClass("active");
-            }
-
-            if ($("#master-02_div").hasClass("d-block")) {
-                $("#master-02_div").addClass("d-none");
-                $("#master-02_div").removeClass("d-block");
-                $("#master-02_btn").removeClass("active");
-            }
+            check_master01div();
+            check_master02div();
         }
     })
 });
 
+
+/** BUTTONS OF CARD USAGE */
+$(document).ready(function () {
+    // 1
+    $("#cardusage-01_btn").click(function () {
+        if ($("#cardusage-01_div").hasClass("d-none")) {
+            $("#cardusage-01_div").addClass("d-block");
+            $("#cardusage-01_div").removeClass("d-none");
+            $("#cardusage-01_btn").addClass("active");
+            check_cardusage02div();
+            check_cardusage03div();
+        }
+    })
+
+    // 2
+    $("#cardusage-02_btn").click(function () {
+        if ($("#cardusage-02_div").hasClass("d-none")) {
+            $("#cardusage-02_div").addClass("d-block");
+            $("#cardusage-02_div").removeClass("d-none");
+            $("#cardusage-02_btn").addClass("active");
+
+            check_cardusage01div();
+            check_cardusage03div();
+        }
+    })
+
+    // 3
+    $("#cardusage-03_btn").click(function () {
+        if ($("#cardusage-03_div").hasClass("d-none")) {
+            $("#cardusage-03_div").addClass("d-block");
+            $("#cardusage-03_div").removeClass("d-none");
+            $("#cardusage-03_btn").addClass("active");
+
+            check_cardusage01div();
+            check_cardusage02div();
+        }
+    })
+});
+
+/** BUTTONS OF ORDER STATUS */
+$(document).ready(function () {
+    // 1
+    $("#orderstatus-01_btn").click(function () {
+        if ($("#orderstatus-01_div").hasClass("d-none")) {
+            $("#orderstatus-01_div").addClass("d-block");
+            $("#orderstatus-01_div").removeClass("d-none");
+            $("#orderstatus-01_btn").addClass("active");
+            check_orderstatus02div();
+            check_orderstatus03div();
+        }
+    })
+
+    // 2
+    $("#orderstatus-02_btn").click(function () {
+        if ($("#orderstatus-02_div").hasClass("d-none")) {
+            $("#orderstatus-02_div").addClass("d-block");
+            $("#orderstatus-02_div").removeClass("d-none");
+            $("#orderstatus-02_btn").addClass("active");
+
+            check_orderstatus01div();
+            check_orderstatus03div();
+        }
+    })
+
+    // 3
+    $("#orderstatus-03_btn").click(function () {
+        if ($("#orderstatus-03_div").hasClass("d-none")) {
+            $("#orderstatus-03_div").addClass("d-block");
+            $("#orderstatus-03_div").removeClass("d-none");
+            $("#orderstatus-03_btn").addClass("active");
+
+            check_orderstatus01div();
+            check_orderstatus02div();
+        }
+    })
+});
