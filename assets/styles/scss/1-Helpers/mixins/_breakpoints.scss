@@ -1,3 +1,11 @@
+@mixin breakpoint-xxl-up {
+
+    //1441px -> up
+    @media (min-width: $xxl-up) {
+        @content;
+    }
+}
+
 @mixin breakpoint-xxl {
 
     //1440px -> down

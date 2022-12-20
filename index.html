@@ -7,32 +7,28 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
 
     <!-- CSS  -->
     <!-- DataTables 1.13.1 -->
-    <link
-      rel="stylesheet"
-      href="assets/vendors/DataTables-1.13.1/css/datatables.min.css"
-    />
+    <link rel="stylesheet" href="assets/vendors/DataTables-1.13.1/css/datatables.min.css" />
     <!-- fullcalendar-scheduler-5.11.3 -->
-    <link
-      rel="stylesheet"
-      href="assets/vendors/fullcalendar-scheduler-5.11.3/css/main.min.css"
-    />
+    <link rel="stylesheet" href="assets/vendors/fullcalendar-scheduler-5.11.3/css/main.min.css" />
     <!-- Font-Awesome-Pro 6 -->
-    <link
-      rel="stylesheet"
-      href="assets/vendors/font_awesome-6pro/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="assets/vendors/font_awesome-6pro/font-awesome.min.css" />
+    
+    <!-- vanillajs-datepicker-1.2.0 -->
+    <link rel="stylesheet" href="assets/vendors/vanillajs-datepicker-1.2.0/css/datepicker-bs5.min.css"  />
+    
     <!-- Bootstrap 5.1.3 -->
-    <link
-      rel="stylesheet"
-      href="assets/vendors/bootstrap-5.1.3/css/bootstrap.css"
-    />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-5.1.3/css/bootstrap.css" />
+    
+    <!-- select2 -->
+    <link rel="stylesheet" href="assets/vendors/select2-4.0.13/css/select2.min.css"  />
+    <link rel="stylesheet" href="assets/vendors/select2-4.0.13/css/select2-bootstrap-5-theme.min.css"  />
+    
+    
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/styles/css/main.css" />
 
@@ -41,7 +37,9 @@
     <script src="assets/vendors/DataTables-1.13.1/js/datatables.min.js"></script>
     <script src="assets/vendors/fullcalendar-scheduler-5.11.3/js/main.min.js"></script>
     <script src="assets/vendors/fullcalendar-scheduler-5.11.3/js/locales-all.min.js"></script>
+    <script src="assets/vendors/vanillajs-datepicker-1.2.0/js/datepicker-full.js"></script>
     <script src="assets/vendors/bootstrap-5.1.3/js/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/select2-4.0.13/js/select2.min.js"></script>
     <script src="assets/javascript/function.js"></script>
     <script src="assets/javascript/dom.js"></script>
     <script src="assets/javascript/main.js"></script>
@@ -51,36 +49,17 @@
     <title>Keflavik</title>
   </head>
   <body class="container-fluid bg-light vh-100">
-    <header
-      id="header"
-      class="max bg-primary position-fixed fixed-top"
-      style="height: 100px"
-    >
-      <div
-        class="brand d-flex justify-content-between align-items-center flex-column py-2"
-      >
+    <header id="header" class="max bg-primary position-fixed fixed-top" style="height: 100px">
+      <div class="brand d-flex justify-content-between align-items-center flex-column py-2">
         <div class="toggle">
-          <div
-            id="btn-toggle-collapse"
-            class="btn-toggle toggle-collapse btn btn-primary shadow active rounded-circle"
-          >
+          <div id="btn-toggle-collapse" class="btn-toggle toggle-collapse btn btn-primary shadow active rounded-circle">
             <i id="icon-collapse" class="fa-solid fa-chevron-left"></i>
           </div>
         </div>
 
         <div>
-          <img
-            class="brand-full"
-            src="assets/img/logo/logo-full.png"
-            alt=""
-            height="30px"
-          />
-          <img
-            class="brand-icon"
-            src="assets/img/logo/logo-icon.png"
-            alt=""
-            height="30px"
-          />
+          <img class="brand-full" src="assets/img/logo/logo-full.png" alt="" height="30px" />
+          <img class="brand-icon" src="assets/img/logo/logo-icon.png" alt="" height="30px" />
         </div>
       </div>
       <div class=""></div>
@@ -88,10 +67,7 @@
 
     <aside id="side-navbar" class="max side-navbar bg-light">
       <!-- profile -->
-      <a
-        id="profilebtn"
-        class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light"
-      >
+      <a id="profilebtn" class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light">
         <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
         <span class="h5 ms-2 text-dark">시공사 이름</span>
       </a>
@@ -100,135 +76,57 @@
         <div class="side-navbar_tabs_top">
           <div class="accordion accordion-flush">
             <!-- Main -->
-            <a
-              id="mainbtn"
-              href="#"
-              class="list-group-item active"
-              aria-current="true"
-              data-bs-toggle="tooltip"
-              data-bs-placement="right"
-              title="일정"
-            >
+            <a id="mainbtn" href="#" class="list-group-item active" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="일정">
               <i class="fa-regular fa-calendar-check"></i>
               <span class="ms-2"> 일정 </span>
             </a>
 
             <!-- Card Usage History -->
-            <a
-              id="cardusagebtn"
-              href="#"
-              class="list-group-item"
-              aria-current="true"
-              data-bs-toggle="tooltip"
-              data-bs-placement="right"
-              title="카드 사용 내역"
-            >
+            <a id="cardusagebtn" href="#" class="list-group-item" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="카드 사용 내역">
               <i class="fa-regular fa-address-book"></i>
               <span class="ms-2">카드 사용 내역</span>
             </a>
 
             <!-- Order status -->
-            <a
-              id="orderstatusbtn"
-              href="#"
-              class="list-group-item"
-              aria-current="true"
-              data-bs-toggle="tooltip"
-              data-bs-placement="right"
-              title="발주 현황"
-            >
+            <a id="orderstatusbtn" href="#" class="list-group-item" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="발주 현황" >
               <i class="fa-regular fa-table"></i>
               <span class="ms-2">발주 현황</span>
             </a>
 
             <!-- Set -->
             <div class="accordion-item">
-              <h2
-                class="accordion-header"
-                id="set-heading"
-                data-bs-toggle="tooltip"
-                data-bs-placement="right"
-                title="설정"
-              >
-                <button
-                  id="setbtn"
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#set-collapse"
-                  aria-expanded="false"
-                  aria-controls="set-collapse"
-                >
+              <h2 class="accordion-header" id="set-heading" data-bs-toggle="tooltip" data-bs-placement="right" title="설정" >
+                <button id="setbtn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#set-collapse" aria-expanded="false" aria-controls="set-collapse" >
                   <i class="fa-regular fa-gear"></i>
                   <span class="ms-2 me-3">설정</span>
                 </button>
               </h2>
-              <div
-                id="set-collapse"
-                class="accordion-collapse collapse"
-                aria-labelledby="set-heading"
-                data-bs-parent="#accordionsetExample"
-              >
+              <div id="set-collapse" class="accordion-collapse collapse" aria-labelledby="set-heading" data-bs-parent="#accordionsetExample" >
                 <div class="accordion-body shadow">
                   <!-- Payment request -->
-                  <a
-                    id="paymentrequestbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="결제 요청"
-                  >
+                  <a id="paymentrequestbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="결제 요청" >
                     <i class="fa-regular fa-square-1"></i>
                     <span>결제 요청</span>
                   </a>
 
                   <!-- service management -->
-                  <a
-                    id="servicemanagementbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="서비스 관리"
-                  >
+                  <a id="servicemanagementbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="서비스 관리" >
                     <i class="fa-regular fa-square-2"></i>
                     <span>서비스 관리</span>
                   </a>
                   <!-- order management -->
-                  <a
-                    id="ordermanagementbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="주문 관리"
-                  >
+                  <a id="ordermanagementbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="주문 관리" >
                     <i class="fa-regular fa-square-3"></i>
                     <span>주문 관리</span>
                   </a>
                   <!-- send photo -->
-                  <a
-                    id="sendphotobtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="사진 보내기"
-                  >
+                  <a id="sendphotobtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="사진 보내기" >
                     <i class="fa-regular fa-square-4"></i>
                     <span>사진 보내기</span>
                   </a>
 
                   <!-- technician management -->
-                  <a
-                    id="technicianmanagementbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="기술자 관리"
-                  >
+                  <a id="technicianmanagementbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="기술자 관리" >
                     <i class="fa-regular fa-square-5"></i>
                     <span>기술자 관리</span>
                   </a>
@@ -241,106 +139,44 @@
         <div class="side-navbar_tabs_bot my-4">
           <div class="accordion accordion-flush">
             <!-- Log out -->
-            <a
-              id="logoutbtn"
-              href="#"
-              class="list-group-item"
-              aria-current="true"
-              data-bs-toggle="tooltip"
-              data-bs-placement="right"
-              title="로그아웃"
-            >
+            <a id="logoutbtn" href="#" class="list-group-item" aria-current="true" data-bs-toggle="tooltip"  data-bs-placement="right" title="로그아웃" >
               로그아웃
             </a>
 
             <!-- menu -->
             <div class="accordion-item">
-              <div
-                id="menu-collapse"
-                class="accordion-collapse collapse"
-                aria-labelledby="menu-heading"
-                data-bs-parent="#accordionmenuExample"
-              >
+              <div id="menu-collapse" class="accordion-collapse collapse" aria-labelledby="menu-heading" data-bs-parent="#accordionmenuExample" >
                 <div class="accordion-body">
                   <!-- Fair -->
-                  <a
-                    id="fairbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="박람회"
-                  >
+                  <a id="fairbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="박람회" >
                     <i class="fa-regular fa-circle-5"></i>
                     <span>박람회</span>
                   </a>
                   <!-- fair management -->
-                  <a
-                    id="fairmanagementbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="박람회 관리"
-                  >
+                  <a id="fairmanagementbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip"  data-bs-placement="right" title="박람회 관리" >
                     <i class="fa-regular fa-circle-4"></i>
                     <span>박람회 관리</span>
                   </a>
                   <!-- contract -->
-                  <a
-                    id="contractbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="계약서"
-                  >
+                  <a id="contractbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="계약서" >
                     <i class="fa-regular fa-circle-3"></i>
                     <span>계약서</span>
                   </a>
                   <!-- counselling -->
-                  <a
-                    id="counsellingbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="삼담"
-                  >
+                  <a id="counsellingbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="삼담" >
                     <i class="fa-regular fa-circle-2"></i>
                     <span>삼담</span>
                   </a>
                   <!-- master -->
-                  <a
-                    id="masterbtn"
-                    href="#"
-                    class="accordion-body-item"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    title="마스터"
-                  >
+                  <a id="masterbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="마스터" >
                     <i class="fa-regular fa-circle-1"></i>
                     <span>마스터</span>
                   </a>
                 </div>
               </div>
 
-              <h2
-                class="accordion-header"
-                id="menu-heading"
-                data-bs-toggle="tooltip"
-                data-bs-placement="right"
-                title="메뉴"
-              >
-                <button
-                  id="menubtn"
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#menu-collapse"
-                  aria-expanded="false"
-                  aria-controls="menu-collapseTwo"
-                >
+              <h2 class="accordion-header" id="menu-heading" data-bs-toggle="tooltip" data-bs-placement="right" title="메뉴" >
+                <button id="menubtn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menu-collapse" aria-expanded="false"  aria-controls="menu-collapseTwo" >
                   메뉴
                 </button>
               </h2>
@@ -1524,48 +1360,50 @@
       <section id="servicemanagementsec" class="d-none content">
         <div class="card-main shadow bg-white col-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2>발주관리</h2>
-          <div class="my-5 p-2"> 
-            <div class="d-flex justify-content-start align-items-center flex-wrap">
-              <h1 class="fs-20px fw-bold"> 발송 </h1>
-              <a href="#"  class="d-flex flow-row text-muted">
-                <label class="switch" >
-                  <input class="switch-input" type="checkbox" />
-                  <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                  <span class="switch-handle"></span> 
-                </label>
-              </a>
-            </div>
-            <form class="my-3">
-              <div>
-                <input  type="radio" name="email">이메일
-                <input class="ms-5" type="radio" name="email">SNS
-              </div>
+           <h2>발주관리</h2>
+           <form class=""> 
+             <div class="my-5 p-2"> 
+               <div class="d-flex justify-content-start align-items-center flex-wrap">
+                 <h1 class="fs-20px fw-bold"> 발송 </h1>
+                 <a href="#"  class="d-flex flow-row text-muted">
+                   <label class="switch" >
+                     <input class="switch-input" type="checkbox" />
+                     <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                     <span class="switch-handle"></span> 
+                   </label>
+                  </a>
+               </div>
+               <div class="my-3">
+                 <div>
+                   <input  type="radio" name="email">이메일
+                   <input class="ms-5" type="radio" name="email">SNS
+                 </div>
             
-              <div class="my-5">
-                <div class="d-flex justify-content-start align-items-center flex-wrap">
-                  <label for="inputPassword5" class="form-label"> 이메일 입력</label>
-                  <input type="password" id="inputPassword5" class="form-control" placeholder="이메일을 입력해주세요" aria-describedby="passwordHelpBlock">
-                </div>
-              </div>
-              <div class="my-3 ms-1">
-                <div class="d-flex justify-content-between align-items-center flex-wrap">
-                  <h1 style="font-size:12px">적용 상품/프로세스 선택 </h1>
-                </div>
-             </div>
+                 <div class="my-5">
+                   <div class="d-flex justify-content-start align-items-center flex-wrap">
+                     <label for="inputPassword5" class="form-label"> 이메일 입력</label>
+                     <input type="password" id="inputPassword5" class="form-control" placeholder="이메일을 입력해주세요" aria-describedby="passwordHelpBlock">
+                   </div>
+                 </div>
+                 <div class="my-3 ms-1">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                      <h1 style="font-size:12px">적용 상품/프로세스 선택 </h1>
+                    </div>
+                  </div>
            
-              <div class="mb-3">
-                <input type="email" class="form-control" id="exampleInputEmail1"   placeholder="선택하기" aria-describedby="emailHelp">
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control"  placeholder="선택하기" id="exampleInputPassword1">
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button">입력완료</button>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleInputEmail1"   placeholder="선택하기" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <input type="password" class="form-control"  placeholder="선택하기" id="exampleInputPassword1">
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">입력완료</button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
-        </div>
       </section>
 
       <!-- order management --> 
@@ -1933,253 +1771,60 @@
             </nav>
           </div>
 
-          <div class="d-flex justify-content-between align-items-center flex-row ">
-            <div class="d-flex justify-content-between align-items-center flex-column w-80 border border-danger">
-              <p class="fw-bold fs-20px"> 일정 관리 </p>
-              <div>
-                <form action="">
-                  
-                </form>
+          <div class="mt-4 mb-3">
+            <form action="" class="row gy-2 gx-4 ">
+              <div class="div1 col-md-12 col-lg-7 col-xl-6 col-xxl-4  ">
+                <label for="inputEmail4" class="form-label">&nbsp;</label>
+                <div class="d-flex justify-content-between justify-content-xl-start align-items-center flex-row flex-nowrap">
+                    <div class="selectApartmentdiv">
+                      <select name="" id="selectAppartment" class="form-select" data-placeholder="아파트 이름 검색">
+                        <option></option> 
+                        <option value='1'>요게시 싱</option> 
+                        <option value='2'>소나리카 바도리아</option> 
+                        <option value='3'>아닐 싱</option> 
+                        <option value='4'>비샬 사후</option> 
+                        <option value='5'>마얀크 파티다르</option> 
+                        <option value='6'>비제이 모리야</option> 
+                        <option value='7'>라케시 사후</option> 
+                      </select>
+                    </div>
+
+                    <p class="fw-bold fs-18px text-nowrap text-center mx-3"> 온라인 박람회 </p>
+                    <button type="button" class="btn btn-primary"> 추가 </button>
+                </div>
               </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center flex-column w-20 border border-danger">
-              <p class="fw-bold fs-20px"> 시간 관리 </p>
-              <div>
-                <form action="">
-                  
-                </form>
+              
+              <div class="col-md-12 col-lg-5 col-xl-6 col-xxl-3  ">
+                <label for="inputEmail4" class="form-label">일정 관리</label>
+                <div id="foo" class="input-group input-daterange">
+                  <input type="text" class="form-control" name="start">
+                  <span class="input-group-text"><i class="fa-solid fa-minus"></i></span>
+                  <input type="text" class="form-control rounded-end" name="end">
+                </div>
               </div>
-            </div>
-          </div>
-
-          <!-- <div class="row g-0">
-            <div class="col-md-6 mb-2 p-2">
-              <nav class="nav align-items-end h-100 fw-bold fs-12px">
-                <a href="#" aria-current="page"
-                  class="nav-link text-start active pb-0 ps-0 pe-5 link-dark">
-                 구독 정보
-                </a>
-                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark"> 
-                  시공사 관리 
-                </a>
-              </nav>
-            </div>
-                        
-                          <div class="d-lg-flex ">
-        
-                                <div>
-                         
-                                  <select id='selUser' style='width: 120px;'>
-                                    <option value='0'></option> 
-                                    <option value='1'>요게시 싱</option> 
-                                    <option value='2'>소나리카 바도리아</option> 
-                                    <option value='3'>아닐 싱</option> 
-                                    <option value='4'>비샬 사후</option> 
-                                    <option value='5'>마얀크 파티다르</option> 
-                                    <option value='6'>비제이 모리야</option> 
-                                    <option value='7'>라케시 사후</option> 
-                               </select>
-                       
-                       <br/>
-                       <div id='result'></div>
-
-                       <script>
-                        $(document).ready(function(){
- 
- // Initialize select2
- $("#selUser").select2();
-
- // Read selected option
- $('#but_read').click(function(){
-     var username = $('#selUser option:selected').text();
-     var userid = $('#selUser').val();
-
-     $('#result').html("id : " + userid + ", name : " + username);
-
- });
-});
-                       </script>
-                       </div>
-                       <div class="ms-2">
-                        <span class="fs-8" >온라인 박람회</span>
-                       </div>
-                       <div class="ms-2">
-                        <button type="button" class="btn btn-primary" style="width:100%;font-size:10px;">추가</button>
-                       </div>
-                       <div class="ms-2 ">
-                        <input type="date" id="birthday" name="birthday" style="width: 120px;">
-                       </div>
-                       <div class="ms-2">
-                        <input type="date" id="birthday" name="birthday" style="width: 120px;">
-                       </div>
-                       <div class="ms-2">
-                        <span class="fs-8" >오프라인 박람회</span>
-                       </div>
-                       <div class="ms-2">
+              
+              <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 ">
+                <label for="inputEmail4" class="form-label d-none d-xxl-block"> &nbsp; </label>
+                <div class="d-flex justify-content-center align-items-center flex-row flex-nowrap">
+                  <p class="fw-bold fs-18px text-nowrap me-2"> 오프라인 박람회 </p>
+                  <a href="#"  class="d-flex flow-row text-muted m-0 p-0">
                         <label class="switch" >
-              <input onclick="myFunction()" class="switch-input" type="checkbox" />
-              <span class="switch-label"  data-off="Off" data-on="On"></span> 
-              <span class="switch-handle"></span> 
-          </label>
-                       </div>
-                      
-                       <div class="ms-2 " id="Mydiv" style="display: none;">
-                        <input type="date" id="birthday" name="birthday" style="width: 100px;">
-                      
-                        <input type="date" id="birthday" name="birthday" style="width: 100px;">
-                       </div>
-                       
-              
-                   
-                        </div>
-                        <div class="row h-27">
-                        <div class="d-lg-flex">
-                          <div class="d-lg-flex flex-column " style="width: 250px;">
-                          <div class="fs-8 mt-2 p-2">
-                            <p>아파트단지별 조회<i class="fa fa-caret-down"></i></p>
-                          </div>
-                          <div class="card h-60 w-120" style="overflow:auto;">
-                            <p>[홍대] DMC 리버포레자이<i class="fa fa-close" style="float:right"></i></p>
-                            <p>[홍대] 검단베르힐<i class="fa fa-close"  style="float:right"></i></p>
-                            <p>[홍대] 양주 옥정 더원파크빌리지<i class="fa fa-close"  style="float:right"></i></p>
-                            <p>[홍대] 양주 옥정 더원파크빌리지<i class="fa fa-close"  style="float:right"></i></p>
-                            <p>[홍대] 양주 옥정 더원파크빌리지<i class="fa fa-close"  style="float:right"></i></p>
-                            <p>[홍대] 양주 옥정 더원파크빌리지<i class="fa fa-close"  style="float:right"></i></p>
-                            
-                           
-                          </div>
-                          </div>
-                          <div class="d-lg-flex flex-column ms-5" style="width: 250px;">
-                            <div class="fs-8 mt-2 p-2">
-                              <p>아파트단지별 조회<i class="fa fa-caret-down"></i></p>
-                            </div>
-                            <div class="card h-60 w-120" style="overflow: auto;">
-                              <p style="border-bottom: 1px solid gray; ">카테고리 입력<i class="fa fa-plus" style="float: right; font-size: 10px;"></i></p>
-                              <h4 class="fs-10px">브랜드가구<i class="fa fa-close"></i></h4>
-              
-                             
-                            </div>
-                            </div>
-                            <div class="d-flex flex-column ms-5" style="width: 250px;">
-                              <div class="fs-8 mt-2 p-2">
-                                <p>아파트단지별 조회<i class="fa fa-caret-down"></i></p>
-                              </div>
-                              <div class="card h-60 w-120" style="overflow: auto;">
-                                <p style="border-bottom: 1px solid gray; font-size: 15px;">시공사 이름 검색<i class="fa fa-search" style="float: right; font-size: 15px;"></i></p>
-                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
-                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
-                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
-                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
-                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
-                               
-                               
-                              </div>
-                            </div>
-                            
-                            </div>
-                            </div>
-                            <div class="w-100  rounded overflow-x-auto text-nowrap card-table">
-                              <table class="table text-center">
-                                  <thead class="bg-primary">
-                                      <tr class="text-white border-bottom-0 ">
-                                        <th  class="text-center"> 카테고리</th>
-                                        <th  class="text-center">시공사</th>
-                                        <th  class="text-center">대표연락처</th>
-                                        <th  class="text-center">응답</th>
-                                        <th  class="text-center">참가비용납입</th>
-                                        <th  class="text-center">회사소개</th>
-                                        <th  class="text-center">동영상</th>
-                                        <th  class="text-center">태그</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr class="text-primary fs-7">
-                                        <td  >브랜드가구</td>
-                                        <td >시공사이름</td>
-                                        <td >010-0000-0000 </td>
-                                        <td ><label class="switch">
-                                            <input class="switch-input" type="checkbox" />
-                                            <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                                            <span class="switch-handle"></span> 
-                                        </label></td>
-                                        <td ><label class="switch">
-                                            <input  class="switch-input" type="checkbox" />
-                                            <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                                            <span class="switch-handle"></span> 
-                                        </label></td>
-                                        <td><i class="fa fa-share"></i></td>
-                                        <td >www.youtube.co.kr</td>
-                                        <td >#단열필름 #3M #보온스마트플... <i class="fa fa-close" style="margin-left:30px;"></i> </td>
-                                      </tr>
-                                      <tr class="text-primary fs-7">
-                                        <td  >브랜드가구</td>
-                    <td >시공사이름</td>
-                    <td >010-0000-0000 </td>
-                    <td ><label class="switch">
-                        <input class="switch-input" type="checkbox" />
-                        <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                        <span class="switch-handle"></span> 
-                    </label></td>
-                    <td ><label class="switch">
-                        <input  class="switch-input" type="checkbox" />
-                        <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                        <span class="switch-handle"></span> 
-                    </label></td>
-                    <td><i class="fa fa-share"></i></td>
-                    <td >www.youtube.co.kr</td>
-                    <td >#단열필름 #3M #보온스마트플... <i class="fa fa-close" style="margin-left:30px;"></i> </td>
-                                      </tr>
-                                      <tr class="text-primary fs-7">
-                                        <td  >브랜드가구</td>
-                                        <td >시공사이름</td>
-                                        <td >010-0000-0000 </td>
-                                        <td ><label class="switch">
-                                            <input class="switch-input" type="checkbox" />
-                                            <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                                            <span class="switch-handle"></span> 
-                                        </label></td>
-                                        <td ><label class="switch">
-                                            <input  class="switch-input" type="checkbox" />
-                                            <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                                            <span class="switch-handle"></span> 
-                                        </label></td>
-                                        <td><i class="fa fa-share"></i></td>
-                                        <td >www.youtube.co.kr</td>
-                                        <td >#단열필름 #3M #보온스마트플... <i class="fa fa-close" style="margin-left:30px;"></i> </td>
-                                      </tr>
-                                     
-                                      
-                                  </tbody>
-                              </table>
-                          </div>
-
-                          
-
-                     
-
+                          <input class="switch-input" type="checkbox" />
+                          <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                          <span class="switch-handle"></span> 
+                        </label>
+                      </a>
+                </div>
               </div>
-        
- <script>
-  var a;
-  function myFunction(){
-      if(a==1)
-          {
-              document.getElementById("Mydiv").style.display="none";
-              return a=0;
-          }
-      else
-          {
-              document.getElementById("Mydiv").style.display="inline";
-              return a=1;
-          }
-  }
-  </script>
+              
+              <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-2 border border-danger">
+                <label for="inputEmail4" class="form-label"> 시간 관리 </label>
+              </div>
+              
+            </form>
           </div>
 
-
-            </div>
-        </div>
-         </div> -->
+          
              
         </div>
       </section>
@@ -3001,7 +2646,165 @@
               
               <div id="master-03_div" class="d-none card my-3 border-0">
                 <!-- content here  -->
-                3
+                <div class="my-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center my-5">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-sm page">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <i class="fa-solid fa-chevrons-left"></i>
+                        </a>
+                      </li>
+                      <li class="page-item ">
+                        <a class="page-link active " href="#">
+                          1
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          2
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          3
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          4
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          5
+                        </a>
+                        </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <i class="fa-solid fa-chevrons-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
               </div>
 
             </div>

@@ -1,0 +1,228 @@
+<!-- <div class="row g-0">
+            <div class="col-md-6 mb-2 p-2">
+              <nav class="nav align-items-end h-100 fw-bold fs-12px">
+                <a href="#" aria-current="page"
+                  class="nav-link text-start active pb-0 ps-0 pe-5 link-dark">
+                 구독 정보
+                </a>
+                <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark"> 
+                  시공사 관리 
+                </a>
+              </nav>
+            </div>
+                        
+                          <div class="d-lg-flex ">
+        
+                                <div>
+                         
+                                  <select id='selUser' style='width: 120px;'>
+                                    <option value='0'></option> 
+                                    <option value='1'>요게시 싱</option> 
+                                    <option value='2'>소나리카 바도리아</option> 
+                                    <option value='3'>아닐 싱</option> 
+                                    <option value='4'>비샬 사후</option> 
+                                    <option value='5'>마얀크 파티다르</option> 
+                                    <option value='6'>비제이 모리야</option> 
+                                    <option value='7'>라케시 사후</option> 
+                               </select>
+                       
+                       <br/>
+                       <div id='result'></div>
+
+                       <script>
+                        $(document).ready(function(){
+ 
+ // Initialize select2
+ $("#selUser").select2();
+
+ // Read selected option
+ $('#but_read').click(function(){
+     var username = $('#selUser option:selected').text();
+     var userid = $('#selUser').val();
+
+     $('#result').html("id : " + userid + ", name : " + username);
+
+ });
+});
+                       </script>
+                       </div>
+                       <div class="ms-2">
+                        <span class="fs-8" >온라인 박람회</span>
+                       </div>
+                       <div class="ms-2">
+                        <button type="button" class="btn btn-primary" style="width:100%;font-size:10px;">추가</button>
+                       </div>
+                       <div class="ms-2 ">
+                        <input type="date" id="birthday" name="birthday" style="width: 120px;">
+                       </div>
+                       <div class="ms-2">
+                        <input type="date" id="birthday" name="birthday" style="width: 120px;">
+                       </div>
+                       <div class="ms-2">
+                        <span class="fs-8" >오프라인 박람회</span>
+                       </div>
+                       <div class="ms-2">
+                        <label class="switch" >
+              <input onclick="myFunction()" class="switch-input" type="checkbox" />
+              <span class="switch-label"  data-off="Off" data-on="On"></span> 
+              <span class="switch-handle"></span> 
+          </label>
+                       </div>
+                      
+                       <div class="ms-2 " id="Mydiv" style="display: none;">
+                        <input type="date" id="birthday" name="birthday" style="width: 100px;">
+                      
+                        <input type="date" id="birthday" name="birthday" style="width: 100px;">
+                       </div>
+                       
+              
+                   
+                        </div>
+                        <div class="row h-27">
+                        <div class="d-lg-flex">
+                          <div class="d-lg-flex flex-column " style="width: 250px;">
+                          <div class="fs-8 mt-2 p-2">
+                            <p>아파트단지별 조회<i class="fa fa-caret-down"></i></p>
+                          </div>
+                          <div class="card h-60 w-120" style="overflow:auto;">
+                            <p>[홍대] DMC 리버포레자이<i class="fa fa-close" style="float:right"></i></p>
+                            <p>[홍대] 검단베르힐<i class="fa fa-close"  style="float:right"></i></p>
+                            <p>[홍대] 양주 옥정 더원파크빌리지<i class="fa fa-close"  style="float:right"></i></p>
+                            <p>[홍대] 양주 옥정 더원파크빌리지<i class="fa fa-close"  style="float:right"></i></p>
+                            <p>[홍대] 양주 옥정 더원파크빌리지<i class="fa fa-close"  style="float:right"></i></p>
+                            <p>[홍대] 양주 옥정 더원파크빌리지<i class="fa fa-close"  style="float:right"></i></p>
+                            
+                           
+                          </div>
+                          </div>
+                          <div class="d-lg-flex flex-column ms-5" style="width: 250px;">
+                            <div class="fs-8 mt-2 p-2">
+                              <p>아파트단지별 조회<i class="fa fa-caret-down"></i></p>
+                            </div>
+                            <div class="card h-60 w-120" style="overflow: auto;">
+                              <p style="border-bottom: 1px solid gray; ">카테고리 입력<i class="fa fa-plus" style="float: right; font-size: 10px;"></i></p>
+                              <h4 class="fs-10px">브랜드가구<i class="fa fa-close"></i></h4>
+              
+                             
+                            </div>
+                            </div>
+                            <div class="d-flex flex-column ms-5" style="width: 250px;">
+                              <div class="fs-8 mt-2 p-2">
+                                <p>아파트단지별 조회<i class="fa fa-caret-down"></i></p>
+                              </div>
+                              <div class="card h-60 w-120" style="overflow: auto;">
+                                <p style="border-bottom: 1px solid gray; font-size: 15px;">시공사 이름 검색<i class="fa fa-search" style="float: right; font-size: 15px;"></i></p>
+                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
+                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
+                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
+                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
+                                <p style="border-bottom: 1px solid gray; font-size:12px">시공사 이름</p>
+                               
+                               
+                              </div>
+                            </div>
+                            
+                            </div>
+                            </div>
+                            <div class="w-100  rounded overflow-x-auto text-nowrap card-table">
+                              <table class="table text-center">
+                                  <thead class="bg-primary">
+                                      <tr class="text-white border-bottom-0 ">
+                                        <th  class="text-center"> 카테고리</th>
+                                        <th  class="text-center">시공사</th>
+                                        <th  class="text-center">대표연락처</th>
+                                        <th  class="text-center">응답</th>
+                                        <th  class="text-center">참가비용납입</th>
+                                        <th  class="text-center">회사소개</th>
+                                        <th  class="text-center">동영상</th>
+                                        <th  class="text-center">태그</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr class="text-primary fs-7">
+                                        <td  >브랜드가구</td>
+                                        <td >시공사이름</td>
+                                        <td >010-0000-0000 </td>
+                                        <td ><label class="switch">
+                                            <input class="switch-input" type="checkbox" />
+                                            <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                                            <span class="switch-handle"></span> 
+                                        </label></td>
+                                        <td ><label class="switch">
+                                            <input  class="switch-input" type="checkbox" />
+                                            <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                                            <span class="switch-handle"></span> 
+                                        </label></td>
+                                        <td><i class="fa fa-share"></i></td>
+                                        <td >www.youtube.co.kr</td>
+                                        <td >#단열필름 #3M #보온스마트플... <i class="fa fa-close" style="margin-left:30px;"></i> </td>
+                                      </tr>
+                                      <tr class="text-primary fs-7">
+                                        <td  >브랜드가구</td>
+                    <td >시공사이름</td>
+                    <td >010-0000-0000 </td>
+                    <td ><label class="switch">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                        <span class="switch-handle"></span> 
+                    </label></td>
+                    <td ><label class="switch">
+                        <input  class="switch-input" type="checkbox" />
+                        <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                        <span class="switch-handle"></span> 
+                    </label></td>
+                    <td><i class="fa fa-share"></i></td>
+                    <td >www.youtube.co.kr</td>
+                    <td >#단열필름 #3M #보온스마트플... <i class="fa fa-close" style="margin-left:30px;"></i> </td>
+                                      </tr>
+                                      <tr class="text-primary fs-7">
+                                        <td  >브랜드가구</td>
+                                        <td >시공사이름</td>
+                                        <td >010-0000-0000 </td>
+                                        <td ><label class="switch">
+                                            <input class="switch-input" type="checkbox" />
+                                            <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                                            <span class="switch-handle"></span> 
+                                        </label></td>
+                                        <td ><label class="switch">
+                                            <input  class="switch-input" type="checkbox" />
+                                            <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                                            <span class="switch-handle"></span> 
+                                        </label></td>
+                                        <td><i class="fa fa-share"></i></td>
+                                        <td >www.youtube.co.kr</td>
+                                        <td >#단열필름 #3M #보온스마트플... <i class="fa fa-close" style="margin-left:30px;"></i> </td>
+                                      </tr>
+                                     
+                                      
+                                  </tbody>
+                              </table>
+                          </div>
+
+                          
+
+                     
+
+              </div>
+        
+ <script>
+  var a;
+  function myFunction(){
+      if(a==1)
+          {
+              document.getElementById("Mydiv").style.display="none";
+              return a=0;
+          }
+      else
+          {
+              document.getElementById("Mydiv").style.display="inline";
+              return a=1;
+          }
+  }
+  </script>
+          </div>
+
+
+            </div>
+        </div>
+         </div> -->
