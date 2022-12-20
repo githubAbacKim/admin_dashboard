@@ -1074,42 +1074,6 @@ p {
   -o-transition: All 0.3s ease;
 }
 
-@media (min-width: 1201px) {
-  .div1 {
-    border: 1px solid black;
-  }
-}
-@media (min-width: 1401px) {
-  .div1 .selectApartmentdiv {
-    width: 80%;
-  }
-}
-@media (min-width: 1201px) {
-  .div1 .selectApartmentdiv {
-    width: 60%;
-  }
-}
-@media (min-width: 993px) {
-  .div1 .selectApartmentdiv {
-    width: 47%;
-  }
-}
-@media (max-width: 992px) {
-  .div1 .selectApartmentdiv {
-    width: 60%;
-  }
-}
-@media (max-width: 768px) {
-  .div1 .selectApartmentdiv {
-    width: 60%;
-  }
-}
-@media (max-width: 768px) {
-  .div1 .selectApartmentdiv {
-    width: 60%;
-  }
-}
-
 .navigation .nav-list.nav .nav-link {
   color: #797979;
   position: relative;
@@ -2128,6 +2092,37 @@ main.min .content {
 #contractsec .card-submain {
   height: calc(100vh - (50px + 6rem + 1rem + 14px + 18rem)) !important;
   overflow: hidden;
+}
+
+@media (min-width: 1401px) {
+  #fairmanagementsec .selectApartmentdiv {
+    width: 80%;
+  }
+}
+@media (min-width: 1201px) {
+  #fairmanagementsec .selectApartmentdiv {
+    width: 60%;
+  }
+}
+@media (min-width: 993px) {
+  #fairmanagementsec .selectApartmentdiv {
+    width: 47%;
+  }
+}
+@media (max-width: 992px) {
+  #fairmanagementsec .selectApartmentdiv {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  #fairmanagementsec .selectApartmentdiv {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  #fairmanagementsec .selectApartmentdiv {
+    width: 60%;
+  }
 }
 
 #counsellingsec .counselling {

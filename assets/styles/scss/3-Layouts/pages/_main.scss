@@ -7,11 +7,19 @@
 #contractsec {
     .card-submain {
         height: calc(100vh - (50px + (2 * $s5) + $s3 + 14px + (18 * $s3))) !important;
-        // border: 1px solid red;
         overflow: hidden;
     }
+}
 
-    
+#fairmanagementsec {
+    .selectApartmentdiv {
+		@include breakpoint-xxl-up { width: 80%; }
+		@include breakpoint-xl-up { width: 60%; }
+		@include breakpoint-lg-up { width: 47%; }
+		@include breakpoint-lg { width: 60%; }
+		@include breakpoint-md { width: 60%; }
+		@include breakpoint-md { width: 60%; }
+	}
 }
 
 #counsellingsec {
@@ -200,7 +208,6 @@
         }
     }
 }
-
 
 #mastersec {
     .card-main {

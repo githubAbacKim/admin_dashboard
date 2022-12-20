@@ -22,4 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// easy-time-picker-bootstrap
+document.addEventListener('DOMContentLoaded', function () {
+    jQuery('#start_time, #end_time').timepicker({});
+});
 
