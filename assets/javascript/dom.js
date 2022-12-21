@@ -608,6 +608,29 @@ $(document).ready(function () {
     })
 });
 
+/** BUTTONS OF FAIR MANAGEMENT */
+$(document).ready(function () {
+    // 1
+    $("#fairmanagement-01_btn").click(function () {
+        if ($("#fairmanagement-01_div").hasClass("d-none")) {
+            $("#fairmanagement-01_div").removeClass("d-none");
+            $("#fairmanagement-01_div").addClass("d-block");
+            $("#fairmanagement-01_btn").addClass("active");
+            check_fairmanagement02div();
+        }
+    })
+
+    // 2
+    $("#fairmanagement-02_btn").click(function () {
+        if ($("#fairmanagement-02_div").hasClass("d-none")) {
+            $("#fairmanagement-02_div").removeClass("d-none");
+            $("#fairmanagement-02_div").addClass("d-block");
+            $("#fairmanagement-02_btn").addClass("active");
+            check_fairmanagement01div();
+        }
+    })
+});
+
 /** SELECT 2 */
 $(document).ready(function () {
     $('#selectAppartment').select2({
