@@ -215,6 +215,35 @@ function check_orderstatus03div() {
     }
 }
 
+function check_master01div() {
+    if ($("#master-01_div").hasClass("d-block")) {
+        $("#master-01_div").addClass("d-none");
+        $("#master-01_div").removeClass("d-block");
+        $("#master-01-card1").addClass("d-none");
+        $("#master-01-card2").addClass("d-none");
+        $("#master-01-card2").removeClass("d-flex");
+        $("#master-01_btn").removeClass("active");
+    }
+}
+
+// 5.1.2
+function check_master02div() {
+    if ($("#master-02_div").hasClass("d-block")) {
+        $("#master-02_div").addClass("d-none");
+        $("#master-02_div").removeClass("d-block");
+        $("#master-02_btn").removeClass("active");
+    }
+}
+
+// 5.1.3
+function check_master03div() {
+    if ($("#master-03_div").hasClass("d-block")) {
+        $("#master-03_div").addClass("d-none");
+        $("#master-03_div").removeClass("d-block");
+        $("#master-03_btn").removeClass("active");
+    }
+}
+
 // 5.4.1
 function check_fairmanagement01div() {
     if ($("#fairmanagement-01_div").hasClass("d-block")) {
