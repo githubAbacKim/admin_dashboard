@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="assets/vendors/select2-4.0.13/css/select2-bootstrap-5-theme.min.css"  />
     <link rel="stylesheet" href="assets/vendors/bootstrap-5.1.3/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/styles/css/main.css" />
+    <link rel="stylesheet" href="assets/calendar/css/main.min.css" />
+
 
     <!-- JAVASCRIPTS -->
     <script src="assets/vendors/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -33,6 +35,9 @@
     <script src="assets/javascript/function.js"></script>
     <script src="assets/javascript/dom.js"></script>
     <script src="assets/javascript/main.js"></script>
+    <script src="assets/calendar/js/main.min.js"></script>
+    <script src="assets/calendar/js/script.js"></script>
+
     <!-- <script src="assets/javascript/scroll.js"></script> -->
 
 
@@ -1668,74 +1673,39 @@
           <!-- INSIDE CONTENTS -->
           <h2 class="mb-2">설정</h2>
           <h2 class="mb-2">일정보기</h2>
-           <div class="row g-0 mt-5">
-            <div class="col-md-8 ">
-                <nav class="nav align-items-end h-100 fw-bold ms-5" style="font-size: 12px;">
-                    <a  href="#" class="nav-link text-start active pb-0 ps-0 pe-5 link-dark" aria-current="page">
-                      날짜별로 보기▼
-                    </a>
-                    <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark">아파트 단지별로 보기▼</a>
-                  
+            <div class="row g-0 mt-5">
+              <div class="col-md-8 ">
+                <nav class="nav align-items-end h-100 fw-bold p-2 my-3">
+
+                  <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark">날짜별로 보기▼</a>
+                  <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark">아파트 단지별로 보기▼</a>
                 </nav>
-            </div>
-              <div class="col-md-4 ">
-              <div class="card-body rounded p-2">
-           <div class="d-flex flex-row p-2">
-                <div style="width:20px;height: 20px;background-color: aqua; border-radius: 100px;"></div>
-                <h5 class="fs-8" >진지석</h5>
-                <div style="width:20px;height: 20px;background-color: yellow; border-radius: 100px;"></div>
-              <h5 class="fs-8" >진지석</h5>
-                 <div style="width:20px;height: 20px;background-color: purple; border-radius: 100px;"></div>
-              <h5 class="fs-8" >진지석</h5>
-                 <div style="width:20px;height: 20px;background-color:#CCC6FF; border-radius: 100px;"></div>
-               <h5 class="fs-8" >진지석</h5>
-
-                
-
-                
-
-                </div>
-
-             
-              </div>
-            </div>
-            </div>
-              <div class="row mt-4">
-              <div class="col-md-12">
-                <div class="card">
-                
-                 <div class="row">
-                  <div class="col-md-8"></div>
-                   <div class="col-md-4">
-                    <div class="right">
-                      <div class="row my-2">
-                        <div class="col-md-11 my-2">
-                          <div class="card p-2 h-500 pb-5 shadow  bg-body rounded" style="background-color: #FAFBFF; border-radius: 10px;">
-                            <h2 style="font-size: 20px;">담당자 미지정 태스크</h2>
-                             <p style="font-size: 18px;"> 10/03&nbsp;&nbsp;보스 생일</p>
-                             <p style="font-size: 18px;"> 10/03&nbsp;&nbsp;보스 생일</p>
-                          </div>
-                        </div>
-                        <div class="col-md-11 my-2 mt-3">
-                          <div class="card p-2 h-500 pb-5  shadow  bg-body rounded">
-                            <h2 style="font-size: 20px;"> 휴무 시공자</h2>
-                            <p style="font-size: 15px;"> 10/03&nbsp;&nbsp;보스 생일</p>
-                            <p style="font-size: 15px;"> 10/04&nbsp;&nbsp;보스 생일</p>
-                            <p style="font-size: 15px;"> 10/06&nbsp;&nbsp;보스 생일</p>
-  
-                          </div>
+               </div>
+                 <div class="col-md-4 ">
+                   <div class="card-body rounded p-2">
+                     <div class="d-flex flex-row p-2">
+                       <div style="width:20px;height: 20px;background-color: aqua; border-radius: 100px;"></div>
+                         <h5 class="fs-8" >진지석</h5>
+                         <div style="width:20px;height: 20px;background-color: yellow; border-radius: 100px;"></div>
+                           <h5 class="fs-8" >진지석</h5>
+                           <div style="width:20px;height: 20px;background-color: purple; border-radius: 100px;"></div>
+                             <h5 class="fs-8" >진지석</h5>
+                             <div style="width:20px;height: 20px;background-color:#CCC6FF; border-radius: 100px;"></div>
+                               <h5 class="fs-8" >진지석</h>
+       
+                      </div>                 
+                    </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col-md-12">
+                      <div class="card p-2 my-5">
+                        <div id="calendar">
+        
                         </div>
                       </div>
+                    </div>
                   </div>
-
-                  </div>
-                </div>
-                    
-                </div>
-              </div>    
-
         </div>
-      </div>
       </section>
 
       <!-- MENU -->
