@@ -1,29 +1,33 @@
-/** DATA TABLES */
+
 $(document).ready(function () {
-    $('table').DataTable();
-});
+    $('.complex').on('click', function () {
+        $(this).parent().remove();
+    });
+})
 
-/** SELECT 2 */
+
 $(document).ready(function () {
-    $('#selectAppartment').select2( {
-        theme: 'bootstrap-5',
-        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-        placeholder: $(this).data('placeholder'),
+    $('.addpartcons').on('click', function (e) {
+        e.preventDefault();
+        const contractor = $('#partcontractor').val();
+        const partconslist = '<li class="btn btn-outline-primary rounded-pill"> <p>' + contractor + '</p><i class="partconsbtn fa-regular fa-xmark"></i></li >';
+ 
+        if (contractor.length == '') {
+
+        } else {
+            $('#partconslists').append(partconslist);
+            $('#partcontractor').val('');
+        }
+
+        $('.partconsbtn').on('click', function () {
+            $(this).parent().remove();
+        });
     });
-});
+})
 
-// VANILLA JS DATEPICKER
-document.addEventListener('DOMContentLoaded', function () {
-    const elem = document.getElementById('foo');
-    const rangepicker = new DateRangePicker(elem, {
-        orientation: "bottom left",
-        buttonClass: 'btn',
-        autoclose: false
+
+$(document).ready(function () {
+    $('.partconsbtn').on('click', function () {
+        $(this).parent().remove();
     });
-});
-
-// easy-time-picker-bootstrap
-document.addEventListener('DOMContentLoaded', function () {
-    jQuery('#start_time, #end_time').timepicker({});
-});
-
+})

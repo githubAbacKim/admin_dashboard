@@ -2153,6 +2153,51 @@ main.min .content {
     width: 60%;
   }
 }
+#fairmanagementsec .complex-div ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+#fairmanagementsec .complex-div ul li:hover {
+  color: #003AC9 !important;
+}
+#fairmanagementsec .partcons {
+  min-height: calc(200px - (4rem + 6px));
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#fairmanagementsec .partcons div ul {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#fairmanagementsec .partcons div ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 10px !important;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#fairmanagementsec .partcons div ul li p {
+  font-size: 10px !important;
+}
+#fairmanagementsec .partcons div ul li i {
+  margin-left: 1rem;
+  font-size: 12px !important;
+}
 
 #counsellingsec .counselling {
   min-height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 4.5rem)) !important;

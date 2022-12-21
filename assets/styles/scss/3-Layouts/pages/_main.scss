@@ -20,6 +20,65 @@
 		@include breakpoint-md { width: 60%; }
 		@include breakpoint-md { width: 60%; }
 	}
+
+    .complex-div {
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                cursor: pointer;
+                padding-top: $s1;
+                padding-bottom: $s1;
+
+                &:hover {
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+
+    .partcons {
+        min-height: calc(200px - ((4 * $s2) +  (2 * $s3) + 6px));
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        div {
+            ul {
+                display: flex !important;
+                justify-content: flex-start;
+                align-items: start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    cursor: pointer;
+                    padding-top: $s1;
+                    padding-bottom: $s1;
+                    font-size: 10px !important;
+                    // margin-left: $s2;
+                    margin-right: $s2;
+                    margin-bottom: $s2;
+                    
+                    p {
+                        font-size: 10px !important;
+                    }
+
+                    i {
+                        margin-left: $s3;
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #counsellingsec {
