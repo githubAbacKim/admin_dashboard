@@ -12,15 +12,6 @@
 }
 
 #fairmanagementsec {
-    .selectApartmentdiv {
-		@include breakpoint-xxl-up { width: 80%; }
-		@include breakpoint-xl-up { width: 60%; }
-		@include breakpoint-lg-up { width: 47%; }
-		@include breakpoint-lg { width: 60%; }
-		@include breakpoint-md { width: 60%; }
-		@include breakpoint-md { width: 60%; }
-	}
-
     .complex-div {
         ul {
             li {
@@ -41,7 +32,7 @@
     }
 
     .partcons {
-        min-height: calc(200px - ((4 * $s2) +  (2 * $s3) + 6px));
+        min-height: calc(180px - ((4 * $s2) +  (2 * $s3) + 6px));
         overflow-y: auto;
         overflow-x: hidden;
 
@@ -75,6 +66,30 @@
                         margin-left: $s3;
                         font-size: 12px !important;
                     }
+                }
+            }
+        }
+    }
+
+    .contname {
+        min-height: calc(180px - ((4 * $s2) +  (2 * $s3) + 6px));
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        div {
+            ul {
+                display: block !important;
+                
+                li {
+                    // border: 1px solid red;
+                    cursor: pointer;
+                    // padding-top: $s1;
+                    padding-bottom: $s1;
+                    font-weight: 500;
+                    font-size: 13px !important;
+                    // margin-left: $s2;
+                    margin-right: $s2;
+                    margin-bottom: $s2;;
                 }
             }
         }

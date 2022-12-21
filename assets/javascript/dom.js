@@ -132,6 +132,9 @@ $(document).ready(function () {
     $('[data-bs-toggle="tooltip-progress"]').tooltip("enable");
 });
 
+
+
+
 /** SIDEBAR BUTTON FUNCTIONS  **/
 $(document).ready(function () {
     // 0
@@ -624,6 +627,14 @@ document.addEventListener('DOMContentLoaded', function () {
         language: 'ko',
         todayHighlight: true,
     });
+});
+
+// POP OVER
+document.addEventListener('DOMContentLoaded', function () {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
 });
 
 // easy-time-picker-bootstrap

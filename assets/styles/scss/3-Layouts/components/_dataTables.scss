@@ -91,6 +91,13 @@
                         @include py($s2);
                         @include px($s3);
                         text-align: center;
+
+                        &:first-of-type{
+                            border-top-left-radius: $s1 !important;
+                        }
+                        &:last-of-type {
+                            border-top-right-radius: $s1 !important;
+                        }
                     }
                 }
             }
@@ -98,10 +105,22 @@
             tbody {
                 tr {
                     td {
+                        // display: flex;
+                        justify-content: center;
+                        align-items: center;
                         vertical-align: middle;
                         @include py($s2);
                         @include px($s3);
                         text-align: center;
+                        margin-left: auto !important;
+                        margin-right: auto !important;
+
+                        .switch-div {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: row;
+                        }
                     }
                 }
             }
