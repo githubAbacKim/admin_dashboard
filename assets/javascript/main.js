@@ -33,9 +33,9 @@ $(document).ready(function () {
 })
 
 /** DATA TABLES */
-$(document).ready(function () {
-    $('table').DataTable();
-});
+// $(document).ready(function () {
+//     $('table').DataTable();
+// });
 
 $(document).ready(function () {
     // var viewallcontracts = $('#viewallcontractsbyac_table').DataTable();
@@ -51,6 +51,18 @@ $(document).ready(function () {
     //         categoryIndex = i; return false;
     //     }
     // });
+});
 
+
+$(document).ready(function () {
+    var viewallcontractsbyac = $('#viewallcontractsbyac_table').DataTable();
+    $('#apartmentcomplexfilter01').on('change', function () {
+        viewallcontractsbyac.search(this.value).draw();
+    });
+    
+    var viewallcontractsbyar = $('#viewallcontractsbyar_table').DataTable();
+    $('#apartmentcomplexfilter02').on('change', function () {
+        viewallcontractsbyar.search(this.value).draw();
+    });
 });
 
