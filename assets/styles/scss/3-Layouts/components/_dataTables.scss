@@ -57,6 +57,20 @@
     }
 
     .dataTables_wrapper {
+        .viewallcontactsfilters {
+
+            @include breakpoint-lg {
+                text-align: center !important;
+            }
+
+            #viewallcontracts_table_filter {
+                @include breakpoint-lg {
+                    text-align: center !important; 
+                }
+
+            }
+        }
+
         .dt-buttons {
             width: 100%;
             display: block !important;
@@ -76,7 +90,6 @@
 
         .dataTables_length {
             @include my($s1);
-
         }
 
         .dataTables_filter {
@@ -90,7 +103,7 @@
                         vertical-align: middle;
                         @include py($s2);
                         @include px($s3);
-                        text-align: center;
+                        text-align: center !important;
 
                         &:first-of-type{
                             border-top-left-radius: $s1 !important;

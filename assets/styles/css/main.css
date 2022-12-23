@@ -116,6 +116,10 @@ p {
   color: #33588E;
 }
 
+.text-orange {
+  color: #FF2020;
+}
+
 .text-gray100 {
   color: #b7b7b7;
 }
@@ -1191,6 +1195,16 @@ p {
 .data-table.hasNoAddButton .dataTables_wrapper .dt-buttons button {
   width: auto !important;
 }
+@media (max-width: 992px) {
+  .data-table .dataTables_wrapper .viewallcontactsfilters {
+    text-align: center !important;
+  }
+}
+@media (max-width: 992px) {
+  .data-table .dataTables_wrapper .viewallcontactsfilters #viewallcontracts_table_filter {
+    text-align: center !important;
+  }
+}
 .data-table .dataTables_wrapper .dt-buttons {
   width: 100%;
   display: block !important;
@@ -1220,7 +1234,7 @@ p {
   padding-top: 0.5rem !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
-  text-align: center;
+  text-align: center !important;
 }
 .data-table .dataTables_wrapper .table thead tr th:first-of-type {
   border-top-left-radius: 0.25rem !important;

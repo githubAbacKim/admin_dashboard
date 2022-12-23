@@ -167,11 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // });
 
 
-/** DATA TABLES */
-// $(document).ready(function () {
-//     $('table').DataTable();
-// });
-
 /** SIDEBAR BUTTON FUNCTIONS  **/
 $(document).ready(function () {
     // HOME PAGE
@@ -702,3 +697,44 @@ $(document).ready(function () {
 
 
 });
+
+$(document).ready(function () {
+    $("#viewallcontracts-01_btn").click(function () {
+        if ($("#viewallcontracts-01_div").hasClass("d-none")) {
+            $("#viewallcontracts-01_div").addClass("d-flex");
+            $("#viewallcontracts-01_div").removeClass("d-none");
+            $("#viewallcontracts-01_btn").addClass("active");
+
+            $("#apartmentcomplexfilterselect01").addClass("d-flex");
+            $("#apartmentcomplexfilterselect01").removeClass("d-none");
+
+            check_viewallcontracts02_div();
+            check_viewallcontracts03_div();
+        }
+    })
+
+    $("#viewallcontracts-02_btn").click(function () {
+        if ($("#viewallcontracts-02_div").hasClass("d-none")) {
+            $("#viewallcontracts-02_div").addClass("d-flex");
+            $("#viewallcontracts-02_div").removeClass("d-none");
+            $("#viewallcontracts-02_btn").addClass("active");
+
+            $("#apartmentcomplexfilterselect02").addClass("d-flex");
+            $("#apartmentcomplexfilterselect02").removeClass("d-none");
+
+            check_viewallcontracts01_div();
+            check_viewallcontracts03_div();
+        }
+    })
+
+    $("#viewallcontracts-03_btn").click(function () {
+        if ($("#viewallcontracts-03_div").hasClass("d-none")) {
+            $("#viewallcontracts-03_div").addClass("d-flex");
+            $("#viewallcontracts-03_div").removeClass("d-none");
+            $("#viewallcontracts-03_btn").addClass("active");
+
+            check_viewallcontracts01_div();
+            check_viewallcontracts02_div();
+        }
+    })
+})

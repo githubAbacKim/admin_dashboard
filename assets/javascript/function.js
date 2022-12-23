@@ -191,3 +191,34 @@ function check_master_page() {
         $("#master_btn").removeClass('active');
     }
 }
+
+
+function check_viewallcontracts01_div () {
+    if ($("#viewallcontracts-01_div").hasClass("d-flex")) {
+        $("#viewallcontracts-01_div").addClass("d-none");
+        $("#viewallcontracts-01_div").removeClass("d-flex");
+        $("#viewallcontracts-01_btn").removeClass("active");
+
+        $("#apartmentcomplexfilterselect01").addClass("d-none");
+        $("#apartmentcomplexfilterselect01").removeClass("d-flex");
+    }
+}
+
+function check_viewallcontracts02_div() {
+    if ($("#viewallcontracts-02_div").hasClass("d-flex")) {
+        $("#viewallcontracts-02_div").addClass("d-none");
+        $("#viewallcontracts-02_div").removeClass("d-flex");
+        $("#viewallcontracts-02_btn").removeClass("active");
+
+        $("#apartmentcomplexfilterselect02").addClass("d-none");
+        $("#apartmentcomplexfilterselect02").removeClass("d-flex");
+    }
+}
+
+function check_viewallcontracts03_div() {
+    if ($("#viewallcontracts-03_div").hasClass("d-flex")) {
+        $("#viewallcontracts-03_div").addClass("d-none");
+        $("#viewallcontracts-03_div").removeClass("d-flex");
+        $("#viewallcontracts-03_btn").removeClass("active");
+    }
+}
