@@ -132,505 +132,6 @@ $(document).ready(function () {
     $('[data-bs-toggle="tooltip-progress"]').tooltip("enable");
 });
 
-
-
-
-/** SIDEBAR BUTTON FUNCTIONS  **/
-$(document).ready(function () {
-    // 0
-    $("#profilebtn").click(function () {
-        if ($("#profilesec").hasClass("d-none")) {
-            $("#profilesec").addClass("d-block");
-            $("#profilesec").removeClass("d-none");
-
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 1
-    $("#mainbtn").click(function () {
-        if ($("#mainsec").hasClass("d-none")) {
-            $("#mainsec").addClass("d-block");
-            $("#mainsec").removeClass("d-none");
-            $("#mainbtn").addClass('active');
-
-            check_profilesec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 2
-    $("#cardusagebtn").click(function () {
-        if ($("#cardusagesec").hasClass("d-none")) {
-            $("#cardusagesec").addClass("d-block");
-            $("#cardusagesec").removeClass("d-none");
-            $("#cardusagebtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 3
-    $("#orderstatusbtn").click(function () {
-        if ($("#orderstatussec").hasClass("d-none")) {
-            $("#orderstatussec").addClass("d-block");
-            $("#orderstatussec").removeClass("d-none");
-            $("#orderstatusbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 4.1
-    $("#paymentrequestbtn").click(function () {
-        if ($("#paymentrequestsec").hasClass("d-none")) {
-            $("#paymentrequestsec").addClass("d-block");
-            $("#paymentrequestsec").removeClass("d-none");
-            $("#paymentrequestbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 4.2
-    $("#servicemanagementbtn").click(function () {
-        if ($("#servicemanagementsec").hasClass("d-none")) {
-            $("#servicemanagementsec").addClass("d-block");
-            $("#servicemanagementsec").removeClass("d-none");
-            $("#servicemanagementbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 4.3
-    $("#ordermanagementbtn").click(function () {
-        if ($("#ordermanagementsec").hasClass("d-none")) {
-            $("#ordermanagementsec").addClass("d-block");
-            $("#ordermanagementsec").removeClass("d-none");
-            $("#ordermanagementbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 4.4
-    $("#sendphotobtn").click(function () {
-        if ($("#sendphotosec").hasClass("d-none")) {
-            $("#sendphotosec").addClass("d-block");
-            $("#sendphotosec").removeClass("d-none");
-            $("#sendphotobtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 4.5
-    $("#technicianmanagementbtn").click(function () {
-        if ($("#technicianmanagementsec").hasClass("d-none")) {
-            $("#technicianmanagementsec").addClass("d-block");
-            $("#technicianmanagementsec").removeClass("d-none");
-            $("#technicianmanagementbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 5.5
-    $("#fairbtn").click(function () {
-        if ($("#fairsec").hasClass("d-none")) {
-            $("#fairsec").addClass("d-block");
-            $("#fairsec").removeClass("d-none");
-            $("#fairbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 5.4
-    $("#fairmanagementbtn").click(function () {
-        if ($("#fairmanagementsec").hasClass("d-none")) {
-            $("#fairmanagementsec").addClass("d-block");
-            $("#fairmanagementsec").removeClass("d-none");
-            $("#fairmanagementbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_contractsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 5.3
-    $("#contractbtn").click(function () {
-        if ($("#contractsec").hasClass("d-none")) {
-            $("#contractsec").addClass("d-block");
-            $("#contractsec").removeClass("d-none");
-            $("#contractbtn").addClass('active');
-
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_counsellingsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 5.2
-    $("#counsellingbtn").click(function () {
-        if ($("#counsellingsec").hasClass("d-none")) {
-            $("#counsellingsec").addClass("d-block");
-            $("#counsellingsec").removeClass("d-none");
-            $("#counsellingbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_mastersec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-
-    // 5.1
-    $("#masterbtn").click(function () {
-        if ($("#mastersec").hasClass("d-none")) {
-            $("#mastersec").addClass("d-block");
-            $("#mastersec").removeClass("d-none");
-            $("#masterbtn").addClass('active');
-
-            check_profilesec();
-            check_mainsec();
-            check_cardusagesec();
-            check_orderstatussec();
-            check_paymentrequestsec();
-            check_servicemanagementsec();
-            check_ordermanagementsec();
-            check_sendphotosec();
-            check_technicianmanagementsec();
-            check_fairsec();
-            check_fairmanagementsec();
-            check_contractsec();
-            check_counsellingsec();
-            set_accordion();
-            menu_accordion();
-        }
-    })
-});
-
-
-/** BUTTONS OF MASTER PAGE */
-$(document).ready(function () {
-    // 1
-    $("#master-01_btn").click(function () {
-        if ($("#master-01_div").hasClass("d-none")) {
-            $("#master-01_div").addClass("d-block");
-            $("#master-01_div").removeClass("d-none");
-            $("#master-01-card1").addClass("");
-            $("#master-01-card2").addClass("d-flex");
-            $("#master-01-card2").removeClass("d-none");
-            $("#master-01_btn").addClass("active");
-
-            check_master02div();
-            check_master03div();
-        }
-    })
-
-    // 2
-    $("#master-02_btn").click(function () {
-        if ($("#master-02_div").hasClass("d-none")) {
-            $("#master-02_div").addClass("d-block");
-            $("#master-02_div").removeClass("d-none");
-            $("#master-02_btn").addClass("active");
-
-            check_master01div();
-            check_master03div();
-        }
-    })
-
-    // 3
-    $("#master-03_btn").click(function () {
-        if ($("#master-03_div").hasClass("d-none")) {
-            $("#master-03_div").addClass("d-block");
-            $("#master-03_div").removeClass("d-none");
-            $("#master-03_btn").addClass("active");
-
-            check_master01div();
-            check_master02div();
-        }
-    })
-});
-
-
-/** BUTTONS OF CARD USAGE */
-$(document).ready(function () {
-    // 1
-    $("#cardusage-01_btn").click(function () {
-        if ($("#cardusage-01_div").hasClass("d-none")) {
-            $("#cardusage-01_div").addClass("d-block");
-            $("#cardusage-01_div").removeClass("d-none");
-            $("#cardusage-01_btn").addClass("active");
-            check_cardusage02div();
-            check_cardusage03div();
-        }
-    })
-
-    // 2
-    $("#cardusage-02_btn").click(function () {
-        if ($("#cardusage-02_div").hasClass("d-none")) {
-            $("#cardusage-02_div").addClass("d-block");
-            $("#cardusage-02_div").removeClass("d-none");
-            $("#cardusage-02_btn").addClass("active");
-
-            check_cardusage01div();
-            check_cardusage03div();
-        }
-    })
-
-    // 3
-    $("#cardusage-03_btn").click(function () {
-        if ($("#cardusage-03_div").hasClass("d-none")) {
-            $("#cardusage-03_div").addClass("d-block");
-            $("#cardusage-03_div").removeClass("d-none");
-            $("#cardusage-03_btn").addClass("active");
-
-            check_cardusage01div();
-            check_cardusage02div();
-        }
-    })
-});
-
-/** BUTTONS OF ORDER STATUS */
-$(document).ready(function () {
-    // 1
-    $("#orderstatus-01_btn").click(function () {
-        if ($("#orderstatus-01_div").hasClass("d-none")) {
-            $("#orderstatus-01_div").addClass("d-block");
-            $("#orderstatus-01_div").removeClass("d-none");
-            $("#orderstatus-01_btn").addClass("active");
-            check_orderstatus02div();
-            check_orderstatus03div();
-        }
-    })
-
-    // 2
-    $("#orderstatus-02_btn").click(function () {
-        if ($("#orderstatus-02_div").hasClass("d-none")) {
-            $("#orderstatus-02_div").addClass("d-block");
-            $("#orderstatus-02_div").removeClass("d-none");
-            $("#orderstatus-02_btn").addClass("active");
-
-            check_orderstatus01div();
-            check_orderstatus03div();
-        }
-    })
-
-    // 3
-    $("#orderstatus-03_btn").click(function () {
-        if ($("#orderstatus-03_div").hasClass("d-none")) {
-            $("#orderstatus-03_div").addClass("d-block");
-            $("#orderstatus-03_div").removeClass("d-none");
-            $("#orderstatus-03_btn").addClass("active");
-
-            check_orderstatus01div();
-            check_orderstatus02div();
-        }
-    })
-});
-
-/** BUTTONS OF FAIR MANAGEMENT */
-$(document).ready(function () {
-    // 1
-    $("#fairmanagement-01_btn").click(function () {
-        if ($("#fairmanagement-01_div").hasClass("d-none")) {
-            $("#fairmanagement-01_div").removeClass("d-none");
-            $("#fairmanagement-01_div").addClass("d-block");
-            $("#fairmanagement-01_btn").addClass("active");
-            check_fairmanagement02div();
-        }
-    })
-
-    // 2
-    $("#fairmanagement-02_btn").click(function () {
-        if ($("#fairmanagement-02_div").hasClass("d-none")) {
-            $("#fairmanagement-02_div").removeClass("d-none");
-            $("#fairmanagement-02_div").addClass("d-block");
-            $("#fairmanagement-02_btn").addClass("active");
-            check_fairmanagement01div();
-        }
-    })
-});
-
 /** SELECT 2 */
 $(document).ready(function () {
     $('#selectAppartment').select2({
@@ -667,6 +168,537 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /** DATA TABLES */
+// $(document).ready(function () {
+//     $('table').DataTable();
+// });
+
+/** SIDEBAR BUTTON FUNCTIONS  **/
 $(document).ready(function () {
-    $('table').DataTable();
+    // HOME PAGE
+    $("#home_btn").click(function () {
+        if ($("#home_page").hasClass("d-none")) {
+            $("#home_page").addClass("d-block");
+            $("#home_page").removeClass("d-none");
+
+            // check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // PROFILE PAGE
+    $("#profile_btn").click(function () {
+        if ($("#profile_page").hasClass("d-none")) {
+            $("#profile_page").addClass("d-block");
+            $("#profile_page").removeClass("d-none");
+
+            check_home_page();
+            // check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // VIEW ALL CONTRACTS PAGE
+    $("#viewallcontracts_btn").click(function () {
+        if ($("#viewallcontracts_page").hasClass("d-none")) {
+            $("#viewallcontracts_page").addClass("d-block");
+            $("#viewallcontracts_page").removeClass("d-none");
+            $("#viewallcontracts_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            // check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // CONTRACT WRITING PAGE
+    $("#contractwriting_btn").click(function () {
+        if ($("#contractwriting_page").hasClass("d-none")) {
+            $("#contractwriting_page").addClass("d-block");
+            $("#contractwriting_page").removeClass("d-none");
+            $("#contractwriting_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            // check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // ORDER STATUS PAGE
+    $("#orderstatus_btn").click(function () {
+        if ($("#orderstatus_page").hasClass("d-none")) {
+            $("#orderstatus_page").addClass("d-block");
+            $("#orderstatus_page").removeClass("d-none");
+            $("#orderstatus_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            // check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // ORDER MANAGEMENT PAGE
+    $("#ordermanagement_btn").click(function () {
+        if ($("#ordermanagement_page").hasClass("d-none")) {
+            $("#ordermanagement_page").addClass("d-block");
+            $("#ordermanagement_page").removeClass("d-none");
+            $("#ordermanagement_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            // check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // FILE MANAGEMENT PAGE
+    $("#filemanagement_btn").click(function () {
+        if ($("#filemanagement_page").hasClass("d-none")) {
+            $("#filemanagement_page").addClass("d-block");
+            $("#filemanagement_page").removeClass("d-none");
+            $("#filemanagement_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            // check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // ONLINE FAIR PAGE
+    $("#onlinefair_btn").click(function () {
+        if ($("#onlinefair_page").hasClass("d-none")) {
+            $("#onlinefair_page").addClass("d-block");
+            $("#onlinefair_page").removeClass("d-none");
+            $("#onlinefair_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            // check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // FAIR MANAGEMENT PAGE
+    $("#fairmanagement_btn").click(function () {
+        if ($("#fairmanagement_page").hasClass("d-none")) {
+            $("#fairmanagement_page").addClass("d-block");
+            $("#fairmanagement_page").removeClass("d-none");
+            $("#fairmanagement_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            // check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // PAYMENT REQUEST MANAGEMENT PAGE
+    $("#paymentrequestmanagement_btn").click(function () {
+        if ($("#paymentrequestmanagement_page").hasClass("d-none")) {
+            $("#paymentrequestmanagement_page").addClass("d-block");
+            $("#paymentrequestmanagement_page").removeClass("d-none");
+            $("#paymentrequestmanagement_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            // check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // SERVICE MANAGEMENT PAGE
+    $("#servicemanagement_btn").click(function () {
+        if ($("#servicemanagement_page").hasClass("d-none")) {
+            $("#servicemanagement_page").addClass("d-block");
+            $("#servicemanagement_page").removeClass("d-none");
+            $("#servicemanagement_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            // check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // SEND PHOTOS PAGE
+    $("#sendphotos_btn").click(function () {
+        if ($("#sendphotos_page").hasClass("d-none")) {
+            $("#sendphotos_page").addClass("d-block");
+            $("#sendphotos_page").removeClass("d-none");
+            $("#sendphotos_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            // check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // TECHNICIAN MANAGEMENT PAGE
+    $("#technicianmanagement_btn").click(function () {
+        if ($("#technicianmanagement_page").hasClass("d-none")) {
+            $("#technicianmanagement_page").addClass("d-block");
+            $("#technicianmanagement_page").removeClass("d-none");
+            $("#technicianmanagement_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            // check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // CONTRACT PAGE
+    $("#contract_btn").click(function () {
+        if ($("#contract_page").hasClass("d-none")) {
+            $("#contract_page").addClass("d-block");
+            $("#contract_page").removeClass("d-none");
+            $("#contract_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            // check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // CONSULTING PAGE
+    $("#consulting_btn").click(function () {
+        if ($("#consulting_page").hasClass("d-none")) {
+            $("#consulting_page").addClass("d-block");
+            $("#consulting_page").removeClass("d-none");
+            $("#consulting_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            // check_consulting_page();
+            check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+    // CARD USAGE HISTORY PAGE
+    $("#cardusagehistory_btn").click(function () {
+        if ($("#cardusagehistory_page").hasClass("d-none")) {
+            $("#cardusagehistory_page").addClass("d-block");
+            $("#cardusagehistory_page").removeClass("d-none");
+            $("#cardusagehistory_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            // check_cardusagehistory_page();
+            check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+
+    // MASTER PAGE
+    $("#master_btn").click(function () {
+        if ($("#master_page").hasClass("d-none")) {
+            $("#master_page").addClass("d-block");
+            $("#master_page").removeClass("d-none");
+            $("#master_btn").addClass('active');
+
+            check_home_page();
+            check_profile_page();
+            check_viewallcontracts_page();
+            check_contractwriting_page();
+            check_orderstatus_page();
+            check_ordermanagement_page();
+            check_filemanagement_page();
+            check_onlinefair_page();
+            check_fairmanagement_page();
+            check_paymentrequestmanagement_page();
+            check_servicemanagement_page();
+            check_sendphotos_page();
+            check_technicianmanagement_page();
+            check_contract_page();
+            check_consulting_page();
+            check_cardusagehistory_page();
+            // check_master_page();
+            check_order_accordion();
+            check_fair_accordion();
+            check_settings_accordion();
+            check_menu_accordion();
+        }
+    })
+
+
 });

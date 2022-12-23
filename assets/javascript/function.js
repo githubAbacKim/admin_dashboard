@@ -1,263 +1,193 @@
-function set_accordion() {
-    if ($("#paymentrequestsec").hasClass("d-block") ||
-        $("#servicemanagementsec").hasClass("d-block") ||
-        $("#ordermanagementsec").hasClass("d-block") ||
-        $("#sendphotosec").hasClass("d-block") ||
-        $("#technicianmanagementsec").hasClass("d-block")) {
+function check_order_accordion () {
+    if ($("#orderstatus_page").hasClass("d-block") ||
+        $("#ordermanagement_page").hasClass("d-block")) {
         // do nothing
     }
-    else if ($("#paymentrequestsec").hasClass("d-none") ||
-        $("#servicemanagementsec").hasClass("d-none") ||
-        $("#ordermanagementsec").hasClass("d-none") ||
-        $("#sendphotosec").hasClass("d-none") ||
-        $("#technicianmanagementsec").hasClass("d-none")) {
+    else if ($("#orderstatus_page").hasClass("d-none") ||
+        $("#ordermanagement_page").hasClass("d-none")) {
 
-            $("#setbtn").addClass('collapsed');
-            $("#set-collapse").removeClass('show');
-        }
+        $("#order_btn").addClass('collapsed');
+        $("#order_collapse").removeClass('show');
+    }
 }
 
-function menu_accordion() {
-    if ($("#fairsec").hasClass("d-block") ||
-        $("#fairmanagementsec").hasClass("d-block") ||
-        $("#contractsec").hasClass("d-block") ||
-        $("#counsellingsec").hasClass("d-block") ||
-        $("#mastersec").hasClass("d-block")) {
+function check_fair_accordion() {
+    if ($("#onlinefair_page").hasClass("d-block") ||
+        $("#fairmanagement_page").hasClass("d-block")) {
         // do nothing
     }
-    else if ($("#fairsec").hasClass("d-none") ||
-        $("#fairmanagementsec").hasClass("d-none") ||
-        $("#contractsec").hasClass("d-none") ||
-        $("#counsellingsec").hasClass("d-none") ||
-        $("#mastersec").hasClass("d-none")) {
+    else if ($("#onlinefair_page").hasClass("d-none") ||
+        $("#fairmanagement_page").hasClass("d-none")) {
 
-            $("#menubtn").addClass('collapsed');
-            $("#menu-collapse").removeClass('show');
+        $("#fair_btn").addClass('collapsed');
+        $("#fair_collapse").removeClass('show');
     }
 }
 
-// 0
-function check_profilesec() {
-    if ($("#profilesec").hasClass("d-block")) {
-        $("#profilesec").addClass("d-none");
-        $("#profilesec").removeClass("d-block");
+function check_settings_accordion() {
+    if ($("#paymentrequestmanagement_page").hasClass("d-block") ||
+        $("#servicemanagement_page").hasClass("d-block") ||
+        $("#sendphotos_page").hasClass("d-block") ||
+        $("#technicianmanagement_page").hasClass("d-block")) {
+        // do nothing
+    }
+    else if ($("#paymentrequestmanagement_page").hasClass("d-none") ||
+        $("#servicemanagement_page").hasClass("d-none") ||
+        $("#sendphotos_page").hasClass("d-none") ||
+        $("#technicianmanagement_page").hasClass("d-none")) {
+
+        $("#settings_btn").addClass('collapsed');
+        $("#settings_collapse").removeClass('show');
     }
 }
 
-// 1
-function check_mainsec() {
-    if ($("#mainsec").hasClass("d-block")) {
-        $("#mainsec").addClass("d-none");
-        $("#mainsec").removeClass("d-block");
-        $("#mainbtn").removeClass('active');
+function check_menu_accordion() {
+    if ($("#contract_page").hasClass("d-block") ||
+        $("#consulting_page").hasClass("d-block") ||
+        $("#cardusagehistory_page").hasClass("d-block") ||
+        $("#master_page").hasClass("d-block")) {
+        // do nothing
+    }
+    else if ($("#contract_page").hasClass("d-none") ||
+        $("#consulting_page").hasClass("d-none") ||
+        $("#cardusagehistory_page").hasClass("d-none") ||
+        $("#master_page").hasClass("d-none")) {
+
+        $("#menu_btn").addClass('collapsed');
+        $("#menu_collapse").removeClass('show');
     }
 }
 
-// 2
-function check_cardusagesec() {
-    if ($("#cardusagesec").hasClass("d-block")) {
-        $("#cardusagesec").addClass("d-none");
-        $("#cardusagesec").removeClass("d-block");
-        $("#cardusagebtn").removeClass('active');
+function check_home_page() {
+    if ($("#home_page").hasClass("d-block")) {
+        $("#home_page").addClass("d-none");
+        $("#home_page").removeClass("d-block");
     }
 }
 
-// 3
-function check_orderstatussec() {
-    if ($("#orderstatussec").hasClass("d-block")) {
-        $("#orderstatussec").addClass("d-none");
-        $("#orderstatussec").removeClass("d-block");
-        $("#orderstatusbtn").removeClass('active');
+function check_profile_page() {
+    if ($("#profile_page").hasClass("d-block")) {
+        $("#profile_page").addClass("d-none");
+        $("#profile_page").removeClass("d-block");
     }
 }
 
-// 4.1
-function check_paymentrequestsec() {
-    if ($("#paymentrequestsec").hasClass("d-block")) {
-        $("#paymentrequestsec").addClass("d-none");
-        $("#paymentrequestsec").removeClass("d-block");
-        $("#paymentrequestbtn").removeClass('active');
+function check_viewallcontracts_page() {
+    if ($("#viewallcontracts_page").hasClass("d-block")) {
+        $("#viewallcontracts_page").addClass("d-none");
+        $("#viewallcontracts_page").removeClass("d-block");
+        $("#viewallcontracts_btn").removeClass('active');
+    }
+} 
+
+function check_contractwriting_page() {
+    if ($("#contractwriting_page").hasClass("d-block")) {
+        $("#contractwriting_page").addClass("d-none");
+        $("#contractwriting_page").removeClass("d-block");
+        $("#contractwriting_btn").removeClass('active');
+    }
+} 
+
+function check_orderstatus_page() {
+    if ($("#orderstatus_page").hasClass("d-block")) {
+        $("#orderstatus_page").addClass("d-none");
+        $("#orderstatus_page").removeClass("d-block");
+        $("#orderstatus_btn").removeClass('active');
+    }
+} 
+
+function check_ordermanagement_page() {
+    if ($("#ordermanagement_page").hasClass("d-block")) {
+        $("#ordermanagement_page").addClass("d-none");
+        $("#ordermanagement_page").removeClass("d-block");
+        $("#ordermanagement_btn").removeClass('active');
     }
 }
 
-// 4.2
-function check_servicemanagementsec() {
-    if ($("#servicemanagementsec").hasClass("d-block")) {
-        $("#servicemanagementsec").addClass("d-none");
-        $("#servicemanagementsec").removeClass("d-block");
-        $("#servicemanagementbtn").removeClass('active');
+function check_filemanagement_page() {
+    if ($("#filemanagement_page").hasClass("d-block")) {
+        $("#filemanagement_page").addClass("d-none");
+        $("#filemanagement_page").removeClass("d-block");
+        $("#filemanagement_btn").removeClass('active');
     }
 }
 
-// 4.3
-function check_ordermanagementsec() {
-    if ($("#ordermanagementsec").hasClass("d-block")) {
-        $("#ordermanagementsec").addClass("d-none");
-        $("#ordermanagementsec").removeClass("d-block");
-        $("#ordermanagementbtn").removeClass('active');
+function check_onlinefair_page() {
+    if ($("#onlinefair_page").hasClass("d-block")) {
+        $("#onlinefair_page").addClass("d-none");
+        $("#onlinefair_page").removeClass("d-block");
+        $("#onlinefair_btn").removeClass('active');
     }
 }
 
-// 4.4
-function check_sendphotosec() {
-    if ($("#sendphotosec").hasClass("d-block")) {
-        $("#sendphotosec").addClass("d-none");
-        $("#sendphotosec").removeClass("d-block");
-        $("#sendphotobtn").removeClass('active');
+function check_fairmanagement_page() {
+    if ($("#fairmanagement_page").hasClass("d-block")) {
+        $("#fairmanagement_page").addClass("d-none");
+        $("#fairmanagement_page").removeClass("d-block");
+        $("#fairmanagement_btn").removeClass('active');
     }
 }
 
-// 4.5
-function check_technicianmanagementsec () {
-    if ($("#technicianmanagementsec").hasClass("d-block")) {
-        $("#technicianmanagementsec").addClass("d-none");
-        $("#technicianmanagementsec").removeClass("d-block");
-        $("#technicianmanagementbtn").removeClass('active');
+function check_paymentrequestmanagement_page() {
+    if ($("#paymentrequestmanagement_page").hasClass("d-block")) {
+        $("#paymentrequestmanagement_page").addClass("d-none");
+        $("#paymentrequestmanagement_page").removeClass("d-block");
+        $("#paymentrequestmanagement_btn").removeClass('active');
     }
 }
 
-// 5.5
-function check_fairsec() {
-    if ($("#fairsec").hasClass("d-block")) {
-        $("#fairsec").addClass("d-none");
-        $("#fairsec").removeClass("d-block");
-        $("#fairbtn").removeClass('active');  
+function check_servicemanagement_page() {
+    if ($("#servicemanagement_page").hasClass("d-block")) {
+        $("#servicemanagement_page").addClass("d-none");
+        $("#servicemanagement_page").removeClass("d-block");
+        $("#servicemanagement_btn").removeClass('active');
     }
 }
 
-// 5.4
-function check_fairmanagementsec() {
-    if ($("#fairmanagementsec").hasClass("d-block")) {
-        $("#fairmanagementsec").addClass("d-none");
-        $("#fairmanagementsec").removeClass("d-block");
-        $("#fairmanagementbtn").removeClass('active');
+function check_sendphotos_page() {
+    if ($("#sendphotos_page").hasClass("d-block")) {
+        $("#sendphotos_page").addClass("d-none");
+        $("#sendphotos_page").removeClass("d-block");
+        $("#sendphotos_btn").removeClass('active');
     }
 }
 
-// 5.3
-function check_contractsec() {
-    if ($("#contractsec").hasClass("d-block")) {
-        $("#contractsec").addClass("d-none");
-        $("#contractsec").removeClass("d-block");
-        $("#contractbtn").removeClass('active');
+function check_technicianmanagement_page() {
+    if ($("#technicianmanagement_page").hasClass("d-block")) {
+        $("#technicianmanagement_page").addClass("d-none");
+        $("#technicianmanagement_page").removeClass("d-block");
+        $("#technicianmanagement_btn").removeClass('active');
     }
 }
 
-// 5.2
-function check_counsellingsec() {
-    if ($("#counsellingsec").hasClass("d-block")) {
-        $("#counsellingsec").addClass("d-none");
-        $("#counsellingsec").removeClass("d-block");
-        $("#counsellingbtn").removeClass('active');
+function check_contract_page() {
+    if ($("#contract_page").hasClass("d-block")) {
+        $("#contract_page").addClass("d-none");
+        $("#contract_page").removeClass("d-block");
+        $("#contract_btn").removeClass('active');
     }
 }
 
-// 5.1
-function check_mastersec() {
-    if ($("#mastersec").hasClass("d-block")) {
-        $("#mastersec").addClass("d-none");
-        $("#mastersec").removeClass("d-block");
-        $("#masterbtn").removeClass('active');
+function check_consulting_page() {
+    if ($("#consulting_page").hasClass("d-block")) {
+        $("#consulting_page").addClass("d-none");
+        $("#consulting_page").removeClass("d-block");
+        $("#consulting_btn").removeClass('active');
     }
 }
 
-// 2.1
-function check_cardusage01div() {
-    if ($("#cardusage-01_div").hasClass("d-block")) {
-        $("#cardusage-01_div").addClass("d-none");
-        $("#cardusage-01_div").removeClass("d-block");
-        $("#cardusage-01_btn").removeClass("active");
+function check_cardusagehistory_page() {
+    if ($("#cardusagehistory_page").hasClass("d-block")) {
+        $("#cardusagehistory_page").addClass("d-none");
+        $("#cardusagehistory_page").removeClass("d-block");
+        $("#cardusagehistory_btn").removeClass('active');
     }
 }
 
-// 2.2
-function check_cardusage02div() {
-    if ($("#cardusage-02_div").hasClass("d-block")) {
-        $("#cardusage-02_div").addClass("d-none");
-        $("#cardusage-02_div").removeClass("d-block");
-        $("#cardusage-02_btn").removeClass("active");
-    }
-}
-
-// 2.3
-function check_cardusage03div() {
-    if ($("#cardusage-03_div").hasClass("d-block")) {
-        $("#cardusage-03_div").addClass("d-none");
-        $("#cardusage-03_div").removeClass("d-block");
-        $("#cardusage-03_btn").removeClass("active");
-    }
-}
-
-// 3.1
-function check_orderstatus01div() {
-    if ($("#orderstatus-01_div").hasClass("d-block")) {
-        $("#orderstatus-01_div").addClass("d-none");
-        $("#orderstatus-01_div").removeClass("d-block");
-        $("#orderstatus-01_btn").removeClass("active");
-    }
-}
-
-// 3.2
-function check_orderstatus02div() {
-    if ($("#orderstatus-02_div").hasClass("d-block")) {
-        $("#orderstatus-02_div").addClass("d-none");
-        $("#orderstatus-02_div").removeClass("d-block");
-        $("#orderstatus-02_btn").removeClass("active");
-    }
-}
-
-// 3.3
-function check_orderstatus03div() {
-    if ($("#orderstatus-03_div").hasClass("d-block")) {
-        $("#orderstatus-03_div").addClass("d-none");
-        $("#orderstatus-03_div").removeClass("d-block");
-        $("#orderstatus-03_btn").removeClass("active");
-    }
-}
-
-function check_master01div() {
-    if ($("#master-01_div").hasClass("d-block")) {
-        $("#master-01_div").addClass("d-none");
-        $("#master-01_div").removeClass("d-block");
-        $("#master-01-card1").addClass("d-none");
-        $("#master-01-card2").addClass("d-none");
-        $("#master-01-card2").removeClass("d-flex");
-        $("#master-01_btn").removeClass("active");
-    }
-}
-
-// 5.1.2
-function check_master02div() {
-    if ($("#master-02_div").hasClass("d-block")) {
-        $("#master-02_div").addClass("d-none");
-        $("#master-02_div").removeClass("d-block");
-        $("#master-02_btn").removeClass("active");
-    }
-}
-
-// 5.1.3
-function check_master03div() {
-    if ($("#master-03_div").hasClass("d-block")) {
-        $("#master-03_div").addClass("d-none");
-        $("#master-03_div").removeClass("d-block");
-        $("#master-03_btn").removeClass("active");
-    }
-}
-
-// 5.4.1
-function check_fairmanagement01div() {
-    if ($("#fairmanagement-01_div").hasClass("d-block")) {
-        $("#fairmanagement-01_div").addClass("d-none");
-        $("#fairmanagement-01_div").removeClass("d-block");
-        $("#fairmanagement-01_btn").removeClass("active");
-    }
-}
-
-// 5.4.2
-function check_fairmanagement02div() {
-    if ($("#fairmanagement-02_div").hasClass("d-block")) {
-        $("#fairmanagement-02_div").addClass("d-none");
-        $("#fairmanagement-02_div").removeClass("d-block");
-        $("#fairmanagement-02_btn").removeClass("active");
+function check_master_page() {
+    if ($("#master_page").hasClass("d-block")) {
+        $("#master_page").addClass("d-none");
+        $("#master_page").removeClass("d-block");
+        $("#master_btn").removeClass('active');
     }
 }

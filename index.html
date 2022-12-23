@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/vendors/select2-4.0.13/css/select2.min.css"  />
     <link rel="stylesheet" href="assets/vendors/select2-4.0.13/css/select2-bootstrap-5-theme.min.css"  />
     <link rel="stylesheet" href="assets/vendors/bootstrap-5.1.3/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-5.1.3/css/bootstrap-icons.css" />
     <link rel="stylesheet" href="assets/styles/css/main.css" />
     <link rel="stylesheet" href="assets/calendar/css/main.min.css" />
 
@@ -52,17 +53,17 @@
           </div>
         </div>
 
-        <div>
+        <a id="home_btn" href="#home">
           <img class="brand-full" src="assets/img/logo/logo-full.png" alt="" height="30px" />
           <img class="brand-icon" src="assets/img/logo/logo-icon.png" alt="" height="30px" />
-        </div>
+        </a>
       </div>
       <div class=""></div>
     </header>
 
     <aside id="side-navbar" class="max side-navbar bg-light">
       <!-- profile -->
-      <a id="profilebtn" class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light">
+      <a id="profile_btn" href="#profile" class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light">
         <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
         <span class="h5 ms-2 text-dark">시공사 이름</span>
       </a>
@@ -70,100 +71,151 @@
       <div class="side-navbar_tabs list-group bg-light">
         <div class="side-navbar_tabs_top">
           <div class="accordion accordion-flush">
-            <!-- Main -->
-            <a id="mainbtn" href="#" class="list-group-item active" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="일정">
-              <i class="fa-regular fa-calendar-check"></i>
-              <span class="ms-2"> 일정 </span>
+          
+            <!-- View all contract -->
+            <a id="viewallcontracts_btn" href="#viewallcontracts" class="list-group-item" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="계약 전체 보기">
+              <i class="fa-light fa-file-lines"></i>
+              <span class="ms-2"> 계약 전체 보기 </span>
             </a>
 
-            <!-- Card Usage History -->
-            <a id="cardusagebtn" href="#" class="list-group-item" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="카드 사용 내역">
-              <i class="fa-regular fa-address-book"></i>
-              <span class="ms-2">카드 사용 내역</span>
+            <!-- Contract Writing -->
+            <a id="contractwriting_btn" href="#contractwriting" class="list-group-item" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="계약서 작성">
+              <i class="fa-light fa-file-pen"></i>
+              <span class="ms-2"> 계약서 작성 </span>
             </a>
 
-            <!-- Order status -->
-            <a id="orderstatusbtn" href="#" class="list-group-item" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="발주 현황" >
-              <i class="fa-regular fa-table"></i>
-              <span class="ms-2">발주 현황</span>
-            </a>
-
-            <!-- Set -->
+            <!-- Order Accordion-->
             <div class="accordion-item">
-              <h2 class="accordion-header" id="set-heading" data-bs-toggle="tooltip" data-bs-placement="right" title="설정" >
-                <button id="setbtn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#set-collapse" aria-expanded="false" aria-controls="set-collapse" >
-                  <i class="fa-regular fa-gear"></i>
-                  <span class="ms-2 me-3">설정</span>
+              <h2 class="accordion-header" id="order-heading" data-bs-toggle="tooltip" data-bs-placement="right" title="발주" >
+                <button id="order_btn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#order_collapse" aria-expanded="false" aria-controls="order-collapse" >
+                  <i class="fa-light fa-file-pen"></i>
+                  <span class="me-3">발주</span>
                 </button>
               </h2>
-              <div id="set-collapse" class="accordion-collapse collapse" aria-labelledby="set-heading" data-bs-parent="#accordionsetExample" >
+              <div id="order_collapse" class="accordion-collapse collapse" aria-labelledby="order-heading" data-bs-parent="#accordionorderExample" >
                 <div class="accordion-body shadow">
-                  <!-- Payment request -->
-                  <a id="paymentrequestbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="결제 요청" >
+                  <!-- Order Status -->
+                  <a id="orderstatus_btn" href="#orderstatus" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="발주 현황" >
                     <i class="fa-regular fa-square-1"></i>
-                    <span>결제 요청</span>
+                    <span>발주 현황</span>
                   </a>
 
-                  <!-- service management -->
-                  <a id="servicemanagementbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="서비스 관리" >
+                  <!-- Order Management -->
+                  <a id="ordermanagement_btn" href="#ordermanagement" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="발주 관리" >
+                    <i class="fa-regular fa-square-2"></i>
+                    <span>발주 관리</span>
+                  </a>
+                </div>
+              </div>
+            
+            </div>
+
+            <!-- File Management -->
+            <a id="filemanagement_btn" href="#filemanagement" class="list-group-item" aria-current="true" data-bs-toggle="tooltip" data-bs-placement="right" title="파일관리">
+              <i class="fa-light fa-folder"></i>
+              <span class="ms-2"> 파일관리 </span>
+            </a>
+
+            <!-- Fair Accordion -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="fair-heading" data-bs-toggle="tooltip" data-bs-placement="right" title="박람회" >
+                <button id="fair_btn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fair_collapse" aria-expanded="false" aria-controls="fair-collapse" >
+                  <i class="fa-light fa-landmark"></i>
+                  <span class="me-3">박람회</span>
+                </button>
+              </h2>
+              <div id="fair_collapse" class="accordion-collapse collapse" aria-labelledby="fair-heading" data-bs-parent="#accordionfairExample" >
+                <div class="accordion-body shadow">
+                  <!-- Online Fair -->
+                  <a id="onlinefair_btn" href="#onlinefair" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="온라인 박람회" >
+                    <i class="fa-regular fa-square-1"></i>
+                    <span>온라인 박람회</span>
+                  </a>
+
+                  <!-- Fair Management -->
+                  <a id="fairmanagement_btn" href="#fairmanagement" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="박람회 관리" >
+                    <i class="fa-regular fa-square-2"></i>
+                    <span>박람회 관리</span>
+                  </a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div style="margin-top: 2px;"></div>
+
+            <!-- Settings Accordion -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="settings-heading" data-bs-toggle="tooltip" data-bs-placement="right" title="설정" >
+                <button id="settings_btn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings_collapse" aria-expanded="false" aria-controls="settings-collapse" >
+                  <i class="fa-light fa-gear"></i>
+                  <span class="me-3">설정</span>
+                </button>
+              </h2>
+              <div id="settings_collapse" class="accordion-collapse collapse" aria-labelledby="settings-heading" data-bs-parent="#accordionsettingsExample" >
+                <div class="accordion-body shadow">
+                  <!-- Payment Request Management -->
+                  <a id="paymentrequestmanagement_btn" href="#paymentrequest" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="결제 요청 관리" >
+                    <i class="fa-regular fa-square-1"></i>
+                    <span>결제 요청 관리</span>
+                  </a>
+
+                  <!-- Service Management -->
+                  <a id="servicemanagement_btn" href="#servicemanagement" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="서비스 관리" >
                     <i class="fa-regular fa-square-2"></i>
                     <span>서비스 관리</span>
                   </a>
-                  <!-- order management -->
-                  <a id="ordermanagementbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="주문 관리" >
+
+                  <!-- Send Photos -->
+                  <a id="sendphotos_btn" href="#sendphotos" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="사진발송" >
                     <i class="fa-regular fa-square-3"></i>
-                    <span>주문 관리</span>
-                  </a>
-                  <!-- send photo -->
-                  <a id="sendphotobtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="사진 보내기" >
-                    <i class="fa-regular fa-square-4"></i>
-                    <span>사진 보내기</span>
+                    <span>사진발송</span>
                   </a>
 
-                  <!-- technician management -->
-                  <a id="technicianmanagementbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="기술자 관리" >
-                    <i class="fa-regular fa-square-5"></i>
+                  <!-- Technician Management -->
+                  <a id="technicianmanagement_btn" href="#technicianmanagement" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="기술자 관리" >
+                    <i class="fa-regular fa-square-4"></i>
                     <span>기술자 관리</span>
                   </a>
                 </div>
               </div>
+            
             </div>
           </div>
         </div>
 
-        <div class="side-navbar_tabs_bot my-4">
-          <div class="accordion accordion-flush">
+        <div class="side-navbar_tabs_bot my-2 mb-4 bg-transparent">
+          <div class="accordion accordion-flush bg-transparent">
             <!-- Log out -->
-            <a id="logoutbtn" href="#" class="list-group-item" aria-current="true" data-bs-toggle="tooltip"  data-bs-placement="right" title="로그아웃" >
+            <a id="logout_btn" href="#logout" class="list-group-item bg-transparent" aria-current="true" data-bs-toggle="tooltip"  data-bs-placement="right" title="로그아웃" >
               로그아웃
             </a>
 
             <!-- menu -->
             <div class="accordion-item">
-              <div id="menu-collapse" class="accordion-collapse collapse" aria-labelledby="menu-heading" data-bs-parent="#accordionmenuExample" >
+              <div id="menu_collapse" class="accordion-collapse collapse" aria-labelledby="menu-heading" data-bs-parent="#accordionmenuExample" >
                 <div class="accordion-body">
-                  <!-- Fair -->
-                  <a id="fairbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="박람회" >
-                    <i class="fa-regular fa-circle-5"></i>
-                    <span>박람회</span>
-                  </a>
-                  <!-- fair management -->
-                  <a id="fairmanagementbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip"  data-bs-placement="right" title="박람회 관리" >
-                    <i class="fa-regular fa-circle-4"></i>
-                    <span>박람회 관리</span>
-                  </a>
+                  
                   <!-- contract -->
-                  <a id="contractbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="계약서" >
-                    <i class="fa-regular fa-circle-3"></i>
+                  <a id="contract_btn" href="#contract" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="계약서" >
+                    <i class="fa-regular fa-circle-4"></i>
                     <span>계약서</span>
                   </a>
-                  <!-- counselling -->
-                  <a id="counsellingbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="삼담" >
-                    <i class="fa-regular fa-circle-2"></i>
-                    <span>삼담</span>
+
+                  <!-- Consulting -->
+                  <a id="consulting_btn" href="#consulting" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="상담" >
+                    <i class="fa-regular fa-circle-3"></i>
+                    <span>상담</span>
                   </a>
-                  <!-- master -->
-                  <a id="masterbtn" href="#" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="마스터" >
+
+                  <!-- Card Usage History -->
+                  <a id="cardusagehistory_btn" href="#cardusagehistory" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="카드사용내역" >
+                    <i class="fa-regular fa-circle-2"></i>
+                    <span>카드사용내역</span>
+                  </a>
+
+                  <!-- Master -->
+                  <a id="master_btn" href="#master" class="accordion-body-item" data-bs-toggle="tooltip" data-bs-placement="right" title="마스터" >
                     <i class="fa-regular fa-circle-1"></i>
                     <span>마스터</span>
                   </a>
@@ -171,7 +223,7 @@
               </div>
 
               <h2 class="accordion-header" id="menu-heading" data-bs-toggle="tooltip" data-bs-placement="right" title="메뉴" >
-                <button id="menubtn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menu-collapse" aria-expanded="false"  aria-controls="menu-collapseTwo" >
+                <button id="menu_btn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menu_collapse" aria-expanded="false"  aria-controls="menu-collapseTwo" >
                   메뉴
                 </button>
               </h2>
@@ -182,8 +234,16 @@
     </aside>
 
     <main id="main-content" class="max">
-      <!-- profile -->
-      <section id="profilesec" class="d-none content">
+      <!-- HOME PAGE -->
+      <section id="home_page" class="d-block content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
+          <!-- INSIDE CONTENTS -->
+        
+        </div>
+      </section>
+
+      <!-- PROFILE PAGE -->
+      <section id="profile_page" class="d-none content">
         <div class="card-main shadow bg-white col-xl-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
           <h2> 프로필 </h2>
@@ -194,16 +254,16 @@
             <div class="ms-3 d-flex justify-content-around align-items-start flex-column" style="height: 98px;">
               <p class="fs-25px fw-bold"> 윈케어 </p>
               <div class="d-flex justify-content-between align-items-center flex-row flex-wrap">
-                <p class="fs-17px text-gray300 my-1 me-3"> 000000-0000000 </p>
-                <button type="button" class="text-gray300 ms-0 ms-md-3 btn btn-outline-secondary"> 사업자등록증 보기 </button>
+                <p class="fs-17px text-gray300 my-1 me-4"> 000000-0000000 </p>
+                <button type="button" class="text-gray300 btn btn-outline-secondary"> 사업자등록증 보기 </button>
               </div>
 
             </div>
           </div>
 
           <div class="my-3 d-flex justify-content-start align-items-center flex-row w-100">
-            <div style="width:98px;"> </div>
-            <p class="ms-3 text-gray300 fs-17px"> 방충망 / 시스템에어컨 / 단열필름 / 욕실케어 </p>
+            <div class="me-3" style="min-width:98px;"> </div>
+            <p class="text-gray300 fs-17px text-wrap"> 방충망 / 시스템에어컨 / 단열필름 / 욕실케어 </p>
           </div>
 
           <hr class="hr-1 bg-dark">
@@ -241,978 +301,59 @@
                 <div class="d-flex align-items-center">
                   <div class="col-2 col-form-label fs-17px text-gray300" > 프로필 <br/> 이미지 </div>
                   <div class="col-10">
-                    <label for="editprofile" class="cursor-pointer " >
-                      <img src="/assets/img/images/edit-profile.png" alt="" style="height: 160px; width: 160px;">
-                      <input id="editprofile" type="file" class="form-control file-profile d-none">
+                    <label for="editprofile" class="btn btn-light rounded-circle p-0">
+                      <div class="d-flex justify-content-center align-items-center" style="height: 160px; width: 160px;">
+                        <i class="fa-light fa-pen-to-square text-secondary" style="font-size: 50px"></i>
+                        <input id="editprofile" type="file" class="form-control file-profile d-none">
+                      </div>
                     </label>
                   </div>
                 </div>
-                
               </div>
-              <div class="text-end">
-                <button type="submit" class="btn btn-primary">저장</button>
+
+              <div class="mt-5 text-end">
+                <button type="button" class="btn btn-primary">저장</button>
               </div>
             </form>
           </div>
         </div>
       </section>
 
-      <!-- main -->
-      <section id="mainsec" class="d-block content">
+      <!-- ALL CONTRACT PAGE -->
+      <section id="viewallcontracts_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
-          <div class="d-flex justify-content-between align-items-center flex-row">
-            <p class="me-3 fs-20px text-darkprimary fw-bold "> 총123건 </p>
-            <div class="d-flex justify-content-between align-items-center flex-row flex-wrap">
-              <span class="me-3 fs-20px text-darkprimary fw-bold">완료율 27%</span>
-              <span class="ms-3 fs-20px text-darkprimary fw-bold">회수율 23%</span>
-            </div>
-          </div>
-
-          <div class="progress my-3" style="height: 26px">
-            <div
-              class="progress-bar bg-info"
-              role="progressbar"
-              aria-label="Segment one"
-              style="width: 32%"
-              aria-valuenow="32"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              data-bs-toggle="tooltip-progress" 
-              data-bs-placement="top" 
-              title="시공완료 32건"
-            >
-            </div>
-            <div
-              class="progress-bar bg-danger"
-              role="progressbar"
-              aria-label="Segment two"
-              style="width: 5%"
-              aria-valuenow="5"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-            </div>
-            <div
-              class="progress-bar bg-light"
-              role="progressbar"
-              aria-label="Segment three"
-              style="width: 87%"
-              aria-valuenow="87"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              data-bs-toggle="tooltip-progress" 
-              data-bs-placement="top" 
-              title="대기중 87건"
-            >
-            </div>
-          </div>
-
-          <div class="row g-3">
-            <div class="col-xl-6">
-              <div class="card-submain card py-4 px-3 px-md-4 rounded-10 shadow">
-                <h3> 채팅 </h3>
-                <div class="card-submain my-2 px-1 pe-md-3 overflow-x-hidden overflow-y-auto">
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                  <div class="mb-3 me-2 d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <img
-                        src="assets/img/images/tree.png"
-                        alt=""
-                        height="44px"
-                        width="44px"
-                      />
-                      <div class="ms-1 ms-md-3 d-flex justify-content-around align-items-start flex-column">
-                        <p class="fs-14px fw-bold text-dark"> 이민지 </p>
-                        <p class="fs-14px text-gray200"> 안녕하세요 견적서 문의드립니다.^^ </p>
-                      </div>
-                    </div>
-                    <p class="fs-14px text-gray100"> 2022-11-28 </p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-6">
-              <div class="card-submain card py-4 px-3 px-md-4 rounded-10 shadow">
-                <h3> 계약서 요청 </h3>
-                <div class="card-submain my-2 px-1 pe-md-3 overflow-x-hidden overflow-y-auto">
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-between flex-column">
-                    <div class="d-flex justify-content-between align-items-center flex-row">
-                      <p class="fs-20px text-dark fw-bold"> 이민지 </p>
-                      <div class="d-flex justify-content-between align-items-center flex-row">
-                        <button type="button" class="fs-13px btn btn-outline-primary">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-primary mx-2">
-                          계약서 보기
-                        </button>
-                        <button type="button" class="fs-13px btn btn-secondary">
-                          계약서 보기
-                        </button>
-                      </div>
-                    </div>
-                    <p class="text-gray200 fs-14px text-end py-1">
-                      2022-11-28
-                    </p>
-                  </div>
-
-                </div>
-              </div>
-          </div>
-
         </div>
       </section>
 
-      <!-- card usage history -->
-      <section id="cardusagesec" class="d-none content">
-        <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+      <!-- CONTRACT WRITING PAGE -->
+      <section id="contractwriting_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">카드 사용 내역</h2>
+        </div>
+      </section>
 
-          <div class="navigation mt-3 mb-4">
-            <nav class="nav-list nav">
-              <a id="cardusage-01_btn" class="nav-link active" href="#"> 날짜별로 보기 </a>
-              <a id="cardusage-02_btn" class="nav-link" href="#"> 카드로 보기 </a>
-              <a id="cardusage-03_btn" class="nav-link" href="#"> 계정으로 보기 </a>
-            </nav>
-          </div>
+      <!-- ORDER PAGES -->
+      <!-- ORDER STATUS PAGE -->
+      <section id="orderstatus_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
+          <!-- INSIDE CONTENTS -->
+          <h2>발주현황</h2>
 
           <!-- datatables -->
-          <div id="cardusage-01_div" class="d-block card my-3 border-0">
-            1
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table table-hover">
-                  <thead class="text-center bg-primary">
-                      <tr class="text-white border-bottom-0">
-                        <th class="rounded-start text-center">카드번호(뒤 4자리)</th>
-                        <th class="text-center">날짜</th>
-                        <th class="text-center">시간</th>
-                        <th class="text-center">금액</th>
-                        <th class="text-center">상호</th>
-                        <th class="rounded-end text-center">계정(관리자가 직접 입력)</th>
-                      </tr>
-                  </thead>
-                  <tbody class="text-center text-darkprimary fs-14px">
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                  </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="cardusage-02_div" class="d-none card my-3 border-0">
-            2
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table table-hover">
-                  <thead class="text-center bg-primary">
-                      <tr class="text-white border-bottom-0">
-                        <th class="rounded-start text-center">카드번호(뒤 4자리)</th>
-                        <th class="text-center">날짜</th>
-                        <th class="text-center">시간</th>
-                        <th class="text-center">금액</th>
-                        <th class="text-center">상호</th>
-                        <th class="rounded-end text-center">계정(관리자가 직접 입력)</th>
-                      </tr>
-                  </thead>
-                  <tbody class="text-center text-darkprimary fs-14px">
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                  </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="cardusage-03_div" class="d-none card my-3 border-0">
-            3
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table table-hover">
-                  <thead class="text-center bg-primary">
-                      <tr class="text-white border-bottom-0">
-                        <th class="rounded-start text-center">카드번호(뒤 4자리)</th>
-                        <th class="text-center">날짜</th>
-                        <th class="text-center">시간</th>
-                        <th class="text-center">금액</th>
-                        <th class="text-center">상호</th>
-                        <th class="rounded-end text-center">계정(관리자가 직접 입력)</th>
-                      </tr>
-                  </thead>
-                  <tbody class="text-center text-darkprimary fs-14px">
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                    <tr>
-                      <td>5806</td>
-                      <td>2022-12-14</td>
-                      <td>20.15</td>
-                      <td>30,000</td>
-                      <td>작동 테스트</td>
-                      <td>상호</td>
-                    </tr>
-                  </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- order status -->
-      <section id="orderstatussec" class="d-none content">
-        <div class="card-main shadow bg-white col-12 p-3 p-md-5">
-          <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">카드 사용 내역</h2>
-
-          <div class="navigation mt-3 mb-4">
-            <nav class="nav-list nav">
-              <a id="orderstatus-01_btn" class="nav-link active" href="#"> 날짜별로 보기 </a>
-              <a id="orderstatus-02_btn" class="nav-link" href="#"> 카드로 보기 </a>
-              <a id="orderstatus-03_btn" class="nav-link" href="#"> 계정으로 보기 </a>
-            </nav>
-          </div>
-
-          <!-- datatables -->
-          <div id="orderstatus-01_div" class="d-block card my-3 border-0">
-            1
+          <div id="" class="d-block card my-3 border-0">
             <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
               <table id="" class="display table table-hover">
                   <thead class="text-center bg-primary">
                     <tr class="text-white border-bottom-0">
                       <th class="rounded-start text-center">주소명</th>
                       <th class="text-center">실측일자</th>
-                      <th  class="text-center">발주일자</th>
-                      <th  class="text-center">제작완료일자</th>
-                      <th  class="text-center">출고 여부</th>
-                      <th  class="text-center">시공여부</th>
-                      <th  class="text-center">발주서 보기</th>
-                      <th  class="text-center">견적서 보기</th>
-                      <th class="rounded-end text-center">보기</th>
-                    </tr>
-                  </thead>
-                  <tbody class="text-center text-darkprimary fs-14px">
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                  </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="orderstatus-02_div" class="d-none card my-3 border-0">
-            2
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table table-hover">
-                  <thead class="text-center bg-primary">
-                    <tr class="text-white border-bottom-0">
-                      <th class="rounded-start text-center">주소명</th>
-                      <th class="text-center">실측일자</th>
-                      <th  class="text-center">발주일자</th>
-                      <th  class="text-center">제작완료일자</th>
-                      <th  class="text-center">출고 여부</th>
-                      <th  class="text-center">시공여부</th>
-                      <th  class="text-center">발주서 보기</th>
-                      <th  class="text-center">견적서 보기</th>
-                      <th class="rounded-end text-center">보기</th>
-                    </tr>
-                  </thead>
-                  <tbody class="text-center text-darkprimary fs-14px">
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                    <tr>
-                      <td>작동 테스트</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>2022-10-04</td>
-                      <td>97</td>
-                      <td>010-9857-1143</td>
-                      <td>휴먼 프론트 차지</td>
-                      <td>보다</td>
-                      <td>이지연</td>
-                    </tr>
-                  </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="orderstatus-03_div" class="d-none card my-3 border-0">
-            3
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table table-hover">
-                  <thead class="text-center bg-primary">
-                    <tr class="text-white border-bottom-0">
-                      <th class="rounded-start text-center">주소명</th>
-                      <th class="text-center">실측일자</th>
-                      <th  class="text-center">발주일자</th>
-                      <th  class="text-center">제작완료일자</th>
-                      <th  class="text-center">출고 여부</th>
-                      <th  class="text-center">시공여부</th>
-                      <th  class="text-center">발주서 보기</th>
-                      <th  class="text-center">견적서 보기</th>
+                      <th class="text-center">발주일자</th>
+                      <th class="text-center">제작완료일자</th>
+                      <th class="text-center">출고 여부</th>
+                      <th class="text-center">시공여부</th>
+                      <th class="text-center">발주서 보기</th>
+                      <th class="text-center">견적서 보기</th>
                       <th class="rounded-end text-center">보기</th>
                     </tr>
                   </thead>
@@ -1301,91 +442,42 @@
         </div>
       </section>
 
-      <!-- SET -->
-      <!-- payment request -->
-      <section id="paymentrequestsec" class="d-none content">
+      <!-- ORDER MANAGEMENT PAGE -->
+      <section id="ordermanagement_page" class="d-none content">
         <div class="card-main shadow bg-white col-lg-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2> 결제요청 </h2>
-          
-          <div class="my-5">
-            <form action="">
-              <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-center flex-row">
-                  <label for="formGroupExampleInput" class="form-label">
-                    결제요청
-                  </label>
-                  <button type="button" class="btn shadow-none fs-15px text-gray300"> 
-                    <i class="fa-light fa-pen"></i>
-                    <span class="ms-1">수정하기</span>
-                  </button>
-                </div>
-                <textarea class="form-control textarea-12">(고객 이름)님, (업체명)입니다.
-
-금일 시공 받으신 (작업명)은 만족스러우셨나요?
-
-결제는 (계정정보)로 (견적)을 입금 부탁드립니다.
-
-감사합니다.
-                </textarea>
-              </div>
-
-              <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">
-                  결제요청 템플릿
-                </label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected hidden>은행 선택</option>
-                  <option value="1">Land Bank</option>
-                  <option value="2">BDO</option>
-                  <option value="3">BPI</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="계좌번호를 입력해주세요.">
-              </div>
-
-              <button type="submit" class="btn btn-primary w-100"> 입력완료 </button>
-            </form>
-          </div>
-      </section>
-
-      <!-- service management -->
-      <section id="servicemanagementsec" class="d-none content">
-        <div class="card-main shadow bg-white col-6 p-3 p-md-5">
-          <!-- INSIDE CONTENTS -->
-           <h2>발주관리</h2>
-           <form class=""> 
-             <div class="my-5 p-2"> 
-               <div class="d-flex justify-content-start align-items-center flex-wrap">
-                 <h1 class="fs-20px fw-bold"> 발송 </h1>
-                 <a href="#"  class="d-flex flow-row text-muted">
-                   <label class="switch" >
-                     <input class="switch-input" type="checkbox" />
-                     <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                     <span class="switch-handle"></span> 
-                   </label>
+          <h2>발주관리</h2>
+          <div>
+            <form class=""> 
+              <div class="my-5 p-2"> 
+                <div class="d-flex justify-content-start align-items-center flex-wrap">
+                  <h1 class="fs-20px fw-bold"> 발송 </h1>
+                  <a href="#"  class="d-flex flow-row text-muted">
+                    <label class="switch" >
+                      <input class="switch-input" type="checkbox" />
+                      <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                      <span class="switch-handle"></span> 
+                    </label>
                   </a>
-               </div>
-               <div class="my-3">
-                 <div>
-                   <input  type="radio" name="email">이메일
-                   <input class="ms-5" type="radio" name="email">SNS
-                 </div>
-            
-                 <div class="my-5">
-                   <div class="d-flex justify-content-start align-items-center flex-wrap">
-                     <label for="inputPassword5" class="form-label"> 이메일 입력</label>
-                     <input type="password" id="inputPassword5" class="form-control" placeholder="이메일을 입력해주세요" aria-describedby="passwordHelpBlock">
-                   </div>
-                 </div>
-                 <div class="my-3 ms-1">
+                </div>
+                <div class="my-3">
+                  <div>
+                    <input  type="radio" name="email">이메일
+                    <input class="ms-5" type="radio" name="email">SNS
+                  </div>
+              
+                  <div class="my-5">
+                    <div class="d-flex justify-content-start align-items-center flex-wrap">
+                      <label for="inputPassword5" class="form-label"> 이메일 입력</label>
+                      <input type="password" id="inputPassword5" class="form-control" placeholder="이메일을 입력해주세요" aria-describedby="passwordHelpBlock">
+                    </div>
+                  </div>
+                  <div class="my-3 ms-1">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                       <h1 style="font-size:12px">적용 상품/프로세스 선택 </h1>
                     </div>
                   </div>
-           
+            
                   <div class="mb-3">
                     <input type="email" class="form-control" id="exampleInputEmail1"   placeholder="선택하기" aria-describedby="emailHelp">
                   </div>
@@ -1399,331 +491,30 @@
               </div>
             </form>
           </div>
-      </section>
-
-      <!-- order management --> 
-      <section id="ordermanagementsec" class="d-none content">
-        <div class="card-main shadow bg-white col-md-12 p-3 p-md-5">
-          <!-- INSIDE CONTENTS -->
-          <div class="row">
-            <div class="col-md-6">
-             <h1 style="font-size: 20px; font-weight: 700;">주소지 상세페이지</h1> 
-            <form>
-              <div class="row my-3  g-3">
-               <div class="col-md-6">
-                 <div class="form-outline">
-                   <label for="firstname" class="form-label fw-bold"> 단지명</label>
-                   <input type="text" id="form6Example1" class="form-control" placeholder="서울 도심 레지던스"/>
-         
-                 </div>
-               </div>
-               <div class="col-md-6">
-                 <div class="form-outline">
-                   <label for="firstname" class="form-label fw-bold"> 단지명</label>
-                   <input type="text" id="form6Example1" class="form-control" placeholder="  102동 304호 "/>
-         
-                   </div>
-               </div>
-              
-            
-              
-                 <div class="col-md-2">
-                   <div class="form-outline">
-                     <label for="firstname" class="form-label fw-bold">   타입</label>
-                     <input type="text" id="form6Example1" class="form-control" placeholder="95"/>
-         
-                   </div>
-                 </div>
-                 <div class="col-md-6">
-                   <div class="form-outline">
-                     <label for="firstname" class="form-label fw-bold">    견적</label>
-                     <input type="text" id="form6Example1" class="form-control"placeholder="150,000"/>
-         
-                   </div>
-                 </div>
-                 <div class="col-md-4">
-                   <div class="form-outline">
-                     <label for="firstname" class="form-label fw-bold">    견적</label>
-                     <input type="text" id="form6Example1" class="form-control"placeholder=" 레이"/>
-         
-                   </div>
-                 </div>
-   
-             
-              
-                 <div class="col-md-6">
-                    <div class="form-outline">
-                      <label for="firstname" class="form-label fw-bold">    타입</label>
-                      <input type="text" id="form6Example1" class="form-control" placeholder=" 010-4321-5678"/>
-         
-                     </div>
-                 </div>
-               <div class="col-md-6">
-                   <div class="form-outline">
-                     <label for="firstname" class="form-label fw-bold">     견적</label>
-                     <input type="text" id="form6Example1" class="form-control"placeholder=" 010-4321-5678"/>
-         
-                   </div>
-                 </div>
-             
-   
-              
-              
-                   <div class="col-md-6">
-                     <div class="form-outline">
-                       <label for="firstname" class="form-label fw-bold">  신청일정</label>
-                       <input type="date" id="form6Example1" class="form-control"/>
-         
-                     </div>
-                   </div>
-                <div class="col-md-6">
-                   <div class="form-outline">
-                     <label for="firstname" class="form-label fw-bold"> &nbsp; </label>
-                     <input type="time" id="form6Example1" class="form-control"/>
-         
-                   </div>
-                 </div>
-               
-            
-             
-                 <div class="col-md-6">
-                   <div class="form-outline">
-                     <label for="firstname" class="form-label fw-bold">  신청일정</label>
-                     <input type="date" id="form6Example1" class="form-control"/>
-         
-                   </div>
-                 </div>
-                 <div class="col-md-6">
-                   <div class="form-outline">
-                     <label for="firstname" class="form-label fw-bold"> &nbsp; </label>
-                     <input type="time" id="form6Example1" class="form-control"/>
-         
-                   </div>
-                 </div>
-               
-             
-             
-                   <div class="col-md-12">
-                     <div class="form-outline">
-                       <label for="firstname" class="form-label fw-bold">비고</label>
-                       <textarea class="form-control textarea-6" id="form6Example7" rows="4" placeholder="메시지"></textarea>
-                     </div>
-                   </div>
-               
-               </div>
-             </form>
-            </div>
-         <div class="col-md-6">
-             <div class=" row  ">
-               <div class="col-md-12 ">
-                 <h1 class="fs-20px fw-bold">작업 세부 사항</h1>
-                   <div class="card-submain card py-4 px-3 px-md-4 rounded-10 shadow" style="background-color: #FAFBFF;">
-                     <form>
-                         <div class="row g-3">
-                           <div class="col-md-6">
-                             <div class="form-outline ">
-                               <label for="firstname" class="form-label fw-bold">  주소</label>
-                               <input type="text" id="form6Example1" class="form-control" placeholder=" 102동 304호"/>
-         
-                             </div>
-                           </div>
-                            <div class="col-md-6">
-                               <div class="form-outline">
-                                  <label for="firstname" class="form-label fw-bold">  시공요청일</label>
-                                 <input type="text" id="form6Example1" class="form-control" placeholder=" 2022.09.30"/>
-         
-                               </div>
-                             </div>
-              
-                       
-                        
-                             <div class="col-md-6">
-                               <div class="form-outline">
-                                 <label for="firstname" class="form-label fw-bold">   견적</label>
-                                 <input type="text" id="form6Example1" class="form-control" placeholder=" 180,000"/>
-         
-                               </div>
-                             </div>
-                             <div class="col-md-6">
-                                <div class="form-outline">
-                                   <label for="firstname" class="form-label fw-bold">  시공 여부</label>
-                                   <input type="text" id="form6Example1" class="form-control" placeholder=" 전진"/>
-         
-                                  </div>
-                               </div>
-              
-                       
-                       
-                             <div class="col-md-6">
-                               <div class="form-outline">
-                                 <label for="firstname" class="form-label fw-bold">  담당자</label>
-                                 <input type="text" id="form6Example1" class="form-control" placeholder="석진"/>
-         
-                               </div>
-                             </div>
-                           </div>
-                       </form>
-                   </div>
-               </div>
-             </div>
-            <div class=" row ">
-             <div class="col-md-12 ">
-              <div class="card-submain card py-4 px-3 px-md-4 rounded-10 shadow" style="background-color: #FAFBFF;">
-                <form>
-                   <div class="row  g-3">
-                     <div class="col-md-6">
-                       <div class="form-outline">
-                         <label for="firstname" class="form-label fw-bold">  주소</label>
-                         <input type="text" id="form6Example1" class="form-control" placeholder=" 102동 304호"/>
-         
-                       </div>
-                     </div>
-                     <div class="col-md-6">
-                       <div class="form-outline">
-                         <label for="firstname" class="form-label fw-bold">  시공요청일</label>
-                         <input type="text" id="form6Example1" class="form-control" placeholder=" 2022.09.30"/>
-         
-                       </div>
-                    </div>
-              
-                   
-                   
-                       <div class="col-md-6">
-                         <div class="form-outline">
-                           <label for="firstname" class="form-label fw-bold">   견적</label>
-                           <input type="text" id="form6Example1" class="form-control" placeholder=" 180,000"/>
-         
-                         </div>
-                       </div>
-                       <div class="col-md-6">
-                         <div class="form-outline">
-                           <label for="firstname" class="form-label fw-bold">  시공 여부</label>
-                           <input type="text" id="form6Example1" class="form-control" placeholder=" 전진"/>
-         
-                         </div>
-                       </div>
-              
-                 
-                  
-                       <div class="col-md-6">
-                         <div class="form-outline">
-                           <label for="firstname" class="form-label fw-bold">  담당자</label>
-                           <input type="text" id="form6Example1" class="form-control" placeholder="석진"/>
-         
-                         </div>
-                       </div>
-                     </div>
-                 </form>
-               </div>
-              </div>
-            </div>
-         </div>
-       </div>
-     </div>
-       
-    
-      </section>
-
-      <!-- send photo -->
-      <section id="sendphotosec" class="d-none content">
-        <div class="card-main shadow bg-white col-12 p-3 p-md-5">
-          <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">링크 업로드</h2>
-             
-          <div class="my-5  mb-2">
-            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <h1 style="font-size:12px"> 결제요청 </h1>
-            </div>
-                </div>
-                <form>
-                  <div class=" row">
-                    <div class=" col-md-5 ">
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                  </div>
-                    <div class="my-5  mb-2">
-                      <div class="d-flex justify-content-between align-items-center flex-wrap">
-                          <h1 style="font-size:12px"> 결제요청 </h1>
-                     
-                          </div>
-                    </div>
-                            <div class=" row">
-                              <div class=" col-md-5 ">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                              </div>
-              
-                            </div>
-                              <div class=" row">
-                                <div class=" col-md-5 my-3 ">
-                                  <div class="d-grid gap-2 ">
-                                  <button class="btn btn-primary" type="button">입력완료</button>
-                                  </div>
-                                </div>
-                              </div>
-                
-                </form>
-       
-
         </div>
       </section>
 
-      <!-- technician management -->
-      <section id="technicianmanagementsec" class="d-none content">
-        <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+      <!-- FILE MANAGEMENT PAGE -->
+      <section id="filemanagement_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">설정</h2>
-          <h2 class="mb-2">일정보기</h2>
-            <div class="row g-0 mt-5">
-              <div class="col-md-8 ">
-                <nav class="nav align-items-end h-100 fw-bold p-2 my-3">
-
-                  <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark">날짜별로 보기▼</a>
-                  <a href="#" class="nav-link text-start pb-0 ps-0 pe-5 link-dark">아파트 단지별로 보기▼</a>
-                </nav>
-               </div>
-                 <div class="col-md-4 ">
-                   <div class="card-body rounded p-2">
-                     <div class="d-flex flex-row p-2">
-                       <div style="width:20px;height: 20px;background-color: aqua; border-radius: 100px;"></div>
-                         <h5 class="fs-8" >진지석</h5>
-                         <div style="width:20px;height: 20px;background-color: yellow; border-radius: 100px;"></div>
-                           <h5 class="fs-8" >진지석</h5>
-                           <div style="width:20px;height: 20px;background-color: purple; border-radius: 100px;"></div>
-                             <h5 class="fs-8" >진지석</h5>
-                             <div style="width:20px;height: 20px;background-color:#CCC6FF; border-radius: 100px;"></div>
-                               <h5 class="fs-8" >진지석</h>
-       
-                      </div>                 
-                    </div>
-                  </div>
-                  <div class="row ">
-                    <div class="col-md-12">
-                      <div class="card p-2 my-5">
-                        <div id="calendar">
-        
-                        </div>
-                      </div>
-                    </div>
-                  </div>
         </div>
       </section>
 
-      <!-- MENU -->
-      <!-- fair -->
-      <section id="fairsec" class="d-none content">
-        <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+      <!-- FAIR PAGES -->
+      <!-- ONLINE FAIR PAGE -->
+      <section id="onlinefair_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
-         <h2 class="mb-2">설정</h2>
-
-
         </div>
       </section>
 
-      <!-- fair management -->
-      <section id="fairmanagementsec" class="d-none content">
+      <!-- FAIR MANAGEMENT PAGE -->
+      <section id="fairmanagement_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2>박람회 관리</h2>
+          <h2 id="fairmanagement-01_title" class="d-block">박람회 관리</h2>
+          <h2 id="fairmanagement-02_title" class="d-none">입주자 관리</h2>
           <div class="navigation my-3">
             <nav class="nav-list nav">
               <a id="fairmanagement-01_btn" class="nav-link active" href="#"> 박람회 생성 </a>
@@ -1782,20 +573,12 @@
                   <label for="" class="form-label fw-bold fs-20px"> 시간 관리 </label>
                   <label for="start_time" class="form-label d-none"> Start Time </label>
                   <label for="end_time" class="form-label d-none"> End Time</label>
-                  <div class="d-flex justify-content-around align-items-center flex-row flex-nowrap">
-  
-                    <!-- <div id="" class="input-group input-daterange">
-                      <input type="text" id="start_time" class="form-control" placeholder="--:-- --" name="start_time" autocomplete="off" />
-                      <span class="input-group-text px-2"><i class="fa-regular fa-minus"></i></span>
-                      <input type="text" id="start_time" class="form-control" placeholder="--:-- --" name="end_time" autocomplete="off" />
-                    </div> -->
-                    
+                  <div class="d-flex justify-content-around align-items-center flex-row flex-nowrap">            
                     <div id="" class="input-group input-daterange">
                       <input type="time" id="start_time" class="form-control cursor-pointer" name="start_time" autocomplete="off" />
                       <span class="input-group-text px-2"><i class="fa-regular fa-minus"></i></span>
                       <input type="time" id="start_time" class="form-control cursor-pointer" name="end_time" autocomplete="off" />
                     </div>
-  
                   </div>
                 </div>
               </form>
@@ -2217,19 +1000,11 @@
                   <label for="start_time" class="form-label d-none"> Start Time </label>
                   <label for="end_time" class="form-label d-none"> End Time</label>
                   <div class="d-flex justify-content-around align-items-center flex-row flex-nowrap">
-  
-                    <!-- <div id="" class="input-group input-daterange">
-                      <input type="text" id="start_time" class="form-control" placeholder="--:-- --" name="start_time" autocomplete="off" />
-                      <span class="input-group-text px-2"><i class="fa-regular fa-minus"></i></span>
-                      <input type="text" id="start_time" class="form-control" placeholder="--:-- --" name="end_time" autocomplete="off" />
-                    </div> -->
-                    
                     <div id="" class="input-group input-daterange">
                       <input type="time" id="start_time" class="form-control cursor-pointer" name="start_time" autocomplete="off" />
                       <span class="input-group-text px-2"><i class="fa-regular fa-minus"></i></span>
                       <input type="time" id="start_time" class="form-control cursor-pointer" name="end_time" autocomplete="off" />
                     </div>
-  
                   </div>
                 </div>
               </form>
@@ -2598,13 +1373,127 @@
               </div>
             </div>
           </div>
-             
         </div>
       </section>
 
-      <!-- contract -->
-      <section id="contractsec" class="d-none content">
-        <div class="card-main shadow bg-white col-12 p-3 p-md-5">
+      <!-- SETTINGS PAGES -->
+      <!-- PAYMENT REQUEST MANAGEMENT PAGE -->
+      <section id="paymentrequestmanagement_page" class="d-none content">
+        <div class="card-main shadow bg-white col-lg-6 p-3 p-md-5">
+          <!-- INSIDE CONTENTS -->
+          <h2> 결제요청 </h2>
+          
+          <div class="my-5">
+            <form action="">
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center flex-row">
+                  <label for="formGroupExampleInput" class="form-label">
+                    결제요청
+                  </label>
+                  <button type="button" class="btn shadow-none fs-15px text-gray300"> 
+                    <i class="fa-light fa-pen"></i>
+                    <span class="ms-1">수정하기</span>
+                  </button>
+                </div>
+                <textarea class="form-control textarea-12">(고객 이름)님, (업체명)입니다.
+
+금일 시공 받으신 (작업명)은 만족스러우셨나요?
+
+결제는 (계정정보)로 (견적)을 입금 부탁드립니다.
+
+감사합니다.
+                </textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">
+                  결제요청 템플릿
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected hidden>은행 선택</option>
+                  <option value="1">Land Bank</option>
+                  <option value="2">BDO</option>
+                  <option value="3">BPI</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="계좌번호를 입력해주세요.">
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100"> 입력완료 </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE MANAGEMENT PAGE -->
+      <section id="servicemanagement_page" class="d-none content">
+        <div class="card-main shadow bg-white col-lg-6 p-3 p-md-5">
+          <!-- INSIDE CONTENTS -->
+          <h2>발주관리</h2>
+          <form class=""> 
+             <div class="my-5 p-2"> 
+               <div class="d-flex justify-content-start align-items-center flex-wrap">
+                 <h1 class="fs-20px fw-bold"> 발송 </h1>
+                 <a href="#"  class="d-flex flow-row text-muted">
+                   <label class="switch" >
+                     <input class="switch-input" type="checkbox" />
+                     <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                     <span class="switch-handle"></span> 
+                   </label>
+                  </a>
+               </div>
+               <div class="my-3">
+                 <div>
+                   <input  type="radio" name="email">이메일
+                   <input class="ms-5" type="radio" name="email">SNS
+                 </div>
+            
+                 <div class="my-5">
+                   <div class="d-flex justify-content-start align-items-center flex-wrap">
+                     <label for="inputPassword5" class="form-label"> 이메일 입력</label>
+                     <input type="password" id="inputPassword5" class="form-control" placeholder="이메일을 입력해주세요" aria-describedby="passwordHelpBlock">
+                   </div>
+                 </div>
+                 <div class="my-3 ms-1">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                      <h1 style="font-size:12px">적용 상품/프로세스 선택 </h1>
+                    </div>
+                  </div>
+           
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleInputEmail1"   placeholder="선택하기" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <input type="password" class="form-control"  placeholder="선택하기" id="exampleInputPassword1">
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">입력완료</button>
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- SEND PHOTOS PAGE -->
+      <section id="sendphotos_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
+          <!-- INSIDE CONTENTS -->
+        </div>
+      </section>
+
+      <!-- TECHNICIAN MANAGEMENT PAGE -->
+      <section id="technicianmanagement_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
+          <!-- INSIDE CONTENTS -->
+        </div>
+      </section>
+
+      <!-- CONTRACT PAGE (NOT YET DONE)--> 
+      <section id="contract_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
           <h2> 계약서 목록 </h2>
           <h6 class="fs-12px mt-5 mb-3"> 
@@ -2952,12 +1841,11 @@
               </ul>
             </nav>
           </div>
-      
         </div>
       </section>
 
-      <!-- counselling -->
-      <section id="counsellingsec" class="d-none content">
+      <!-- CONSULTING PAGE -->
+      <section id="consulting_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
           <h2>삼담</h2>
@@ -2969,9 +1857,313 @@
                   <i class="fa-light fa-pen-to-square"></i>
                 </button>
               </div>
-              <div class="counselling-left_bot overflow-y-auto overflow-x-hidden">
+              <div class="counselling-left_bot">
                 <!-- contact chats  -->
                 <div class="chats cursor-pointer active">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
+                  <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                      <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                      <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                        <p class="fw-bold fs-11px"> 김은하 </p>
+                        <p class="fw-light fs-11px"> 최근 채팅 내 용 입니다. </p>
+                      </div>
+                    </div>
+                    <div class="ms-2 d-flex justify-content-around align-items-center flex-column">
+                      <div class="bg-primary rounded-circle" style="height:6px; width:6px"> </div>
+                      <p class="mt-1 fw-light fs-8px"> 2 문 전 </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chats cursor-pointer">
                   <div class="p-3 d-flex justify-content-between align-items-center flex-row flex-nowrap">
                     <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
                       <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
@@ -3195,408 +2387,24 @@
               </div>
             </div>
           </div>
-          
         </div>
       </section>
 
-      <!-- master -->
-      <section id="mastersec" class="d-none content">
-        <div class="">
-          <div class="row m-0 p-0">
-            <div class="card-main shadow bg-white col-12 col-lg-6 col-xl-6 p-3 p-md-5">
-              <h2>시공사 검색</h2>
-
-              <div class="navigation mt-3 mb-4">
-                <nav class="nav-list nav">
-                  <a id="master-01_btn" class="nav-link active" href="#">구독 정보</a>
-                  <a id="master-02_btn" class="nav-link" href="#">시공사 관리</a>
-                  <a id="master-03_btn" class="nav-link" href="#">박람회 할당</a>
-                </nav>
-              </div>
-          
-              <!-- datatables -->
-              <div id="master-01_div" class="d-block card my-3 border-0">
-                <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-                  <table id="" class="display table table-hover">
-                      <thead class="text-center bg-primary">
-                          <tr class="text-white border-bottom-0">
-                            <th class="rounded-start text-center">이름</th>
-                            <th  class="text-center"> 첫구독시작일</th>
-                            <th  class="text-center"> 최근결제날짜</th>
-                            <th class="rounded-end text-center"> 매월 결제일 </th>
-                          </tr>
-                      </thead>
-                      <tbody class="text-center text-darkprimary">
-                        <tr class="fs-14px">
-                          <td >현식</td>
-                          <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
-                        </tr>
-                        <tr class="fs-14px">
-                          <td  >현식</td>
-                          <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
-                        </tr>
-                        <tr class="fs-14px">
-                          <td  >현식</td>
-                          <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
-                        </tr>
-                        <tr class="fs-14px">
-                          <td  >현식</td>
-                          <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
-                        </tr>
-                        <tr class="fs-14px">
-                          <td  >현식</td>
-                          <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
-                        </tr>
-                        <tr class="fs-14px">
-                          <td  >현식</td>
-                          <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
-                        </tr>
-                      </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div id="master-02_div" class="d-none card my-3 border-0">
-                <!-- content here -->
-                <div class="input-group rounded-pill"> 
-                  <input type="search" class="form-control rounded-pill"  placeholder="시공사 검색" aria-label="Search" aria-describedby="search-addon"   />
-                </div>
-                
-                <div class="my-4">
-                  <div class="row g-3">
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                        
-                    
-                  </div>
-                </div>
-                <div class="d-flex justify-content-center align-items-center my-5">
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination pagination-sm page">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <i class="fa-solid fa-chevrons-left"></i>
-                        </a>
-                      </li>
-                      <li class="page-item ">
-                        <a class="page-link active " href="#">
-                          1
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          2
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          3
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          4
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          5
-                        </a>
-                        </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <i class="fa-solid fa-chevrons-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-
-              </div>
-
-
-              
-              <div id="master-03_div" class="d-none card my-3 border-0">
-                <!-- content here  -->
-                <div class="my-4">
-                  <div class="row g-3">
-                    <div class="col-6">
-                      <div class="card rounded p-2 cursor-pointer">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-700"> 시공사 1</p>
-                              <p class="fs-13px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="card rounded p-2 cursor-pointer">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-700"> 시공사 1</p>
-                              <p class="fs-13px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="card rounded p-2 cursor-pointer">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-700"> 시공사 1</p>
-                              <p class="fs-13px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="card rounded p-2 cursor-pointer">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-700"> 시공사 1</p>
-                              <p class="fs-13px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="card rounded p-2 cursor-pointer">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-700"> 시공사 1</p>
-                              <p class="fs-13px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="card rounded p-2 cursor-pointer">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-700"> 시공사 1</p>
-                              <p class="fs-13px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="card rounded p-2 cursor-pointer">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-700"> 시공사 1</p>
-                              <p class="fs-13px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="card rounded p-2 cursor-pointer">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-700"> 시공사 1</p>
-                              <p class="fs-13px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <button type="button" class="fs-13px btn btn-primary mx-1 btn-sm">추가</button>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="d-flex justify-content-center align-items-center my-5">
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination pagination-sm page">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <i class="fa-solid fa-chevrons-left"></i>
-                        </a>
-                      </li>
-                      <li class="page-item ">
-                        <a class="page-link active " href="#">
-                          1
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          2
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          3
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          4
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">
-                          5
-                        </a>
-                        </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <i class="fa-solid fa-chevrons-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div id="master-01-card1" class="card-main1">
-            </div>
-
-            <div id="master-01-card2" class="d-flex card-main2 col-12 col-lg-6 col-xl-5 p-3 p-md-5">
-            <!-- INSIDE CONTENTS -->
-              <div class="card-main2-content">
-                <h1 class="fs-25px fw-bolder text-center"> 시공사 검색</h1> 
-                <h6 class="fs-16px text-center">더욱 더 저 렴 해진 가 격 으로 서 비 스 를 이 용 하 세요!</h6>
-                <img src="assets/img/images/switch_subscription.png" class="mx-auto d-block w-100 my-4"  alt="...">
-                <button class="btn btn-primary w-100" type="button">입력완료</button>
-              </div>
-            </div>
-          </div>
+      <!-- CARD USAGE HISTORY PAGE -->
+      <section id="cardusagehistory_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
+          <!-- INSIDE CONTENTS -->
         </div>
       </section>
+
+      <!-- MASTER PAGE -->
+      <section id="master_page" class="d-none content">
+        <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
+          <!-- INSIDE CONTENTS -->
+        </div>
+      </section>
+
+
     </main>
 
     

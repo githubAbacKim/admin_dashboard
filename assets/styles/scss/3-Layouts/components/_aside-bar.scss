@@ -31,17 +31,22 @@ aside.side-navbar {
 
                 .list-group-item {
                     display: flex;
+                    justify-content: start;
                     align-items: center;
                     flex-direction: row;
                     background-color: $transparent !important;
                     border: 0px solid $transparent;
                     border-top-left-radius: $s2;
                     border-bottom-left-radius: $s2;
+                    border-top-right-radius: 0 !important;
+                    border-bottom-right-radius: 0 !important;
                     color: $darkprimary;
                     text-transform: uppercase;
                     font-family: $title;
                     margin-top: 2px !important;
                     margin-bottom: 2px !important;
+                    // padding-top: 1px !important;
+                    // padding-bottom: 1px !important;
                     // border: 1px solid red;
 
                     &:hover,
@@ -52,8 +57,13 @@ aside.side-navbar {
                     }
 
                     i {
+                        // border: 1px solid red;
                         text-align: center;
-                        min-width: 25px;
+                        // min-width: 20px;
+                    }
+
+                    span {
+                        white-space: nowrap !important;
                     }
                 }
 
@@ -61,6 +71,7 @@ aside.side-navbar {
                     @include mp(0);
                     border: 0px solid $transparent !important;
                     background-color: $transparent !important;
+                    
                     // width: 100% !important;
                     // border: 1px solid red !important;
 
@@ -97,10 +108,10 @@ aside.side-navbar {
                     .accordion-header {
                         background-color: $transparent !important;
                         width: 100% !important;
-                        border-top-left-radius: $s2;
-                        border-bottom-left-radius: $s2;
                         display: block !important;
                         line-height: normal !important;
+                        overflow: hidden !important;
+
 
                         .accordion-button {
                             line-height: normal !important;
@@ -112,7 +123,10 @@ aside.side-navbar {
                             border: 0px solid $transparent !important;
                             border-top-left-radius: $s2;
                             border-bottom-left-radius: $s2;
+                            border-top-right-radius: 0 !important;
+                            border-bottom-right-radius: 0 !important;
                             transition: 0.5s;
+                            overflow: hidden;
 
                             &:not(.collapsed),
                             &.active {
@@ -154,15 +168,12 @@ aside.side-navbar {
                     .accordion-collapse {
                         @include mp(0);
                         background-color: $transparent !important;
-                        border-radius: 0 !important;
                     }
 
                     .accordion-body {
-                        // width: 100% !important;
                         background-color: $white !important;
                         display: block !important;
                         border-bottom-left-radius: $s2;
-                        // border:1px solid red;
                         padding-top: 0;
                         padding-bottom: 0;
 
@@ -199,7 +210,7 @@ aside.side-navbar {
                 .list-group-item {
                     padding: $s2 !important;
                     margin: 0 !important;
-                    background-color: $gray-100 !important;
+                    background-color: $transparent !important;
                     border: 0px solid $transparent;
                     color: $darkprimary;
                     text-transform: uppercase;
@@ -209,7 +220,7 @@ aside.side-navbar {
                     &:hover,
                     &.active {
                         border: 0px;
-                        background-color: $gray-100 !important;
+                        background-color: $transparent !important;
                         color: $primary;
                     }
         
@@ -394,7 +405,7 @@ aside.max {
                     @include transition (3000);
                     @include breakpoint-md-up {
                         @include transition (3000);
-                        padding: $s3 $s4 !important;
+                        padding: $s2 $s4 !important;
                         margin-left: $s5 !important; 
                     }
 
@@ -406,6 +417,11 @@ aside.max {
 
                     i {
                         @include transition (3000);
+                        @include breakpoint-md-up {
+                            @include transition (3000);
+                            font-size: $s4;
+                            min-width: 40px;
+                        }
                         @include breakpoint-md {
                             @include transition (3000);
                             font-size: $s4;
@@ -433,26 +449,34 @@ aside.max {
                     }
 
                     .accordion-header {
-
                         .accordion-button {
                             @include breakpoint-md-up {
-                                padding: $s3 calc($s4 + 6px) !important;
+                                padding: calc($s2 + 4px) calc($s4 + 10px) !important;
                             }
                             
                             @include breakpoint-md {
-                                // border: 1px solid red !important;
-                                padding: $s3 $s4 !important;
-                            }
-
-                            span {
-                                @include breakpoint-md {
-                                    display: none;
-                                }
+                                // padding: $s3 auto !important;
+                                padding: calc($s2 + 4px) calc($s4 + 2px) !important;
                             }
 
                             i {
-                                @include breakpoint-md {
+                                @include transition (3000);
+                                @include breakpoint-md-up {
+                                    @include transition (3000);
                                     font-size: $s4;
+                                    min-width: 38px;
+                                }
+                                @include breakpoint-md {
+                                    @include transition (3000);
+                                    font-size: $s4;
+                                }
+                            }
+
+                            span {
+                                @include transition (3000);
+                                @include breakpoint-md {
+                                    @include transition (3000);
+                                    display: none;
                                 }
                             }
 
@@ -468,7 +492,8 @@ aside.max {
 
                             &:not(.collapsed)::after {
                                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-
+                                transform: rotate(0deg);
+                                
                                 @include breakpoint-md {
                                     background-image: url("");
                                 }
@@ -476,6 +501,7 @@ aside.max {
 
                             &::after {
                                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2333588E'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                transform: rotate(-90deg);
 
                                 @include breakpoint-md {
                                     background-image: url("");
@@ -674,7 +700,7 @@ aside.min {
                     .accordion-header {
                         .accordion-button {
                             @include transition (3000);
-                            padding: $s3 $s4 !important;
+                            padding: calc($s2 + 4px) calc($s4 + 2px) !important;
 
                             span {
                                 @include transition (3000);
@@ -741,6 +767,7 @@ aside.min {
                     
                     .accordion-header {
                         .accordion-button {
+                            // padding: $s3 calc($s4 + 2px) !important;
                             @include transition (3000);
                             padding: $s3 auto !important;
                         }
