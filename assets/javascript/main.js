@@ -53,7 +53,7 @@ $(document).ready(function () {
     // });
 });
 
-
+/** DATA TABLES */
 $(document).ready(function () {
     var viewallcontractsbyac = $('#viewallcontractsbyac_table').DataTable();
     $('#apartmentcomplexfilter01').on('change', function () {
@@ -64,5 +64,12 @@ $(document).ready(function () {
     $('#apartmentcomplexfilter02').on('change', function () {
         viewallcontractsbyar.search(this.value).draw();
     });
+
+
+    $('#createexposition_table').DataTable();
+    $('#tenantmanagement_table').DataTable();
+    $('#orderstatus_table').DataTable();
 });
+
+
 

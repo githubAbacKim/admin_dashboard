@@ -42,6 +42,9 @@
     <!-- <script src="assets/javascript/scroll.js"></script> -->
 
 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+
     <title>Keflavik</title>
   </head>
   <body class="container-fluid bg-light vh-100">
@@ -246,7 +249,7 @@
       <section id="profile_page" class="d-none content">
         <div class="card-main shadow bg-white col-xl-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2> 프로필  OK! </h2>
+          <h2> 프로필 </h2>
 
           <div class="mt-4 d-flex justify-content-start align-items-center flex-row w-100">
             <img src="/assets/img/images/tree.png" alt="" style="height: 98px; width:98px;"  >
@@ -271,7 +274,7 @@
           <div class="mt-5 mb-2">
             <form>
               <div class="row mb-3">
-                <label for="" class="col-sm-2 col-form-label fs-17px text-gray300"> 회사주소 </label>
+                <label for="" class="col-sm-2 col-form-label fs-17px text-gray300 fw-bold"> 회사주소 </label>
                 <div class="col-sm-10">
                   <div class="input-group ">
                     <textarea class="form-control border-secondary">서울 영등포구 선유로49길 23, 403호 (양평동 4가)</textarea>
@@ -284,7 +287,7 @@
               </div>
 
               <div class="row mb-3">
-                <label for="" class="col-sm-2 col-form-label fs-17px text-gray300"> 회사소개 </label>
+                <label for="" class="col-sm-2 col-form-label fs-17px text-gray300 fw-bold"> 회사소개 </label>
                 <div class="col-sm-10">
                   <div class="input-group">
                     <textarea class="form-control border-secondary textarea-9">벌레 차단을 위한 미세촘촘망.소중한 아이/반려견/반려묘의 추락사고 방지를 위한  안전망 저층 보안을 위한 방범망까지 다양한 용도와 목적에 맞는  튼튼하고 안전한 국산 방충망을 10년간 시공해온 윈케어 입니다.</textarea>
@@ -299,7 +302,7 @@
 
               <div class="row mb-3">
                 <div class="d-flex align-items-center">
-                  <div class="col-2 col-form-label fs-17px text-gray300" > 프로필 <br/> 이미지 </div>
+                  <div class="col-2 col-form-label fs-17px text-gray300 fw-bold" > 프로필 <br/> 이미지 </div>
                   <div class="col-10">
                     <label for="editprofile" class="btn btn-light rounded-circle p-0">
                       <div class="d-flex justify-content-center align-items-center" style="height: 160px; width: 160px;">
@@ -1174,14 +1177,7 @@
                 </thead>
                 
                 <tbody class="text-center text-darkprimary fs-14px">
-                  <tr class="border-top border-dark" >
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                 
                   <tr>
                     <td>안방 (안전)</td>
                     <td>80,000</td>
@@ -1384,12 +1380,12 @@
       <section id="orderstatus_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
-          <h2>발주현황 OK!</h2>
+          <h2>발주현황</h2>
 
           <!-- datatables -->
           <div id="" class="d-block card my-3 border-0">
             <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table">
+              <table id="orderstatus_table" class="display table">
                   <thead class="text-center bg-primary">
                     <tr class="text-white">
                       <th> 주소명 </th>
@@ -1465,61 +1461,71 @@
         </div>
       </section>
 
-      <!-- ORDER MANAGEMENT PAGE (DOUBLE CHECK)-->
+      <!-- ORDER MANAGEMENT PAGE -->
       <section id="ordermanagement_page" class="d-none content">
         <div class="card-main shadow bg-white col-lg-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2>발주관리 DOUBLE CHECK!</h2>
           <div>
-            <form class=" "> 
-              <div class="my-5 p-2 "> 
-                <div class="d-flex justify-content-start align-items-center flex-wrap">
-                  <h1 class="fs-20px fw-bold ">발주서발송</h1>
-                  <a href="#"  class="d-flex flow-row text-muted">
-                    <label class="switch mx-3 mt-n2" >
-                      <input class="switch-input" type="checkbox" />
-                      <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                      <span class="switch-handle"></span> 
-                    </label>
-                  </a>
-                </div>
-                <div class="my-3">
-                  <div>
-                    <input  type="radio" name="email">이메일
-                    <input class="ms-5" type="radio" name="email">SNS
-                  </div>
-              
-                  <div class="my-5">
-                    <div class="d-flex justify-content-start align-items-center flex-wrap">
-                      <label for="inputPassword5" class="form-label fw-bolder"> 이메일 입력</label>
-                      <input type="password" id="inputPassword5" class="form-control" placeholder="이메일을 입력해주세요" aria-describedby="passwordHelpBlock">
-                    </div>
-                  </div>
-                  <div class="my-3 ms-1">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                      <h1 class="fs-15px fw-bolder">적용 상품/프로세스 선택 </h1>
-                    </div>
-                  </div>
+            <h2>발주관리</h2>
             
-                  <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected="" hidden="">선택하기</option>
-                      <option value="1">제품</option>
-                      <option value="2">제품</option>
-                      <option value="3">제품</option>
-                    </select>
+            <form class=""> 
+              <div class="my-5"> 
+                <div class="mb-4">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <p class="form-label fw-bold p-0 m-0">발주서발송</p>
+                    <div class="d-flex justify-content-center align-items-center flow-row">
+                      <label class="switch mx-3" >
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                        <span class="switch-handle"></span> 
+                      </label>
+                    </div>
                   </div>
-                  <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected="" hidden="">선택하기</option>
-                      <option value="1">제품</option>
-                      <option value="2">제품</option>
-                      <option value="3">제품</option>
-                    </select>
+                </div>
+                <div class="mb-4">
+                  <div class="d-inline-flex">
+                    <div class="form-check">
+                      <label class="form-check-label cursor-pointer" for="flexRadioDefault1">
+                        <span class="fw-bold"> 이메일 </span>  
+                      </label>
+                        <input class="form-check-input cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    </div>
+  
+                    <div class="ms-4 form-check ">
+                      <label class="form-check-label cursor-pointer" for="flexRadioDefault2">
+                        <span class="fw-bold"> SNS </span>  
+                      </label>
+                        <input class="form-check-input cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    </div>
                   </div>
-                  <div class="d-grid gap-2">
-                    <button class="btn btn-primary" type="button">입력완료</button>
-                  </div>
+                </div>
+  
+                <div class="mb-4">
+                  <label for="" class="form-label fw-bold">이메일 입력</label>
+                  <input type="email" class="form-control" id="" placeholder="이메일을 입력해주세요">
+                </div>
+  
+                <div class="mb-2">
+                  <label for="" class="form-label fw-bold">적용 상품 / 프로세스 선택</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected hidden>선택하기</option>
+                    <option value="1">제품</option>
+                    <option value="2">제품</option>
+                    <option value="3">제품</option>
+                  </select>
+                </div>
+  
+                <div class="mb-4">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected hidden>선택하기</option>
+                    <option value="1">제품</option>
+                    <option value="2">제품</option>
+                    <option value="3">제품</option>
+                  </select>
+                </div>
+  
+                <div class="">
+                  <button class="btn btn-primary w-100" type="button">입력완료</button>
                 </div>
               </div>
             </form>
@@ -1568,6 +1574,7 @@
               </li>
             </ul>
           </div>
+          
         </div>
       </section>
 
@@ -1576,10 +1583,1039 @@
       <section id="onlinefair_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
+          <div>
+            <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+              <h2>박람회</h2>
+              <form action="">
+                <div class="input-group ">
+                  <span class="input-group-text border-primary"><i class="fa-light fa-magnifying-glass text-primary"></i></span>
+                  <input type="search" class="form-control border-primary" placeholder="시공사 검색">
+                </div>
+              </form>
+            </div>
+
+            <div class="card border-primary my-2">
+              <div class="py-3 px-4 overflow-x-auto overflow-y-hidden">
+                <div class="profile-lists d-flex justify-content-start align-items-center flex-row flex-nowrap">
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+                  <a href="#" class="me-4">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                      <div class="border border-primary rounded-circle">
+                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
+                      </div>
+                      <span class="text-dark fs-14px">시공사 1</span>
+                    </div>
+                  </a>
+
+                  
+                </div>
+
+              </div>
+            </div>
+
+            <div class="online-fair-contents my-2 p-5">
+              <div class="row g-4">
+                <div class="col-12 border-bottom pb-4">
+                  <div class="row g-3">
+                    <div class="col-lg-6">
+                      <div class="bg-gray-200 overflow-hidden d-flex justify-content-center align-items-center p" style="height:515px">
+                        <img src="https://images4.alphacoders.com/127/1273867.jpg" alt="" class="img-fluid">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="d-flex justify-content-between align-items-start flex-column" style="height:515px">
+                        <div class="">
+                          <div>
+                            <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                              <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                              <span class="h5 ms-2 text-dark">시공사 이름</span>
+                            </a>
+                          </div>
+                          <div class="my-3">
+                            <p class="mb-3">
+                              00아파트를 시공했습니다. 맑은 하늘 창에 해가 비치면 
+                              아주 포근한 느낌을 받으실 수 있습니다.
+                              앞으로 계속 있을 추위를 대비해 윈디케어와 
+                              함께 따뜻한 마이하우스 만들어나가요~*^^*
+                            </p>
+                            <div class="d-flex justify-content-start align-items-center flex-row flex-wrap">
+                              <a href="#" class="">#창문</a>
+                              <a href="#" class="mx-2">#방충망</a>
+                              <a href="#" class="">#이중창</a>
+                            </div>
+                          </div>
+                          <div class="">
+                            <div class="row g-2">
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center flex-row flex-nowrap">
+                          <div class="">
+                            <i class="fa-solid fa-heart text-danger"></i>
+                            <span class="ms-1 fw-bold"> 35 </span>
+                          </div>
+                          <div class="ms-5">
+                            <i class="fa-light fa-comment"></i>
+                            <span class="ms-1 fw-bold"> 10 </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 border-bottom pb-4">
+                  <div class="row g-3">
+                    <div class="col-lg-6">
+                      <div class="bg-gray-200 overflow-hidden d-flex justify-content-center align-items-center p" style="height:515px">
+                        <iframe width="100%" height="500"
+                        src="https://www.youtube.com/embed/1qVmoVFo6sI" title="THE STRONGEST DEVIL: Denji & Pochita's INSANE TRUE Powers REVEALED (HOW STRONG IS CHAINSAW MAN?)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="d-flex justify-content-between align-items-start flex-column" style="height:515px">
+                        <div class="">
+                          <div>
+                            <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                              <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+                              <span class="h5 ms-2 text-dark">시공사 이름</span>
+                            </a>
+                          </div>
+                          <div class="my-3">
+                            <p class="mb-3">
+                              00아파트를 시공했습니다. 맑은 하늘 창에 해가 비치면 
+                              아주 포근한 느낌을 받으실 수 있습니다.
+                              앞으로 계속 있을 추위를 대비해 윈디케어와 
+                              함께 따뜻한 마이하우스 만들어나가요~*^^*
+                            </p>
+                            <div class="d-flex justify-content-start align-items-center flex-row flex-wrap">
+                              <a href="#" class="">#창문</a>
+                              <a href="#" class="mx-2">#방충망</a>
+                              <a href="#" class="">#이중창</a>
+                            </div>
+                          </div>
+                          <div class="">
+                            <div class="row g-2">
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="d-flex justify-content-start align-items-center flex-row">
+                                  <a id="#" href="#profile" class="d-flex justify-content-start align-items-center">
+                                    <img src="assets/img/images/tree.png" alt="" height="32px" width="32px" />
+                                    <span class="ms-2 text-dark fs-14px">아이디</span>
+                                  </a>
+                                  <div class="ms-3 fs-14px">
+                                    너무 예쁘네요~*^^
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center flex-row flex-nowrap">
+                          <div class="">
+                            <i class="fa-solid fa-heart text-danger"></i>
+                            <span class="ms-1 fw-bold"> 35 </span>
+                          </div>
+                          <div class="ms-5">
+                            <i class="fa-light fa-comment"></i>
+                            <span class="ms-1 fw-bold"> 10 </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
         </div>
       </section>
 
-      <!-- FAIR MANAGEMENT PAGE  (NOT YET FINISH)-->
+      <!-- FAIR MANAGEMENT PAGE -->
       <section id="fairmanagement_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
@@ -1587,16 +2623,16 @@
           <h2 id="fairmanagement-02_title" class="d-none">입주자 관리</h2>
           <div class="navigation my-3">
             <nav class="nav-list nav">
-              <a id="fairmanagement-01_btn" class="nav-link active" href="#"> 박람회 생성 </a>
-              <a id="fairmanagement-02_btn" class="nav-link" href="#"> 입주자 관리 </a>
+              <a id="fairmanagement-01_btn" class="nav-link" href="#createexposition"> 박람회 생성 </a>
+              <a id="fairmanagement-02_btn" class="nav-link" href="#tenantmanagement"> 입주자 관리 </a>
             </nav>
           </div>
 
-          <div id="fairmanagement-01_div" class="d-block card my-3 border-0">
+          <div id="fairmanagement-01_div" class="d-none card my-3 border-0">
             <div class="mb-3">
               <form action="" class="row gy-2 gx-4">
                 <div class="div1 col-md-12 col-lg-6 col-xl-6 col-xxl-4  ">
-                  <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
+                  <label for="" class="form-label d-none d-lg-block opacity-0">&nbsp;</label>
                   <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
                       <div class="selectApartmentdiv flex-grow-1">
                         <select name="" id="selectAppartment" class="form-select" data-placeholder="아파트 이름 검색">
@@ -1611,13 +2647,13 @@
                         </select>
                       </div>
   
-                      <p class="fw-bold fs-16px text-nowrap text-center mx-2"> 온라인 박람회 </p>
+                      <p class="fw-bold form-label text-nowrap text-center mx-2"> 온라인 박람회 </p>
                       <button type="button" class="btn btn-primary text-nowrap"> 추가 </button>
                   </div>
                 </div>
                 
                 <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-3">
-                  <label for="" class="form-label fw-bold fs-20px">일정 관리</label>
+                  <label for="" class="form-label fw-bold">일정 관리</label>
                   <div id="daterange" class="input-group input-daterange">
                     <input type="text" class="form-control" name="start" autocomplete="off" placeholder="mm/dd/yyyy">
                     <span class="input-group-text px-2"><i class="fa-regular fa-minus"></i></span>
@@ -1626,21 +2662,21 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-2 ">
-                  <label for="" class="form-label fs-20px d-none d-md-block opacity-0"> &nbsp; </label>
+                  <p id="switch_label_top" class="form-label d-none d-xxl-block opacity-0"> &nbsp; </p>
                   <div class="d-flex justify-content-center align-items-center flex-row flex-nowrap p-1">
-                    <p class="fw-bold fs-16px text-nowrap me-2"> 오프라인 박람회 </p>
-                    <a href="#"  class="d-flex flow-row text-muted m-0 p-0">
-                      <label class="switch" >
-                        <input class="switch-input" type="checkbox" checked />
+                    <p class="fw-bold form-label text-nowrap me-2"> 오프라인 박람회 </p>
+                    <div class="d-flex flow-row text-muted m-0 p-0">
+                      <label class="switch">
+                        <input id="switch_onlinefair" class="switch-input" type="checkbox" />
                         <span class="switch-label" data-off="Off" data-on="On"></span> 
                         <span class="switch-handle"></span> 
                       </label>
-                    </a>
+                    </div>
                   </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                  <label for="" class="form-label fw-bold fs-20px"> 시간 관리 </label>
+                <div id="switch_onlinefair_time" class="d-none col-md-6 col-lg-6 col-xl-6 col-xxl-3">
+                  <label for="" class="form-label fw-bold"> 시간 관리 </label>
                   <label for="start_time" class="form-label d-none"> Start Time </label>
                   <label for="end_time" class="form-label d-none"> End Time</label>
                   <div class="d-flex justify-content-around align-items-center flex-row flex-nowrap">            
@@ -1657,7 +2693,10 @@
             <div class="mb-3">
               <form action="" class="row gy-2 gx-4">
                 <div class="col-md-12 col-lg-6 col-xl-4">
-                  <label for="" class="form-label fw-bold fs-20px"> 아파트단지별 조회  <span class="ms-2"> <i class="fa-regular fa-chevron-down"></i> </span></label>
+                  <label for="" class="form-label fw-bold"> 
+                    <span class="me-2"> 아파트단지별 조회 </span>
+                    <i class="fa-regular fa-chevron-down"></i> 
+                  </label>
                   <div class="complex-div card rounded px-3 py-2 overflow-x-hidden overflow-y-auto" style="height: 180px">
                     <ul class="p-0 m-0">
                       <li class="link-dark">
@@ -1694,7 +2733,7 @@
                 </div>
                 
                 <div class="col-md-12 col-lg-6 col-xl-4">
-                  <label for="" class="form-label fw-bold fs-20px"> 참여시공사 관리 </label>
+                  <label for="" class="form-label fw-bold"> 참여시공사 관리 </label>
                   <div class="card rounded px-3 py-2 overflow-x-hidden overflow-y-auto" style="height: 180px">
                     <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap border-bottom border-primary">
                       <input id="partcontractor" type="text" class="form-control border-0 ps-0 shadow-none" placeholder="카테고리 입력">
@@ -1742,10 +2781,10 @@
                   </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-6 col-xl-4">
+                <div class="col-lg-12 col-xl-4">
                   <div class="d-flex justify-content-between align-items-start flex-row flex-nowrap">
                     <div class="flex-grow-1">
-                      <label for="" class="form-label fs-20px d-none d-xl-block opacity-0"> &nbsp; </label>
+                      <label for="" class="form-label d-none d-xl-block opacity-0"> &nbsp; </label>
                       <div class="card rounded px-3 py-2 overflow-x-hidden overflow-y-auto" style="height: 180px">
                         <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap border-bottom border-primary">
                           <input id="contractorname" type="text" class="form-control border-0 ps-0 shadow-none" placeholder="시공사 이름 검색">
@@ -1798,7 +2837,7 @@
             <!-- datatables -->
             <div class="card  border-0">
               <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-                <table id="" class="display table">
+                <table id="createexposition_table" class="display table">
                     <thead class="text-center bg-primary">
                       <tr class="text-white">
                         <th> 카테고리 </th>
@@ -2019,71 +3058,14 @@
           </div>
 
           <div id="fairmanagement-02_div" class="d-none card my-3 border-0">
-            <div class="mb-3">
-              <form action="" class="row gy-2 gx-4">
-                <div class="div1 col-md-12 col-lg-6 col-xl-6 col-xxl-4  ">
-                  <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
-                  <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                      <div class="selectApartmentdiv flex-grow-1">
-                        <select name="" id="selectAppartment" class="form-select" data-placeholder="아파트 이름 검색">
-                          <option></option> 
-                          <option value='1'>요게시 싱</option> 
-                          <option value='2'>소나리카 바도리아</option> 
-                          <option value='3'>아닐 싱</option> 
-                          <option value='4'>비샬 사후</option> 
-                          <option value='5'>마얀크 파티다르</option> 
-                          <option value='6'>비제이 모리야</option> 
-                          <option value='7'>라케시 사후</option> 
-                        </select>
-                      </div>
-  
-                      <p class="fw-bold fs-16px text-nowrap text-center mx-2"> 온라인 박람회 </p>
-                      <button type="button" class="btn btn-primary text-nowrap"> 추가 </button>
-                  </div>
-                </div>
-                
-                <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-3">
-                  <label for="" class="form-label fw-bold fs-20px">일정 관리</label>
-                  <div id="daterange" class="input-group input-daterange">
-                    <input type="text" class="form-control" name="start" autocomplete="off" placeholder="mm/dd/yyyy">
-                    <span class="input-group-text px-2"><i class="fa-regular fa-minus"></i></span>
-                    <input type="text" class="form-control rounded-end" name="end" autocomplete="off" placeholder="mm/dd/yyyy">
-                  </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-2 ">
-                  <label for="" class="form-label fs-20px d-none d-md-block opacity-0"> &nbsp; </label>
-                  <div class="d-flex justify-content-center align-items-center flex-row flex-nowrap p-1">
-                    <p class="fw-bold fs-16px text-nowrap me-2"> 오프라인 박람회 </p>
-                    <a href="#"  class="d-flex flow-row text-muted m-0 p-0">
-                      <label class="switch" >
-                        <input class="switch-input" type="checkbox" checked />
-                        <span class="switch-label" data-off="Off" data-on="On"></span> 
-                        <span class="switch-handle"></span> 
-                      </label>
-                    </a>
-                  </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3">
-                  <label for="" class="form-label fw-bold fs-20px"> 시간 관리 </label>
-                  <label for="start_time" class="form-label d-none"> Start Time </label>
-                  <label for="end_time" class="form-label d-none"> End Time</label>
-                  <div class="d-flex justify-content-around align-items-center flex-row flex-nowrap">
-                    <div id="" class="input-group input-daterange">
-                      <input type="time" id="start_time" class="form-control cursor-pointer" name="start_time" autocomplete="off" />
-                      <span class="input-group-text px-2"><i class="fa-regular fa-minus"></i></span>
-                      <input type="time" id="start_time" class="form-control cursor-pointer" name="end_time" autocomplete="off" />
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-  
+             
             <div class="mb-3">
               <form action="" class="row gy-2 gx-4">
                 <div class="col-md-12 col-lg-6 col-xl-4">
-                  <label for="" class="form-label fw-bold fs-20px"> 아파트단지별 조회  <span class="ms-2"> <i class="fa-regular fa-chevron-down"></i> </span></label>
+                  <label for="" class="form-label fw-bold">  
+                    <span class="me-2"> 아파트단지별 조회  </span>
+                    <i class="fa-regular fa-chevron-down"></i> 
+                  </label>
                   <div class="complex-div card rounded px-3 py-2 overflow-x-hidden overflow-y-auto" style="height: 180px">
                     <ul class="p-0 m-0">
                       <li class="link-dark">
@@ -2119,328 +3101,204 @@
                   </div>
                 </div>
                 
-                <div class="col-md-12 col-lg-6 col-xl-4">
-                  <label for="" class="form-label fw-bold fs-20px"> 참여시공사 관리 </label>
-                  <div class="card rounded px-3 py-2 overflow-x-hidden overflow-y-auto" style="height: 180px">
-                    <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap border-bottom border-primary">
-                      <input id="partcontractor" type="text" class="form-control border-0 ps-0 shadow-none" placeholder="카테고리 입력">
-                      <button type="button" class="addpartcons btn ms-2 shadow-none link-primary" data-complexid="1"> 
-                        <i class="fa-regular fa-plus"></i>
+                <div class="col-md-12 col-lg-6 col-xl-7">
+                  <div class="row g-2">
+                    <div class="col-4 col-lg-6 col-xxl-4">
+                      <label for="" class="form-label fw-bold"> 추첨 기준 </label>
+                      <input id="" type="text" class="form-control" placeholder="2">
+                    </div>
+  
+                    <div class="col-4 col-lg-6 col-xxl-4">
+                      <label for="" class="form-label fw-bold"> 추첨 세대 </label>
+                      <input id="" type="text" class="form-control" placeholder="5">
+                    </div>
+  
+                    <div class="col-4 col-lg-6 col-xxl-4">
+                      <p class="form-label fw-bold d-block d-lg-none d-xxl-block"> &nbsp; </p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#prizedrawModal">
+                        경품추첨
                       </button>
                     </div>
-  
-                    <div class="partcons mt-2">
-                      <div class="">
-                        <ul id="partconslists" class="m-0 p-0">
-                          <li class="btn btn-outline-primary rounded-pill">
-                            <p> 브랜드가구 </p>
-                            <i class="partconsbtn fa-regular fa-xmark"></i>
-                          </li>
-  
-                          <li class="btn btn-outline-primary rounded-pill">
-                            <p> 디자인가구 </p>
-                            <i class="partconsbtn fa-regular fa-xmark"></i>
-                          </li>
-  
-                          <li class="btn btn-outline-primary rounded-pill">
-                            <p> 가전 </p>
-                            <i class="partconsbtn fa-regular fa-xmark"></i>
-                          </li>
-  
-                          <li class="btn btn-outline-primary rounded-pill">
-                            <p> 방충망 </p>
-                            <i class="partconsbtn fa-regular fa-xmark"></i>
-                          </li>
-  
-                          <li class="btn btn-outline-primary rounded-pill">
-                            <p> 시스템에어컨 </p>
-                            <i class="partconsbtn fa-regular fa-xmark"></i>
-                          </li>
-  
-                          <li class="btn btn-outline-primary rounded-pill">
-                            <p> 음식물처리기 </p>
-                            <i class="partconsbtn fa-regular fa-xmark"></i>
-                          </li>
-                          
-                        </ul>
-                      </div>
-                    </div>
                   </div>
+                  
                 </div>
-                
-                <div class="col-md-6 col-lg-6 col-xl-4">
-                  <div class="d-flex justify-content-between align-items-start flex-row flex-nowrap">
-                    <div class="flex-grow-1">
-                      <label for="" class="form-label fs-20px d-none d-xl-block opacity-0"> &nbsp; </label>
-                      <div class="card rounded px-3 py-2 overflow-x-hidden overflow-y-auto" style="height: 180px">
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap border-bottom border-primary">
-                          <input id="contractorname" type="text" class="form-control border-0 ps-0 shadow-none" placeholder="시공사 이름 검색">
-                          <button type="button" class="btn ms-2 shadow-none link-primary" data-complexid="1"> 
-                            <i class="fa-regular fa-magnifying-glass"></i>
-                          </button>
-                        </div>
-      
-                        <div class="contname mt-2">
-                          <div class="">
-                            <ul id="contnamelists" class="m-0 p-0">
-                              <li class="border-bottom">
-                                시공사 이름
-                              </li>
-      
-                              <li class="border-bottom">
-                                시공사 이름
-                              </li>
-      
-                              <li class="border-bottom">
-                                시공사 이름
-                              </li>
-      
-                              <li class="border-bottom">
-                                시공사 이름
-                              </li>
-      
-                              <li class="border-bottom">
-                                시공사 이름
-                              </li>
-      
-                              <li class="border-bottom">
-                                시공사 이름
-                              </li>
-                              
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ms-3 d-flex justify-content-end align-items-end flex-column flex-nowrap">
-                      <label for="" class="form-label fs-20px d-none d-xl-block opacity-0"> &nbsp; </label>
-                      <button class="btn btn-primary text-nowrap fs-13px"> 추가 </button>
-                    </div>
-                  </div>
-                </div>  
               </form>
             </div>
   
             <!-- datatables -->
             <div class="d-block card  border-0">
               <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-                <table id="" class="display table">
+                <table id="tenantmanagement_table" class="display table">
                     <thead class="text-center bg-primary">
-                      <tr class="text-white border-bottom-0">
-                        <th class="text-center"> 카테고리 </th>
-                        <th class="text-center"> 시공사 </th>
-                        <th class="text-center"> 대표연락처 </th>
-                        <th class="text-center"> 응답 </th>
-                        <th class="text-center"> 참가비용납입 </th>
-                        <th class="text-center"> 회사소개 </th>
-                        <th class="text-center"> 동영상 </th>
-                        <th class="text-center"> 태그 </th>
+                      <tr class="text-white text-center border-bottom-0">
+                        <th> 아파트 </th>
+                        <th> 동 </th>
+                        <th> 호수 </th>
+                        <th> 타입 </th>
+                        <th> 이름 </th>
+                        <th> 연락처 </th>
+                        <th> 계약건수 </th>
+                        <th> 사은품 </th>
                       </tr>
                     </thead>
-                    <tbody class="text-center text-darkprimary fs-14px">
+                    <tbody class="text-center text-dark fs-14px">
                       <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
                         <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
+                        <td> 7 </td>
+                        <td class="text-primary"> O </td>
                       </tr>
+
                       <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
                         <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
+                        <td> 7 </td>
+                        <td class="text-orange"> X </td>
                       </tr>
+
                       <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
                         <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
+                        <td> 7 </td>
+                        <td class="text-primary"> O </td>
                       </tr>
+
                       <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
                         <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
+                        <td> 7 </td>
+                        <td class="text-orange"> X </td>
                       </tr>
+
                       <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
                         <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
+                        <td> 7 </td>
+                        <td class="text-primary"> O </td>
                       </tr>
+
+                      <tr class="">
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
+                        <td> 010-0000-0000 </td>
+                        <td> 7 </td>
+                        <td class="text-orange"> X </td>
+                      </tr>
+
+                      <tr class="">
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
+                        <td> 010-0000-0000 </td>
+                        <td> 7 </td>
+                        <td class="text-primary"> O </td>
+                      </tr>
+
+                      <tr class="">
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
+                        <td> 010-0000-0000 </td>
+                        <td> 7 </td>
+                        <td class="text-orange"> X </td>
+                      </tr>
+
+                      <tr class="">
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
+                        <td> 010-0000-0000 </td>
+                        <td> 7 </td>
+                        <td class="text-primary"> O </td>
+                      </tr>
+
+                      <tr class="">
+                        <td> 검단베르힐 </td>
+                        <td> 104 </td>
+                        <td> 1005 </td>
+                        <td> 84A </td>
+                        <td> 김케플 </td>
+                        <td> 010-0000-0000 </td>
+                        <td> 7 </td>
+                        <td class="text-orange"> X </td>
+                      </tr>
+                      
                     </tbody>
                 </table>
               </div>
+            </div>
+
+            <div class="my-3">
+              <div id="tenantmanagement_div" class="d-flex justify-content-end align-items-center flex-row">
+                <button id="tenantmanagement_div_btn" type="button" class="btn btn-primary"> 항목추가 </button>
+              </div>
+
+              <div id="tenantmanagement_form_div" class="d-none justify-content-between align-items-center flex-row flex-wrap">
+                <form id="tenantmanagement_form" action="">
+                  <div class="row g-2">
+                    <div class="col-4 col-xl-2">
+                      <input type="text" class="form-control" placeholder="아파트이름">
+                    </div>
+                    <div class="col-4 col-xl-1">
+                      <input type="text" class="form-control" placeholder="동">
+                    </div>
+                    <div class="col-4 col-xl-1">
+                      <input type="text" class="form-control" placeholder="호수">
+                    </div>
+                    <div class="col-4 col-xl-1">
+                      <input type="text" class="form-control" placeholder="타입">
+                    </div>
+                    <div class="col-4 col-xl-2">
+                      <input type="text" class="form-control" placeholder="이름">
+                    </div>
+                    <div class="col-4 col-xl-2">
+                      <input type="text" class="form-control" placeholder="전화번호">
+                    </div>
+                    <div class="col-4 col-xl-1">
+                      <input type="text" class="form-control" placeholder="계약건수">
+                    </div>
+                    <div class="col-4 col-xl-1">
+                      <input type="text" class="form-control" placeholder="사은품">
+                    </div>
+                    <div class="col-4 col-xl-1">
+                      <button type="button" class="btn btn-outline-primary"> 추가 </button>
+                    </div>
+                  </div>
+
+                  
+                </form>
+              </div>
+
             </div>
           </div>
         </div>
@@ -2451,13 +3309,13 @@
       <section id="paymentrequestmanagement_page" class="d-none content">
         <div class="card-main shadow bg-white col-lg-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2> 결제요청 OK!</h2>
+          <h2> 결제요청 </h2>
           
           <div class="my-5">
             <form action="">
               <div class="mb-3">
                 <div class="d-flex justify-content-between align-items-center flex-row">
-                  <label for="formGroupExampleInput" class="form-label">
+                  <label for="formGroupExampleInput" class="form-label fw-bold">
                     결제요청
                   </label>
                   <button type="button" class="btn shadow-none fs-15px text-gray300"> 
@@ -2475,7 +3333,7 @@
               </div>
 
               <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">
+                <label for="formGroupExampleInput" class="form-label fw-bold">
                   결제요청 템플릿
                 </label>
                 <select class="form-select" aria-label="Default select example">
@@ -2497,31 +3355,28 @@
       </section>
 
       <!-- SERVICE MANAGEMENT PAGE -->
-      <section id="servicemanagement_page" class="d-none content">
+      <section id="servicemanagement_page" class="d-none content"> 
         <div class="card-main shadow bg-white col-lg-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
           <h2> 결제요청 </h2>
-          <div class="my-5 ">
-            <div class="card-submain card py-4 px-3 px-md-4 rounded-10 shadow" style="background-color: #FAFBFF;">
-              <form action="" >
-                <div class="d-flex justify-content-start align-items-center flex-wrap my-3">
-                  <label for="inputPassword5" class="form-label fw-bolder"> 상품명</label>
-                  <input type="password" id="inputPassword5" class="form-control" placeholder="안전방충망" aria-describedby="passwordHelpBlock">
+          <div class="my-5">
+            <div class="card-submain card py-4 px-3 px-md-4 rounded-10 shadow bg-light">
+              <form action="">
+                <div class="mb-4">
+                  <label for="" class="form-label fw-bold"> 상품명</label>
+                  <input type="text" id="" class="form-control" placeholder="안전방충망">
                 </div>
-                <div class="d-flex justify-content-start align-items-center flex-wrap  my-3">
-                  <label for="inputPassword5" class="form-label fw-bolder"> 프로세스</label>
-                 <textarea class="form-control textarea-6 " style="height:0px;overflow-y:hidden;">신청 - 상담 - 실측일정확정 - 실측예정(당일)
 
--실측완료 - 제작중 -시공예정(당일) - 시공완료
+                <div class="mb-4">
+                  <label for="" class="form-label fw-bold"> 프로세스</label>
+                  <textarea class="form-control textarea-7">신청 - 상담 - 실측일정확정 - 실측예정(당일)
 
-
-
-
-                </textarea>
+-실측완료 - 제작중 -시공예정(당일) - 시공완료</textarea>
                 </div>
-                <div class="d-flex justify-content-start align-items-center flex-wrap my-3 ">
-                  <label for="inputPassword5" class="form-label fw-bolder"> 단위</label>
-                  <input type="password" id="inputPassword5" class="form-control" placeholder="시간" aria-describedby="passwordHelpBlock">
+
+                <div class="mb-4">
+                  <label for="" class="form-label fw-bold"> 단위</label>
+                  <input type="text" id="" class="form-control" placeholder="시간">
                 </div>
               </form>
             </div>
@@ -2531,64 +3386,63 @@
 
       <!-- SEND PHOTOS PAGE -->
       <section id="sendphotos_page" class="d-none content">
-        <div class="card-main shadow bg-white col-6 p-3 p-md-5">
+        <div class="card-main shadow bg-white col-lg-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-           <h2>발주관리</h2>
-           <form class=""> 
-             <div class="my-3 p-2 pt-5 "> 
-               <div class="d-flex justify-content-start align-items-center flex-wrap">
-                 <h1 class="fs-20px fw-bold"> 고객에게 완료 사진 발송 </h1>
-                 <a href="#"  class="d-flex flow-row text-muted">
-                   <label class="switch" >
-                     <input class="switch-input" type="checkbox" />
-                     <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                     <span class="switch-handle"></span> 
-                   </label>
-                  </a>
-               </div>
-               
-                 <div class="my-5 ">
-                   <div class="d-flex justify-content-start align-items-center flex-wrap">
-                     <label for="inputPassword5" class="form-label fs-18px fw-bold"> 고객 전화번호</label>
-                     <input type="password" id="inputPassword5" class="form-control" placeholder="010-0000 -0000" aria-describedby="passwordHelpBlock">
-                   </div>
-                 </div>
-                 <div class="my-3 ms-1">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                      <label for="inputPassword5" class="form-label fs-18px fw-bold "> 적용 상품/프로세스 선택</label>
-    
+          <div>
+            <h2>사진발송</h2>
+          
+            <form class=""> 
+              <div class="my-5"> 
+                <div class="mb-4">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <p class="form-label fw-bold p-0 m-0">고객에게완료사진발송</p>
+                    <div class="d-flex justify-content-center align-items-center flow-row">
+                      <label class="switch mx-3" >
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label"  data-off="Off" data-on="On"></span> 
+                        <span class="switch-handle"></span> 
+                      </label>
                     </div>
-                 
-           
-                      <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected="" hidden="">선택하기</option>
-                          <option value="1">제품</option>
-                          <option value="2">제품</option>
-                          <option value="3">제품</option>
-                        </select>
-                      </div>
-                      <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected="" hidden="">선택하기</option>
-                          <option value="1">프로세스</option>
-                          <option value="2">프로세스</option>
-                          <option value="3">프로세스</option>
-                        </select>
-                      </div>
-                      <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">입력 완료</button>
-                      </div>
                   </div>
+                </div>  
+  
+                <div class="mb-4">
+                  <label for="" class="form-label fw-bold">고객전 화번호</label>
+                  <input type="text" class="form-control" id="" placeholder="010-0000-0000">
+                </div>
+  
+                <div class="mb-2">
+                  <label for="" class="form-label fw-bold">적용 상품 / 프로세스 선택</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected hidden>선택하기</option>
+                    <option value="1">제품</option>
+                    <option value="2">제품</option>
+                    <option value="3">제품</option>
+                  </select>
+                </div>
+  
+                <div class="mb-4">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected hidden>선택하기</option>
+                    <option value="1">제품</option>
+                    <option value="2">제품</option>
+                    <option value="3">제품</option>
+                  </select>
+                </div>
+  
+                <div class="">
+                  <button class="btn btn-primary w-100" type="button">입력완료</button>
                 </div>
               </div>
             </form>
+
           </div>
+        </div>
       </section>
 
       <!-- TECHNICIAN MANAGEMENT PAGE -->
       <section id="technicianmanagement_page" class="d-none content">
-        <div class="card-main shadow bg-white col-6 p-3 p-md-5">
+        <div class="card-main shadow bg-white col-lg-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
            <h2>기술자 관리</h2>
            <h6 class="fs-18px mt-5 mb-3"> 
@@ -2699,14 +3553,14 @@
               <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-outline ">
-                      <label for="firstname" class="form-label fw-bold"> 기술자 초대</label>
+                      <label for="firstname" class="form-label fw-bold my-3"> 기술자 초대</label>
                       <input type="text" id="form6Example1" class="form-control " placeholder="이름을 입력해 주세요.">
             
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-outline">
-                      <label for="firstname" class="form-label fw-bold">&nbsp;</label>
+                      <label for="firstname" class="form-label fw-bold my-3">&nbsp;</label>
                       <input type="text" id="form6Example1" class="form-control" placeholder="‘-’ 제외하고 전화번호를 입력해 주세요.">
             
                     </div>
@@ -2721,6 +3575,7 @@
         </div>
       </section>
 
+      <!-- MENU PAGES -->
       <!-- CONTRACT PAGE (NOT YET DONE)--> 
       <section id="contract_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
@@ -3633,7 +4488,7 @@
         <div class="">
           <div class="row m-0 p-0">
             <div class="card-main shadow bg-white col-12 col-lg-6 col-xl-6 p-3 p-md-5">
-              <h2>시공사 검색</h2>
+              <h2 class=" fw-bolder mb-5">마스터</h2>
 
               <div class="navigation mt-3 mb-4">
                 <nav class="nav-list nav">
@@ -3652,45 +4507,66 @@
                             <th class="rounded-start text-center">이름</th>
                             <th  class="text-center"> 첫구독시작일</th>
                             <th  class="text-center"> 최근결제날짜</th>
-                            <th class="rounded-end text-center"> 매월 결제일 </th>
+                            <th class="text-center"> 매월 결제일 </th>
+                            <th class="rounded-end text-center"> 결제 여부 </th>
                           </tr>
                       </thead>
                       <tbody class="text-center text-darkprimary">
                         <tr class="fs-14px">
-                          <td >현식</td>
+                          <td >김대림</td>
                           <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
+                          <td >2022/12/24</td>
+                          <td >24</td>
+                          <td class="text-primary">Y</td>
                         </tr>
                         <tr class="fs-14px">
-                          <td  >현식</td>
-                          <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
+                          <td >김대림</td>
+                          <td >2022/9/4</td>
+                          <td >2022/11/4</td>
+                          <td >4</td>
+                          <td class="text-danger">N</td>
                         </tr>
                         <tr class="fs-14px">
-                          <td  >현식</td>
+                          <td >김대림</td>
                           <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
+                          <td >2022/12/24</td>
+                          <td >24</td>
+                          <td class="text-primary">Y</td>
                         </tr>
                         <tr class="fs-14px">
-                          <td  >현식</td>
+                          <td >김대림</td>
                           <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
+                          <td >2022/12/24</td>
+                          <td >24</td>
+                          <td class="text-primary">Y</td>
                         </tr>
                         <tr class="fs-14px">
-                          <td  >현식</td>
+                          <td >김대림</td>
                           <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
+                          <td >2022/12/24</td>
+                          <td >24</td>
+                          <td class="text-primary">Y</td>
                         </tr>
                         <tr class="fs-14px">
-                          <td  >현식</td>
+                          <td >김대림</td>
+                          <td >2022/9/4</td>
+                          <td >2022/11/4</td>
+                          <td >4</td>
+                          <td class="text-danger">N</td>
+                        </tr>
+                        <tr class="fs-14px">
+                          <td >김대림</td>
                           <td >2022/10/24</td>
-                          <td >2022/10/03</td>
-                          <td >3천</td>
+                          <td >2022/12/24</td>
+                          <td >24</td>
+                          <td class="text-primary">Y</td>
+                        </tr>
+                        <tr class="fs-14px">
+                          <td >김대림</td>
+                          <td >2022/9/4</td>
+                          <td >2022/11/4</td>
+                          <td >4</td>
+                          <td class="text-danger">N</td>
                         </tr>
                       </tbody>
                   </table>
@@ -3699,21 +4575,116 @@
 
               <div id="master-02_div" class="d-none card my-3 border-0">
                 <!-- content here -->
-                <div class="input-group rounded-pill"> 
-                  <input type="search" class="form-control rounded-pill"  placeholder="시공사 검색" aria-label="Search" aria-describedby="search-addon"   />
-                </div>
+               
                 
                 <div class="my-4">
                   <div class="row g-3">
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
                         <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
                           <div class="d-flex justify-content-between align-items-center">
                             <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
                             <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
+                            </div>
+                          </div>
+                          <i class="fa-regular fa-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="card rounded p-2 cursor-pointer">
+                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-700"> 시공사 1</p>
+                              <p class="fs-13px fw-light"> 시공사1검색</p>
                             </div>
                           </div>
                           <i class="fa-regular fa-chevron-right"></i>
@@ -3721,83 +4692,6 @@
                       </div>
                     </div>
 
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6"> 
-                      <div class="card p-3 cursor-pointer"> 
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <img src="assets/img/images/tree.png" alt="" height="44px" width="44px">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-18px fw-500"> 시공사 1</p>
-                              <p class="fs-16px fw-light"> 시공사1검색</p>
-                            </div>
-                          </div>
-                          <i class="fa-regular fa-chevron-right"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                        
-                    
                   </div>
                 </div>
                 <div class="d-flex justify-content-center align-items-center my-5">
@@ -3844,8 +4738,6 @@
 
               </div>
 
-
-              
               <div id="master-03_div" class="d-none card my-3 border-0">
                 <!-- content here  -->
                 <div class="my-4">
@@ -4017,8 +4909,8 @@
             <div id="master-01-card2" class="d-flex card-main2 col-12 col-lg-6 col-xl-5 p-3 p-md-5">
             <!-- INSIDE CONTENTS -->
               <div class="card-main2-content">
-                <h1 class="fs-25px fw-bolder text-center"> 시공사 검색</h1> 
-                <h6 class="fs-16px text-center">더욱 더 저 렴 해진 가 격 으로 서 비 스 를 이 용 하 세요!</h6>
+                <h1 class="fs-25px fw-bolder text-center"> 구독 서비스 전환</h1> 
+                <h6 class="fs-16px text-center">더욱 더저렴해진가격으로서비스를 이용하세요!</h6>
                 <img src="assets/img/images/switch_subscription.png" class="mx-auto d-block w-100 my-4"  alt="...">
                 <button class="btn btn-primary w-100" type="button">입력완료</button>
               </div>
@@ -4029,6 +4921,552 @@
 
 
     </main>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="prizedrawModal" tabindex="-3" aria-labelledby="prizedrawModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0 py-3">
+            <h6 class="modal-title" id="prizedrawModalLabel">&nbsp;</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-title my-2">
+            <div class="text-center">
+              <svg width="168" height="41" viewBox="0 0 168 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M126.618 20.5L131.474 12M140.645 28L155.75 18.5M104.5 19L107.737 2.5M65.1184 18.5L61.3421 2M84 16V6M43.5395 20.5L38.1447 12M27.3553 28L12.7895 18.5M12.7895 39L2 35.5M166 35.5L153.592 39" stroke="#BD4400" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <h3>축하합니다</h3>
+            </div>
+          </div>
+          <div class="modal-body">
+              <div class="row gx-0">
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div><div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div><div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div><div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div><div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                <div class="col-6"> 
+                  <div class="row g-2">
+                    <h6 class="col-4 text-center">김케플</h6>
+                    <h6 class="col-8 text-start">010-1234-1234</h6>
+                  </div>
+                </div>
+                  
+              </div>
+            
+                  
+
+
+          </div>
+        </div>
+      </div>
+    </div>
 
     
   </body>
