@@ -198,3 +198,13 @@
 .h-full {
     min-height: 100vh !important;
 }
+
+.w-lg-50 {
+    @include breakpoint-lg-up {
+        width: 50% !important;
+    }
+}
+
+.min-h-card {
+    min-height: calc(100vh - (50px + (3 * $s3) + (2 * $s5) + $s4)) !important;
+}

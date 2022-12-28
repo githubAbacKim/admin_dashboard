@@ -1,9 +1,9 @@
 
-$(document).ready(function () {
-    $('.complex').on('click', function () {
-        $(this).parent().remove();
-    });
-})
+// $(document).ready(function () {
+//     $('.complex').on('click', function () {
+//         $(this).parent().remove();
+//     });
+// })
 
 
 $(document).ready(function () {
@@ -13,7 +13,7 @@ $(document).ready(function () {
         const partconslist = '<li class="btn btn-outline-primary rounded-pill"> <p>' + contractor + '</p><i class="partconsbtn fa-regular fa-xmark"></i></li >';
  
         if (contractor.length == '') {
-
+            // do nothing
         } else {
             $('#partconslists').append(partconslist);
             $('#partcontractor').val('');
@@ -31,6 +31,40 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 })
+
+// FILE UPLOAD INITIALIZED WITH FILEPOND
+$(document).ready(function () {
+
+    // First register any plugins
+    $.fn.filepond.registerPlugin(
+        FilePondPluginImagePreview,
+        FilePondPluginImageResize,
+        FilePondPluginImageTransform
+    );
+
+    
+    // Turn input element into a pond
+    $('.my-pond').filepond();
+    
+    // remove the credits section & override css styles
+    $('.filepond--credits').remove();
+    $('.filepond--drop-label').addClass('bg-light rounded');
+    $('.filepond--drop-label > label').addClass('bg-light text-secondary fw-bold cursor-pointer');
+ 
+    // Set allowMultiple property to true
+    $('.my-pond').filepond('allowMultiple', true);
+
+    // Listen for addfile event
+    $('.my-pond').on('FilePond:addfile', function (e) {
+        console.log('file added event', e);
+    });
+
+    // Manually add a file using the addfile method
+    // $('.my-pond').first().filepond('addFile', 'index.html').then(function (file) {
+    //     console.log('file added', file);
+    // });
+
+});
 
 /** DATA TABLES */
 // $(document).ready(function () {
@@ -70,6 +104,8 @@ $(document).ready(function () {
     $('#tenantmanagement_table').DataTable();
     $('#orderstatus_table').DataTable();
 });
+
+
 
 
 

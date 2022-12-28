@@ -492,6 +492,16 @@ p {
   min-height: 100vh !important;
 }
 
+@media (min-width: 993px) {
+  .w-lg-50 {
+    width: 50% !important;
+  }
+}
+
+.min-h-card {
+  min-height: calc(100vh - (50px + 3rem + 6rem + 1.5rem)) !important;
+}
+
 .hr-1 {
   height: 1px;
   width: 100%;
@@ -916,6 +926,10 @@ p {
 
 .bg-gray-300 {
   background-color: #dee2e6 !important;
+}
+
+.bg-darkprimary {
+  background-color: #33588E !important;
 }
 
 #alert {
@@ -2162,6 +2176,50 @@ main.min .content {
   max-width: calc(100vw - 80px - 1rem);
 }
 
+#login_main #login_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 100px) !important;
+}
+#login_main #login_page form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#login_main #login_page form .login_avatar {
+  height: 120px;
+  width: 120px;
+  margin-bottom: -60px;
+  z-index: 3;
+}
+#login_main #login_page form .login_avatar i {
+  font-size: 60px;
+}
+#login_main #login_page form .login_inputs {
+  z-index: 2;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-radius: 60px;
+}
+#login_main #login_page form .login_button {
+  z-index: 1;
+  width: 70%;
+  text-align: center;
+}
+#login_main #login_page form .login_button button {
+  width: 70%;
+  padding: 10px 30px;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+
 #main_page .card-submain {
   height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 6rem)) !important;
 }
@@ -2185,7 +2243,7 @@ main.min .content {
   color: #003AC9 !important;
 }
 #fairmanagement_page .partcons {
-  min-height: calc(180px - (4rem + 6px));
+  min-height: calc(180px - (4rem + 21px));
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -2217,7 +2275,7 @@ main.min .content {
   font-size: 12px !important;
 }
 #fairmanagement_page .contname {
-  min-height: calc(180px - (4rem + 6px));
+  min-height: calc(180px - (4rem + 21px));
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -2231,6 +2289,74 @@ main.min .content {
   font-size: 13px !important;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+#technicianmanagement_page .card-main {
+  min-height: calc(100vh - 50px) !important;
+  background: #fff !important;
+  z-index: 101;
+}
+@media (min-width: 993px) {
+  #technicianmanagement_page .card-main {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+}
+@media (max-width: 992px) {
+  #technicianmanagement_page .card-main {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 0;
+  }
+}
+#technicianmanagement_page .card-main1 {
+  height: 4px;
+  z-index: 102;
+  background-color: #fff;
+}
+@media (min-width: 993px) {
+  #technicianmanagement_page .card-main1 {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  #technicianmanagement_page .card-main1 {
+    display: flex;
+  }
+}
+#technicianmanagement_page .card-main2 {
+  z-index: 101;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+@media (min-width: 993px) {
+  #technicianmanagement_page .card-main2 {
+    background: transparent !important;
+  }
+}
+@media (max-width: 992px) {
+  #technicianmanagement_page .card-main2 {
+    border-bottom-right-radius: 1.5rem;
+    background: #fff !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+}
+@media (min-width: 993px) {
+  #technicianmanagement_page .card-main2 .card-main2-content {
+    border-radius: 1.5rem !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    background: #fff !important;
+  }
+}
+@media (max-width: 992px) {
+  #technicianmanagement_page .card-main2 .card-main2-content {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
 }
 
 #filemanagement_page .complex-div ul li {
@@ -2433,10 +2559,10 @@ main.min .content {
 }
 #master_page .card-main2 {
   z-index: 101;
+  display: flex;
   justify-content: center !important;
   align-items: center !important;
   flex-direction: column !important;
-  height: calc(100vh - 50px) !important;
 }
 @media (min-width: 993px) {
   #master_page .card-main2 {
@@ -2450,12 +2576,10 @@ main.min .content {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
 }
-#master_page .card-main2 .card-main2-content {
-  border-radius: 1.5rem !important;
-  padding: 3rem !important;
-}
 @media (min-width: 993px) {
   #master_page .card-main2 .card-main2-content {
+    border-radius: 1.5rem !important;
+    padding: 3rem !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     background: #fff !important;
   }

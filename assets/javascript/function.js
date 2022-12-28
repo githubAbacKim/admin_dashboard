@@ -215,7 +215,7 @@ function check_fairmanagement02_div() {
 function check_master01div() {
     if ($("#master-01_div").hasClass("d-block")) {
         $("#master-01_div").addClass("d-none").removeClass("d-block");
-        $("#master-01-card1").addClass("d-none");
+        // $("#master-01-card1").addClass("d-none");
         $("#master-01-card2").addClass("d-none").removeClass("d-flex");
         $("#master-01_btn").removeClass("active");
     }
@@ -253,7 +253,5 @@ function setDefault_fairmanagement() {
         $('#fairmanagement-01_btn').addClass('active');
         $('#fairmanagement-01_div').addClass('d-flex').removeClass('d-none');
         $('#fairmanagement-01_title').addClass('d-block').removeClass('d-none');
-
-       
     }
 }

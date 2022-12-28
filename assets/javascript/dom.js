@@ -73,39 +73,20 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#btn-toggle-collapse").click(function () {
         if ($("#side-navbar").hasClass("min")) {
-            $("#side-navbar").removeClass("min");
-            $("#side-navbar").addClass("max");
-
-            $("#header").removeClass("min");
-            $("#header").addClass("max");
-
-            $("#main-content").removeClass("min");
-            $("#main-content").addClass("max");
-
-            $("#icon-collapse").removeClass("fa-chevron-right");
-            $("#icon-collapse").addClass("fa-chevron-left");
-
-            $("#btn-toggle-collapse").removeClass("min");
-            $("#btn-toggle-collapse").addClass("max");
+            $("#side-navbar").removeClass("min").addClass("max");
+            $("#header").removeClass("min").addClass("max");
+            $("#main-content").removeClass("min").addClass("max");
+            $("#icon-collapse").removeClass("fa-chevron-right").addClass("fa-chevron-left");
+            $("#btn-toggle-collapse").removeClass("min").addClass("max");
 
             $('[data-bs-toggle="tooltip"]').tooltip("disable");
 
         } else if ($("#side-navbar").hasClass("max")) {
-            $("#side-navbar").removeClass("max");
-            $("#side-navbar").addClass("min");
-
-            $("#header").removeClass("max");
-            $("#header").addClass("min");
-
-            $("#main-content").removeClass("max");
-            $("#main-content").addClass("min");
-
-            $("#icon-collapse").removeClass("fa-chevron-left");
-            $("#icon-collapse").addClass("fa-chevron-right");
-
-            $("#btn-toggle-collapse").removeClass("max");
-            $("#btn-toggle-collapse").addClass("min");
-
+            $("#side-navbar").removeClass("max").addClass("min");
+            $("#header").removeClass("max").addClass("min");
+            $("#main-content").removeClass("max").addClass("min");
+            $("#icon-collapse").removeClass("fa-chevron-left").addClass("fa-chevron-right");
+            $("#btn-toggle-collapse").removeClass("max").addClass("min");
             $('[data-bs-toggle="tooltip"]').tooltip("enable");
         }
     });
@@ -652,7 +633,6 @@ $(document).ready(function () {
         }
     })
 
-
     // MASTER PAGE
     $("#master_btn").click(function () {
         if ($("#master_page").hasClass("d-none")) {
@@ -682,10 +662,10 @@ $(document).ready(function () {
             check_menu_accordion();
         }
     })
-
-
 });
 
+
+// navigations with the pages
 $(document).ready(function () {
     // 1.1
     $("#viewallcontracts-01_btn").click(function () {
@@ -760,11 +740,8 @@ $(document).ready(function () {
     // 7.1.1
     $("#master-01_btn").click(function () {
         if ($("#master-01_div").hasClass("d-none")) {
-            $("#master-01_div").addClass("d-block");
-            $("#master-01_div").removeClass("d-none");
-            $("#master-01-card1").addClass("");
-            $("#master-01-card2").addClass("d-flex");
-            $("#master-01-card2").removeClass("d-none");
+            $("#master-01_div").addClass("d-block").removeClass("d-none");
+            $("#master-01-card2").addClass("d-flex").removeClass("d-none");
             $("#master-01_btn").addClass("active");
             check_master02div();
             check_master03div();
@@ -774,8 +751,7 @@ $(document).ready(function () {
     // 7.1.2
     $("#master-02_btn").click(function () {
         if ($("#master-02_div").hasClass("d-none")) {
-            $("#master-02_div").addClass("d-block");
-            $("#master-02_div").removeClass("d-none");
+            $("#master-02_div").addClass("d-block").removeClass("d-none");
             $("#master-02_btn").addClass("active");
             check_master01div();
             check_master03div();
@@ -785,11 +761,54 @@ $(document).ready(function () {
     // 7.1.3
     $("#master-03_btn").click(function () {
         if ($("#master-03_div").hasClass("d-none")) {
-            $("#master-03_div").addClass("d-block");
-            $("#master-03_div").removeClass("d-none");
+            $("#master-03_div").addClass("d-block").removeClass("d-none");
             $("#master-03_btn").addClass("active");
             check_master01div();
             check_master02div();
         }
     });
+    
+    $("#techmanagement_frame2_view").click(function () {
+        $("#technician-01-card2").toggle();
+    });
+
+    $("#cardusage-01_btn").click(function () {
+        if ($("#viewallcontracts-01_div").hasClass("d-none")) {
+            $("#viewallcontracts-01_div").addClass("d-flex").removeClass("d-none");
+            $("#viewallcontracts-01_btn").addClass("active");
+            $("#apartmentcomplexfilterselect01").addClass("d-flex").removeClass("d-none");
+            check_viewallcontracts02_div();
+            check_viewallcontracts03_div();
+        }
+    })
+
+    // 1.2
+    $("#viewallcontracts-02_btn").click(function () {
+        if ($("#viewallcontracts-02_div").hasClass("d-none")) {
+            $("#viewallcontracts-02_div").addClass("d-flex").removeClass("d-none");
+            $("#viewallcontracts-02_btn").addClass("active");
+            $("#apartmentcomplexfilterselect02").addClass("d-flex").removeClass("d-none");
+            check_viewallcontracts01_div();
+            check_viewallcontracts03_div();
+        }
+    })
+
+    // 1.3
+    $("#viewallcontracts-03_btn").click(function () {
+        if ($("#viewallcontracts-03_div").hasClass("d-none")) {
+            $("#viewallcontracts-03_div").addClass("d-flex").removeClass("d-none");
+            $("#viewallcontracts-03_btn").addClass("active");
+            check_viewallcontracts01_div();
+            check_viewallcontracts02_div();
+        }
+    })
+
 })
+
+
+// $(window).resize(function () {
+//     if ($(window).width() < 992) {
+//         $('#master_page > .card-main').css("{min-height: 'calc(100vh - 250px)'}");
+//     }
+// })
+

@@ -1,52 +1,14 @@
-<h2>발주관리</h2>
-           <form class=""> 
-             <div class="my-3 p-2 pt-5 "> 
-               <div class="d-flex justify-content-start align-items-center flex-wrap">
-                 <h1 class="fs-20px fw-bold"> 고객에게 완료 사진 발송 </h1>
-                 <a href="#"  class="d-flex flow-row text-muted">
-                   <label class="switch" >
-                     <input class="switch-input" type="checkbox" />
-                     <span class="switch-label"  data-off="Off" data-on="On"></span> 
-                     <span class="switch-handle"></span> 
-                   </label>
-                  </a>
-               </div>
-               
-                 <div class="my-5 ">
-                   <div class="d-flex justify-content-start align-items-center flex-wrap">
-                     <label for="inputPassword5" class="form-label fs-18px fw-bold my-3"> 고객 전화번호</label>
-                     <input type="password" id="inputPassword5" class="form-control" placeholder="010-0000 -0000" aria-describedby="passwordHelpBlock">
-                   </div>
-                 </div>
-                 <div class="my-3 ms-1">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                      <label for="inputPassword5" class="form-label fs-18px fw-bold my-3 "> 적용 상품/프로세스 선택</label>
-    
-                    </div>
-                 
-           
-                      <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected="" hidden="">선택하기</option>
-                          <option value="1">제품</option>
-                          <option value="2">제품</option>
-                          <option value="3">제품</option>
-                        </select>
-                      </div>
-                      <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected="" hidden="">선택하기</option>
-                          <option value="1">프로세스</option>
-                          <option value="2">프로세스</option>
-                          <option value="3">프로세스</option>
-                        </select>
-                      </div>
-                      <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">입력 완료</button>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <div>
-              
+<div class="d-flex justify-content-between align-items-center">
+                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
+                              <p class="fs-15px fw-bold"> 이재진</p>
+                              <p class="fs-13px fw-light"> 010-0000 -0000</p>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center flex-row flex-wrap"> 
+                            <button type="button" class="btn btn-primary btn-sm">
+                              추가
+                            </button>
+                            <button type="button" class="btn btn-secondary btn-sm">
+                              추가
+                            </button>
+                          </div>
