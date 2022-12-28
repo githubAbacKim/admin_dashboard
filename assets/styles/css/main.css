@@ -2327,10 +2327,6 @@ main.min .content {
 }
 #technicianmanagement_page .card-main2 {
   z-index: 101;
-  display: flex;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-direction: column !important;
 }
 @media (min-width: 993px) {
   #technicianmanagement_page .card-main2 {
@@ -2339,10 +2335,16 @@ main.min .content {
 }
 @media (max-width: 992px) {
   #technicianmanagement_page .card-main2 {
+    padding: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     background: #fff !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
+}
+#technicianmanagement_page .card-main2 .card-main2-content .row {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - (50px + 1rem + 1.5rem)) !important;
 }
 @media (min-width: 993px) {
   #technicianmanagement_page .card-main2 .card-main2-content {

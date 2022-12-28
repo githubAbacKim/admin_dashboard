@@ -773,33 +773,33 @@ $(document).ready(function () {
     });
 
     $("#cardusage-01_btn").click(function () {
-        if ($("#viewallcontracts-01_div").hasClass("d-none")) {
-            $("#viewallcontracts-01_div").addClass("d-flex").removeClass("d-none");
-            $("#viewallcontracts-01_btn").addClass("active");
-            $("#apartmentcomplexfilterselect01").addClass("d-flex").removeClass("d-none");
-            check_viewallcontracts02_div();
-            check_viewallcontracts03_div();
+        if ($("#cardusage-01_div").hasClass("d-none")) {
+            $("#cardusage-01_div").addClass("d-flex").removeClass("d-none");
+            $("#cardusage-01_btn").addClass("active");
+            check_cardusage02_div();
+            check_cardusage03_div();
         }
     })
 
     // 1.2
-    $("#viewallcontracts-02_btn").click(function () {
-        if ($("#viewallcontracts-02_div").hasClass("d-none")) {
-            $("#viewallcontracts-02_div").addClass("d-flex").removeClass("d-none");
-            $("#viewallcontracts-02_btn").addClass("active");
-            $("#apartmentcomplexfilterselect02").addClass("d-flex").removeClass("d-none");
-            check_viewallcontracts01_div();
-            check_viewallcontracts03_div();
+    $("#cardusage-02_btn").click(function () {
+        if ($("#cardusage-02_div").hasClass("d-none")) {
+            $("#cardusage-02_div").addClass("d-flex").removeClass("d-none");
+            $("#cardusage-02_btn").addClass("active");
+            $("#cardusageapartmentcomplexfilterselect01").addClass("d-flex").removeClass("d-none");
+            check_cardusage01_div();
+            check_cardusage03_div();
         }
     })
 
     // 1.3
-    $("#viewallcontracts-03_btn").click(function () {
-        if ($("#viewallcontracts-03_div").hasClass("d-none")) {
-            $("#viewallcontracts-03_div").addClass("d-flex").removeClass("d-none");
-            $("#viewallcontracts-03_btn").addClass("active");
-            check_viewallcontracts01_div();
-            check_viewallcontracts02_div();
+    $("#cardusage-03_btn").click(function () {
+        if ($("#cardusage-03_div").hasClass("d-none")) {
+            $("#cardusage-03_div").addClass("d-flex").removeClass("d-none");
+            $("#cardusage-03_btn").addClass("active");
+            $("#cardusageapartmentcomplexfilterselect02").addClass("d-flex").removeClass("d-none");
+            check_cardusage01_div();
+            check_cardusage02_div();
         }
     })
 

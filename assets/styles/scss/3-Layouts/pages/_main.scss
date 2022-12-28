@@ -179,6 +179,10 @@
             border-bottom-right-radius: 0;
             // min-height: calc(100vh - 50px - 250px) !important;
         }
+
+        .top-row-card {
+            // height: calc(100vh - (50px + $s4 + (50 * $s2) + (3 * 0.375rem)));
+        }
     }
 
     .card-main1 {
@@ -197,24 +201,36 @@
 
     .card-main2 {
         z-index: 101;
+        // max-height: calc(100vh - 50px) !important;
+        // background: $white !important;
         // background: $white !important;
         // padding: $s3;
-        display: flex;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-direction: column !important;
+        // display: flex;
+        // justify-content: start !important;
+        // align-items: center !important;
+        // flex-direction: column !important;
 
         @include breakpoint-lg-up {
             background: $transparent !important;
         }
 
         @include breakpoint-lg { 
+            padding: $s4;
             border-bottom-right-radius: $s4;
             background: $white !important;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
         }
         
         .card-main2-content {
+
+            .row {
+                // @include breakpoint-lg-up {
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    max-height: calc(100vh - (50px + (2 * $s2) + (1 * $s4)) ) !important;
+                // }
+            }
+
             @include breakpoint-lg-up {
                 border-radius: $s4 !important;
                 padding: $s4 !important;

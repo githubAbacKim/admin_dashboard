@@ -255,3 +255,25 @@ function setDefault_fairmanagement() {
         $('#fairmanagement-01_title').addClass('d-block').removeClass('d-none');
     }
 }
+function check_cardusage01_div () {
+    if ($("#cardusage-01_div").hasClass("d-flex")) {
+        $("#cardusage-01_div").addClass("d-none").removeClass("d-flex");
+        $("#cardusage-01_btn").removeClass("active");
+    }
+}
+
+function check_cardusage02_div() {
+    if ($("#cardusage-02_div").hasClass("d-flex")) {
+        $("#cardusage-02_div").addClass("d-none").removeClass("d-flex");
+        $("#cardusage-02_btn").removeClass("active");
+        $("#cardusageapartmentcomplexfilterselect01").addClass("d-none").removeClass("d-flex");
+    }
+}
+
+function check_cardusage03_div() {
+    if ($("#cardusage-03_div").hasClass("d-flex")) {
+        $("#cardusage-03_div").addClass("d-none").removeClass("d-flex");
+        $("#cardusage-03_btn").removeClass("active");
+        $("#cardusageapartmentcomplexfilterselect02").addClass("d-none").removeClass("d-flex");
+    }
+}
