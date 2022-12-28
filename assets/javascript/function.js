@@ -237,6 +237,12 @@ function check_master03div() {
     }
 }
 
+function check_superadmin_page() {
+    if ($("#superadmin_page").hasClass('d-block')) {
+        $('#superadmin_page').removeClass('d-block').addClass('d-none');
+    } 
+}
+
 
 function setDefault_fairmanagement() {
     if ($('#fairmanagement-01_div').hasClass('d-none')) {

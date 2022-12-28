@@ -403,16 +403,23 @@ aside.max {
 
                 .list-group-item {
                     @include transition (3000);
+
+                    // @include breakpoint-xl-up {
+                    //     margin-left: $s5; 
+                    //     border: 1px solid red;
+                    // }
+
                     @include breakpoint-md-up {
                         @include transition (3000);
                         padding: $s2 $s4 !important;
-                        margin-left: $s5 !important; 
+                        // border: 1px solid $primary;
+                        margin-left: $s3; 
                     }
 
                     @include breakpoint-md {
                         @include transition (3000);
                         padding: $s2 $s3 !important;
-                        margin-left: $s2 !important;
+                        margin-left: $s1;
                     }
 
                     i {
@@ -441,11 +448,11 @@ aside.max {
                 .accordion-item {
                     
                     @include breakpoint-md-up {
-                        margin-left: $s5 !important;
+                        margin-left: $s3 !important;
                     }
 
                     @include breakpoint-md {
-                        margin-left: $s2 !important;
+                        margin-left: $s1 !important;
                     }
 
                     .accordion-header {

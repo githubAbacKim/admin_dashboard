@@ -1,14 +1,758 @@
-<div class="d-flex justify-content-between align-items-center">
-                            <div class="ms-2 d-flex justify-content-around align-items-start flex-column">
-                              <p class="fs-15px fw-bold"> 이재진</p>
-                              <p class="fs-13px fw-light"> 010-0000 -0000</p>
-                            </div>
-                          </div>
-                          <div class="d-flex justify-content-between align-items-center flex-row flex-wrap"> 
-                            <button type="button" class="btn btn-primary btn-sm">
-                              추가
-                            </button>
-                            <button type="button" class="btn btn-secondary btn-sm">
-                              추가
-                            </button>
-                          </div>
+<div class="d-flex justify-content-center justify-content-md-between align-items-center flex-row flex-wrap">
+            <div class="navigation my-3 mb-2">
+              <nav class="nav-list nav my-2">
+                <a id="viewallcontracts-01_btn" href="#viewallcontractsbyapartmentcomplex" class="nav-link"> 아파트 단지별 보기 </a>
+                <a id="viewallcontracts-02_btn" href="#viewallcontractsbyaccountsreceivable" class="nav-link" > 미수금 보기 </a>
+                <a id="viewallcontracts-03_btn" href="#viewallcontractsbyperiod" class="nav-link" > 기간별 보기 </a>
+              </nav>
+            </div>
+            
+            
+            <div id="apartmentcomplexfilterselect01" class="ms-0 ms-lg-5 d-flex justify-content-center justify-content-md-between align-items-center border border-danger">
+              <div class="col-8 col-md-6 col-lg-4 col-xl-3">
+                <select id="viewallcontracts_selectapartmentcomplex01" class="form-select form-select-sm my-1" data-placeholder="아파트 단지 선택">
+                  <option></option>
+                  <option value="전체">전체</option>
+                  <option value="동작협성휴포레">동작협성휴포레</option>
+                  <option value="아파트 단지 이름">아파트 단지 이름</option>
+                  <option value="아파트 단지 이름">아파트 단지 이름</option>
+                </select>
+              </div>
+            </div>
+
+              <!-- <div id="apartmentcomplexfilterselect01" class="d-none col-sm-12 col-lg-6 col-xl-4">
+                <select id="viewallcontracts_selectapartmentcomplex01" class="form-select" data-placeholder="아파트 단지 선택">
+                  <option></option>
+                  <option value="전체">전체</option>
+                  <option value="동작협성휴포레">동작협성휴포레</option>
+                  <option value="아파트 단지 이름">아파트 단지 이름</option>
+                </select>
+              </div> -->
+
+              <!-- <div id="apartmentcomplexfilterselect02" class="d-none col-8 col-lg-4 col-xl-3 col-xxl-2 ">
+                <select id="viewallcontracts_selectapartmentcomplex02" class="form-select" data-placeholder="아파트 단지 선택">
+                  <option></option>
+                  <option value="">전체</option>
+                  <option value="동작협성휴포레">동작협성휴포레</option>
+                  <option value="아파트 단지 이름">아파트 단지 이름</option>
+                </select>
+              </div> -->
+            
+          </div>
+
+          <div id="viewallcontracts-01_div" class="d-none card border-0">
+            <!-- <div class="col-sm-12 col-lg-6 col-xl-4 apartmentcomplexfilter">
+              <div class="row g-0 d-flex justify-content-center justify-content-lg-center justify-content-xl-end align-items-center">
+                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
+                <div class="col-10 col-lg-6 col-xl-10">
+                  <select id="viewallcontracts_selectapartmentcomplex01" class="form-select form-select-sm my-1" data-placeholder="아파트 단지 선택">
+                    <option></option>
+                    <option value="전체">전체</option>
+                    <option value="동작협성휴포레">동작협성휴포레</option>
+                    <option value="아파트 단지 이름">아파트 단지 이름</option>
+                    <option value="아파트 단지 이름">아파트 단지 이름</option>
+                  </select>
+                </div>
+                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
+              </div>
+            </div> -->
+
+            <!-- <div class="d-flex justify-content-center justify-content-md-between align-items-center">
+              <div class="col-8 col-md-6 col-lg-4 col-xl-3 ">
+                <select id="viewallcontracts_selectapartmentcomplex01" class="form-select form-select-sm my-1" data-placeholder="아파트 단지 선택">
+                  <option></option>
+                  <option value="전체">전체</option>
+                  <option value="동작협성휴포레">동작협성휴포레</option>
+                  <option value="아파트 단지 이름">아파트 단지 이름</option>
+                  <option value="아파트 단지 이름">아파트 단지 이름</option>
+                </select>
+              </div>
+            </div> -->
+
+            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+              <table id="viewallcontractsbyac_table" class="display table">
+                  <thead class="text-center bg-primary">
+                      <tr class="text-white">
+                        <th> 생성날짜 </th>
+                        <th> 아파트단지 </th>
+                        <th> 동 </th>
+                        <th> 호수 </th>
+                        <th> 타입 </th>
+                        <th> 전화번호 </th>
+                        <th> 고객명 </th>
+                        <th> 신청서비스 </th>
+                        <th> 견적가 </th>
+                        <th> 계약상세 </th>
+                        <th> 신청일정 </th>
+                        <th> 시공일정 </th>
+                        <th> 비고 </th>
+                        <th> 시공담당자 </th>
+                        <th> 시공여부 </th>
+                        <th> 결제여부 </th>
+                        <th> 취소 </th>
+                      </tr>
+                  </thead>
+                  <tbody class="text-dark fs-14px">
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-orange"> N </td>
+                      <td class="text-primary"> Y </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-orange"> N </td>
+                      <td class="text-primary"> Y </td>
+                      <td> - </td>
+                    </tr>
+                    
+                  </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="viewallcontracts-02_div" class="d-none card border-0">
+            <!-- <div class="col-sm-12 col-lg-12 col-xl-4 apartmentcomplexfilter">
+              <div class="row g-0 d-flex justify-content-center justify-content-lg-center justify-content-xl-end align-items-center">
+                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
+                <div class="col-10 col-lg-6 col-xl-10">
+                    <select id="apartmentcomplexfilter" class="form-control form-control-sm my-1">
+                      <option value="">전체</option>
+                      <option value="">동작협성휴포레</option>
+                      <option value="">아파트 단지 이름</option>
+                      <option value="">아파트 단지 이름</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
+              </div>
+            </div> -->
+
+            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+              <table id="viewallcontractsbyar_table" class="display table">
+                  <thead class="text-center bg-primary">
+                      <tr class="text-white">
+                        <th> 생성날짜 </th>
+                        <th> 아파트단지 </th>
+                        <th> 동 </th>
+                        <th> 호수 </th>
+                        <th> 타입 </th>
+                        <th> 전화번호 </th>
+                        <th> 고객명 </th>
+                        <th> 신청서비스 </th>
+                        <th> 견적가 </th>
+                        <th> 계약상세 </th>
+                        <th> 신청일정 </th>
+                        <th> 시공일정 </th>
+                        <th> 비고 </th>
+                        <th> 시공담당자 </th>
+                        <th> 시공여부 </th>
+                        <th> 결제여부 </th>
+                        <th> 취소 </th>
+                      </tr>
+                  </thead>
+                  <tbody class="text-dark fs-14px">
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-primary"> Y </td>
+                      <td class="text-orange"> N </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-orange"> N </td>
+                      <td class="text-primary"> Y </td>
+                      <td> - </td>
+                    </tr>
+                    <tr>
+                      <td> 2022/10/24 </td>
+                      <td> 동작협성휴포레 </td>
+                      <td> 101 </td>
+                      <td> 2902 </td>
+                      <td> 97 </td>
+                      <td> 010-9857-1143 </td>
+                      <td> 이지연 </td>
+                      <td> 안전방충망 </td>
+                      <td> 600,000 </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button> </td>
+                      <td class="text-primary"> 2022/08/13 </td>
+                      <td class="text-orange"> 2022/09/13 </td>
+                      <td> - </td>
+                      <td> 한규석 </td>
+                      <td class="text-orange"> N </td>
+                      <td class="text-primary"> Y </td>
+                      <td> - </td>
+                    </tr>
+                    
+                  </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="viewallcontracts-03_div" class="d-none p-3">
+            
+          </div>

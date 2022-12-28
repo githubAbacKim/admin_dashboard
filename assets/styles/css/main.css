@@ -212,6 +212,66 @@ p {
   font-size: 25px !important;
 }
 
+.fs-26px {
+  font-size: 26px !important;
+}
+
+.fs-27px {
+  font-size: 27px !important;
+}
+
+.fs-28px {
+  font-size: 28px !important;
+}
+
+.fs-29px {
+  font-size: 29px !important;
+}
+
+.fs-30px {
+  font-size: 30px !important;
+}
+
+.fs-31px {
+  font-size: 31px !important;
+}
+
+.fs-32px {
+  font-size: 32px !important;
+}
+
+.fs-33px {
+  font-size: 33px !important;
+}
+
+.fs-34px {
+  font-size: 34px !important;
+}
+
+.fs-35px {
+  font-size: 35px !important;
+}
+
+.fs-36px {
+  font-size: 36px !important;
+}
+
+.fs-37px {
+  font-size: 37px !important;
+}
+
+.fs-38px {
+  font-size: 38px !important;
+}
+
+.fs-39px {
+  font-size: 39px !important;
+}
+
+.fs-40px {
+  font-size: 40px !important;
+}
+
 .cursor-pointer {
   cursor: pointer !important;
 }
@@ -932,6 +992,10 @@ p {
   background-color: #33588E !important;
 }
 
+.bg-lightprimary {
+  background-color: #E6F0FF !important;
+}
+
 #alert {
   list-style-type: disc !important;
   list-style-position: inside !important;
@@ -1224,16 +1288,6 @@ p {
 }
 .data-table.hasNoAddButton .dataTables_wrapper .dt-buttons button {
   width: auto !important;
-}
-@media (max-width: 992px) {
-  .data-table .dataTables_wrapper .viewallcontactsfilters {
-    text-align: center !important;
-  }
-}
-@media (max-width: 992px) {
-  .data-table .dataTables_wrapper .viewallcontactsfilters #viewallcontracts_table_filter {
-    text-align: center !important;
-  }
 }
 .data-table .dataTables_wrapper .dt-buttons {
   width: 100%;
@@ -1774,14 +1828,14 @@ aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion .list-group-item {
   aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion .list-group-item {
     transition: 3000 !important;
     padding: 0.5rem 1.5rem !important;
-    margin-left: 3rem !important;
+    margin-left: 1rem;
   }
 }
 @media (max-width: 768px) {
   aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion .list-group-item {
     transition: 3000 !important;
     padding: 0.5rem 1rem !important;
-    margin-left: 0.5rem !important;
+    margin-left: 0.25rem;
   }
 }
 aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion .list-group-item i {
@@ -1812,12 +1866,12 @@ aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion .list-group-item sp
 }
 @media (min-width: 769px) {
   aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion .accordion-item {
-    margin-left: 3rem !important;
+    margin-left: 1rem !important;
   }
 }
 @media (max-width: 768px) {
   aside.max .side-navbar_tabs .side-navbar_tabs_top .accordion .accordion-item {
-    margin-left: 0.5rem !important;
+    margin-left: 0.25rem !important;
   }
 }
 @media (min-width: 769px) {
@@ -2218,6 +2272,69 @@ main.min .content {
   border-top-right-radius: 0px !important;
   border-bottom-left-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
+}
+
+#home_page .card-submain {
+  height: calc(100vh - (50px + 2rem + 20px + 2rem + 26px + 6rem)) !important;
+}
+@media (min-width: 1201px) {
+  #home_page .container01 {
+    width: 49.3%;
+    margin-right: 0.35%;
+  }
+}
+@media (max-width: 1200px) {
+  #home_page .container01 {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1201px) {
+  #home_page .container02 {
+    width: 49.3%;
+    margin-left: 0.35%;
+  }
+}
+@media (max-width: 1200px) {
+  #home_page .container02 {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+#home_page .h-card {
+  width: 100%;
+  height: 662px;
+}
+#home_page .h-card #home_calendar {
+  height: calc(662px - 2rem) !important;
+}
+#home_page .h-card-2 {
+  height: 323px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#home_page .h-card-3 {
+  padding-right: 1rem;
+  height: 323px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#viewallcontracts_page #viewallcontracts-03_div .calendar-card {
+  width: 100%;
+  height: 680px !important;
+}
+#viewallcontracts_page #viewallcontracts-03_div .calendar-card #allcontracts_calendar {
+  height: inherit !important;
+}
+#viewallcontracts_page #viewallcontracts-03_div .calendar-card #allcontracts_calendar .toastui-calendar-layout {
+  height: 100% !important;
+}
+#viewallcontracts_page #viewallcontracts-03_div .calendar-card #allcontracts_calendar .toastui-calendar-layout .toastui-calendar-time {
+  height: 410px !important;
 }
 
 #main_page .card-submain {

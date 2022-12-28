@@ -52,6 +52,104 @@
     }
 }
 
+
+#home_page {
+    .card-submain {
+        height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (2 * $s5))) !important;
+    }
+
+    .container01 {
+        @include breakpoint-xl-up {
+            width: 49.3%;
+            margin-right: 0.35%;
+        }
+
+        @include breakpoint-xl {
+            width: 100%;
+            margin-right: 0%;
+            margin-bottom: $s3;
+        }
+    }
+
+    .container02 {
+        @include breakpoint-xl-up {
+            width: 49.3%;
+            margin-left: 0.35%;
+        }
+
+        @include breakpoint-xl {
+            width: 100%;
+            margin-left: 0%;
+        }
+    }
+
+
+    .h-card {
+        width: 100%;
+        height: 662px;
+        // border: 1px solid red;
+        // height: calc(100vh - (50px + (2 * $s3) + 75px + (2 * $s3) + 26px + (2 * $s5))) !important;
+
+        #home_calendar {
+            height: calc(662px - (2 * $s3)) !important;
+        }
+    }
+
+    .h-card-2 {
+        // border: 1px solid red;
+        height: 323px;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        // height: calc(100vh - (2 * (50px + (5 * $s3) + 75px + 26px + (2 * $s5)))) !important;
+    }
+
+    .h-card-3 {
+        // padding-left: $s1;
+        padding-right: $s3;
+        // border: 1px solid red;
+        height: 323px;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        // height: calc(100vh - (2 * (50px + (2 * $s3) + 83px + (2 * $s3) + 26px + (2 * $s5)))) !important;
+    }
+}
+
+
+#viewallcontracts_page {
+    #viewallcontracts-03_div {
+
+        .calendar-card {
+            width: 100%;
+            height: 680px !important;
+            // border: 1px solid red;
+            // height: calc(100vh - (50px + (2 * $s3) + 75px + (2 * $s3) + 26px + (2 * $s5))) !important;
+
+            #allcontracts_calendar {
+                height: inherit !important;
+
+                .toastui-calendar-layout {
+                    height: 100% !important;
+
+                    .toastui-calendar-time {
+                        height: 410px !important;
+                    }
+                }
+            }
+        }
+
+        
+            // height: 700px !important;
+            // height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (2 * $s5))) !important;
+    
+            // * {
+            //     border: 1px solid red;
+            // }
+        
+    }
+}
+
 #main_page {
     .card-submain {
         height: calc(100vh - (50px + (2 * $s3) + 20px + (2 * $s3) + 26px + (2 * $s5))) !important;
@@ -246,7 +344,6 @@
     }
     
 }
-
 
 #filemanagement_page {
     .complex-div {
@@ -528,4 +625,11 @@
         }
     }
     
+}
+
+#superadmin_page {
+    // .card-submain {
+    //     min-height: calc(100vh - (60px + (2 * $s5) + (4 * $s2 + $s4)));
+    //     height: auto;
+    // }
 }

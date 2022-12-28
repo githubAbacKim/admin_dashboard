@@ -112,26 +112,6 @@ $(document).ready(function () {
     $('[data-bs-toggle="tooltip-progress"]').tooltip("enable");
 });
 
-/** SELECT 2 */
-$(document).ready(function () {
-    $('#selectAppartment').select2({
-        theme: 'bootstrap-5',
-        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-        placeholder: $(this).data('placeholder'),
-    });
-});
-
-// VANILLA JS DATEPICKER
-document.addEventListener('DOMContentLoaded', function () {
-    const elem = document.getElementById('daterange');
-    const daterange = new DateRangePicker(elem, {
-        orientation: "bottom left",
-        buttonClass: 'btn',
-        clearBtn: true,
-        language: 'ko',
-        todayHighlight: true,
-    });
-});
 
 // POP OVER
 document.addEventListener('DOMContentLoaded', function () {
@@ -175,6 +155,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -204,6 +185,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -234,6 +216,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -264,6 +247,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -294,6 +278,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -324,6 +309,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -354,6 +340,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -384,6 +371,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -414,6 +402,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -446,6 +435,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -476,6 +466,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -506,6 +497,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -536,6 +528,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -566,6 +559,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -596,6 +590,7 @@ $(document).ready(function () {
             // check_consulting_page();
             check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -626,6 +621,7 @@ $(document).ready(function () {
             check_consulting_page();
             // check_cardusagehistory_page();
             check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -656,6 +652,7 @@ $(document).ready(function () {
             check_consulting_page();
             check_cardusagehistory_page();
             // check_master_page();
+            check_superadmin_page();
             check_order_accordion();
             check_fair_accordion();
             check_settings_accordion();
@@ -770,6 +767,24 @@ $(document).ready(function () {
     
     $("#techmanagement_frame2_view").click(function () {
         $("#technician-01-card2").toggle();
+    });
+
+    // superadmin_page
+
+    $("#superadmin_btn").click(function () {
+        if ($("#superadmin_page").hasClass('d-none')) {
+            $('#superadmin_page').removeClass('d-none').addClass('d-block');
+            
+            check_master_page();
+            check_menu_accordion();
+
+            if ($('#master-01-card2').hasClass('d-flex')) {
+                $('#master-01-card2').removeClass('d-flex').addClass('d-none');
+                
+            } else if ($('#master-01-card2').hasClass('d-none')) {
+                // do nothing
+            }
+        }
     });
 
     $("#cardusage-01_btn").click(function () {
