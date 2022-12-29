@@ -28,10 +28,10 @@ header {
 
 header.max {
     .brand {
-        @include transition (3000);
-        width: 300px !important;
+        // @include transition (3000);
+        // width: 300px !important;
 
-        @include breakpoint-xl {
+        @include breakpoint-md-up {
             @include transition (3000);
             width: 240px !important;
         }

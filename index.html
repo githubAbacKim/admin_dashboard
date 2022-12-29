@@ -804,10 +804,192 @@
       <section id="viewallcontracts_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2>계약 전체 보기</h2>
+          <div class="">
+            <h2>계약 전체 보기</h2>
+            <div class="mt-4 p-1">
+              <div class="row g-4 align-items-center">
+                <div class="col-12 col-lg-7">
+                    <div class="navigation">
+                      <nav class="nav-list nav flex-nowrap">
+                        <a id="viewallcontracts-01_btn" href="#viewallcontractsbyapartmentcomplex" class="nav-link"> 아파트 단지별 보기 </a>
+                        <a id="viewallcontracts-02_btn" href="#viewallcontractsbyaccountsreceivable" class="nav-link" > 미수금 보기 </a>
+                        <a id="viewallcontracts-03_btn" href="#viewallcontractsbyperiod" class="nav-link" > 기간별 보기 </a>
+                      </nav>
+                    </div>
+                </div>
+  
+                <div id="viewallcontracts_selectapartmentcomplex01_div" class="d-none col-12 col-lg-5">
+                  <div class="row justify-content-center justify-content-lg-end">
+                    <div class="col-8 col-md-8 col-lg-12 col-xl-12 col-xxl-6">
+                      <select id="viewallcontracts_selectapartmentcomplex01" class="form-select form-select-sm my-1" data-placeholder="아파트 단지 선택">
+                        <option></option>
+                        <option value="전체">전체</option>
+                        <option value="동작협성휴포레">동작협성휴포레</option>
+                        <option value="아파트 단지 이름">아파트 단지 이름</option>
+                        <option value="아파트 단지 이름">아파트 단지 이름</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="viewallcontracts_selectapartmentcomplex02_div" class="d-none col-12 col-lg-5 ">
+                  <div class="row justify-content-center justify-content-lg-end">
+                    <div class="col-8 col-md-8 col-lg-12 col-xl-12 col-xxl-6">
+                      <select id="viewallcontracts_selectapartmentcomplex02" class="form-select form-select-sm my-1" data-placeholder="아파트 단지 선택">
+                        <option></option>
+                        <option value="전체">전체</option>
+                        <option value="동작협성휴포레">동작협성휴포레</option>
+                        <option value="아파트 단지 이름">아파트 단지 이름</option>
+                        <option value="아파트 단지 이름">아파트 단지 이름</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           
+            <div id="viewallcontracts-01_div" class="d-none card border-0 mt-2">
+              <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+                <table id="viewallcontractsbyac_table" class="display table">
+                    <thead class="text-center bg-primary">
+                        <tr class="text-white">
+                          <th> 생성날짜 </th>
+                          <th> 아파트단지 </th>
+                          <th> 동 </th>
+                          <th> 호수 </th>
+                          <th> 타입 </th>
+                          <th> 전화번호 </th>
+                          <th> 고객명 </th>
+                          <th> 신청서비스 </th>
+                          <th> 견적가 </th>
+                          <th> 계약상세 </th>
+                          <th> 신청일정 </th>
+                          <th> 시공일정 </th>
+                          <th> 비고 </th>
+                          <th> 시공담당자 </th>
+                          <th> 시공여부 </th>
+                          <th> 결제여부 </th>
+                          <th> 취소 </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> 2022/10/24 </td>
+                        <td> 동작협성휴포레 </td>
+                        <td> 101 </td>
+                        <td> 2902 </td>
+                        <td> 97 </td>
+                        <td> 010-9857-1143 </td>
+                        <td> 이지연 </td>
+                        <td> 안전방충망 </td>
+                        <td> 600,000 </td>
+                        <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contractdetailsModal" >보기</button> </td>
+                        <td class="text-primary"> 2022/08/13 </td>
+                        <td class="text-orange"> 2022/09/13 </td>
+                        <td> - </td>
+                        <td> 한규석 </td>
+                        <td class="text-primary fw-bold"> Y </td>
+                        <td class="text-orange fw-bold"> N </td>
+                        <td> - </td>
+                      </tr>
+                      <tr>
+                        <td> 2022/10/24 </td>
+                        <td> 동작협성휴포레 </td>
+                        <td> 101 </td>
+                        <td> 2902 </td>
+                        <td> 97 </td>
+                        <td> 010-9857-1143 </td>
+                        <td> 이지연 </td>
+                        <td> 안전방충망 </td>
+                        <td> 600,000 </td>
+                        <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contractdetailsModal" >보기</button> </td>
+                        <td class="text-primary"> 2022/08/13 </td>
+                        <td class="text-orange"> 2022/09/13 </td>
+                        <td> - </td>
+                        <td> 한규석 </td>
+                        <td class="text-primary fw-bold"> Y </td>
+                        <td class="text-orange fw-bold"> N </td>
+                        <td> - </td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
 
-
+            <div id="viewallcontracts-02_div" class="d-none card border-0 mt-2">
+              <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+                <table id="viewallcontractsbyar_table" class="display table">
+                    <thead class="text-center bg-primary">
+                        <tr class="text-white">
+                          <th> 생성날짜 </th>
+                          <th> 아파트단지 </th>
+                          <th> 동 </th>
+                          <th> 호수 </th>
+                          <th> 타입 </th>
+                          <th> 전화번호 </th>
+                          <th> 고객명 </th>
+                          <th> 신청서비스 </th>
+                          <th> 견적가 </th>
+                          <th> 계약상세 </th>
+                          <th> 신청일정 </th>
+                          <th> 시공일정 </th>
+                          <th> 비고 </th>
+                          <th> 시공담당자 </th>
+                          <th> 시공여부 </th>
+                          <th> 결제여부 </th>
+                          <th> 취소 </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-dark fs-14px">
+                      <tr>
+                        <td> 2022/10/24 </td>
+                        <td> 동작협성휴포레 </td>
+                        <td> 101 </td>
+                        <td> 2902 </td>
+                        <td> 97 </td>
+                        <td> 010-9857-1143 </td>
+                        <td> 이지연 </td>
+                        <td> 안전방충망 </td>
+                        <td> 600,000 </td>
+                        <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contractdetailsModal" >보기</button> </td>
+                        <td class="text-primary"> 2022/08/13 </td>
+                        <td class="text-orange"> 2022/09/13 </td>
+                        <td> - </td>
+                        <td> 한규석 </td>
+                        <td class="text-primary fw-bold"> Y </td>
+                        <td class="text-orange fw-bold"> N </td>
+                        <td> - </td>
+                      </tr>
+                      <tr>
+                        <td> 2022/10/24 </td>
+                        <td> 동작협성휴포레 </td>
+                        <td> 101 </td>
+                        <td> 2902 </td>
+                        <td> 97 </td>
+                        <td> 010-9857-1143 </td>
+                        <td> 이지연 </td>
+                        <td> 안전방충망 </td>
+                        <td> 600,000 </td>
+                        <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contractdetailsModal" >보기</button> </td>
+                        <td class="text-primary"> 2022/08/13 </td>
+                        <td class="text-orange"> 2022/09/13 </td>
+                        <td> - </td>
+                        <td> 한규석 </td>
+                        <td class="text-primary fw-bold"> Y </td>
+                        <td class="text-orange fw-bold"> N </td>
+                        <td> - </td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div id="viewallcontracts-03_div" class="d-none p-3">
+              
+            </div>
+          
+          </div>
         </div>
       </section>
 
@@ -815,313 +997,278 @@
       <section id="contractwriting_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2 class="mb-2">계약서 작성</h2>
-            <form action="">
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="row gy-2 gx-2">
-                      <div class="col-md-12">
-                        <label for="" class="form-label d-none d-lg-block opacity-0">&nbsp;</label>
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <p class="fw-bold fs-16px text-nowrap text-center  "> 고객명 </p>
-                          
-                          <input type="text" id="form6Example1" class="form-control mx-4 " placeholder="고객명">
-                          <button type="button" class="btn btn-primary text-nowrap">고객정보 불러오기</button>
+          <div class="">
+            <h2>계약서 작성</h2>
+            <div class="my-4">
+              <div class="row g-2">
+                <!-- first -->
+                <div class="col-12">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-xl-6">
+                      <div class="row g-2">
+                        <div class="col-2 ">
+                          <label class="form-label fw-bold my-2 p-0 lh-1"> 고객명 </label>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row gy-2 gx-2">
-                      <div class="col-md-12">
-                        <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <p class="fw-bold fs-16px text-nowrap text-center "> 전화번호 </p>
-                          
-                          <input type="text" id="form6Example1" class="form-control mx-2 " placeholder="고객명">
-                          <p class="fw-bold fs-16px text-nowrap text-center mx-2"> 아파트명 </p>
-                          <div class="input-group rounded">
-                            <input type="search" class="form-control rounded" placeholder="아파트명" aria-label="Search" aria-describedby="search-addon" />
-                            <span class="input-group-text border-0" id="search-addon">
-                              <i class="fas fa-search"></i>
-                            </span>
-                          </div>
+                        <div class="col-5 col-lg-4 ">
+                          <input type="text" class="form-control" placeholder="이민지" disabled>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row gy-2 gx-2">
-                      <div class="col-md-12">
-                        <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
-                        <div class="d-flex justify-content-between  flex-row flex-nowrap">
-                          <p class="fw-bold fs-16px text-nowrap text-center "> 고객명 </p>
-                          <textarea class="form-control textarea-9 ms-4" id="form6Example7" rows="4" placeholder="메시지" style="height:0px;overflow-y:hidden;" spellcheck="false"></textarea>
+                        <div class="col-5 col-lg-6 ">
+                          <button type="button" class="btn btn-primary text-nowrap"> 고객정보 불러오기 </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                <div class="col-md-6">
-                    <div class="row gy-2 gx-2">
-                      <div class="col-md-12">
-                        <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
-                        <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
-                      </div>
+                </div>
+                <!-- 2nd -->
+                <div class="col-12 col-xl-6 ">
+                  <div class="row g-2">
+                    <div class="col-2 ">
+                      <label class="form-label fw-bold my-0 my-md-2 p-0 lh-1"> 전화번호 </label>
                     </div>
-                    <div class="row gy-2 gx-2">
-                      <div class="col-md-12">
-                        <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <p class="fw-bold fs-16px text-nowrap text-center mx-2"> 동호수 </p>
-                          
-                          <input type="text" id="form6Example1" class="form-control mx-4 " placeholder="동호수">
-                          <p class="fw-bold fs-16px text-nowrap text-center mx-2 ms-n1"> 타입 </p>
-                          <input type="text" id="form6Example1" class="form-control mx-2 " placeholder="평 수(㎡)">
-                        </div> 
-                      </div>
+                  
+                    <div class="col-10 col-md-4 ">
+                      <input type="text" class="form-control" placeholder="010-1234-1234" disabled>
                     </div>
-                    <div class="row gy-2 gx-2">
-                      <div class="col-md-12">
-                        <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
-                        <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-                          <p class="fw-bold fs-16px text-nowrap text-center mx-2"> 입주일자 </p>
-                          
-                          <input type="text" id="form6Example1" class="form-control mx-2 " placeholder="2023-00-00">
-                          <button type="button" class="btn btn-primary text-nowrap mx-2">확정</button>
-                          <p class="fw-bold fs-16px text-nowrap text-center  mx-2 "> 시공
-                            요청일자 </p>
-                          
-                          <input type="text" id="form6Example1" class="form-control mx-2 " placeholder="2023-00-00">
-                          <button type="button" class="btn btn-secondary text-nowrap">확정</button>
-                        </div> 
-                      </div>
+
+                    <div class="col-2  text-start text-md-end">
+                      <label class="form-label fw-bold my-0 my-md-2 p-0 lh-1"> 아파트명 </label>
                     </div>
-                    <div class="row gy-2 gx-2">
-                      <div class="col-md-12">
-                        <label for="" class="form-label fs-20px d-none d-lg-block opacity-0">&nbsp;</label>
-                        <div class="d-flex justify-content-start align-items-center flex-row flex-nowrap">
-                          <p class="fw-bold fs-16px text-nowrap text-center mx-2"> 현금영수증 </p>
-                          <div>
-                            <input type="radio" name="email">신청
-                            <input class="ms-5" type="radio" name="email">미신청
-                            <input  class="ms-5" type="radio" name="email">신청
-                            <input class="ms-5" type="radio" name="email">미신청
-                          </div>
-                        
-                          
-                        
+
+                    <div class="col-10 col-md-4 ">
+                      <input type="text" class="form-control" placeholder="010-1234-1234" disabled>
+                    </div>
+
+                    <div class="col-2  align-items-start">
+                      <label class="form-label fw-bold m-0 p-0"> 비고 </label>
+                    </div>
+
+                    <div class="col-10 ">
+                      <textarea class="form-control textarea-8" disabled> 특이사항
+                      </textarea>
+                    </div>
+                  </div>
+                </div>
+                <!-- 3rd -->
+                <div class="col-12 col-xl-6">
+                  <div class="row g-2">
+                    <div class="col-2  text-start text-xl-end">
+                      <label class="form-label fw-bold my-0 my-md-2 p-0 lh-1"> 동호수 </label>
+                    </div>
+                  
+                    <div class="col-10 col-md-4 ">
+                      <input type="text" class="form-control" placeholder="000동 0000호" disabled>
+                    </div>
+
+                    <div class="col-2  text-start text-md-end">
+                      <label class="form-label fw-bold my-0 my-md-2 p-0 lh-1"> 타입 </label>
+                    </div>
+
+                    <div class="col-10 col-md-4 ">
+                      <input type="text" class="form-control" placeholder="평 수(㎡)" disabled>
+                    </div>
+
+                    <div class="col-2  text-start text-xl-end">
+                      <label class="form-label fw-bold my-0 my-lg-2 p-0 lh-1"> 입주일자 </label>
+                    </div>
+
+                    <div class="col-10 col-md-4 ">
+                      <div class="row g-2">
+                        <div class="col-9">
+                          <input type="text" class="form-control" placeholder="2023-00-00" disabled>
+                        </div>
+                        <div class="col-3">
+                          <button type="button" class="btn btn-primary text-nowrap"> 확정 </button>
                         </div>
                       </div>
-                      <div class="col-md-3 mx-5">
-                        <input type="text" id="form6Example1" class="form-control mx-4" placeholder="전화번호">
+                    </div>
+
+                    <div class="col-2  text-start text-md-end">
+                      <label class="form-label fw-bold my-0 my-lg-2 p-0 lh-1"> 시공 요청 일자 </label>
+                    </div>
+
+                    <div class="col-10 col-md-4 ">
+                      <div class="row g-2">
+                        <div class="col-9">
+                          <input type="text" class="form-control" placeholder="2023-00-00" disabled>
+                        </div>
+                        <div class="col-3">
+                          <button type="button" class="btn btn-secondary text-nowrap"> 확정 </button>
+                        </div>
                       </div>
+                    </div>
+
+                    <div class="col-2  text-start text-xl-end">
+                      <label class="form-label fw-bold my-0 my-lg-2 p-0 lh-1"> 현금영수증 </label>
+                    </div>
+
+                    <div class="col-10  ">
+                      <div class="row g-0 row-cols-4 align-content-center">
+                        <div class="col-3 ">
+                          <div class="form-check my-lg-1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label my-0" for="flexRadioDefault1">
+                              신청
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-3 ">
+                          <div class="form-check my-lg-1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label my-0" for="flexRadioDefault2">
+                              미신청
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-3 ">
+                          <div class="form-check my-lg-1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                            <label class="form-check-label my-0" for="flexRadioDefault3">
+                              소득공제용
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-3 ">
+                          <div class="form-check my-lg-1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                            <label class="form-check-label my-0" for="flexRadioDefault4">
+                              지출증빙용
+                            </label>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-2  text-start text-md-end">
+                      <label class="form-label fw-bold my-0 my-lg-2 p-0 lh-1"> &nbsp; </label>
+                    </div>
+
+                    <div class="col-10 col-md-4 ">
+                      <input type="text" class="form-control" placeholder="010-1234-1234" disabled>
+                    </div>
                   </div>
+                </div>
               </div>
-            </form>
+            </div>
+
+
+
             <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-            <table id="" class="display table table-hover">
-                <thead class=" d-none text-center bg-primary">
-                    <tr class="text-white border-bottom-0">
-                      <th class="rounded-start text-center">카드번호(뒤 4자리)</th>
-                      <th class="text-center">날짜</th>
-                      <th class="text-center">시간</th>
-                      <th class="text-center">금액</th>
-                      <th class="text-center">상호</th>
-                      <th class="rounded-end text-center">계정(관리자가 직접 입력)</th>
-                    </tr>
-                </thead>
-                
-                <tbody class="text-center text-darkprimary fs-14px">
-                 
-                  <tr>
-                    <td>안방 (안전)</td>
-                    <td>80,000</td>
-                    <td>
-                      <div class="row">
-                        <div class="col-sm-3 mx-auto">
-                            <div class="input-group">
-                                <span class="input-group-prepend">
-                                    <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                        <span class="fa fa-minus"></span>
-                                    </button>
-                                </span>
-                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                                <span class="input-group-append">
-                                    <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                        <span class="fa fa-plus"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td>후기 작성</td>
-                    <td>-20,000</td>
-                    <td>x</td>
-                  </tr>
-                  <tr>
-                    <td>안방 (안전)</td>
-                    <td>80,000</td>
-                    <td>
-                      <div class="row">
-                        <div class="col-sm-3 mx-auto">
-                            <div class="input-group">
-                              <span class="input-group-prepend">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                      <span class="fa fa-minus"></span>
-                                  </button>
-                              </span>
-                              <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                              <span class="input-group-append">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                      <span class="fa fa-plus"></span>
-                                  </button>
-                              </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>후기 작성</td>
-                    <td>-20,000</td>
-                    <td>x</td>
-                  </tr>
-                  <tr>
-                    <td>안방 (안전)</td>
-                    <td>80,000</td>
-                    <td>
-                      <div class="row">
-                        <div class="col-sm-3 mx-auto">
-                            <div class="input-group">
-                              <span class="input-group-prepend">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                      <span class="fa fa-minus"></span>
-                                  </button>
-                              </span>
-                              <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                              <span class="input-group-append">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                      <span class="fa fa-plus"></span>
-                                  </button>
-                              </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>후기 작성</td>
-                    <td>-20,000</td>
-                    <td>x</td>
-                  </tr>
-                  <tr>
-                    <td>안방 (안전)</td>
-                    <td>80,000</td>
-                    <td>
-                      <div class="row">
-                        <div class="col-sm-3 mx-auto">
-                            <div class="input-group">
-                              <span class="input-group-prepend">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                      <span class="fa fa-minus"></span>
-                                  </button>
-                              </span>
-                              <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                              <span class="input-group-append">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                      <span class="fa fa-plus"></span>
-                                  </button>
-                              </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>후기 작성</td>
-                    <td>-20,000</td>
-                    <td>x</td>
-                  </tr>
-                  <tr>
-                    <td>안방 (안전)</td>
-                    <td>80,000</td>
-                    <td>
-                      <div class="row">
-                        <div class="col-sm-3 mx-auto">
-                            <div class="input-group">
-                              <span class="input-group-prepend">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                      <span class="fa fa-minus"></span>
-                                  </button>
-                              </span>
-                              <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                              <span class="input-group-append">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                      <span class="fa fa-plus"></span>
-                                  </button>
-                              </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>후기 작성</td>
-                    <td>-20,000</td>
-                    <td>x</td>
-                  </tr>
-                  <tr>
-                    <td>안방 (안전)</td>
-                    <td>80,000</td>
-                    <td>
-                      <div class="row">
-                        <div class="col-sm-3 mx-auto">
-                            <div class="input-group">
-                              <span class="input-group-prepend">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                      <span class="fa fa-minus"></span>
-                                  </button>
-                              </span>
-                              <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                              <span class="input-group-append">
-                                  <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                      <span class="fa fa-plus"></span>
-                                  </button>
-                              </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>후기 작성</td>
-                    <td>-20,000</td>
-                    <td>x</td>
-                  </tr>
-                  <tr class="border-top border-dark">
-                    
+              <table id="contractwriting_table" class="display table">
+                <!-- <div class="hr-2 bg-primary"></div> -->
+                  <thead class="d-none p-0 m-0">
+                      <tr class="p-0 m-0">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                  </thead>              
+                  <tbody class="">
+                    <tr>
                       <td>안방 (안전)</td>
                       <td>80,000</td>
-                      <td>
-                        <div class="row">
-                          <div class="col-sm-3 mx-auto">
-                              <div class="input-group">
-                                <span class="input-group-prepend">
-                                    <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                        <span class="fa fa-minus"></span>
-                                    </button>
-                                </span>
-                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                                <span class="input-group-append">
-                                    <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                        <span class="fa fa-plus"></span>
-                                    </button>
-                                </span>
-                            </div>
-                          </div>
+                      <td style="width: 100px">
+                        <div class="input-group input-group-sm text-primary flex-nowrap">
+                          <button class="input-group-text text-primary" onclick="decrement(1)"><i class="fa-regular fa-minus"></i></button>
+                          <input type="number" class="number form-control text-center text-primary" min="1" placeholder="1" value="1" data-id="1" style="width: 40px">
+                          <button class="input-group-text text-primary" onclick="increment(1)"><i class="fa-regular fa-plus"></i></button>
                         </div>
                       </td>
                       <td>후기 작성</td>
                       <td>-20,000</td>
-                      <td>x</td>
+                      <td class="text-primary"><i class="fa-regular fa-xmark"></i></td>
                     </tr>
-                </tbody>
-            </table>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-end">
-               <span class="mx-3 mr-5">합계</span>
-               <span class="mx-3 fs-2" style="color:blue">290,000</span>
-               <span>원</span>
-               <button type="button" class="btn btn-primary text-nowrap mx-2">확정</button>
-             </div>
+                    <tr>
+                      <td>안방 (안전)</td>
+                      <td>80,000</td>
+                      <td style="width: 100px">
+                        <div class="input-group input-group-sm text-primary flex-nowrap">
+                          <button class="input-group-text text-primary" onclick="decrement(2)"><i class="fa-regular fa-minus"></i></button>
+                          <input type="number" class="number form-control text-center text-primary" min="1" placeholder="1" value="1" data-id="2" style="width: 40px">
+                          <button class="input-group-text text-primary" onclick="increment(2)"><i class="fa-regular fa-plus"></i></button>
+                        </div>
+                      </td>
+                      <td>후기 작성</td>
+                      <td>-20,000</td>
+                      <td class="text-primary"><i class="fa-regular fa-xmark"></i></td>
+                    </tr>
+                    <tr>
+                      <td>안방 (안전)</td>
+                      <td>80,000</td>
+                      <td style="width: 100px">
+                        <div class="input-group input-group-sm text-primary flex-nowrap">
+                          <button class="input-group-text text-primary" onclick="decrement(3)"><i class="fa-regular fa-minus"></i></button>
+                          <input type="number" class="number form-control text-center text-primary" min="1" placeholder="1" value="1" data-id="3" style="width: 40px">
+                          <button class="input-group-text text-primary" onclick="increment(3)"><i class="fa-regular fa-plus"></i></button>
+                        </div>
+                      </td>
+                      <td>후기 작성</td>
+                      <td>-20,000</td>
+                      <td class="text-primary"><i class="fa-regular fa-xmark"></i></td>
+                    </tr>
+                    <tr>
+                      <td>안방 (안전)</td>
+                      <td>80,000</td>
+                      <td style="width: 100px">
+                        <div class="input-group input-group-sm text-primary flex-nowrap">
+                          <button class="input-group-text text-primary" onclick="decrement(4)"><i class="fa-regular fa-minus"></i></button>
+                          <input type="number" class="number form-control text-center text-primary" min="1" placeholder="1" value="1" data-id="4" style="width: 40px">
+                          <button class="input-group-text text-primary" onclick="increment(4)"><i class="fa-regular fa-plus"></i></button>
+                        </div>
+                      </td>
+                      <td>후기 작성</td>
+                      <td>-20,000</td>
+                      <td class="text-primary"><i class="fa-regular fa-xmark"></i></td>
+                    </tr>
+                    <tr>
+                      <td>안방 (안전)</td>
+                      <td>80,000</td>
+                      <td style="width: 100px">
+                        <div class="input-group input-group-sm text-primary flex-nowrap">
+                          <button class="input-group-text text-primary" onclick="decrement(5)"><i class="fa-regular fa-minus"></i></button>
+                          <input type="number" class="number form-control text-center text-primary" min="1" placeholder="1" value="1" data-id="5" style="width: 40px">
+                          <button class="input-group-text text-primary" onclick="increment(5)"><i class="fa-regular fa-plus"></i></button>
+                        </div>
+                      </td>
+                      <td>후기 작성</td>
+                      <td>-20,000</td>
+                      <td class="text-primary"><i class="fa-regular fa-xmark"></i></td>
+                    </tr>
+                    <tr>
+                      <td>안방 (안전)</td>
+                      <td>80,000</td>
+                      <td style="width: 100px">
+                        <div class="input-group input-group-sm text-primary flex-nowrap">
+                          <button class="input-group-text text-primary" onclick="decrement(6)"><i class="fa-regular fa-minus"></i></button>
+                          <input type="number" class="number form-control text-center text-primary" min="1" placeholder="1" value="1" data-id="6" style="width: 40px">
+                          <button class="input-group-text text-primary" onclick="increment(6)"><i class="fa-regular fa-plus"></i></button>
+                        </div>
+                      </td>
+                      <td>후기 작성</td>
+                      <td>-20,000</td>
+                      <td class="text-primary"><i class="fa-regular fa-xmark"></i></td>
+                    </tr>
+                    <tr>
+                      <td>안방 (안전)</td>
+                      <td>80,000</td>
+                      <td style="width: 100px">
+                        <div class="input-group input-group-sm text-primary flex-nowrap">
+                          <button class="input-group-text text-primary" onclick="decrement(7)"><i class="fa-regular fa-minus"></i></button>
+                          <input type="number" class="number form-control text-center text-primary" min="1" placeholder="1" value="1" data-id="7" style="width: 40px">
+                          <button class="input-group-text text-primary" onclick="increment(7)"><i class="fa-regular fa-plus"></i></button>
+                        </div>
+                      </td>
+                      <td>후기 작성</td>
+                      <td>-20,000</td>
+                      <td class="text-primary"><i class="fa-regular fa-circle-plus"></i></td>
+                    </tr>
+                  </tbody>
+                  <!-- <div class="hr-2 bg-dark"></div> -->
+                </table>
+            </div>
           </div>
         </div>
       </section>
@@ -1134,7 +1281,7 @@
           <h2>발주현황</h2>
 
           <!-- datatables -->
-          <div id="" class="d-block card my-3 border-0">
+          <div id="" class="d-block card my-4 border-0">
             <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
               <table id="orderstatus_table" class="display table">
                   <thead class="text-center bg-primary">
@@ -1220,7 +1367,7 @@
             <h2>발주관리</h2>
             
             <form class=""> 
-              <div class="my-5"> 
+              <div class="my-4"> 
                 <div class="mb-4">
                   <div class="d-flex justify-content-start align-items-center">
                     <p class="form-label fw-bold p-0 m-0">발주서발송</p>
@@ -1344,7 +1491,7 @@
               </form>
             </div>
 
-            <div class="card border-primary my-2">
+            <div class="card border-primary my-4">
               <div class="py-3 px-4 overflow-x-auto overflow-y-hidden">
                 <div class="profile-lists d-flex justify-content-start align-items-center flex-row flex-nowrap">
                   <a href="#" class="me-4">
@@ -1372,750 +1519,7 @@
                       <span class="text-dark fs-14px">시공사 1</span>
                     </div>
                   </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
-                  <a href="#" class="me-4">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="border border-primary rounded-circle">
-                        <img src="assets/img/images/tree.png" alt="" height="50px" width="50px" class=""/>
-                      </div>
-                      <span class="text-dark fs-14px">시공사 1</span>
-                    </div>
-                  </a>
+
 
                   
                 </div>
@@ -2378,7 +1782,7 @@
             </nav>
           </div>
 
-          <div id="fairmanagement-01_div" class="d-none card my-3 border-0">
+          <div id="fairmanagement-01_div" class="d-none card my-4 border-0">
             <div class="mb-3">
               <form action="" class="row gy-2 gx-4">
                 <div class="div1 col-md-12 col-lg-6 col-xl-6 col-xxl-4  ">
@@ -3013,7 +2417,7 @@
           <!-- INSIDE CONTENTS -->
           <h2> 결제요청 </h2>
           
-          <div class="my-5">
+          <div class="my-4">
             <form action="">
               <div class="mb-3">
                 <div class="d-flex justify-content-between align-items-center flex-row">
@@ -3061,7 +2465,7 @@
         <div class="card-main shadow bg-white col-xl-6 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
           <h2> 결제요청 </h2>
-          <div class="my-5">
+          <div class="my-4">
             <div class="card-submain card py-4 px-3 px-md-4 rounded-10 shadow bg-light">
               <form action="">
                 <div class="mb-4">
@@ -3094,7 +2498,7 @@
             <h2>사진발송</h2>
           
             <form class=""> 
-              <div class="my-5"> 
+              <div class="my-4"> 
                 <div class="mb-4">
                   <div class="d-flex justify-content-start align-items-center">
                     <p class="form-label fw-bold p-0 m-0">고객에게완료사진발송</p>
@@ -5075,7 +4479,7 @@
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
           <h2> 계약서 목록 </h2>
-          <h6 class="fs-12px mt-5 mb-3"> 
+          <h6 class="fs-12px mt-4 mb-3"> 
             <span class="me-2">시공사 선택 </span>
             <i class="fa-regular fa-chevron-down"></i>
           </h6>
@@ -5973,10 +5377,10 @@
       <section id="cardusagehistory_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
-          <h2 class="mb-5">카드사용 내역</h2>
-          <div class="navigation my-3 mb-2">
+          <h2>카드사용 내역</h2>
+          <div class="navigation my-4 mb-2">
             <div class="d-flex justify-content-center justify-content-lg-between align-items-center flex-row flex-wrap">
-              <nav class="nav-list nav my-2">
+              <nav class="nav-list nav">
                 <a id="cardusage-01_btn" href="#viewallcardusagebyapartmentcomplex" class="nav-link"> 날짜별로 보기 </a>
                 <a id="cardusage-02_btn" href="#viewallcardusagebyaccountsreceivable" class="nav-link" > 카드별로 보기 </a>
                 <a id="cardusage-03_btn" href="#viewallcardusagebyperiod" class="nav-link" > 계정별로 보기 </a>
@@ -6295,7 +5699,7 @@
               <h2>마스터</h2>
 
               <div class="d-flex justify-content-between align-items-center flex-row flex-wrap">
-                <div class="navigation mt-3 mb-4">
+                <div class="navigation mt-4 mb-4">
                   <nav class="nav-list nav">
                     <a id="master-01_btn" class="nav-link active" href="#">구독 정보</a>
                     <a id="master-02_btn" class="nav-link" href="#">시공사 관리</a>
@@ -6739,7 +6143,6 @@
         </div>
       </section>
 
-
       <!-- SUPER ADMIN PAGE -->
       <section id="superadmin_page" class="d-none content">
         <div class="card-main shadow bg-white col-xl-6 p-3 p-md-5">
@@ -6865,7 +6268,7 @@
 
 
 
-    <!-- Modal -->
+    <!-- Prize Draw Modal -->
     <div class="modal fade" id="prizedrawModal" tabindex="-3" aria-labelledby="prizedrawModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
@@ -7409,8 +6812,7 @@
       </div>
     </div>
 
-
-    <!-- Modal -->
+    <!-- Accept Modal -->
     <div class="modal  fade" id="acceptModal" tabindex="-1" aria-labelledby="acceptModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -7433,7 +6835,7 @@
       </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Decline Modal -->
     <div class="modal  fade" id="declineModal" tabindex="-1" aria-labelledby="declineModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -7456,6 +6858,72 @@
       </div>
     </div>
 
+    <!-- Contract Details Modal -->
+    <div class="modal fade" id="contractdetailsModal" tabindex="-1" aria-labelledby="contractdetailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header py-2 bg-light">
+            <h5 class="modal-title" id="contractdetailsModalLabel"> 계약상세 </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row gx-4 gy-3">
+                <div class="col-6">
+                  <div class="row gx-2 gy-3">
+                      <div class="col-4 text-start fw-bold"> 단지명 </div>
+                      <div class="col-8 text-start"> 의정부센트럴자이 </div>
+                      <div class="col-4 text-start fw-bold"> 주소 </div>
+                      <div class="col-8 text-start"> 108동 903호 </div>
+                      <div class="col-4 text-start fw-bold"> 타입 </div>
+                      <div class="col-8 text-start"> 84 </div>
+                      <div class="col-4 text-start fw-bold"> 견적 </div>
+                      <div class="col-8 text-start"> 150,000원 </div>
+                      <div class="col-4 text-start fw-bold"> 연락처 </div>
+                      <div class="col-8 text-start"> 010-4234-4039 </div>
+                      <div class="col-4 text-start fw-bold"> 신청일정 </div>
+                      <div class="col-8 text-start"> 9/25 오전 10:25 </div>
+                      <div class="col-4 text-start fw-bold"> 시공일정 </div>
+                      <div class="col-8 text-start"> 9/25 오전 10:41 </div>
+                      <div class="col-4 text-start fw-bold"> 비고 </div>
+                      <div class="col-8 text-start"> 아이가 있어서 빠른 시공 원함 비번시공 0341 </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                  <div class="card bg-lightprimary p-3 shadow">
+                    <div class="row g-2">
+                      <div class="col-12 text-center fw-bold"> 미세망교체 </div>
+                      <div class="col-6 text-start fw-bold"> 시공요청일 </div>
+                      <div class="col-6 text-end"> 9/30 </div>
+                      <div class="col-6 text-start fw-bold"> 견적 </div>
+                      <div class="col-6 text-end"> 150,000원 </div>
+                      <div class="col-6 text-start fw-bold"> 시공여부 </div>
+                      <div class="col-6 text-end"> 준비중 </div>
+                      <div class="col-6 text-start fw-bold"> 담당자 </div>
+                      <div class="col-6 text-end"> 미지정 </div>
+                    </div>
+                  </div>
+
+                  <div class="card bg-lightprimary p-3 mt-3 shadow">
+                    <div class="row g-2">
+                      <div class="col-12 text-center fw-bold"> 탄성코팅 </div>
+                      <div class="col-6 text-start fw-bold"> 시공요청일 </div>
+                      <div class="col-6 text-end"> 9/30 </div>
+                      <div class="col-6 text-start fw-bold"> 견적 </div>
+                      <div class="col-6 text-end"> 150,000원 </div>
+                      <div class="col-6 text-start fw-bold"> 시공여부 </div>
+                      <div class="col-6 text-end"> 준비중 </div>
+                      <div class="col-6 text-start fw-bold"> 담당자 </div>
+                      <div class="col-6 text-end"> 미지정 </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
   </body>
 </html>

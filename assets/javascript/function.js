@@ -171,12 +171,18 @@ function check_master_page() {
     }
 }
 
+function check_superadmin_page() {
+    if ($("#superadmin_page").hasClass('d-block')) {
+        $('#superadmin_page').removeClass('d-block').addClass('d-none');
+    }
+}
+
 
 function check_viewallcontracts01_div () {
     if ($("#viewallcontracts-01_div").hasClass("d-flex")) {
         $("#viewallcontracts-01_div").addClass("d-none").removeClass("d-flex");
         $("#viewallcontracts-01_btn").removeClass("active");
-        $("#apartmentcomplexfilterselect01").addClass("d-none").removeClass("d-flex");
+        $("#viewallcontracts_selectapartmentcomplex01_div").addClass("d-none").removeClass("d-block");
     }
 }
 
@@ -184,7 +190,7 @@ function check_viewallcontracts02_div() {
     if ($("#viewallcontracts-02_div").hasClass("d-flex")) {
         $("#viewallcontracts-02_div").addClass("d-none").removeClass("d-flex");
         $("#viewallcontracts-02_btn").removeClass("active");
-        $("#apartmentcomplexfilterselect02").addClass("d-none").removeClass("d-flex");
+        $("#viewallcontracts_selectapartmentcomplex02_div").addClass("d-none").removeClass("d-block");
     }
 }
 
@@ -237,11 +243,7 @@ function check_master03div() {
     }
 }
 
-function check_superadmin_page() {
-    if ($("#superadmin_page").hasClass('d-block')) {
-        $('#superadmin_page').removeClass('d-block').addClass('d-none');
-    } 
-}
+
 
 
 function setDefault_fairmanagement() {
@@ -261,6 +263,7 @@ function setDefault_fairmanagement() {
         $('#fairmanagement-01_title').addClass('d-block').removeClass('d-none');
     }
 }
+
 function check_cardusage01_div () {
     if ($("#cardusage-01_div").hasClass("d-flex")) {
         $("#cardusage-01_div").addClass("d-none").removeClass("d-flex");
@@ -282,4 +285,13 @@ function check_cardusage03_div() {
         $("#cardusage-03_btn").removeClass("active");
         $("#cardusageapartmentcomplexfilterselect02").addClass("d-none").removeClass("d-flex");
     }
+}
+
+
+
+function increment(id) {
+    document.querySelector('[data-id="' + id + '"]').stepUp();
+}
+function decrement(id) {
+    document.querySelector('[data-id="' + id + '"]').stepDown();
 }

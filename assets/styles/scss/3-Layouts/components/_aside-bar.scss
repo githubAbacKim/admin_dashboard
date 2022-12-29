@@ -368,10 +368,10 @@ aside.side-navbar {
 
 aside.max {
     @include transition (3000);
-    width: 300px !important;
+    // width: 300px !important;
     min-height: calc(100vh - 100px) !important;
 
-    @include breakpoint-xl {
+    @include breakpoint-md-up {
         @include transition (3000);
         width: 240px !important;
     }

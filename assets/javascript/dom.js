@@ -669,7 +669,7 @@ $(document).ready(function () {
         if ($("#viewallcontracts-01_div").hasClass("d-none")) {
             $("#viewallcontracts-01_div").addClass("d-flex").removeClass("d-none");
             $("#viewallcontracts-01_btn").addClass("active");
-            $("#apartmentcomplexfilterselect01").addClass("d-flex").removeClass("d-none");
+            $("#viewallcontracts_selectapartmentcomplex01_div").addClass("d-block").removeClass("d-none");
             check_viewallcontracts02_div();
             check_viewallcontracts03_div();
         }
@@ -680,7 +680,7 @@ $(document).ready(function () {
         if ($("#viewallcontracts-02_div").hasClass("d-none")) {
             $("#viewallcontracts-02_div").addClass("d-flex").removeClass("d-none");
             $("#viewallcontracts-02_btn").addClass("active");
-            $("#apartmentcomplexfilterselect02").addClass("d-flex").removeClass("d-none");
+            $("#viewallcontracts_selectapartmentcomplex02_div").addClass("d-block").removeClass("d-none");
             check_viewallcontracts01_div();
             check_viewallcontracts03_div();
         }

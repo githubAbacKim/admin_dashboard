@@ -156,6 +156,13 @@ $(document).ready(function () {
     $('#tenantmanagement_table').DataTable();
     $('#orderstatus_table').DataTable();
     $('#subscribermanagement_table').DataTable();
+
+    $('#contractwriting_table').DataTable();
+    var second_row = $('#contractwriting_table_wrapper .row:nth-child(2)');
+    second_row.prepend('<div class="hr-2 bg-dark mt-2"></div>');
+    second_row.append('<div class="hr-2 bg-dark mt-3 mb-2"></div>');
+    
+
 });
 
 

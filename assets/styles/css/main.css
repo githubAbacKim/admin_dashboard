@@ -104,6 +104,12 @@ p {
   background: #555;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .text-white {
   color: #fff;
 }
@@ -1312,6 +1318,9 @@ p {
   margin-bottom: 0.25rem !important;
   margin-top: 0.25rem !important;
 }
+.data-table .dataTables_wrapper .table thead {
+  font-size: 14px !important;
+}
 .data-table .dataTables_wrapper .table thead tr th {
   vertical-align: middle;
   padding-bottom: 0.5rem !important;
@@ -1325,6 +1334,10 @@ p {
 }
 .data-table .dataTables_wrapper .table thead tr th:last-of-type {
   border-top-right-radius: 0.25rem !important;
+}
+.data-table .dataTables_wrapper .table tbody {
+  font-size: 14px !important;
+  color: #000;
 }
 .data-table .dataTables_wrapper .table tbody tr td {
   justify-content: center;
@@ -1392,11 +1405,7 @@ header .brand .brand-icon {
   }
 }
 
-header.max .brand {
-  transition: 3000 !important;
-  width: 300px !important;
-}
-@media (max-width: 1200px) {
+@media (min-width: 769px) {
   header.max .brand {
     transition: 3000 !important;
     width: 240px !important;
@@ -1463,13 +1472,7 @@ main .content .card-main {
 main.max {
   transition: 3000 !important;
 }
-main.max .content {
-  transition: 3000 !important;
-  margin-left: 300px !important;
-  width: 100%;
-  max-width: calc(100vw - 300px - 1rem);
-}
-@media (max-width: 1200px) {
+@media (min-width: 769px) {
   main.max .content {
     transition: 3000 !important;
     margin-left: 240px !important;
@@ -1790,10 +1793,9 @@ aside.side-navbar .side-navbar_tabs .side-navbar_tabs_bot .accordion .accordion-
 
 aside.max {
   transition: 3000 !important;
-  width: 300px !important;
   min-height: calc(100vh - 100px) !important;
 }
-@media (max-width: 1200px) {
+@media (min-width: 769px) {
   aside.max {
     transition: 3000 !important;
     width: 240px !important;
@@ -2197,13 +2199,7 @@ main .content .card-main {
 main.max {
   transition: 3000 !important;
 }
-main.max .content {
-  transition: 3000 !important;
-  margin-left: 300px !important;
-  width: 100%;
-  max-width: calc(100vw - 300px - 1rem);
-}
-@media (max-width: 1200px) {
+@media (min-width: 769px) {
   main.max .content {
     transition: 3000 !important;
     margin-left: 240px !important;

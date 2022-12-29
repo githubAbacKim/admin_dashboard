@@ -27,12 +27,12 @@ main.max {
     @include transition (3000);
 
     .content {
-        @include transition (3000);
-        margin-left: 300px !important;
-        width: 100%;
-        max-width: calc(100vw - 300px - $s3);
+        // @include transition (3000);
+        // margin-left: 300px !important;
+        // width: 100%;
+        // max-width: calc(100vw - 300px - $s3);
 
-        @include breakpoint-xl {
+        @include breakpoint-md-up {
             @include transition (3000);
             margin-left: 240px !important;
             width: 100%;
