@@ -221,6 +221,7 @@ $(document).ready(function () {
             check_fair_accordion();
             check_settings_accordion();
             check_menu_accordion();
+            setDefault_viewallcontracts();
         }
     })
 
@@ -626,6 +627,7 @@ $(document).ready(function () {
             check_fair_accordion();
             check_settings_accordion();
             check_menu_accordion();
+            setDefault_cardusagehistory();
         }
     })
 
@@ -673,7 +675,7 @@ $(document).ready(function () {
             check_viewallcontracts02_div();
             check_viewallcontracts03_div();
         }
-    })
+    });
 
     // 1.2
     $("#viewallcontracts-02_btn").click(function () {
@@ -684,7 +686,7 @@ $(document).ready(function () {
             check_viewallcontracts01_div();
             check_viewallcontracts03_div();
         }
-    })
+    });
 
     // 1.3
     $("#viewallcontracts-03_btn").click(function () {
@@ -694,7 +696,7 @@ $(document).ready(function () {
             check_viewallcontracts01_div();
             check_viewallcontracts02_div();
         }
-    })
+    });
 
     // 5.1
     $("#fairmanagement-01_btn").click(function () {
@@ -704,7 +706,7 @@ $(document).ready(function () {
             $('#fairmanagement-01_title').addClass("d-block").removeClass("d-none");
             check_fairmanagement02_div();
         }
-    })
+    });
 
     // 5.1.1
     $("#switch_onlinefair").click(function () {
@@ -733,6 +735,40 @@ $(document).ready(function () {
         $('#tenantmanagement_form_div').addClass('d-flex').removeClass('d-none');
         $('#tenantmanagement_div').addClass('d-none').removeClass('d-flex');
     });
+
+    // 6.1
+    $("#cardusagehistory-01_btn").click(function () {
+        if ($("#cardusagehistory-01_div").hasClass("d-none")) {
+            $("#cardusagehistory-01_div").addClass("d-flex").removeClass("d-none");
+            $("#cardusagehistory-01_btn").addClass("active");
+            $("#cardusagehistory_date01_div").addClass("d-block").removeClass("d-none");
+            check_cardusagehistory02_div();
+            check_cardusagehistory03_div();
+        }
+    });
+
+    // 6.2
+    $("#cardusagehistory-02_btn").click(function () {
+        if ($("#cardusagehistory-02_div").hasClass("d-none")) {
+            $("#cardusagehistory-02_div").addClass("d-flex").removeClass("d-none");
+            $("#cardusagehistory-02_btn").addClass("active");
+            $("#cardusagehistory_card02_div").addClass("d-block").removeClass("d-none");
+            check_cardusagehistory01_div();
+            check_cardusagehistory03_div();
+        }
+    });
+
+    // 6.3
+    $("#cardusagehistory-03_btn").click(function () {
+        if ($("#cardusagehistory-03_div").hasClass("d-none")) {
+            $("#cardusagehistory-03_div").addClass("d-flex").removeClass("d-none");
+            $("#cardusagehistory-03_btn").addClass("active");
+            $("#cardusagehistory_account03_div").addClass("d-block").removeClass("d-none");
+            check_cardusagehistory01_div();
+            check_cardusagehistory02_div();
+        }
+    });
+
 
     // 7.1.1
     $("#master-01_btn").click(function () {

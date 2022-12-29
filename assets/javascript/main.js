@@ -84,16 +84,27 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
     $('#viewallcontracts_selectapartmentcomplex01').select2({
         theme: 'bootstrap-5',
-        // width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
         placeholder: $(this).data('placeholder'),
     });
 
     $('#viewallcontracts_selectapartmentcomplex02').select2({
         theme: 'bootstrap-5',
-        // width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
         placeholder: $(this).data('placeholder'),
     });
 
+    $('#cardusagehistory_card02').select2({
+        theme: 'bootstrap-5',
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        placeholder: $(this).data('placeholder'),
+    });
+
+    $('#cardusagehistory_account03').select2({
+        theme: 'bootstrap-5',
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        placeholder: $(this).data('placeholder'),
+    });
 
     $('#selectAppartment').select2({
         theme: 'bootstrap-5',
@@ -161,6 +172,11 @@ $(document).ready(function () {
     var second_row = $('#contractwriting_table_wrapper .row:nth-child(2)');
     second_row.prepend('<div class="hr-2 bg-dark mt-2"></div>');
     second_row.append('<div class="hr-2 bg-dark mt-3 mb-2"></div>');
+    
+
+    $('#cardusagehistorybydate_table').DataTable();
+    $('#cardusagehistorybycard_table').DataTable();
+    $('#cardusagehistorybyaccount_table').DataTable();
     
 
 });

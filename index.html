@@ -1001,7 +1001,7 @@
             <h2>계약서 작성</h2>
             <div class="my-4">
               <div class="row g-2">
-                <!-- first -->
+                
                 <div class="col-12">
                   <div class="row g-0 align-items-center">
                     <div class="col-xl-6">
@@ -1019,7 +1019,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- 2nd -->
+                
                 <div class="col-12 col-xl-6 ">
                   <div class="row g-2">
                     <div class="col-2 ">
@@ -1048,7 +1048,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- 3rd -->
+                
                 <div class="col-12 col-xl-6">
                   <div class="row g-2">
                     <div class="col-2  text-start text-xl-end">
@@ -1150,8 +1150,6 @@
                 </div>
               </div>
             </div>
-
-
 
             <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
               <table id="contractwriting_table" class="display table">
@@ -1268,6 +1266,10 @@
                   </tbody>
                   <!-- <div class="hr-2 bg-dark"></div> -->
                 </table>
+            </div>
+
+            <div class="text-end">
+              <!-- DIRI ECODE ANG LOWER PART -->
             </div>
           </div>
         </div>
@@ -2551,7 +2553,7 @@
         <div class="">
           <!-- INSIDE CONTENTS -->
           <div class="row m-0 p-0"> 
-            <div class="card-main shadow bg-white col-12 col-lg-6 col-xl-6 p-3 p-md-5">
+            <div class="card-main shadow bg-white col-12 col-xl-6 p-3 p-md-5">
               <h2>기술자 관리</h2>
               <div class="min-h-card mt-4 d-flex justify-content-between align-items-start flex-column">
                 <div class="w-100 flex-grow-1">
@@ -3072,7 +3074,7 @@
             <div id="technician-01-card1" class="card-main1">
             </div>
             
-            <div id="technician-01-card2" class="card-main2 col-12 col-lg-6 col-xl-6 " style="display: none;">
+            <div id="technician-01-card2" class="card-main2 col-12 col-xl-6 " style="display: none;">
               <!-- INSIDE CONTENTS --> 
               <div class="card-main2-content">
                 <div class="row g-2">
@@ -5377,67 +5379,89 @@
       <section id="cardusagehistory_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
-          <h2>카드사용 내역</h2>
-          <div class="navigation my-4 mb-2">
-            <div class="d-flex justify-content-center justify-content-lg-between align-items-center flex-row flex-wrap">
-              <nav class="nav-list nav">
-                <a id="cardusage-01_btn" href="#viewallcardusagebyapartmentcomplex" class="nav-link"> 날짜별로 보기 </a>
-                <a id="cardusage-02_btn" href="#viewallcardusagebyaccountsreceivable" class="nav-link" > 카드별로 보기 </a>
-                <a id="cardusage-03_btn" href="#viewallcardusagebyperiod" class="nav-link" > 계정별로 보기 </a>
-              </nav>
+          <div class="">
+            <h2>카드사용 내역</h2>
+            <div class="mt-4 p-1">
+              <div class="row g-4 align-items-center">
+                <div class="col-12 col-lg-7">
+                    <div class="navigation">
+                      <nav class="nav-list nav flex-nowrap">
+                        <a id="cardusagehistory-01_btn" href="#cardusagehistorybydate" class="nav-link"> 날짜별로 보기 </a>
+                        <a id="cardusagehistory-02_btn" href="#cardusagehistorybycard" class="nav-link" > 카드별로 보기 </a>
+                        <a id="cardusagehistory-03_btn" href="#cardusagehistorybyaccount" class="nav-link" > 계정별로 보기 </a>
+                      </nav>
+                    </div>
+                </div>
+  
+                <div id="cardusagehistory_date01_div" class="d-none col-12 col-lg-5">
+                  <div class="row justify-content-center justify-content-lg-end">
+                    <div class="col-8 col-md-8 col-lg-12 col-xl-12 col-xxl-6">
+                      <input id="cardusagehistory_date01" type="date" class="form-control form-control-sm">
+                    </div>
+                  </div>
+                </div>
 
-              <div id="cardusageapartmentcomplexfilterselect01" class="d-none col-8 col-lg-4 col-xl-3 col-xxl-2">
-                <select id="cardusageapartmentcomplexfilter01" class="form-select">
-                  <option value="">전체</option>
-                  <option value="동작협성휴포레">동작협성휴포레</option>
-                  <option value="아파트 단지 이름">아파트 단지 이름</option>
-                </select>
-              </div>
 
-              <div id="cardusageapartmentcomplexfilterselect02" class="d-none col-8 col-lg-4 col-xl-3 col-xxl-2 ">
-                <select id="cardusageapartmentcomplexfilter02" class="form-select">
-                  <option value="">전체</option>
-                  <option value="동작협성휴포레">동작협성휴포레</option>
-                  <option value="아파트 단지 이름">아파트 단지 이름</option>
-                </select>
+                <div id="cardusagehistory_card02_div" class="d-none col-12 col-lg-5">
+                  <div class="row justify-content-center justify-content-lg-end">
+                    <div class="col-8 col-md-8 col-lg-12 col-xl-12 col-xxl-6">
+                      <select id="cardusagehistory_card02" class="form-select form-select-sm my-1" data-placeholder="카드 번호 선택">
+                        <option></option>
+                        <option value="전체">전체</option>
+                        <option value="2"> 5476 </option>
+                        <option value="3"> 2946 </option>
+                        <option value="2"> 8864 </option>
+                        <option value="3"> 7512 </option>
+                        <option value="2"> 2359 </option>
+                        <option value="3"> 1665 </option>
+                        <option value="2"> 5476 </option>
+                        <option value="3"> 2946 </option>
+                        <option value="2"> 5476 </option>
+                        <option value="3"> 2946 </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="cardusagehistory_account03_div" class="d-none col-12 col-lg-5 ">
+                  <div class="row justify-content-center justify-content-lg-end">
+                    <div class="col-8 col-md-8 col-lg-12 col-xl-12 col-xxl-6">
+                      <select id="cardusagehistory_account03" class="form-select form-select-sm my-1" data-placeholder="계정 선택">
+                        <option></option>
+                        <option value="전체">전체</option>
+                        <option value="식대">식대</option>
+                        <option value="경비">경비</option>
+                        <option value="일반">일반</option>
+                        <option value="주차">주차</option>
+                        <option value="비품">비품</option>
+                        <option value="기타">기타</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div id="cardusage-01_div" class="d-none card border-0">
-            <!-- <div class="col-sm-12 col-lg-12 col-xl-4 apartmentcomplexfilter">
-              <div class="row g-0 d-flex justify-content-center justify-content-lg-center justify-content-xl-end align-items-center">
-                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
-                <div class="col-10 col-lg-6 col-xl-10">
-                    <select id="apartmentcomplexfilter" class="form-control form-control-sm my-1">
-                      <option value="">전체</option>
-                      <option value="">동작협성휴포레</option>
-                      <option value="">아파트 단지 이름</option>
-                      <option value="">아파트 단지 이름</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
-              </div>
-            </div> -->
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table">
+          
+            <div id="cardusagehistory-01_div" class="d-none card border-0 mt-2">
+              <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+                <table id="cardusagehistorybydate_table" class="display table">
                   <thead class="text-center bg-primary">
-                      <tr class="text-white">
-                        <th> 카드번호(뒤 4자리) </th>
-                        <th> 날짜 </th>
-                        <th>시간 </th>
-                        <th> 금액 </th>
-                        <th> 상호 </th>
-                        <th> 게정(관리자가 직접 입력) </th>
-                      </tr>
+                    <tr class="text-white">
+                      <th> 카드번호(뒤 4자리) </th>
+                      <th> 날짜 </th>
+                      <th> 시간 </th>
+                      <th> 금액 </th>
+                      <th> 상호 </th>
+                      <th> 게정(관리자가 직접 입력) </th>
+                    </tr>
                   </thead>
-                  <tbody class="text-dark fs-14px">
+                  <tbody">
                     <tr class="text-center">
                       <td> 5806 </td>
                       <td> 2022/10/24 </td>
                       <td> 20:15 </td>
                       <td> 20,000 </td>
-                      <td> 해장국 </td>
+                      <td>커피 </td>
                       <td> 식대 </td>
                     </tr>
                     <tr class="text-center">
@@ -5445,177 +5469,77 @@
                       <td> 2022/10/24 </td>
                       <td> 20:15 </td>
                       <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
+                      <td> 주차장 </td>
+                      <td> 주차 </td>
                     </tr>
                     <tr class="text-center">
                       <td> 5806 </td>
                       <td> 2022/10/24 </td>
                       <td> 20:15 </td>
                       <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
+                      <td> 하이패스 </td>
+                      <td> 경비 </td>
                     </tr>
                     <tr class="text-center">
                       <td> 5806 </td>
                       <td> 2022/10/24 </td>
                       <td> 20:15 </td>
                       <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
+                      <td> 코레일 </td>
+                      <td> 경비 </td>
                     </tr>
                     <tr class="text-center">
                       <td> 5806 </td>
                       <td> 2022/10/24 </td>
                       <td> 20:15 </td>
                       <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
+                      <td> 자제 </td>
+                      <td> 비품 </td>
                     </tr>
                     <tr class="text-center">
                       <td> 5806 </td>
                       <td> 2022/10/24 </td>
                       <td> 20:15 </td>
                       <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
+                      <td> 자제 </td>
+                      <td> 비품 </td>
                     </tr>
                     <tr class="text-center">
                       <td> 5806 </td>
                       <td> 2022/10/24 </td>
                       <td> 20:15 </td>
                       <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
+                      <td> 교통카드 </td>
+                      <td> 경비 </td>
                     </tr>
                     <tr class="text-center">
                       <td> 5806 </td>
                       <td> 2022/10/24 </td>
                       <td> 20:15 </td>
                       <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
+                      <td> 주차장 </td>
+                      <td> 주차 </td>
                     </tr>
-                   
-                    
+               
                   </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="cardusage-02_div" class="d-none card border-0">
-            <!-- <div class="col-sm-12 col-lg-12 col-xl-4 apartmentcomplexfilter">
-              <div class="row g-0 d-flex justify-content-center justify-content-lg-center justify-content-xl-end align-items-center">
-                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
-                <div class="col-10 col-lg-6 col-xl-10">
-                    <select id="apartmentcomplexfilter" class="form-control form-control-sm my-1">
-                      <option value="">전체</option>
-                      <option value="">동작협성휴포레</option>
-                      <option value="">아파트 단지 이름</option>
-                      <option value="">아파트 단지 이름</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
+                </table>
               </div>
-            </div> -->
-
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table">
-                <thead class="text-center bg-primary">
-                  <tr class="text-white">
-                    <th> 카드번호(뒤 4자리) </th>
-                    <th> 날짜 </th>
-                    <th>시간 </th>
-                    <th> 금액 </th>
-                    <th> 상호 </th>
-                    <th> 게정(관리자가 직접 입력) </th>
-                  </tr>
-              </thead>
-              <tbody class="text-dark fs-14px">
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td>커피 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 주차장 </td>
-                      <td> 주차 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 하이패스 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 코레일 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 자제 </td>
-                      <td> 비품 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 자제 </td>
-                      <td> 비품 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 교통카드 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 주차장 </td>
-                      <td> 주차 </td>
-                    </tr>
-               
-                  </tbody>
-              </table>
             </div>
-          </div>
 
-          <div id="cardusage-03_div" class="d-none card border-0">
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table">
-                <thead class="text-center bg-primary">
-                  <tr class="text-white">
-                    <th> 카드번호(뒤 4자리) </th>
-                    <th> 날짜 </th>
-                    <th>시간 </th>
-                    <th> 금액 </th>
-                    <th> 상호 </th>
-                    <th> 게정(관리자가 직접 입력) </th>
-                  </tr>
-              </thead>
-              <tbody class="text-dark fs-14px">
+            <div id="cardusagehistory-02_div" class="d-none card border-0 mt-2">
+              <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+                <table id="cardusagehistorybycard_table" class="display table">
+                  <thead class="text-center bg-primary">
+                    <tr class="text-white">
+                      <th> 카드번호(뒤 4자리) </th>
+                      <th> 날짜 </th>
+                      <th> 시간 </th>
+                      <th> 금액 </th>
+                      <th> 상호 </th>
+                      <th> 게정(관리자가 직접 입력) </th>
+                    </tr>
+                  </thead>
+                  <tbody">
                     <tr class="text-center">
                       <td> 5806 </td>
                       <td> 2022/10/24 </td>
@@ -5682,7 +5606,92 @@
                     </tr>
                
                   </tbody>
-              </table>
+                </table>
+              </div>
+            </div>
+            
+            <div id="cardusagehistory-03_div" class="d-none card border-0 mt-2">
+              <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
+                <table id="cardusagehistorybyaccount_table" class="display table">
+                  <thead class="text-center bg-primary">
+                    <tr class="text-white">
+                      <th> 카드번호(뒤 4자리) </th>
+                      <th> 날짜 </th>
+                      <th> 시간 </th>
+                      <th> 금액 </th>
+                      <th> 상호 </th>
+                      <th> 게정(관리자가 직접 입력) </th>
+                    </tr>
+                  </thead>
+                  <tbody">
+                    <tr class="text-center">
+                      <td> 5806 </td>
+                      <td> 2022/10/24 </td>
+                      <td> 20:15 </td>
+                      <td> 20,000 </td>
+                      <td>커피 </td>
+                      <td> 식대 </td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> 5806 </td>
+                      <td> 2022/10/24 </td>
+                      <td> 20:15 </td>
+                      <td> 20,000 </td>
+                      <td> 주차장 </td>
+                      <td> 주차 </td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> 5806 </td>
+                      <td> 2022/10/24 </td>
+                      <td> 20:15 </td>
+                      <td> 20,000 </td>
+                      <td> 하이패스 </td>
+                      <td> 경비 </td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> 5806 </td>
+                      <td> 2022/10/24 </td>
+                      <td> 20:15 </td>
+                      <td> 20,000 </td>
+                      <td> 코레일 </td>
+                      <td> 경비 </td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> 5806 </td>
+                      <td> 2022/10/24 </td>
+                      <td> 20:15 </td>
+                      <td> 20,000 </td>
+                      <td> 자제 </td>
+                      <td> 비품 </td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> 5806 </td>
+                      <td> 2022/10/24 </td>
+                      <td> 20:15 </td>
+                      <td> 20,000 </td>
+                      <td> 자제 </td>
+                      <td> 비품 </td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> 5806 </td>
+                      <td> 2022/10/24 </td>
+                      <td> 20:15 </td>
+                      <td> 20,000 </td>
+                      <td> 교통카드 </td>
+                      <td> 경비 </td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> 5806 </td>
+                      <td> 2022/10/24 </td>
+                      <td> 20:15 </td>
+                      <td> 20,000 </td>
+                      <td> 주차장 </td>
+                      <td> 주차 </td>
+                    </tr>
+               
+                  </tbody>
+                </table>
+              </div>
             </div>
           
           </div>
@@ -5695,13 +5704,13 @@
       <section id="master_page" class="d-none content">
         <div class="">
           <div class="row m-0 p-0">
-            <div class="card-main shadow bg-white col-12 col-lg-6 col-xl-6 p-3 p-md-5">
+            <div class="card-main shadow bg-white col-12 col-xl-6 p-3 p-md-5">
               <h2>마스터</h2>
 
               <div class="d-flex justify-content-between align-items-center flex-row flex-wrap">
                 <div class="navigation mt-4 mb-4">
                   <nav class="nav-list nav">
-                    <a id="master-01_btn" class="nav-link active" href="#">구독 정보</a>
+                    <a id="master-01_btn" class="nav-link" href="#">구독 정보</a>
                     <a id="master-02_btn" class="nav-link" href="#">시공사 관리</a>
                     <a id="master-03_btn" class="nav-link" href="#">박람회 할당</a>
                   </nav>
@@ -5713,7 +5722,7 @@
               </div>
           
               <!-- datatables -->
-              <div id="master-01_div" class="d-block card my-3 border-0">
+              <div id="master-01_div" class="d-none card my-3 border-0">
                 <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
                   <table id="subscribermanagement_table" class="display table table-hover">
                       <thead class="text-center bg-primary">
@@ -6130,7 +6139,7 @@
             <div id="master-01-card1" class="card-main1">
             </div>
 
-            <div id="master-01-card2" class="d-flex card-main2 col-12 col-lg-6 col-xl-5 p-3 p-md-5">
+            <div id="master-01-card2" class="d-none card-main2 col-12 col-xl-5 p-3 p-md-5">
             <!-- INSIDE CONTENTS -->
               <div class="card-main2-content">
                 <h1 class="fs-25px fw-bolder text-center"> 구독 서비스 전환</h1> 

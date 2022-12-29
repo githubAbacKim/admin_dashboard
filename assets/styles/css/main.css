@@ -2409,14 +2409,14 @@ main.min .content {
   background: #fff !important;
   z-index: 101;
 }
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
   #technicianmanagement_page .card-main {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #technicianmanagement_page .card-main {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
@@ -2428,12 +2428,12 @@ main.min .content {
   z-index: 102;
   background-color: #fff;
 }
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
   #technicianmanagement_page .card-main1 {
     display: none;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #technicianmanagement_page .card-main1 {
     display: flex;
   }
@@ -2441,12 +2441,12 @@ main.min .content {
 #technicianmanagement_page .card-main2 {
   z-index: 101;
 }
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
   #technicianmanagement_page .card-main2 {
     background: transparent !important;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #technicianmanagement_page .card-main2 {
     padding: 1.5rem;
     border-bottom-right-radius: 1.5rem;
@@ -2459,7 +2459,7 @@ main.min .content {
   overflow-x: hidden;
   max-height: calc(100vh - (50px + 1rem + 1.5rem)) !important;
 }
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
   #technicianmanagement_page .card-main2 .card-main2-content {
     border-radius: 1.5rem !important;
     padding: 1.5rem !important;
@@ -2467,7 +2467,7 @@ main.min .content {
     background: #fff !important;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #technicianmanagement_page .card-main2 .card-main2-content {
     background: transparent !important;
     box-shadow: none !important;
@@ -2643,14 +2643,14 @@ main.min .content {
   background: #fff !important;
   z-index: 101;
 }
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
   #master_page .card-main {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #master_page .card-main {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
@@ -2662,12 +2662,12 @@ main.min .content {
   z-index: 102;
   background-color: #fff;
 }
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
   #master_page .card-main1 {
     display: none;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #master_page .card-main1 {
     display: flex;
   }
@@ -2679,19 +2679,19 @@ main.min .content {
   align-items: center !important;
   flex-direction: column !important;
 }
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
   #master_page .card-main2 {
     background: transparent !important;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #master_page .card-main2 {
     border-bottom-right-radius: 1.5rem;
     background: #fff !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
 }
-@media (min-width: 993px) {
+@media (min-width: 1201px) {
   #master_page .card-main2 .card-main2-content {
     border-radius: 1.5rem !important;
     padding: 3rem !important;
@@ -2699,7 +2699,7 @@ main.min .content {
     background: #fff !important;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #master_page .card-main2 .card-main2-content {
     background: transparent !important;
     box-shadow: none !important;
