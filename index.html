@@ -1270,6 +1270,14 @@
 
             <div class="text-end">
               <!-- DIRI ECODE ANG LOWER PART -->
+              <div class="row">
+                <div class="col-md-12 text-end">
+                   <span class="mx-3 mr-5">합계</span>
+                   <span class="mx-3 fs-2" style="color:blue">290,000</span>
+                   <span>원</span>
+                   <button type="button" class="btn btn-primary text-nowrap mx-2">확정</button>
+                 </div>
+              </div>  
             </div>
           </div>
         </div>
@@ -1307,7 +1315,7 @@
                       <td class="text-orange">완료</td>
                       <td class="text-darkprimary">완료</td>
                       <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
-                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#orderstatusdetailsModal" >보기</button> </td>
                     </tr>
 
                     <tr>
@@ -1318,7 +1326,7 @@
                       <td class="text-darkprimary">완료</td>
                       <td class="text-orange">완료</td>
                       <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
-                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#orderstatusdetailsModal" >보기</button> </td>
                     </tr>
 
                     <tr>
@@ -1329,7 +1337,7 @@
                       <td class="text-orange">완료</td>
                       <td class="text-darkprimary">완료</td>
                       <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
-                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#orderstatusdetailsModal" >보기</button> </td>
                     </tr>
 
                     <tr>
@@ -1340,7 +1348,7 @@
                       <td class="text-darkprimary">완료</td>
                       <td class="text-orange">완료</td>
                       <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
-                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#orderstatusdetailsModal" >보기</button> </td>
                     </tr>
 
                     <tr>
@@ -1351,7 +1359,7 @@
                       <td class="text-orange">완료</td>
                       <td class="text-darkprimary">완료</td>
                       <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
-                      <td> <button type="button" class="btn btn-outline-primary btn-sm">보기</button>  </td>
+                      <td> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#orderstatusdetailsModal" >보기</button> </td>
                     </tr>
                     
                   </tbody>
@@ -1483,14 +1491,39 @@
         <div class="card-main shadow bg-white col-12 p-3 p-md-5 col-md-12">
           <!-- INSIDE CONTENTS -->
           <div>
-            <div class="d-flex justify-content-between align-items-center flex-row flex-nowrap">
-              <h2>박람회</h2>
-              <form action="">
-                <div class="input-group ">
-                  <span class="input-group-text"><i class="fa-light fa-magnifying-glass"></i></span>
-                  <input type="search" class="form-control" placeholder="시공사 검색">
+            <div class="row align-items-start  d-flexflex-row flex-nowrap g-0">
+              <div class="col-8">
+                <h2>박람회</h2>
+              </div>
+              <div class="col-2 ">
+                <div class=" ">
+                  <select class="form-select" id="onlinefair1" data-placeholder="전체" style="background-color: gray;";>
+                    <option></option>
+                    <option value="1"> 아파트 단지 </option>
+                    <option value="2"> 시공사 </option>
+                    
+                  
+                  </select>
                 </div>
-              </form>
+              </div>
+              <div class="col-2">
+                <div class="" >
+                  <select class="form-select" id="onlinefair2" data-placeholder="전체">
+                    <option></option>
+                    <option value="1"> 전체 </option>
+                    <option value="2">시공사 이름 </option>
+                    <option value="3"> 시공사 이름 </option>
+                    <option value="2"> 시공사 이름 </option>
+                    <option value="3"> 시공사 이름 </option>
+                    <option value="2">시공사 이름 </option>
+                    <option value="3"> 시공사 이름 </option>
+                    <option value="2"> 시공사 이름 </option>
+                    <option value="3"> 시공사 이름 </option>
+                    <option value="2"> 시공사 이름 </option>
+                    <option value="3"> 시공사 이름 </option>
+                  </select>
+                </div>
+              </div>
             </div>
 
             <div class="card border-primary my-4">
@@ -6873,6 +6906,72 @@
         <div class="modal-content">
           <div class="modal-header py-2 bg-light">
             <h5 class="modal-title" id="contractdetailsModalLabel"> 계약상세 </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row gx-4 gy-3">
+                <div class="col-6">
+                  <div class="row gx-2 gy-3">
+                      <div class="col-4 text-start fw-bold"> 단지명 </div>
+                      <div class="col-8 text-start"> 의정부센트럴자이 </div>
+                      <div class="col-4 text-start fw-bold"> 주소 </div>
+                      <div class="col-8 text-start"> 108동 903호 </div>
+                      <div class="col-4 text-start fw-bold"> 타입 </div>
+                      <div class="col-8 text-start"> 84 </div>
+                      <div class="col-4 text-start fw-bold"> 견적 </div>
+                      <div class="col-8 text-start"> 150,000원 </div>
+                      <div class="col-4 text-start fw-bold"> 연락처 </div>
+                      <div class="col-8 text-start"> 010-4234-4039 </div>
+                      <div class="col-4 text-start fw-bold"> 신청일정 </div>
+                      <div class="col-8 text-start"> 9/25 오전 10:25 </div>
+                      <div class="col-4 text-start fw-bold"> 시공일정 </div>
+                      <div class="col-8 text-start"> 9/25 오전 10:41 </div>
+                      <div class="col-4 text-start fw-bold"> 비고 </div>
+                      <div class="col-8 text-start"> 아이가 있어서 빠른 시공 원함 비번시공 0341 </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                  <div class="card bg-lightprimary p-3 shadow">
+                    <div class="row g-2">
+                      <div class="col-12 text-center fw-bold"> 미세망교체 </div>
+                      <div class="col-6 text-start fw-bold"> 시공요청일 </div>
+                      <div class="col-6 text-end"> 9/30 </div>
+                      <div class="col-6 text-start fw-bold"> 견적 </div>
+                      <div class="col-6 text-end"> 150,000원 </div>
+                      <div class="col-6 text-start fw-bold"> 시공여부 </div>
+                      <div class="col-6 text-end"> 준비중 </div>
+                      <div class="col-6 text-start fw-bold"> 담당자 </div>
+                      <div class="col-6 text-end"> 미지정 </div>
+                    </div>
+                  </div>
+
+                  <div class="card bg-lightprimary p-3 mt-3 shadow">
+                    <div class="row g-2">
+                      <div class="col-12 text-center fw-bold"> 탄성코팅 </div>
+                      <div class="col-6 text-start fw-bold"> 시공요청일 </div>
+                      <div class="col-6 text-end"> 9/30 </div>
+                      <div class="col-6 text-start fw-bold"> 견적 </div>
+                      <div class="col-6 text-end"> 150,000원 </div>
+                      <div class="col-6 text-start fw-bold"> 시공여부 </div>
+                      <div class="col-6 text-end"> 준비중 </div>
+                      <div class="col-6 text-start fw-bold"> 담당자 </div>
+                      <div class="col-6 text-end"> 미지정 </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Orderstatus Details Modal -->
+    <div class="modal fade" id="orderstatusdetailsModal" tabindex="-1" aria-labelledby="orderstatusdetailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header py-2 bg-light">
+            <h5 class="modal-title" id="orderstatusdetailsModalLabel"> 계약상세 </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
