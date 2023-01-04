@@ -186,26 +186,41 @@ $(document).ready(function () {
 
     $('#login_form').on('submit', function (e) {
         e.preventDefault();
+
+        // const login_user = $('#login_username').val();
+        // const login_pass = $('#login_password').val();
+
+        // $.ajax({
+        //     type: 'POST',
+        //     url: 'http://210.99.223.38:8081/api/login?ID=' + login_user + '&Password=' + login_pass,
+        //     dataType: 'JSON',
+        //     success: function (response) {
+        //         console.log(response.data);
+        //     }
+        // });
+
+
+        // var form = new FormData();
+        // form.append("constructorId", "c9bc0a5a-047b-4b54-be79-0675bd84c759");
+        // form.append("file", fileInput.files[0], "cat1.jpg");
+
+        // var settings = {
+        //     "url": "http://210.99.223.38:8081/api/constructor/image",
+        //     "method": "POST",
+        //     "timeout": 0,
+        //     "processData": false,
+        //     "mimeType": "multipart/form-data",
+        //     "contentType": false,
+        //     "data": form
+        // };
+
+        // $.ajax(settings).done(function (response) {
+        //     console.log(response);
+        // });
         
-        var formData = new FormData(this)
 
-        const login_user = $('#login_username').val();
-        const login_pass = $('#login_password').val();
 
-        // console.log(formData);
-    
-        $.ajax({
-            type: 'POST',
-            url: 'http://210.99.223.38:8081/api/login?ID=' + login_user + '&Password=' + login_pass,
-            // data: login_user + login_pass,
-            dataType: 'JSON',
-            success: function (response) {
-                console.log(response.data);
-            }
-        });
     });
-
-
 });
 
 
