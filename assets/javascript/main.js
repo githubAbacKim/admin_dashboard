@@ -219,7 +219,7 @@ $(document).ready(function () {
         // });
         
 
-        E PASTE DRI ANG CODE
+        // E PASTE DRI ANG CODE
 
     });
 });
