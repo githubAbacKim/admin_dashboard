@@ -1,217 +1,56 @@
-function check_order_accordion () {
-    if ($("#orderstatus_page").hasClass("d-block") ||
-        $("#ordermanagement_page").hasClass("d-block")) {
+// 2 PAGE ACCORDION
+function check_accordion2 (page1, page2, btn, accordion) {
+    if ($("#" + page1).hasClass("d-block") ||
+        $("#" + page2).hasClass("d-block")) {
         // do nothing
     }
-    else if ($("#orderstatus_page").hasClass("d-none") ||
-        $("#ordermanagement_page").hasClass("d-none")) {
-        $("#order_btn").addClass('collapsed');
-        $("#order_collapse").removeClass('show');
+    else if ($("#" + page1).hasClass("d-none") ||
+        $("#" + page2).hasClass("d-none")) {
+        $("#" + btn).addClass('collapsed');
+        $("#" + accordion).removeClass('show');
     }
 }
 
-function check_fair_accordion() {
-    if ($("#onlinefair_page").hasClass("d-block") ||
-        $("#fairmanagement_page").hasClass("d-block")) {
+// 4 PAGE ACCORDION
+function check_accordion4 (page1, page2, page3, page4, btn, accordion) {
+    if ($("#" + page1).hasClass("d-block") ||
+        $("#" + page2).hasClass("d-block") ||
+        $("#" + page3).hasClass("d-block") ||
+        $("#" + page4).hasClass("d-block")) {
         // do nothing
     }
-    else if ($("#onlinefair_page").hasClass("d-none") ||
-        $("#fairmanagement_page").hasClass("d-none")) {
-        $("#fair_btn").addClass('collapsed');
-        $("#fair_collapse").removeClass('show');
+    else if ($("#" + page1).hasClass("d-none") ||
+        $("#" + page2).hasClass("d-none") ||
+        $("#" + page3).hasClass("d-none") ||
+        $("#" + page4).hasClass("d-none")) {
+        $("#" + btn).addClass('collapsed');
+        $("#" + accordion).removeClass('show');
     }
 }
 
-function check_settings_accordion() {
-    if ($("#paymentrequestmanagement_page").hasClass("d-block") ||
-        $("#servicemanagement_page").hasClass("d-block") ||
-        $("#sendphotos_page").hasClass("d-block") ||
-        $("#technicianmanagement_page").hasClass("d-block")) {
-        // do nothing
-    }
-    else if ($("#paymentrequestmanagement_page").hasClass("d-none") ||
-        $("#servicemanagement_page").hasClass("d-none") ||
-        $("#sendphotos_page").hasClass("d-none") ||
-        $("#technicianmanagement_page").hasClass("d-none")) {
-        $("#settings_btn").addClass('collapsed');
-        $("#settings_collapse").removeClass('show');
+// NO BUTTON PAGE
+function check_page1(page) {
+    if ($("#" + page).hasClass("d-block")) {
+        $("#" + page).addClass("d-none").removeClass("d-block");
     }
 }
 
-function check_menu_accordion() {
-    if ($("#contract_page").hasClass("d-block") ||
-        $("#consulting_page").hasClass("d-block") ||
-        $("#cardusagehistory_page").hasClass("d-block") ||
-        $("#master_page").hasClass("d-block")) {
-        // do nothing
-    }
-    else if ($("#contract_page").hasClass("d-none") ||
-        $("#consulting_page").hasClass("d-none") ||
-        $("#cardusagehistory_page").hasClass("d-none") ||
-        $("#master_page").hasClass("d-none")) {
-        $("#menu_btn").addClass('collapsed');
-        $("#menu_collapse").removeClass('show');
-    }
-}
-
-// 1
-function check_home_page() {
-    if ($("#home_page").hasClass("d-block")) {
-        $("#home_page").addClass("d-none").removeClass("d-block");
-    }
-}
-
-// 2
-function check_profile_page() {
-    if ($("#profile_page").hasClass("d-block")) {
-        $("#profile_page").addClass("d-none").removeClass("d-block");
-    }
-}
-
-// 3
-function check_viewallcontracts_page() {
-    if ($("#viewallcontracts_page").hasClass("d-block")) {
-        $("#viewallcontracts_page").addClass("d-none").removeClass("d-block");
-        $("#viewallcontracts_btn").removeClass('active');
+// HAS BUTTON PAGE
+function check_page2(page, btn) {
+    if ($("#" + page).hasClass("d-block")) {
+        $("#" + page).addClass("d-none").removeClass("d-block");
+        $("#" + btn).removeClass('active');
     }
 } 
 
-// 4
-function check_contractwriting_page() {
-    if ($("#contractwriting_page").hasClass("d-block")) {
-        $("#contractwriting_page").addClass("d-none").removeClass("d-block");
-        $("#contractwriting_btn").removeClass('active');
-    }
-} 
-
-// 5
-function check_orderstatus_page() {
-    if ($("#orderstatus_page").hasClass("d-block")) {
-        $("#orderstatus_page").addClass("d-none").removeClass("d-block");
-        $("#orderstatus_btn").removeClass('active');
-    }
-} 
-
-// 6
-function check_ordermanagement_page() {
-    if ($("#ordermanagement_page").hasClass("d-block")) {
-        $("#ordermanagement_page").addClass("d-none").removeClass("d-block");
-        $("#ordermanagement_btn").removeClass('active');
+function check_div(div, btn, addon) {
+    if ($("#" + div).hasClass("d-flex")) {
+        $("#" + div).addClass("d-none").removeClass("d-flex");
+        $("#" + btn).removeClass("active");
+        $("#" + addon).addClass("d-none").removeClass("d-block");
     }
 }
 
-// 9
-function check_filemanagement_page() {
-    if ($("#filemanagement_page").hasClass("d-block")) {
-        $("#filemanagement_page").addClass("d-none").removeClass("d-block");
-        $("#filemanagement_btn").removeClass('active');
-    }
-}
-
-// 8
-function check_onlinefair_page() {
-    if ($("#onlinefair_page").hasClass("d-block")) {
-        $("#onlinefair_page").addClass("d-none").removeClass("d-block");
-        $("#onlinefair_btn").removeClass('active');
-    }
-}
-
-// 9
-function check_fairmanagement_page() {
-    if ($("#fairmanagement_page").hasClass("d-block")) {
-        $("#fairmanagement_page").addClass("d-none").removeClass("d-block");
-        $("#fairmanagement_btn").removeClass('active');
-    }
-}
-
-// 10
-function check_paymentrequestmanagement_page() {
-    if ($("#paymentrequestmanagement_page").hasClass("d-block")) {
-        $("#paymentrequestmanagement_page").addClass("d-none").removeClass("d-block");
-        $("#paymentrequestmanagement_btn").removeClass('active');
-    }
-}
-
-// 11
-function check_servicemanagement_page() {
-    if ($("#servicemanagement_page").hasClass("d-block")) {
-        $("#servicemanagement_page").addClass("d-none").removeClass("d-block");
-        $("#servicemanagement_btn").removeClass('active');
-    }
-}
-
-// 12
-function check_sendphotos_page() {
-    if ($("#sendphotos_page").hasClass("d-block")) {
-        $("#sendphotos_page").addClass("d-none").removeClass("d-block");
-        $("#sendphotos_btn").removeClass('active');
-    }
-}
-
-// 13
-function check_technicianmanagement_page() {
-    if ($("#technicianmanagement_page").hasClass("d-block")) {
-        $("#technicianmanagement_page").addClass("d-none").removeClass("d-block");
-        $("#technicianmanagement_btn").removeClass('active');
-    }
-}
-
-// 14
-function check_contract_page() {
-    if ($("#contract_page").hasClass("d-block")) {
-        $("#contract_page").addClass("d-none").removeClass("d-block");
-        $("#contract_btn").removeClass('active');
-    }
-}
-
-// 15
-function check_consulting_page() {
-    if ($("#consulting_page").hasClass("d-block")) {
-        $("#consulting_page").addClass("d-none").removeClass("d-block");
-        $("#consulting_btn").removeClass('active');
-    }
-}
-
-// 16
-function check_cardusagehistory_page() {
-    if ($("#cardusagehistory_page").hasClass("d-block")) {
-        $("#cardusagehistory_page").addClass("d-none").removeClass("d-block");
-        $("#cardusagehistory_btn").removeClass('active');
-    }
-}
-
-// 17
-function check_master_page() {
-    if ($("#master_page").hasClass("d-block")) {
-        $("#master_page").addClass("d-none").removeClass("d-block");
-        $("#master_btn").removeClass('active');
-    }
-}
-
-// 18
-function check_superadmin_page() {
-    if ($("#superadmin_page").hasClass('d-block')) {
-        $('#superadmin_page').removeClass('d-block').addClass('d-none');
-    }
-}
-
-// 3.1
-function check_viewallcontracts01_div () {
-    if ($("#viewallcontracts-01_div").hasClass("d-flex")) {
-        $("#viewallcontracts-01_div").addClass("d-none").removeClass("d-flex");
-        $("#viewallcontracts-01_btn").removeClass("active");
-        $("#viewallcontracts_selectapartmentcomplex01_div").addClass("d-none").removeClass("d-block");
-    }
-}
-
-// 3.2
-function check_viewallcontracts02_div() {
-    if ($("#viewallcontracts-02_div").hasClass("d-flex")) {
-        $("#viewallcontracts-02_div").addClass("d-none").removeClass("d-flex");
-        $("#viewallcontracts-02_btn").removeClass("active");
-        $("#viewallcontracts_selectapartmentcomplex02_div").addClass("d-none").removeClass("d-block");
-    }
-}
 
 // 3.3
 function check_viewallcontracts03_div() {
@@ -221,50 +60,6 @@ function check_viewallcontracts03_div() {
     }
 }
 
-// 9.1
-function check_fairmanagement01_div() {
-    if ($("#fairmanagement-01_div").hasClass("d-flex")) {
-        $("#fairmanagement-01_div").addClass("d-none").removeClass("d-flex");
-        $("#fairmanagement-01_btn").removeClass("active"); 
-        $('#fairmanagement-01_title').addClass("d-none").removeClass("d-block");
-    }
-}
-
-// 9.2
-function check_fairmanagement02_div() {
-    if ($("#fairmanagement-02_div").hasClass("d-flex")) {
-        $("#fairmanagement-02_div").addClass("d-none").removeClass("d-flex");
-        $("#fairmanagement-02_btn").removeClass("active");
-        $('#fairmanagement-02_title').addClass("d-none").removeClass("d-block");
-    }
-}
-
-// 16.1
-function check_cardusagehistory01_div() {
-    if ($("#cardusagehistory-01_div").hasClass("d-flex")) {
-        $("#cardusagehistory-01_div").addClass("d-none").removeClass("d-flex");
-        $("#cardusagehistory-01_btn").removeClass("active");
-        $("#cardusagehistory_date01_div").addClass("d-none").removeClass("d-block");
-    }
-}
-
-// 16.2
-function check_cardusagehistory02_div() {
-    if ($("#cardusagehistory-02_div").hasClass("d-flex")) {
-        $("#cardusagehistory-02_div").addClass("d-none").removeClass("d-flex");
-        $("#cardusagehistory-02_btn").removeClass("active");
-        $("#cardusagehistory_card02_div").addClass("d-none").removeClass("d-block");
-    }
-}
-
-// 16.3
-function check_cardusagehistory03_div() {
-    if ($("#cardusagehistory-03_div").hasClass("d-flex")) {
-        $("#cardusagehistory-03_div").addClass("d-none").removeClass("d-flex");
-        $("#cardusagehistory-03_btn").removeClass("active");
-        $("#cardusagehistory_account03_div").addClass("d-none").removeClass("d-block");
-    }
-}
 
 
 // 17.1
@@ -408,3 +203,5 @@ function increment(id) {
 function decrement(id) {
     document.querySelector('[data-id="' + id + '"]').stepDown();
 }
+
+

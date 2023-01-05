@@ -2250,11 +2250,22 @@ main.min .content {
 }
 #login_main #login_page form .login_inputs {
   z-index: 2;
+  width: 460px;
   padding-top: 100px;
   padding-bottom: 60px;
   padding-left: 60px;
   padding-right: 60px;
   border-radius: 60px;
+}
+#login_main #login_page form .login_inputs #login_username {
+  width: 290px;
+}
+#login_main #login_page form .login_inputs #login_password {
+  width: 246px;
+}
+#login_main #login_page form .login_inputs #password_toggle {
+  cursor: pointer;
+  width: 44px;
 }
 #login_main #login_page form .login_button {
   z-index: 1;
@@ -2574,7 +2585,7 @@ main.min .content {
   margin-bottom: 0.5rem;
 }
 #consulting_page .counselling .counselling-right .counselling-right_bot .messagelist .mgssend .mgssend-content {
-  max-width: 48%;
+  max-width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -2600,7 +2611,7 @@ main.min .content {
   margin-bottom: 0.5rem;
 }
 #consulting_page .counselling .counselling-right .counselling-right_bot .messagelist .mgsread .mgsread-content {
-  max-width: 48%;
+  max-width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;

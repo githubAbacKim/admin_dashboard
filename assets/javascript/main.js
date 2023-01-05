@@ -66,16 +66,16 @@ $(document).ready(function () {
 });
 
 // VANILLA JS DATEPICKER
-// document.addEventListener('DOMContentLoaded', function () {
-//     const elem = document.getElementById('daterange');
-//     const daterange = new DateRangePicker(elem, {
-//         orientation: "bottom left",
-//         buttonClass: 'btn',
-//         clearBtn: true,
-//         language: 'ko',
-//         todayHighlight: true,
-//     });
-// });
+document.addEventListener('DOMContentLoaded', function () {
+    const elem = document.getElementById('daterange');
+    const daterange = new DateRangePicker(elem, {
+        orientation: "bottom left",
+        buttonClass: 'btn',
+        clearBtn: true,
+        language: 'ko',
+        todayHighlight: true,
+    });
+});
 
 /** SELECT 2 */
 $(document).ready(function () {
@@ -156,7 +156,7 @@ $(document).ready(function () {
     $('#apartmentcomplexfilter01').on('change', function () {
         viewallcontractsbyac.search(this.value).draw();
     });
-    
+
     var viewallcontractsbyar = $('#viewallcontractsbyar_table').DataTable();
     $('#apartmentcomplexfilter02').on('change', function () {
         viewallcontractsbyar.search(this.value).draw();
@@ -172,58 +172,82 @@ $(document).ready(function () {
     var second_row = $('#contractwriting_table_wrapper .row:nth-child(2)');
     second_row.prepend('<div class="hr-2 bg-dark mt-2"></div>');
     second_row.append('<div class="hr-2 bg-dark mt-3 mb-2"></div>');
-    
+
 
     $('#cardusagehistorybydate_table').DataTable();
     $('#cardusagehistorybycard_table').DataTable();
     $('#cardusagehistorybyaccount_table').DataTable();
-    
 
 });
 
+// $(document).ready(function () { 
+//     $('#login_form').on('submit', function (e) {
+//         e.preventDefault();
+//         // // console.log('clicked');
+//         const login_user = $('#login_username').val();
+//         const login_pass = $('#login_password').val();
+   
+//         var formData = $('#login_form').serialize();
+//         // console.log(login_user, login_pass);
+//         $.ajax({
+//             type: 'POST',
+//             url: 'http://210.99.223.38:8081/api/login',
+//             data: login_user + login_pass,
+//             dataType: 'JSON',
+//             success: function (response) {
+//                 console.log(response);
+//             }
+//         });
 
-$(document).ready(function () { 
 
-    $('#login_form').on('submit', function (e) {
+//     });
+// });
+
+$(function () {
+    const signinForm = document.getElementById('login_form');
+
+    signinForm.addEventListener('submit', function (e) {
         e.preventDefault();
-
-        // const login_user = $('#login_username').val();
-        // const login_pass = $('#login_password').val();
-
-        // $.ajax({
-        //     type: 'POST',
-        //     url: 'http://210.99.223.38:8081/api/login?ID=' + login_user + '&Password=' + login_pass,
-        //     dataType: 'JSON',
-        //     success: function (response) {
-        //         console.log(response.data);
-        //     }
-        // });
-
-
-        // var form = new FormData();
-        // form.append("constructorId", "c9bc0a5a-047b-4b54-be79-0675bd84c759");
-        // form.append("file", fileInput.files[0], "cat1.jpg");
-
-        // var settings = {
-        //     "url": "http://210.99.223.38:8081/api/constructor/image",
-        //     "method": "POST",
-        //     "timeout": 0,
-        //     "processData": false,
-        //     "mimeType": "multipart/form-data",
-        //     "contentType": false,
-        //     "data": form
-        // };
-
-        // $.ajax(settings).done(function (response) {
-        //     console.log(response);
-        // });
-        
-
-        // E PASTE DRI ANG CODE
-
-    });
+        var userIdval = document.getElementById('login_username').value;
+        var passwordval = document.getElementById('login_password').value;
+        fetch("http://210.99.223.38:8081/api/login", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userId: userIdval,
+                password: passwordval
+            })
+        }).then(response => response.json())
+            .then(response => {
+                console.log(response);
+                // if (response.status == "OK") {
+                //     // localStorage.setItem("loginsess", response.data);
+                //     console.log(response.data)
+                //     // document.getElementById('message').innerHTML = response.message;
+                //     // setTimeout(function () {
+                //     //     // window.location.href = 'index.html';
+                //     // }, 1000);
+                // } else {
+                //     // document.getElementById('message').innerHTML = response.message;
+                // }
+            })
+            .catch(err => console.error(err));
+    })
+    // var session = localStorage.getItem('loginsess');
+    // if (session !== null) {
+    //     // window.location.href = 'index.html';
+    // }
+    // console.log(session);
+    // var session = localStorage.getItem('loginsess');
+    // if (session !== null) {
+    //     // window.location.href = 'index.html';
+    // }
+    // console.log(session);
 });
 
+        
 
 
 

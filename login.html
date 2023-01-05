@@ -31,8 +31,8 @@
         <script src="assets/vendors/fullcalendar-scheduler-5.11.3/js/locales-all.min.js"></script>
         <script src="assets/vendors/vanillajs-datepicker-1.2.0/js/datepicker-full.min.js"></script>
         <script src="assets/vendors/vanillajs-datepicker-1.2.0/js/locales/ko.js"></script>
-        <script src="assets/vendors/easy-time-picker-bootstrap/dayjs.min.js"></script>
-        <script src="assets/vendors/easy-time-picker-bootstrap/timepicker-bs4.js"></script>
+        <!-- <script src="assets/vendors/easy-time-picker-bootstrap/dayjs.min.js"></script>
+        <script src="assets/vendors/easy-time-picker-bootstrap/timepicker-bs4.js"></script> -->
         <script src="assets/vendors/bootstrap-5.1.3/js/bootstrap.bundle.js"></script>
         <script src="assets/vendors/select2-4.1.x/js/select2.min.js"></script>
         <script src="assets/vendors/filepond-4.30.4/js/filepond-plugin-image-preview.js"></script>
@@ -42,6 +42,7 @@
         <script src="assets/vendors/filepond-4.30.4/js/filepond.jquery.js"></script>
         <script src="assets/vendors/toastui-calendar-2.1.3/toastui-calendar.ie11.min.js"></script>
         <script src="assets/vendors/toastui-calendar-2.1.3/toastui-calendar.min.js"></script>
+        <script src="assets/vendors/justValidate-4.0.1/just-validate.production.min.js"></script>
 
 
 
@@ -61,26 +62,36 @@
         </header>
 
         <main id="login_main" class="d-flex justify-content-center align-items-center">
-            <section id="login_page">
+            <section id="login_page" class="">
                 <form action="" class="" id="login_form">
                     <div class="login_avatar d-flex justify-content-center align-items-center bg-darkprimary text-white rounded-circle shadow">
                         <i class="fa-light fa-circle-user"></i>
                     </div>
                     <div class="login_inputs bg-white shadow">
-                        <div class="input-group mb-3 bg-light">
-                            <span class="input-group-text">
-                                <i class="fa-solid fa-user"></i>
-                            </span>
-                            <input type="text" class="form-control bg-light" id="login_username" placeholder="ID" aria-label="Username">
+                        <div class="mb-3">
+                            <div class="input-group rounded-0">
+                                <span class="input-group-text rounded-start" id="login_username_prepend">
+                                    <i class="fa-solid fa-user"></i>
+                                </span>
+                                <input type="text" class="form-control rounded-end" id="login_username" placeholder="ID" aria-describedby="login_username_prepend" required>
+                            </div>
                         </div>
 
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">
-                                <i class="fa-solid fa-lock"></i>
-                            </span>
-                            <input type="password" class="form-control bg-light" id="login_password" placeholder="Password" aria-label="Password">
+                        <div class="mb-3">
+                            <div class="input-group rounded-0">
+                                <span class="input-group-text rounded-start" id="login_password_prepend">
+                                    <i class="fa-solid fa-lock"></i>
+                                </span>
+                                <input type="text" class="form-control" id="login_password" placeholder="Password" aria-label="Password" required>
+                                <span class="input-group-text rounded-end" id="password_toggle">
+                                    <i id="password_icon" class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
                         </div>
 
+                        <div id="message">
+
+                        </div>
                         <div>
                             <p class="text-end text-muted"> 아이디 / 비밀번호찾기 </p>
                         </div>

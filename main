@@ -1,309 +1,45 @@
-<h2>카드사용 내역</h2>
-          <div class="navigation my-4 mb-2">
-            <div class="d-flex justify-content-center justify-content-lg-between align-items-center flex-row flex-wrap">
-              <nav class="nav-list nav">
-                <a id="cardusage-01_btn" href="#viewallcardusagebyapartmentcomplex" class="nav-link"> 날짜별로 보기 </a>
-                <a id="cardusage-02_btn" href="#viewallcardusagebyaccountsreceivable" class="nav-link" > 카드별로 보기 </a>
-                <a id="cardusage-03_btn" href="#viewallcardusagebyperiod" class="nav-link" > 계정별로 보기 </a>
-              </nav>
+$(function () {
+    const signinForm = document.getElementById('login_form');
 
-              <div id="cardusageapartmentcomplexfilterselect01" class="d-none col-8 col-lg-4 col-xl-3 col-xxl-2">
-                <select id="cardusageapartmentcomplexfilter01" class="form-select">
-                  <option value="">전체</option>
-                  <option value="동작협성휴포레">동작협성휴포레</option>
-                  <option value="아파트 단지 이름">아파트 단지 이름</option>
-                </select>
-              </div>
+    signinForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var userIdval = document.getElementById('login_username').value;
+        var passwordval = document.getElementById('login_password').value;
+        fetch("http://210.99.223.38:8081/api/login", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userId: userIdval,
+                password: passwordval
+            })
+        }).then(response => response.json())
+            .then(response => {
+                console.log(response);
+                if (response.status == "OK") {
+                    // localStorage.setItem("loginsess", response.data);
+                    console.log(response.data)
+                    // document.getElementById('message').innerHTML = response.message;
+                    // setTimeout(function () {
+                    //     // window.location.href = 'index.html';
+                    // }, 1000);
+                } else {
+                    // document.getElementById('message').innerHTML = response.message;
+                }
+            })
+            .catch(err => console.error(err));
+    })
+    // var session = localStorage.getItem('loginsess');
+    // if (session !== null) {
+    //     // window.location.href = 'index.html';
+    // }
+    // console.log(session);
+    // var session = localStorage.getItem('loginsess');
+    // if (session !== null) {
+    //     // window.location.href = 'index.html';
+    // }
+    // console.log(session);
+});
 
-              <div id="cardusageapartmentcomplexfilterselect02" class="d-none col-8 col-lg-4 col-xl-3 col-xxl-2 ">
-                <select id="cardusageapartmentcomplexfilter02" class="form-select">
-                  <option value="">전체</option>
-                  <option value="동작협성휴포레">동작협성휴포레</option>
-                  <option value="아파트 단지 이름">아파트 단지 이름</option>
-                </select>
-              </div>
-            </div>
-          </div>
 
-          <div id="cardusage-01_div" class="d-none card border-0">
-            <!-- <div class="col-sm-12 col-lg-12 col-xl-4 apartmentcomplexfilter">
-              <div class="row g-0 d-flex justify-content-center justify-content-lg-center justify-content-xl-end align-items-center">
-                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
-                <div class="col-10 col-lg-6 col-xl-10">
-                    <select id="apartmentcomplexfilter" class="form-control form-control-sm my-1">
-                      <option value="">전체</option>
-                      <option value="">동작협성휴포레</option>
-                      <option value="">아파트 단지 이름</option>
-                      <option value="">아파트 단지 이름</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
-              </div>
-            </div> -->
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table">
-                  <thead class="text-center bg-primary">
-                      <tr class="text-white">
-                        <th> 카드번호(뒤 4자리) </th>
-                        <th> 날짜 </th>
-                        <th>시간 </th>
-                        <th> 금액 </th>
-                        <th> 상호 </th>
-                        <th> 게정(관리자가 직접 입력) </th>
-                      </tr>
-                  </thead>
-                  <tbody class="text-dark fs-14px">
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 해장국 </td>
-                      <td> 식대 </td>
-                    </tr>
-                   
-                    
-                  </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="cardusage-02_div" class="d-none card border-0">
-            <!-- <div class="col-sm-12 col-lg-12 col-xl-4 apartmentcomplexfilter">
-              <div class="row g-0 d-flex justify-content-center justify-content-lg-center justify-content-xl-end align-items-center">
-                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
-                <div class="col-10 col-lg-6 col-xl-10">
-                    <select id="apartmentcomplexfilter" class="form-control form-control-sm my-1">
-                      <option value="">전체</option>
-                      <option value="">동작협성휴포레</option>
-                      <option value="">아파트 단지 이름</option>
-                      <option value="">아파트 단지 이름</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-xl-1 d-block d-lg-none"></div>
-              </div>
-            </div> -->
-
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table">
-                <thead class="text-center bg-primary">
-                  <tr class="text-white">
-                    <th> 카드번호(뒤 4자리) </th>
-                    <th> 날짜 </th>
-                    <th>시간 </th>
-                    <th> 금액 </th>
-                    <th> 상호 </th>
-                    <th> 게정(관리자가 직접 입력) </th>
-                  </tr>
-              </thead>
-              <tbody class="text-dark fs-14px">
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td>커피 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 주차장 </td>
-                      <td> 주차 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 하이패스 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 코레일 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 자제 </td>
-                      <td> 비품 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 자제 </td>
-                      <td> 비품 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 교통카드 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 주차장 </td>
-                      <td> 주차 </td>
-                    </tr>
-               
-                  </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div id="cardusage-03_div" class="d-none card border-0">
-            <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
-              <table id="" class="display table">
-                <thead class="text-center bg-primary">
-                  <tr class="text-white">
-                    <th> 카드번호(뒤 4자리) </th>
-                    <th> 날짜 </th>
-                    <th>시간 </th>
-                    <th> 금액 </th>
-                    <th> 상호 </th>
-                    <th> 게정(관리자가 직접 입력) </th>
-                  </tr>
-              </thead>
-              <tbody class="text-dark fs-14px">
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td>커피 </td>
-                      <td> 식대 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 주차장 </td>
-                      <td> 주차 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 하이패스 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 코레일 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 자제 </td>
-                      <td> 비품 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 자제 </td>
-                      <td> 비품 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 교통카드 </td>
-                      <td> 경비 </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td> 5806 </td>
-                      <td> 2022/10/24 </td>
-                      <td> 20:15 </td>
-                      <td> 20,000 </td>
-                      <td> 주차장 </td>
-                      <td> 주차 </td>
-                    </tr>
-               
-                  </tbody>
-              </table>
-            </div>
-          
-          </div>
