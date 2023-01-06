@@ -51,7 +51,6 @@ function check_div(div, btn, addon) {
     }
 }
 
-
 // 3.3
 function check_viewallcontracts03_div() {
     if ($("#viewallcontracts-03_div").hasClass("d-flex")) {
@@ -59,8 +58,6 @@ function check_viewallcontracts03_div() {
         $("#viewallcontracts-03_btn").removeClass("active");
     }
 }
-
-
 
 // 17.1
 function check_master01div() {
@@ -136,7 +133,6 @@ function setDefault_fairmanagement() {
     }
 }
 
-
 // 16
 function setDefault_cardusagehistory() {
     if ($('#cardusagehistory-01_div').hasClass('d-none')) {
@@ -206,70 +202,6 @@ function decrement(id) {
 
 
 
-function check_errLogin() {
-    if (($('#errLogin').hasClass('d-none'))){
-        $('#errLogin').removeClass('d-none').addClass('d-block');
-    } 
-    else if (($('#errLogin').hasClass('d-block'))) {
-        // no nothing
-    }
+function getData(){
+
 }
-
-function Login_MessageResult(mgs) {
-    if (mgs === 'no user') {
-        return 'Username does not exists.';
-    }
-    else if (mgs === 'password is not matched') {
-        return 'Password is incorrect.';
-    } 
-    else if (mgs === 'login success') {
-        return 'Login successfully.';
-    };
-}
-
-function Login_Validate (username, password) {
-    if((username === '' || username === null) && (password === '' || password === null)) {
-        return 'All Fields is required.';
-    } 
-    else if (username === '' || username === null) {
-        return 'Username is required.';
-    } 
-    else if (password === '' || password === null) {
-        return 'Password is required.';
-    } 
-    else if (username != '' && password != '') {
-        // result['message'] <-- ['message'] = column name
-        var mgs = ((Login_GetAllData(username, password))['message']);
-        return Login_MessageResult(mgs);
-    } 
-}
-
-function Login_GetAllData (usernameVal, passwordVal) {
-    var result = null;
-    $.ajax({
-        method: 'POST',
-        url: 'http://210.99.223.38:8081/api/login',
-        dataType: 'JSON',
-        contentType: "application/json",
-        async: false,
-        data: JSON.stringify({
-            username: usernameVal,
-            password: passwordVal
-        }),
-        success: function (responses) {
-            $.each(responses, function (i, response) {
-                result = responses;
-            })
-        }
-    });
-    return result;
-}
-
-
-function Login_Session() {
-    var session = localStorage.getItem('loginsess');
-    if (session === null) {
-        window.location.href = 'login.html';
-    }
-}
-

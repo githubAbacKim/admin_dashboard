@@ -67,20 +67,18 @@ $(document).ready(function () {
 
 // VANILLA JS DATEPICKER
 // $(document).ready(function () {
-// document.addEventListener('DOMContentLoaded', function () {
-//     // const elem = $('#daterange');
+document.addEventListener('DOMContentLoaded', function () {
+    // const elem = $('#daterange');
     
-//     const elem = document.getElementById('daterange');
-//     const daterange = new DateRangePicker(elem, {
-//         orientation: "bottom left",
-//         buttonClass: 'btn',
-//         clearBtn: true,
-//         language: 'ko',
-//         todayHighlight: true,
-//     });
-
-//     consolegfv.catch (err => { const mute = err })
-// });
+    const elem = document.getElementById('daterange');
+    const daterange = new DateRangePicker(elem, {
+        orientation: "bottom left",
+        buttonClass: 'btn',
+        clearBtn: true,
+        language: 'ko',
+        todayHighlight: true,
+    });
+});
 
 /** SELECT 2 */
 $(document).ready(function () {
@@ -186,36 +184,3 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-    $('#logout_btn').on('click', function () {
-        var session = localStorage.getItem('loginsess');
-        localStorage.clear();
-        login_session();
-    });
-});
-
-
-$(function () {
-    const loginForm = $('#login_form');
-
-    loginForm.on('submit', function (e) {
-        e.preventDefault();
-        var usernameVal = $('#login_username').val();
-        var passwordVal = $('#login_password').val();
-
-        // check function Login_Validate -> Login_GetAllData -> Login_MessageResult -> Login_Validate
-        const mgs = Login_Validate(usernameVal, passwordVal);
-
-        // from return mgs === 
-        if (mgs != 'Login successfully.') {
-            check_errLogin();
-            $('#errLogin').text(mgs);
-        } 
-        else if (mgs === 'Login successfully.') {
-            // var rawdata = authLoginForSession(usernameVal, passwordVal);
-            // const constructorId = rawdata['constructorId'];
-            // console.log(constructorId);
-            // $('#errLogin').text('successfull login');
-        }
-    });
-});
