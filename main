@@ -43,3 +43,30 @@ $(function () {
 });
 
 
+
+
+
+
+
+
+
+if (response.status == "OK") {
+
+    if (response.message === 'no user') {
+        mgs = 'Username does not exists.';
+        // document.getElementById('errLogin').innerHTML = err;
+    }
+    else if (response.message === 'password is not matched') {
+        mgs = 'Password is incorrect.';
+        // document.getElementById('errLogin').innerHTML = err;
+    }
+    else if (response.message === 'login success') {
+        mgs = 'Login successfully.';
+        // document.getElementById('errLogin').innerHTML = err;
+        // localStorage.setItem('LoginSession', JSON.stringify(response.data));
+    };
+} else {
+    // return err = response.message;
+}
+
+

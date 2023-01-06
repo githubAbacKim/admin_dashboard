@@ -204,4 +204,53 @@ function decrement(id) {
     document.querySelector('[data-id="' + id + '"]').stepDown();
 }
 
+function check_errLogin() {
+    if (($('#errLogin').hasClass('d-none'))){
+        $('#errLogin').removeClass('d-none').addClass('d-block');
+    } else if (($('#errLogin').hasClass('d-block'))) {
+        // no nothing
+    }
+}
 
+function login_session() {
+    var session = localStorage.getItem('loginsess');
+    if (session === null) {
+        window.location.href = 'login.html';
+    }
+}
+
+// VALIDATE LOGIN
+function validateLogin(username, password) {
+    if((username === '' || username === null) && (password === '' || password === null)) {
+        return 'All Fields is required.';
+    } else if (username === '' || username === null) {
+        return 'Username is required.';
+    } else if (password === '' || password === null) {
+        return 'Password is required.';
+    } else if (username != '' && password != '') {
+        return authLogin(username, password);
+    } 
+}
+
+function authLogin (usernameVal, passwordVal) {
+    var mgs = null;
+    
+    fetch("http://210.99.223.38:8081/api/login", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: usernameVal,
+            password: passwordVal
+        })
+    }).then(response => response.json())
+        .then(response => {
+           mgs = response.message;
+        })
+        .catch(err => console.error(err));
+    
+
+        console.log(mgs);
+    // return mgs;
+}

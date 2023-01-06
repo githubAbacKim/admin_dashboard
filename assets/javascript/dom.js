@@ -1,4 +1,3 @@
-
 /** PASSWORD TOGGLE */
 $(function () {
     var input = $('#login_password');
@@ -15,9 +14,6 @@ $(function () {
         }
     })
 });
-
-
-
 
 /** TEXTAREA AUTO CHANGE HEIGHT **/
 $(function () {

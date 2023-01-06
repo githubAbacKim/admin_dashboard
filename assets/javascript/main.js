@@ -66,16 +66,21 @@ $(document).ready(function () {
 });
 
 // VANILLA JS DATEPICKER
-document.addEventListener('DOMContentLoaded', function () {
-    const elem = document.getElementById('daterange');
-    const daterange = new DateRangePicker(elem, {
-        orientation: "bottom left",
-        buttonClass: 'btn',
-        clearBtn: true,
-        language: 'ko',
-        todayHighlight: true,
-    });
-});
+// $(document).ready(function () {
+// document.addEventListener('DOMContentLoaded', function () {
+//     // const elem = $('#daterange');
+    
+//     const elem = document.getElementById('daterange');
+//     const daterange = new DateRangePicker(elem, {
+//         orientation: "bottom left",
+//         buttonClass: 'btn',
+//         clearBtn: true,
+//         language: 'ko',
+//         todayHighlight: true,
+//     });
+
+//     consolegfv.catch (err => { const mute = err })
+// });
 
 /** SELECT 2 */
 $(document).ready(function () {
@@ -180,91 +185,28 @@ $(document).ready(function () {
 
 });
 
-// $(document).ready(function () { 
-//     $('#login_form').on('submit', function (e) {
-//         e.preventDefault();
-//         // // console.log('clicked');
-//         const login_user = $('#login_username').val();
-//         const login_pass = $('#login_password').val();
-   
-//         var formData = $('#login_form').serialize();
-//         // console.log(login_user, login_pass);
-//         $.ajax({
-//             type: 'POST',
-//             url: 'http://210.99.223.38:8081/api/login',
-//             data: login_user + login_pass,
-//             dataType: 'JSON',
-//             success: function (response) {
-//                 console.log(response);
-//             }
-//         });
 
-
-//     });
-// });
-
-$(function () {
-    const signinForm = document.getElementById('login_form');
-
-    signinForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var userIdval = document.getElementById('login_username').value;
-        var passwordval = document.getElementById('login_password').value;
-        fetch("http://210.99.223.38:8081/api/login", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                userId: userIdval,
-                password: passwordval
-            })
-        }).then(response => response.json())
-            .then(response => {
-                console.log(response);
-                // if (response.status == "OK") {
-                //     // localStorage.setItem("loginsess", response.data);
-                //     console.log(response.data)
-                //     // document.getElementById('message').innerHTML = response.message;
-                //     // setTimeout(function () {
-                //     //     // window.location.href = 'index.html';
-                //     // }, 1000);
-                // } else {
-                //     // document.getElementById('message').innerHTML = response.message;
-                // }
-            })
-            .catch(err => console.error(err));
-    })
-    // var session = localStorage.getItem('loginsess');
-    // if (session !== null) {
-    //     // window.location.href = 'index.html';
-    // }
-    // console.log(session);
-    // var session = localStorage.getItem('loginsess');
-    // if (session !== null) {
-    //     // window.location.href = 'index.html';
-    // }
-    // console.log(session);
+$(document).ready(function () {
+    $('#logout_btn').on('click', function () {
+        var session = localStorage.getItem('loginsess');
+        localStorage.clear();
+        login_session();
+    });
 });
 
-        
 
+$(function () {
+    const loginForm = $('#login_form');
+    loginForm.on('submit', function (e) {
+        e.preventDefault();
+        var usernameVal = $('#login_username').val();
+        var passwordVal = $('#login_password').val();
 
+        const err = validateLogin(usernameVal, passwordVal);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        if (err) {
+            check_errLogin();
+            $('#errLogin').text(err);
+        } 
+    });
+});
