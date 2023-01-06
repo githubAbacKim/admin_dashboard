@@ -207,7 +207,8 @@ function decrement(id) {
 function check_errLogin() {
     if (($('#errLogin').hasClass('d-none'))){
         $('#errLogin').removeClass('d-none').addClass('d-block');
-    } else if (($('#errLogin').hasClass('d-block'))) {
+    } 
+    else if (($('#errLogin').hasClass('d-block'))) {
         // no nothing
     }
 }
@@ -219,38 +220,52 @@ function login_session() {
     }
 }
 
+function loginmgs(errmgs) {
+    if (errmgs === 'no user') {
+        return 'Username does not exists.';
+    }
+    else if (errmgs === 'password is not matched') {
+        return 'Password is incorrect.';
+    } 
+    else if (errmgs === 'login success') {
+        return 'Login successfully.';
+    };
+}
+
 // VALIDATE LOGIN
 function validateLogin(username, password) {
     if((username === '' || username === null) && (password === '' || password === null)) {
         return 'All Fields is required.';
-    } else if (username === '' || username === null) {
+    } 
+    else if (username === '' || username === null) {
         return 'Username is required.';
-    } else if (password === '' || password === null) {
+    } 
+    else if (password === '' || password === null) {
         return 'Password is required.';
-    } else if (username != '' && password != '') {
+    } 
+    else if (username != '' && password != '') {
+        // console.log(authLogin(username, password));
         return authLogin(username, password);
     } 
 }
 
+
 function authLogin (usernameVal, passwordVal) {
     var mgs = null;
-    
-    fetch("http://210.99.223.38:8081/api/login", {
+    $.ajax({
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
+        url: 'http://210.99.223.38:8081/api/login',
+        dataType: 'JSON',
+        contentType: "application/json",
+        async: false,
+        data: JSON.stringify({
             username: usernameVal,
             password: passwordVal
-        })
-    }).then(response => response.json())
-        .then(response => {
-           mgs = response.message;
-        })
-        .catch(err => console.error(err));
-    
-
-        console.log(mgs);
-    // return mgs;
+        }),
+        success: function (response) {
+            mgs = loginmgs(response.message);
+        }
+    });
+    return mgs;
 }
+

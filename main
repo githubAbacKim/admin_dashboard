@@ -44,29 +44,54 @@ $(function () {
 
 
 
+fetch("http://210.99.223.38:8081/api/login", {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        username: usernameVal,
+        password: passwordVal
+    })
+}).then(response => response.json())
+    .then(response => {
+        mgs = response.message;
+        // console.log(mgs);
+        // return mgs = response.message;
+    })
+    .catch(err => console.error(err));
+
+
+// console.log(mgs);
+return mgs = response.message;
 
 
 
 
 
-
-if (response.status == "OK") {
-
-    if (response.message === 'no user') {
-        mgs = 'Username does not exists.';
-        // document.getElementById('errLogin').innerHTML = err;
+JSON.stringify(usernameVal);
+JSON.stringify(passwordVal);
+// var formData = $('#LoginForm').serialize();
+$.ajax({
+    method: 'POST',
+    url: 'http://210.99.223.38:8081/api/login',
+    data: {
+        username: usernameVal,
+        password: passwordVal
+    },
+    dataType: 'JSON',
+    success: function (feedback) {
+        mgs = feedback.message;
+        console.log(mgs);
     }
-    else if (response.message === 'password is not matched') {
-        mgs = 'Password is incorrect.';
-        // document.getElementById('errLogin').innerHTML = err;
-    }
-    else if (response.message === 'login success') {
-        mgs = 'Login successfully.';
-        // document.getElementById('errLogin').innerHTML = err;
-        // localStorage.setItem('LoginSession', JSON.stringify(response.data));
-    };
-} else {
-    // return err = response.message;
-}
+
+});
+
+
+
+
+
+
+
 
 

@@ -197,16 +197,21 @@ $(document).ready(function () {
 
 $(function () {
     const loginForm = $('#login_form');
+
     loginForm.on('submit', function (e) {
         e.preventDefault();
         var usernameVal = $('#login_username').val();
         var passwordVal = $('#login_password').val();
 
-        const err = validateLogin(usernameVal, passwordVal);
+        const mgs = validateLogin(usernameVal, passwordVal);
 
-        if (err) {
+        if (mgs != 'Login successfully.' ) {
             check_errLogin();
-            $('#errLogin').text(err);
-        } 
+            $('#errLogin').text(mgs);
+        } else {
+            // console.log('successfull login')
+            check_errLogin();
+            $('#errLogin').text('successfull login');
+        }
     });
 });
