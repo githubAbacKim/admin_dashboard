@@ -204,6 +204,8 @@ function decrement(id) {
     document.querySelector('[data-id="' + id + '"]').stepDown();
 }
 
+
+
 function check_errLogin() {
     if (($('#errLogin').hasClass('d-none'))){
         $('#errLogin').removeClass('d-none').addClass('d-block');
@@ -213,14 +215,7 @@ function check_errLogin() {
     }
 }
 
-function login_session() {
-    var session = localStorage.getItem('loginsess');
-    if (session === null) {
-        window.location.href = 'login.html';
-    }
-}
-
-function loginmgs(mgs) {
+function Login_MessageResult(mgs) {
     if (mgs === 'no user') {
         return 'Username does not exists.';
     }
@@ -232,8 +227,7 @@ function loginmgs(mgs) {
     };
 }
 
-// VALIDATE LOGIN
-function validateLogin(username, password) {
+function Login_Validate (username, password) {
     if((username === '' || username === null) && (password === '' || password === null)) {
         return 'All Fields is required.';
     } 
@@ -244,13 +238,14 @@ function validateLogin(username, password) {
         return 'Password is required.';
     } 
     else if (username != '' && password != '') {
-        // console.log(authLogin(username, password));
-        return authLoginGetMsg(username, password);
+        // result['message'] <-- ['message'] = column name
+        var mgs = ((Login_GetAllData(username, password))['message']);
+        return Login_MessageResult(mgs);
     } 
 }
 
-function authLoginGetMsg (usernameVal, passwordVal) {
-    var mgs = null;
+function Login_GetAllData (usernameVal, passwordVal) {
+    var result = null;
     $.ajax({
         method: 'POST',
         url: 'http://210.99.223.38:8081/api/login',
@@ -261,48 +256,20 @@ function authLoginGetMsg (usernameVal, passwordVal) {
             username: usernameVal,
             password: passwordVal
         }),
-        success: function (response) {
-            mgs = loginmgs(response.message);
+        success: function (responses) {
+            $.each(responses, function (i, response) {
+                result = responses;
+            })
         }
     });
-    return mgs;
+    return result;
 }
 
-function authLoginGetMsg(usernameVal, passwordVal) {
-    var mgs = null;
-    $.ajax({
-        method: 'POST',
-        url: 'http://210.99.223.38:8081/api/login',
-        dataType: 'JSON',
-        contentType: "application/json",
-        async: false,
-        data: JSON.stringify({
-            username: usernameVal,
-            password: passwordVal
-        }),
-        success: function (response) {
-            mgs = loginmgs(response.message);
-        }
-    });
-    return mgs;
-}
 
-function authLoginForSession(usernameVal, passwordVal) {
-    var mgs = null;
-    $.ajax({
-        method: 'POST',
-        url: 'http://210.99.223.38:8081/api/login',
-        dataType: 'JSON',
-        contentType: "application/json",
-        async: false,
-        data: JSON.stringify({
-            username: usernameVal,
-            password: passwordVal
-        }),
-        success: function (response) {
-            mgs = response.data;
-        }
-    });
-    return mgs;
+function Login_Session() {
+    var session = localStorage.getItem('loginsess');
+    if (session === null) {
+        window.location.href = 'login.html';
+    }
 }
 

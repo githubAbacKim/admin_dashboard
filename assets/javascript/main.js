@@ -203,16 +203,18 @@ $(function () {
         var usernameVal = $('#login_username').val();
         var passwordVal = $('#login_password').val();
 
-        const mgs = validateLogin(usernameVal, passwordVal);
+        // check function Login_Validate -> Login_GetAllData -> Login_MessageResult -> Login_Validate
+        const mgs = Login_Validate(usernameVal, passwordVal);
 
-        if (mgs != 'Login successfully.' ) {
+        // from return mgs === 
+        if (mgs != 'Login successfully.') {
             check_errLogin();
             $('#errLogin').text(mgs);
-        } else {
-            // console.log('successfull login')
-            check_errLogin();
-            console.log(authLoginForSession(usernameVal, passwordVal));
-
+        } 
+        else if (mgs === 'Login successfully.') {
+            // var rawdata = authLoginForSession(usernameVal, passwordVal);
+            // const constructorId = rawdata['constructorId'];
+            // console.log(constructorId);
             // $('#errLogin').text('successfull login');
         }
     });
