@@ -211,7 +211,9 @@ $(function () {
         } else {
             // console.log('successfull login')
             check_errLogin();
-            $('#errLogin').text('successfull login');
+            console.log(authLoginForSession(usernameVal, passwordVal));
+
+            // $('#errLogin').text('successfull login');
         }
     });
 });

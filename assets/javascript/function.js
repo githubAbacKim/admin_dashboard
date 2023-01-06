@@ -220,14 +220,14 @@ function login_session() {
     }
 }
 
-function loginmgs(errmgs) {
-    if (errmgs === 'no user') {
+function loginmgs(mgs) {
+    if (mgs === 'no user') {
         return 'Username does not exists.';
     }
-    else if (errmgs === 'password is not matched') {
+    else if (mgs === 'password is not matched') {
         return 'Password is incorrect.';
     } 
-    else if (errmgs === 'login success') {
+    else if (mgs === 'login success') {
         return 'Login successfully.';
     };
 }
@@ -245,12 +245,11 @@ function validateLogin(username, password) {
     } 
     else if (username != '' && password != '') {
         // console.log(authLogin(username, password));
-        return authLogin(username, password);
+        return authLoginGetMsg(username, password);
     } 
 }
 
-
-function authLogin (usernameVal, passwordVal) {
+function authLoginGetMsg (usernameVal, passwordVal) {
     var mgs = null;
     $.ajax({
         method: 'POST',
@@ -264,6 +263,44 @@ function authLogin (usernameVal, passwordVal) {
         }),
         success: function (response) {
             mgs = loginmgs(response.message);
+        }
+    });
+    return mgs;
+}
+
+function authLoginGetMsg(usernameVal, passwordVal) {
+    var mgs = null;
+    $.ajax({
+        method: 'POST',
+        url: 'http://210.99.223.38:8081/api/login',
+        dataType: 'JSON',
+        contentType: "application/json",
+        async: false,
+        data: JSON.stringify({
+            username: usernameVal,
+            password: passwordVal
+        }),
+        success: function (response) {
+            mgs = loginmgs(response.message);
+        }
+    });
+    return mgs;
+}
+
+function authLoginForSession(usernameVal, passwordVal) {
+    var mgs = null;
+    $.ajax({
+        method: 'POST',
+        url: 'http://210.99.223.38:8081/api/login',
+        dataType: 'JSON',
+        contentType: "application/json",
+        async: false,
+        data: JSON.stringify({
+            username: usernameVal,
+            password: passwordVal
+        }),
+        success: function (response) {
+            mgs = response.data;
         }
     });
     return mgs;
