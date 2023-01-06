@@ -157,6 +157,10 @@ $(function () {
         if ($("#profile_page").hasClass("d-none")) {
             $("#profile_page").addClass("d-block").removeClass("d-none");
 
+            // getConstructorData();
+            var url = 'http://210.99.223.38:8081/api/exhibition/category';
+            getData(url)
+
             check_page1('home_page');
             // check_page1('profile_page');
             check_page2('viewallcontracts_page', 'viewallcontracts_btn');
@@ -374,6 +378,10 @@ $(function () {
         if ($("#fairmanagement_page").hasClass("d-none")) {
             $("#fairmanagement_page").addClass("d-block").removeClass("d-none");
             $("#fairmanagement_btn").addClass('active');
+
+            // getConstructorData();
+            var url = 'http://210.99.223.38:8081/api/constructor/image';
+            getData(url)
 
             check_page1('home_page');
             check_page1('profile_page');
