@@ -1,0 +1,16 @@
+{
+  "status": "OK",
+  "message": "exhibition list",
+  "data": [
+    {
+      "id": "pLZg5LvAiG1XNxJBuDRNOsW1T9zQqecLfUILzXXj23r9c8CpVB",
+      "name": "래미안_자이_박람회",
+      "createDate": "2022-12-01",
+      "startDateTime": "2022-12-01 12:00:00",
+      "endDateTime": "2022-12-12 18:00:00",
+      "offlineStartDateTime": "2022-12-01 12:00:00",
+      "offlineEndDateTime": "2022-12-12 18:00:00",
+      "offlineOn": false
+    }
+  ]
+}

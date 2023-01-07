@@ -1,0 +1,11 @@
+{
+  "status": "OK",
+  "message": "constructor price table file info",
+  "data": {
+    "id": "096fc6f5-fcbb-45a0-8d90-9988632fad6f",
+    "name": "cat1.jpg",
+    "extension": "image/jpeg",
+    "storage": "/home/lodong/TestStorage/price-table/cat1.jpg",
+    "createAt": "2023-01-03 13:50:12"
+  }
+}

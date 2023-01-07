@@ -676,7 +676,6 @@ $(function () {
     });
 });
 
-
 // navigations with the pages
 $(function () {
     // 1.1
@@ -861,11 +860,3 @@ $(function () {
     })
 
 })
-
-
-// $(window).resize(function () {
-//     if ($(window).width() < 992) {
-//         $('#master_page > .card-main').css("{min-height: 'calc(100vh - 250px)'}");
-//     }
-// })
-

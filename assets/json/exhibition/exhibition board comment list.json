@@ -1,0 +1,376 @@
+{
+  "status": "OK",
+  "message": "exhibition comment list",
+  "data": [
+    {
+      "id": "0b651223-6961-4043-b958-cb8f0e953052",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "1f1fcc36-b262-491b-8282-288b876e3f15",
+      "sequence": "0",
+      "comment": "22",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 09:24:28"
+    },
+    {
+      "id": "ae981e88-ae54-4111-9416-5623333e77c7",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "1f1fcc36-b262-491b-8282-288b876e3f15",
+      "sequence": "1",
+      "comment": "22",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 10:20:49"
+    },
+    {
+      "id": "dcb1bcc6-5bd7-4a5c-a7f5-0cb2df5d9b3b",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "1fdcbc14-f283-478b-8ce5-08b56d237aa9",
+      "sequence": "0",
+      "comment": "4",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 18:02:39"
+    },
+    {
+      "id": "cc85de70-5f1d-41bb-a6a5-29a1a8de02eb",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "1fdcbc14-f283-478b-8ce5-08b56d237aa9",
+      "sequence": "1",
+      "comment": "4",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 10:19:56"
+    },
+    {
+      "id": "8809b718-dc21-4def-b737-2dde7799e61f",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "343dbc66-e1c1-4156-bda9-567eb4e71eae",
+      "sequence": "0",
+      "comment": "99999",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-13 16:58:38"
+    },
+    {
+      "id": "5934ffaa-6136-42e3-b376-b26c4d0a7516",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "3988a797-4b67-4918-b280-295c669f1fab",
+      "sequence": "0",
+      "comment": "ㅎㅇㅎㅇ",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-13 19:46:14"
+    },
+    {
+      "id": "db478958-c09f-487b-a35e-72335417918b",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "3988a797-4b67-4918-b280-295c669f1fab",
+      "sequence": "1",
+      "comment": "ㅇㅇㅇㅇㄹㅇㄹㅇ",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-13 19:46:19"
+    },
+    {
+      "id": "6576bc1a-8362-43f5-9c9e-d666506e773b",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "49d07864-e2b9-40d4-994e-e1695507d1f4",
+      "sequence": "0",
+      "comment": "6",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 18:12:49"
+    },
+    {
+      "id": "8c9e20aa-cf1f-4dbf-b3d6-1edb56e75a1b",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "49d07864-e2b9-40d4-994e-e1695507d1f4",
+      "sequence": "1",
+      "comment": "5",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 10:20:41"
+    },
+    {
+      "id": "c221ac2b-a783-4994-944d-0ac1b1b98b0b",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "49d07864-e2b9-40d4-994e-e1695507d1f4",
+      "sequence": "2",
+      "comment": "111",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 12:13:19"
+    },
+    {
+      "id": "941430c4-082a-4f0b-b915-ec04dcacbd0e",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "4a33050c-641e-4cde-8f0d-651079144ab6",
+      "sequence": "0",
+      "comment": "999",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-12 18:38:34"
+    },
+    {
+      "id": "b5febe2f-8b03-4816-a8c1-8a8f51d1bd41",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "4a33050c-641e-4cde-8f0d-651079144ab6",
+      "sequence": "1",
+      "comment": "9999",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-12 18:39:16"
+    },
+    {
+      "id": "5c16aa5f-eda6-4434-94e1-41a7154bbbc0",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "5c95af60-ed3b-40e6-90bb-8a01fc9954eb",
+      "sequence": "0",
+      "comment": "ㅋㅋㅋ",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-13 19:46:10"
+    },
+    {
+      "id": "a8afff8a-aed4-415b-83b5-2ee1aece80e5",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "63fa5e63-866c-4800-8aa2-49ba227ba6be",
+      "sequence": "0",
+      "comment": "ㅇㅇ",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-13 19:28:50"
+    },
+    {
+      "id": "318da38e-4e77-4843-bee8-22f5fa6926d7",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "68b8df42-7515-4e59-a6fe-4f7077b3190f",
+      "sequence": "0",
+      "comment": "33",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 09:25:40"
+    },
+    {
+      "id": "cc0754bb-901f-4075-ae1f-0279f8cc7f51",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "68b8df42-7515-4e59-a6fe-4f7077b3190f",
+      "sequence": "1",
+      "comment": "33",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 10:26:21"
+    },
+    {
+      "id": "385fa18c-d057-412a-9c38-f70500d79ac0",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "6d53ebea-f2e1-44ef-b753-e6f48c6f5b56",
+      "sequence": "0",
+      "comment": "ㅇㅇ",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-13 19:29:21"
+    },
+    {
+      "id": "aa9c0129-682f-4f90-800b-bcd55ce1d24f",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "822e291b-8451-40d4-a661-a6a5b42c187c",
+      "sequence": "0",
+      "comment": "11",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 18:26:24"
+    },
+    {
+      "id": "ec8050f8-4650-43ad-92ef-9ae9b67d2cd2",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "822e291b-8451-40d4-a661-a6a5b42c187c",
+      "sequence": "1",
+      "comment": "123",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 22:04:13"
+    },
+    {
+      "id": "7a3eac7a-7364-455a-ac2e-d934c8138330",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "83399e95-8f11-49da-9680-f12c788322b0",
+      "sequence": "0",
+      "comment": "999",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-12 18:38:37"
+    },
+    {
+      "id": "60d05326-6c4d-47ec-9d6a-c6f1536f9d45",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "90c4877f-469e-4800-a1c7-3202a8c1bd6b",
+      "sequence": "0",
+      "comment": "5",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 18:03:28"
+    },
+    {
+      "id": "40c692c0-8be8-4e32-8341-c6158d4e14c6",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "90c4877f-469e-4800-a1c7-3202a8c1bd6b",
+      "sequence": "1",
+      "comment": "4",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 10:20:05"
+    },
+    {
+      "id": "08bb1e7b-6d3a-42d7-8f6c-efc982a7ca02",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "9683783c-d2bb-4eb1-8136-ae68c7ba8cbc",
+      "sequence": "0",
+      "comment": "22",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 09:24:35"
+    },
+    {
+      "id": "d1b86080-aaad-4a6f-b3ea-cbe7bbc6d6ed",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "9683783c-d2bb-4eb1-8136-ae68c7ba8cbc",
+      "sequence": "1",
+      "comment": "22",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 10:26:09"
+    },
+    {
+      "id": "412cb747-3b33-4bcc-9790-d8b0d94da839",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "a29f31f7-2877-4ba0-86a1-f6f2b91c32c2",
+      "sequence": "0",
+      "comment": "ㅇㅇㅇㅇㅇㅇ",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-13 19:29:28"
+    },
+    {
+      "id": "d4d13885-e4f0-4ab9-ab4d-748199f3a25c",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "bc130812-40d8-455d-8c1b-3653d44b8066",
+      "sequence": "0",
+      "comment": "2",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 18:00:16"
+    },
+    {
+      "id": "965140ed-5e87-4383-9e6b-271e821b2a61",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "bc130812-40d8-455d-8c1b-3653d44b8066",
+      "sequence": "1",
+      "comment": "3344",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 09:26:32"
+    },
+    {
+      "id": "1603dd93-77d1-40ba-a45c-721a7d04605f",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "ced1489f-2d74-4cf1-92e3-5f5cabf6ebdf",
+      "sequence": "0",
+      "comment": "ㅋㅋ",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-13 19:29:06"
+    },
+    {
+      "id": "ff28c698-6eb5-47dd-8847-053ae40dd5f9",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "ec83c07c-5d87-4521-9819-895b905aa400",
+      "sequence": "0",
+      "comment": "3344",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 09:25:58"
+    },
+    {
+      "id": "16b42131-67db-4f08-bc50-ab2ce776fcd1",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "ec83c07c-5d87-4521-9819-895b905aa400",
+      "sequence": "1",
+      "comment": "3344",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 12:16:14"
+    },
+    {
+      "id": "782d2e32-4d48-4b3d-84da-7d0f6cc1fd81",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "ec83c07c-5d87-4521-9819-895b905aa400",
+      "sequence": "2",
+      "comment": "4455",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 12:16:25"
+    },
+    {
+      "id": "0429c761-2d7d-4216-be09-215ffacb114d",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "f25d4814-7616-4190-906a-9d5bb161df27",
+      "sequence": "0",
+      "comment": "1",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 17:58:40"
+    },
+    {
+      "id": "b12b41a6-eed3-4854-b6be-50729565e696",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "f25d4814-7616-4190-906a-9d5bb161df27",
+      "sequence": "1",
+      "comment": "11",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 09:14:02"
+    },
+    {
+      "id": "65a04896-00ab-4afa-bf27-71bb39ab64d5",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "f25d4814-7616-4190-906a-9d5bb161df27",
+      "sequence": "2",
+      "comment": "22",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 09:15:51"
+    },
+    {
+      "id": "fef5e16b-4f2e-46a0-bdd6-c247256817b7",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "f25d4814-7616-4190-906a-9d5bb161df27",
+      "sequence": "3",
+      "comment": "33",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-06 09:16:01"
+    },
+    {
+      "id": "1af073b6-64d4-48dc-96f6-c3cd5043d782",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "fbaf9567-f8c5-4fa1-a5e6-a7ce8a137af7",
+      "sequence": "0",
+      "comment": "3",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 18:01:28"
+    },
+    {
+      "id": "0b399e8a-2d04-4d6b-9ef3-50c3b54a01ea",
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "commentGroupId": "fbaf9567-f8c5-4fa1-a5e6-a7ce8a137af7",
+      "sequence": "1",
+      "comment": "123",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "userCustomerId": null,
+      "createAt": "2022-12-05 22:04:25"
+    }
+  ]
+}

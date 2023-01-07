@@ -1,0 +1,66 @@
+{
+  "status": "OK",
+  "message": "all constructor list in exhibition",
+  "data": [
+    {
+      "id": "9303b04e-9e3f-4bdb-bb53-a2c08b1fba51",
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+      "videoLink": "https://www.youtube.com/shorts/VMAVR86ChNU",
+      "constructorId": "c9bc0a5a-047b-4b54-be79-0675bd84c759",
+      "constructorContent": "안녕하세요3",
+      "tag": "#가전",
+      "constructorName": "ADMIN",
+      "constructorPhoneNumber": "01011111111",
+      "exhibitionCategory": {
+        "id": "934526a2-67a8-4f5b-863e-b3cd2ec554c3",
+        "exhibitionId": "5dadf6ab-aa9e-446c-b8b6-706ed7535a52",
+        "name": "가전"
+      },
+      "answer": true,
+      "pay": false
+    },
+    {
+      "id": "af609ad3-9e10-4c78-bb3c-fa8ae7d4a8fd",
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+      "videoLink": "https://www.youtube.com/shorts/VMAVR86ChNU",
+      "constructorId": "c9bc0a5a-047b-4b54-be79-0675bd84c759",
+      "constructorContent": "안녕하세요3",
+      "tag": "#브랜드가구",
+      "constructorName": "ADMIN",
+      "constructorPhoneNumber": "01011111111",
+      "exhibitionCategory": {
+        "id": "b3347e3b-ca70-4975-a890-fbcafd36229e",
+        "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+        "name": "디자인가구"
+      },
+      "answer": true,
+      "pay": true
+    },
+    {
+      "id": "RgUitTuBLVRzpOXRRgSPAYQOcWC11oBoib7bEFerj4WNK5AUJm",
+      "exhibitionId": "pLZg5LvAiG1XNxJBuDRNOsW1T9zQqecLfUILzXXj23r9c8CpVB",
+      "videoLink": "https://www.youtube.com/shorts/VMAVR86ChNU",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "constructorContent": "벌레 차단을 위한 미세 방충망",
+      "tag": "#미세망 #안전망",
+      "constructorName": null,
+      "constructorPhoneNumber": null,
+      "exhibitionCategory": null,
+      "answer": false,
+      "pay": false
+    },
+    {
+      "id": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR",
+      "exhibitionId": "pLZg5LvAiG1XNxJBuDRNOsW1T9zQqecLfUILzXXj23r9c8CpVB",
+      "videoLink": "https://www.youtube.com/shorts/-YKlCTG8g5M",
+      "constructorId": "15b9db11-b3c6-4fde-8cd1-12eb8b56841e",
+      "constructorContent": "벌레 차단을 위한 미세 방충망",
+      "tag": "#미세망 #안전망",
+      "constructorName": null,
+      "constructorPhoneNumber": null,
+      "exhibitionCategory": null,
+      "answer": false,
+      "pay": false
+    }
+  ]
+}

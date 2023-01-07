@@ -1,0 +1,17 @@
+{
+  "status": "OK",
+  "message": "login user constructor Info",
+  "data": {
+    "constructorId": "c9bc0a5a-047b-4b54-be79-0675bd84c759",
+    "name": "ADMIN",
+    "phoneNumber": "01011111111",
+    "product": [
+      "코팅",
+      "탄성코팅"
+    ],
+    "address": null,
+    "introduction": "안녕하세요3",
+    "bank": null,
+    "bankAccount": null
+  }
+}

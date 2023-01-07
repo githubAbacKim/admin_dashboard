@@ -1,0 +1,57 @@
+{
+  "status": "OK",
+  "message": "participated constructor list",
+  "data": [
+    {
+      "id": "9303b04e-9e3f-4bdb-bb53-a2c08b1fba51",
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+      "videoLink": "https://www.youtube.com/shorts/VMAVR86ChNU",
+      "constructorId": "c9bc0a5a-047b-4b54-be79-0675bd84c759",
+      "constructorContent": "안녕하세요3",
+      "tag": "#가전",
+      "constructorName": "ADMIN",
+      "constructorPhoneNumber": "01011111111",
+      "exhibitionCategory": {
+        "id": "934526a2-67a8-4f5b-863e-b3cd2ec554c3",
+        "exhibitionId": "5dadf6ab-aa9e-446c-b8b6-706ed7535a52",
+        "name": "가전"
+      },
+      "answer": true,
+      "pay": false
+    },
+    {
+      "id": "af609ad3-9e10-4c78-bb3c-fa8ae7d4a8fd",
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+      "videoLink": "https://www.youtube.com/shorts/VMAVR86ChNU",
+      "constructorId": "c9bc0a5a-047b-4b54-be79-0675bd84c759",
+      "constructorContent": "안녕하세요3",
+      "tag": "#브랜드가구",
+      "constructorName": "ADMIN",
+      "constructorPhoneNumber": "01011111111",
+      "exhibitionCategory": {
+        "id": "b3347e3b-ca70-4975-a890-fbcafd36229e",
+        "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+        "name": "디자인가구"
+      },
+      "answer": true,
+      "pay": true
+    },
+    {
+      "id": "b45ca7c6-c2a1-485f-aec6-56cf7c950631",
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+      "videoLink": "https://www.youtube.com/watch?v=dbB-mICjkQM",
+      "constructorId": "c9bc0a5a-047b-4b54-be79-0675bd84c759",
+      "constructorContent": "안녕하세요3",
+      "tag": "#음식물처리기",
+      "constructorName": "ADMIN",
+      "constructorPhoneNumber": "01011111111",
+      "exhibitionCategory": {
+        "id": "7e9ec620-6512-4d1b-b29d-2eaf906921fd",
+        "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+        "name": "음식물처리기"
+      },
+      "answer": false,
+      "pay": false
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "OK",
+  "message": "order estimate",
+  "data": {
+    "id": "0Ifv0KWG2V4sUvfhYx3aQBb9SBT3vxLFu2CDWiU0LlvMyeKuvm",
+    "name": null,
+    "phoneNumber": "",
+    "apartmentCode": "A43083603",
+    "dong": "A101",
+    "hosu": "1103",
+    "apartmentType": "84B",
+    "note": "아구아나 있어요",
+    "liveInDate": "2022-12-12",
+    "requestConstructData": "2022-12-22",
+    "constructorProductDto": {
+      "id": "kjs28Y2M4lSUSnvuKIztMEaSr5mCnq0uhWVh6X5rWDcERFfuls",
+      "name": "방충망",
+      "price": 10000
+    },
+    "status": "삭제",
+    "cashReceipt": false,
+    "confirmationLiveIn": false
+  }
+}

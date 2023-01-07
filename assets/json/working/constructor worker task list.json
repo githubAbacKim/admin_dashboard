@@ -1,0 +1,51 @@
+{
+  "status": "OK",
+  "message": "constructor worker task list",
+  "data": [
+    {
+      "id": "5cf2155e-5205-4b75-8d1f-19c931a38072",
+      "workId": "1c394145-f180-4a82-a81c-f2fd50b5b2f9",
+      "userConstructorId": "c0ae7a51-7976-4394-a7a9-c0665c1408f5",
+      "userConstructorName": "테스트1",
+      "estimateWorkDate": "2022-11-26",
+      "estimateWorkTime": "10:00:00",
+      "name": "완료"
+    },
+    {
+      "id": "4569e080-9e58-4aeb-8c54-08e9bbcb3ed4",
+      "workId": "853448ed-1609-421e-a1a3-c43a17d124e6",
+      "userConstructorId": "c0ae7a51-7976-4394-a7a9-c0665c1408f5",
+      "userConstructorName": "테스트1",
+      "estimateWorkDate": "2022-11-26",
+      "estimateWorkTime": "13:00:00",
+      "name": "상담"
+    },
+    {
+      "id": "776e1120-9df7-4586-91bf-f162d0bb0992",
+      "workId": "1c394145-f180-4a82-a81c-f2fd50b5b2f9",
+      "userConstructorId": "c0ae7a51-7976-4394-a7a9-c0665c1408f5",
+      "userConstructorName": "테스트1",
+      "estimateWorkDate": "2022-11-28",
+      "estimateWorkTime": "23:00:00",
+      "name": "상담"
+    },
+    {
+      "id": "e41c33de-8284-4af0-bb2c-74502dd561ee",
+      "workId": "1c394145-f180-4a82-a81c-f2fd50b5b2f9",
+      "userConstructorId": "c0ae7a51-7976-4394-a7a9-c0665c1408f5",
+      "userConstructorName": "테스트1",
+      "estimateWorkDate": "2022-11-29",
+      "estimateWorkTime": "19:50:00",
+      "name": "시공"
+    },
+    {
+      "id": "47455abf-3e91-4303-b924-63b98a4a97f6",
+      "workId": "432bf2ea-2b55-4c4c-a3cf-4dbe0ef7911d",
+      "userConstructorId": "c0ae7a51-7976-4394-a7a9-c0665c1408f5",
+      "userConstructorName": "테스트1",
+      "estimateWorkDate": "2022-11-30",
+      "estimateWorkTime": "16:00:00",
+      "name": "상담"
+    }
+  ]
+}

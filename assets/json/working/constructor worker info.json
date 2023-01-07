@@ -1,0 +1,14 @@
+{
+  "status": "OK",
+  "message": "constructor worker Info",
+  "data": {
+    "id": "c0ae7a51-7976-4394-a7a9-c0665c1408f5",
+    "name": "테스트1",
+    "phoneNumber": "01099997777",
+    "email": "lee@1111",
+    "ageGroup": 0,
+    "career": 10,
+    "role": null,
+    "constructorId": null
+  }
+}

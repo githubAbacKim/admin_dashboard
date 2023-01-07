@@ -1,0 +1,16 @@
+{
+  "status": "OK",
+  "message": "exhibition category list",
+  "data": [
+    {
+      "id": "7e9ec620-6512-4d1b-b29d-2eaf906921fd",
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+      "name": "음식물처리기"
+    },
+    {
+      "id": "b3347e3b-ca70-4975-a890-fbcafd36229e",
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+      "name": "디자인가구"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "OK",
+  "message": "constructor image file info",
+  "data": {
+    "id": "9b913873-d694-4678-aaca-4df3e95f4157",
+    "name": "4b684dc4-8d5d-4cf2-8469-061ff7b0d2c0-constructor-image.jpeg",
+    "extension": "image/jpeg",
+    "storage": "/home/lodong/TestStorage/constructor-image/4b684dc4-8d5d-4cf2-8469-061ff7b0d2c0-constructor-image.jpeg",
+    "createAt": "2023-01-03 13:36:07"
+  }
+}

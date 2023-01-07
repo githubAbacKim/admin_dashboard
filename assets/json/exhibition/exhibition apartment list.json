@@ -1,0 +1,18 @@
+{
+  "status": "OK",
+  "message": "exhibition apartment list",
+  "data": [
+    {
+      "id": "2bfbe203-edab-4786-914e-a7aa38fa446e",
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
+      "apartmentId": "A10023621",
+      "apartmentName": "하나맨션2차"
+    },
+    {
+      "id": "5f1c9f1e-cc06-471b-94c7-b812c91acdf6",
+      "exhibitionId": "5dadf6ab-aa9e-446c-b8b6-706ed7535a52",
+      "apartmentId": "A10023620",
+      "apartmentName": "방배 현대멤피스 2차 아파트"
+    }
+  ]
+}

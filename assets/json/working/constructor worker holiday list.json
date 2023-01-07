@@ -1,0 +1,16 @@
+{
+  "status": "OK",
+  "message": "constructor worker holiday list",
+  "data": [
+    {
+      "id": "d5kBEWS4dtlTsn3tADMgvWGBxy3bEhIUDTNng7nW9CrEbhGiff",
+      "userId": "c0ae7a51-7976-4394-a7a9-c0665c1408f5",
+      "date": "2022-11-24"
+    },
+    {
+      "id": "d5kBEWS4dtlTsn3tADMgvWGBxy3bEhIUDTNng7nW9CrEbhGif",
+      "userId": "c0ae7a51-7976-4394-a7a9-c0665c1408f5",
+      "date": "2022-11-29"
+    }
+  ]
+}
