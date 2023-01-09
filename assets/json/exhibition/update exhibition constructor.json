@@ -1,0 +1,18 @@
+{
+  "url" : "http://210.99.223.38:8081/api/exhibition/participate",
+  "method" : "POST",
+  "body" : [
+    {
+      "boardId": "b45ca7c6-c2a1-485f-aec6-56cf7c950631",
+      "isAnswer": false,
+      "isPay": false,
+      "videoLink": "https://www.youtube.com/watch?v=dbB-mICjkQM",
+      "tag": "#음식물처리기"
+    }
+  ],
+
+
+  "status": "OK",
+  "message": "update exhibition constructor",
+  "data": null
+}

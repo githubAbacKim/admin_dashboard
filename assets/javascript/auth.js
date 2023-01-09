@@ -87,11 +87,11 @@ $(function () {
 
 
     function Login_Session() {
-        var session = localStorage.getItem('LoginSession');
         if (session === null) {
             window.location.href = 'login.html';
-        } else if(session != null) {
+        } else {
             window.location.href = 'index.html';
         }
     }
+
 });

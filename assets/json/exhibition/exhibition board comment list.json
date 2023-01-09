@@ -1,4 +1,15 @@
 {
+  "url" : "http://210.99.223.38:8081/api/exhibition/participate/comment",
+  "method" : "GET",
+  "body" : [
+    {
+      "boardId": "f1GnYGRj8oczSR5gqSQ0F1jN5TSfZGYkXrqGZ9QeueME0iqImR"
+    }
+  ],
+
+
+
+
   "status": "OK",
   "message": "exhibition comment list",
   "data": [

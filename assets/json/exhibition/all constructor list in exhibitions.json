@@ -1,4 +1,14 @@
 {
+  "url" : "http://210.99.223.38:8081/api/exhibition/constructor/list",
+  "method" : "GET",
+  "body" : [
+    {
+      
+    }
+  ],
+
+
+
   "status": "OK",
   "message": "all constructor list in exhibition",
   "data": [

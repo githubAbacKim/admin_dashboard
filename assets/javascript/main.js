@@ -166,7 +166,7 @@ $(document).ready(function () {
     });
 
 
-    $('#createexposition_table').DataTable();
+    // $('#createexposition_table').DataTable();
     $('#tenantmanagement_table').DataTable();
     $('#orderstatus_table').DataTable();
     $('#subscribermanagement_table').DataTable();

@@ -1,4 +1,14 @@
 {
+  "url" : "http://210.99.223.38:8081/api/exhibition/constructor",
+  "method" : "GET",
+  "body" : [
+    {
+      "constructorId": "c9bc0a5a-047b-4b54-be79-0675bd84c759"
+    }
+  ],
+
+
+
   "status": "OK",
   "message": "constructor's exhibitions list",
   "data": [

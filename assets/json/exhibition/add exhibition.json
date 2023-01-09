@@ -1,0 +1,19 @@
+{
+  "url" : "http://210.99.223.38:8081/api/exhibition",
+  "method" : "POST",
+  "body" : [
+    {
+        "apartmentId": "A10023632",
+        "startDateTime": "2023-01-04 12:00:00",
+        "endDateTime": "2023-01-14 18:00:00",
+        "isOfflineOn": true,
+        "offlineStartDateTime": "2023-01-06 12:00:00",
+        "offlineEndDateTime": "2023-01-16 18:00:00"
+    }
+  ],
+
+
+  "status": "OK",
+  "message": "add exhibition",
+  "data": null
+}

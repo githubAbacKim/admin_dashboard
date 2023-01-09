@@ -1,0 +1,15 @@
+{
+  "url" : "http://210.99.223.38:8081/api/exhibition/category",
+  "method" : "POST",
+  "body" : [
+    {
+      "exhibitionId": "bb3bfc11-7c5b-4ffc-93a3-8c44fa7ddba1",
+      "name": "음식물처리기"
+    }
+  ],
+
+
+  "status": "OK",
+  "message": "add exhibition category",
+  "data": null
+}

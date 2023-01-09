@@ -1,0 +1,14 @@
+{
+  "url" : "http://210.99.223.38:8081/api/exhibition/participate",
+  "method" : "DEL",
+  "body" : [
+    {
+      "boardId": "bbdfc615-d9ad-4d14-9afa-5a19b81172bf"
+    }
+  ],
+
+
+  "status": "OK",
+  "message": "delete exhibition constructor",
+  "data": null
+}

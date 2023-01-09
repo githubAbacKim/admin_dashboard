@@ -1,4 +1,15 @@
 {
+  "url" : "http://210.99.223.38:8081/api/exhibition/participate",
+  "method" : "GET",
+  "body" : [
+    {
+      "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e"
+    }
+  ],
+
+
+
+
   "status": "OK",
   "message": "participated constructor list",
   "data": [

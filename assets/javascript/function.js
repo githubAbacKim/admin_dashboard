@@ -85,7 +85,7 @@ function check_master03div() {
     }
 }
 
-// 1
+// // 1
 function setDefault_viewallcontracts() {
     if ($('#viewallcontracts-01_div').hasClass('d-none')) {
         $('#viewallcontracts-01_btn').addClass('active');
@@ -198,73 +198,4 @@ function increment(id) {
 
 function decrement(id) {
     document.querySelector('[data-id="' + id + '"]').stepDown();
-}
-
-
-function getConstructorData(){
-    var constructorId = localStorage.getItem('LoginSession');
-    // console.log(constructorId);
-
-
-    $.ajax({
-        method: 'GET',
-        url: 'http://210.99.223.38:8081/api/exhibition/constructor/list',
-        dataType: 'JSON',
-        contentType: "application/json",
-        async: false,
-        // data: JSON.stringify({
-        //     // constructorId: constructorId
-        //     constructorId: "c9bc0a5a-047b-4b54-be79-0675bd84c759"
-        // }),
-        success: function (responses) {
-            $.each(responses, function (i, response) {
-                var result = responses;
-                // console.log(result);
-            })
-        }
-    });
-
-
-    // $.ajax({
-    //     method: 'GET',
-    //     url: 'http://210.99.223.38:8081/api/exhibition/participate',
-    //     dataType: 'JSON',
-    //     contentType: "application/json",
-    //     async: false,
-    //     data: JSON.stringify({
-    //         "exhibitionId": "731d2b72-b942-4db1-a0ad-bbb6ea95d38e",
-    //     }),
-    //     success: function (responses) {
-    //         $.each(responses, function (i, response) {
-    //             var result = responses;
-    //             console.log(result);
-    //         })
-    //     }
-    // });
-}
-
-function getData(url) {
-    var res = null;
-    var constructorId = localStorage.getItem('LoginSession');
-    $.ajax({
-        method: 'GET',
-        url: url,
-        dataType: 'JSON',
-        contentType: "application/json",
-        async: false,
-        data: JSON.stringify({
-            // constructorId: constructorId
-            exhibitionId: "731d2b72-b942-4db1-a0ad-bbb6ea95d38e"
-            // requestOrderId: "0Ifv0KWG2V4sUvfhYx3aQBb9SBT3vxLFu2CDWiU0LlvMyeKuvm"
-            // constructorId: "15b9db11-b3c6-4fde-8cd1-12eb8b56841e"
-        }),
-        success: function (responses) {
-            $.each(responses, function (i, response) {
-                res = responses;
-                
-            })
-        }
-    });
-
-    return res;
 }

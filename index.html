@@ -44,13 +44,15 @@
     <script src="assets/vendors/filepond-4.30.4/js/filepond-plugin-image-transform.js"></script>
     <script src="assets/vendors/filepond-4.30.4/js/filepond.js"></script>
     <script src="assets/vendors/filepond-4.30.4/js/filepond.jquery.js"></script>
+    <script src="assets/vendors/mustache-4.2.0/mustache.js"></script>
+    <script src="assets/javascript/global.js"></script>
     <script src="assets/javascript/function.js"></script>
+    <script src="assets/javascript/dataProcessing.js"></script>
     <script src="assets/javascript/dom.js"></script>
     <script src="assets/javascript/main.js"></script>
     <script src="assets/javascript/auth.js"></script>
 
     <script>
-      var session = localStorage.getItem('LoginSession');
       if(session === null){
         window.location.href = 'login.html';
       }
@@ -78,8 +80,8 @@
     <aside id="side-navbar" class="max side-navbar bg-light">
       <!-- profile -->
       <a id="profile_btn" href="#profile" class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light">
-        <img src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
-        <span class="h5 ms-2 text-dark">시공사 이름</span>
+        <img class="consProfileImg" src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+        <span class="consName h5 ms-2 text-dark"> </span>
       </a>
 
       <div class="side-navbar_tabs list-group bg-light">
@@ -732,22 +734,21 @@
           <!-- INSIDE CONTENTS -->
           <h2> 프로필 </h2>
 
-          <div class="mt-4 d-flex justify-content-start align-items-center flex-row w-100">
-            <img src="/assets/img/images/tree.png" alt="" style="height: 98px; width:98px;"  >
+          <div  class="mt-4 d-flex justify-content-start align-items-center flex-row w-100">
+            <img class="consProfileImg" src="" alt="" style="height: 98px; width:98px;"  >
 
-            <div class="ms-3 d-flex justify-content-around align-items-start flex-column" style="height: 98px;">
-              <p class="fs-25px fw-bold"> 윈케어 </p>
-              <div class="d-flex justify-content-between align-items-center flex-row flex-wrap">
-                <p class="fs-17px text-gray300 my-1 me-4"> 000000-0000000 </p>
-                <button type="button" class="text-gray300 btn btn-outline-secondary"> 사업자등록증 보기 </button>
+            <div id="constructorData" class="ms-3 d-flex justify-content-center align-items-start flex-column" style="height: 98px;">
+              <p class='consName fs-25px fw-bold'> </p>
+              <div class='d-flex justify-content-around align-items-center flex-row flex-wrap'>
+                  <p class='consNumber fs-17px text-gray300 my-1 me-4'> </p>
+                  <button type='button' class='text-gray300 btn btn-outline-secondary' data-bs-toggle='modal' data-bs-target='#businessLicenseModal'> 사업자등록증 보기 </button>
               </div>
-
             </div>
           </div>
 
           <div class="my-3 d-flex justify-content-start align-items-center flex-row w-100">
             <div class="me-3" style="min-width:98px;"> </div>
-            <p class="text-gray300 fs-17px text-wrap"> 방충망 / 시스템에어컨 / 단열필름 / 욕실케어 </p>
+            <p class="consProducts text-gray300 fs-17px text-wrap"></p>
           </div>
 
           <hr class="hr-1 bg-dark">
@@ -758,7 +759,7 @@
                 <label for="" class="col-sm-2 col-form-label fs-17px text-gray300 fw-bold"> 회사주소 </label>
                 <div class="col-sm-10">
                   <div class="input-group ">
-                    <textarea class="form-control border-secondary">서울 영등포구 선유로49길 23, 403호 (양평동 4가)</textarea>
+                    <textarea class="consAddress form-control border-secondary"></textarea>
                     <button type="button" class="btn btn-outline-secondary text-gray300 fs-10px ">
                       <i class="fa-light fa-pen"></i>
                       <span class="ms-1">수정하기</span>
@@ -771,7 +772,7 @@
                 <label for="" class="col-sm-2 col-form-label fs-17px text-gray300 fw-bold"> 회사소개 </label>
                 <div class="col-sm-10">
                   <div class="input-group">
-                    <textarea class="form-control border-secondary textarea-9">벌레 차단을 위한 미세촘촘망.소중한 아이/반려견/반려묘의 추락사고 방지를 위한  안전망 저층 보안을 위한 방범망까지 다양한 용도와 목적에 맞는  튼튼하고 안전한 국산 방충망을 10년간 시공해온 윈케어 입니다.</textarea>
+                    <textarea class="consIntro form-control border-secondary textarea-5"></textarea>
 
                     <button type="button" class="btn btn-outline-secondary text-gray300 fs-10px">
                       <i class="fa-light fa-pen"></i>
@@ -815,7 +816,7 @@
                     <div class="navigation">
                       <nav class="nav-list nav flex-nowrap">
                         <a id="viewallcontracts-01_btn" href="#viewallcontractsbyapartmentcomplex" class="nav-link"> 아파트 단지별 보기 </a>
-                        <a id="viewallcontracts-02_btn" href="#viewallcontractsbyaccountsreceivable" class="nav-link" > 미수금 보기 </a>
+                        <a id="viewallcontracts-02_btn" href="#viewallcontractsbyaccountsreceivable" class="nav-link"> 미수금 보기 </a>
                         <a id="viewallcontracts-03_btn" href="#viewallcontractsbyperiod" class="nav-link" > 기간별 보기 </a>
                       </nav>
                     </div>
@@ -1806,7 +1807,7 @@
       <section id="fairmanagement_page" class="d-none content">
         <div class="card-main shadow bg-white col-12 p-3 p-md-5">
           <!-- INSIDE CONTENTS -->
-          <h2 id="fairmanagement-01_title" class="d-block">박람회 관리</h2>
+          <h2 id="fairmanagement-01_title" class="d-none">박람회 관리</h2>
           <h2 id="fairmanagement-02_title" class="d-none">입주자 관리</h2>
           <div class="navigation my-3">
             <nav class="nav-list nav">
@@ -5417,14 +5418,14 @@
                 <div class="col-12 col-lg-7">
                     <div class="navigation">
                       <nav class="nav-list nav flex-nowrap">
-                        <a id="cardusagehistory-01_btn" href="#cardusagehistorybydate" class="nav-link"> 날짜별로 보기 </a>
+                        <a id="cardusagehistory-01_btn" href="#cardusagehistorybydate" class="nav-link active"> 날짜별로 보기 </a>
                         <a id="cardusagehistory-02_btn" href="#cardusagehistorybycard" class="nav-link" > 카드별로 보기 </a>
                         <a id="cardusagehistory-03_btn" href="#cardusagehistorybyaccount" class="nav-link" > 계정별로 보기 </a>
                       </nav>
                     </div>
                 </div>
   
-                <div id="cardusagehistory_date01_div" class="d-none col-12 col-lg-5">
+                <div id="cardusagehistory_date01_div" class="d-block col-12 col-lg-5">
                   <div class="row justify-content-center justify-content-lg-end">
                     <div class="col-8 col-md-8 col-lg-12 col-xl-12 col-xxl-6">
                       <input id="cardusagehistory_date01" type="date" class="form-control form-control-sm">
@@ -5741,7 +5742,7 @@
               <div class="d-flex justify-content-between align-items-center flex-row flex-wrap">
                 <div class="navigation mt-4 mb-4">
                   <nav class="nav-list nav">
-                    <a id="master-01_btn" class="nav-link" href="#">구독 정보</a>
+                    <a id="master-01_btn" class="nav-link active" href="#">구독 정보</a>
                     <a id="master-02_btn" class="nav-link" href="#">시공사 관리</a>
                     <a id="master-03_btn" class="nav-link" href="#">박람회 할당</a>
                   </nav>
@@ -5753,7 +5754,7 @@
               </div>
           
               <!-- datatables -->
-              <div id="master-01_div" class="d-none card my-3 border-0">
+              <div id="master-01_div" class="d-block card my-3 border-0">
                 <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
                   <table id="subscribermanagement_table" class="display table table-hover">
                       <thead class="text-center bg-primary">
@@ -6170,7 +6171,7 @@
             <div id="master-01-card1" class="card-main1">
             </div>
 
-            <div id="master-01-card2" class="d-none card-main2 col-12 col-xl-5 p-3 p-md-5">
+            <div id="master-01-card2" class="d-block card-main2 col-12 col-xl-5 p-3 p-md-5">
             <!-- INSIDE CONTENTS -->
               <div class="card-main2-content">
                 <h1 class="fs-25px fw-bolder text-center"> 구독 서비스 전환</h1> 
@@ -6964,6 +6965,7 @@
         </div>
       </div>
     </div>
+
     <!-- Orderstatus Details Modal -->
     <div class="modal fade" id="orderstatusdetailsModal" tabindex="-1" aria-labelledby="orderstatusdetailsModalLabel" aria-hidden="true">
       <div class="modal-dialog  modal-dialog-centered">
@@ -7030,6 +7032,25 @@
         </div>
       </div>
     </div>
+
+    <!-- Business License Details Modal -->
+    <div class="modal fade" id="businessLicenseModal" tabindex="-1" aria-labelledby="businessLicenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="businessLicenseModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+</div>
     
   </body>
 </html>

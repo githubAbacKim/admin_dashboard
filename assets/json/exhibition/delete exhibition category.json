@@ -1,0 +1,14 @@
+{
+  "url" : "http://210.99.223.38:8081/api/exhibition/category",
+  "method" : "DEL",
+  "body" : [
+    {
+      "categoryId": "c71e561e-c0b7-4952-b936-185568ca90ab"
+    }
+  ],
+
+
+  "status": "OK",
+  "message": "delete exhibition category",
+  "data": null
+}
