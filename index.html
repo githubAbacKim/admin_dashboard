@@ -79,8 +79,11 @@
 
     <aside id="side-navbar" class="max side-navbar bg-light">
       <!-- profile -->
-      <a id="profile_btn" href="#profile" class="profile cursor-pointer py-2 py-md-4 d-flex justify-content-center align-items-center bg-light">
-        <img class="consProfileImg" src="assets/img/images/tree.png" alt="" height="44px" width="44px" />
+      <a id="profile_btn" href="#profile" class="profile cursor-pointer py-2 py-md-4 d-flex 
+      justify-content-center align-items-center bg-light" >
+        <div class="rounded-circle overflow-hidden" style="height: 44px">
+          <img class="consProfileImg" src="" alt="" height="44px" width="44px" />
+        </div>
         <span class="consName h5 ms-2 text-dark"> </span>
       </a>
 
@@ -735,11 +738,13 @@
           <h2> 프로필 </h2>
 
           <div  class="mt-4 d-flex justify-content-start align-items-center flex-row w-100">
-            <img class="consProfileImg" src="" alt="" style="height: 98px; width:98px;"  >
+            <div class="rounded-circle overflow-hidden bg-gray-200">
+              <img class="consProfileImg" src="" alt="" style="height: 98px; width:98px;"  >
+            </div>
 
             <div id="constructorData" class="ms-3 d-flex justify-content-center align-items-start flex-column" style="height: 98px;">
               <p class='consName fs-25px fw-bold'> </p>
-              <div class='d-flex justify-content-around align-items-center flex-row flex-wrap'>
+              <div class='d-flex justify-content-start align-items-center flex-row flex-wrap'>
                   <p class='consNumber fs-17px text-gray300 my-1 me-4'> </p>
                   <button type='button' class='text-gray300 btn btn-outline-secondary' data-bs-toggle='modal' data-bs-target='#businessLicenseModal'> 사업자등록증 보기 </button>
               </div>
@@ -759,8 +764,8 @@
                 <label for="" class="col-sm-2 col-form-label fs-17px text-gray300 fw-bold"> 회사주소 </label>
                 <div class="col-sm-10">
                   <div class="input-group ">
-                    <textarea class="consAddress form-control border-secondary"></textarea>
-                    <button type="button" class="btn btn-outline-secondary text-gray300 fs-10px ">
+                    <textarea class="consAddress form-control border" disabled></textarea>
+                    <button type="button" id="consAddress_btn" class="border btn text-gray300 fs-10px shadow-none bg-white">
                       <i class="fa-light fa-pen"></i>
                       <span class="ms-1">수정하기</span>
                     </button>
@@ -772,9 +777,8 @@
                 <label for="" class="col-sm-2 col-form-label fs-17px text-gray300 fw-bold"> 회사소개 </label>
                 <div class="col-sm-10">
                   <div class="input-group">
-                    <textarea class="consIntro form-control border-secondary textarea-5"></textarea>
-
-                    <button type="button" class="btn btn-outline-secondary text-gray300 fs-10px">
+                    <textarea class="consIntro form-control textarea-5 border" disabled></textarea>
+                    <button type="button" id="consIntro_btn" class="border btn text-gray300 fs-10px shadow-none bg-white">
                       <i class="fa-light fa-pen"></i>
                       <span class="ms-1">수정하기</span>
                     </button>
@@ -1005,7 +1009,6 @@
             <h2>계약서 작성</h2>
             <div class="my-4">
               <div class="row g-2">
-                
                 <div class="col-12">
                   <div class="row g-0 align-items-center">
                     <div class="col-xl-6">
@@ -2014,207 +2017,8 @@
                         <th> 태그 </th>
                       </tr>
                     </thead>
-                    <tbody class="text-center text-darkprimary fs-14px">
-                      <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
-                        <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
-                        <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
-                        <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
-                        <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="">
-                        <td> 브랜드가구 </td>
-                        <td> 시공사이름 </td>
-                        <td> 010-0000-0000 </td>
-                        <td>
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td class="">
-                          <div class="switch-div">
-                            <label class="switch">
-                              <input class="switch-input" type="checkbox" />
-                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
-                              <span class="switch-handle"></span> 
-                            </label>
-                          </div>
-                        </td>
-                        <td> 
-                          <button type="button" class="btn btn-sm link-dark" data-bs-trigger="focus" data-bs-toggle="popover" data-bs-placement="bottom" title="회사이름" data-bs-content="회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 ">
-                            <i class="fa-solid fa-share"></i>
-                          </button>
-                        </td>
-                        <td> <a href="#">www.youtube.co.kr</a>  </td>
-                        <td> 
-                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
-                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
-                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
-                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
-                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
-                            </ul>
-                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
-                          </div>
-                        </td>
-                      </tr>
+                    <tbody id="createexposition_table_body">
+                      
                     </tbody>
                 </table>
               </div>
@@ -6233,11 +6037,13 @@
                 <div class="py-4 px-3">
                   <div class="row  g-3">
                     <div class="col-2 d-flex justify-content-center justify-content-lg-end align-items-center">
-                      <img src="assets/img/images/tree.png" alt="" class="m-0 p-0" style="height:44px; width:44px;" />
+                      <div class="rounded-circle overflow-hidden" style="height: 44px; width: 44px;">
+                        <img class="consProfileImg" src="" alt="" height="44px" width="44px" />
+                      </div>
                     </div>
                     <div class="col-10">
                       <div class="d-flex justify-content-start align-items-center" style="height: 44px;">
-                        <span class="fs-14px text-dark fw-bold"> 윈케어 </span>
+                        <span class="consName fs-14px text-dark fw-bold"> 윈케어 </span>
                       </div>
                     </div>
 
@@ -6245,31 +6051,21 @@
                       <span class="fw-bold fs-14px">시스템</span>
                     </div>
                     <div class="col-10">
-                      <p class="pe-3 fs-14px">
-                        방충망 / 시스템에어컨 / 단열필름 / 욕실케어
-                      </p>
+                      <p class="consProducts pe-3 fs-14px"></p>
                     </div>
 
                     <div class="col-2 text-end">
                       <span class="fw-bold fs-14px">회사주소</span>
                     </div>
                     <div class="col-10">
-                      <p class="pe-3 fs-14px">
-                        서울 영등포구 선유로49길 23, 403호 (양평동 4가)
-                      </p>
+                      <p class="consAddress pe-3 fs-14px"></p>
                     </div>
 
                     <div class="col-2 text-end">
                       <span class="fw-bold fs-14px">회사소개</span>
                     </div>
                     <div class="col-10">
-                      <p align="justify" class="pe-3 fs-14px">
-                        벌레 차단을 위한 미세촘촘망.
-                        소중한 아이/반려견/반려묘의 추락사고 방지를 위한 안전망, 
-                        저층 보안을 위한 방범망까지 다양한 용도와 목적에 맞는 
-                        튼튼하고 안전한 국산 방충망을 10년간 시공해온 
-                        윈케어 입니다.
-                      </p>
+                      <p align="justify" class="consIntro pe-3 fs-14px"> </p>
                     </div>
                   </div>
                 </div>

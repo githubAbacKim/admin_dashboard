@@ -1,3 +1,16 @@
+// POP OVER
+document.addEventListener('DOMContentLoaded', function () {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+});
+
+// easy-time-picker-bootstrap
+// document.addEventListener('DOMContentLoaded', function () {
+//     jQuery('#start_time, #end_time').timepicker({});
+// });
+
 /** PASSWORD TOGGLE */
 $(function () {
     var input = $('#login_password');
@@ -102,18 +115,7 @@ $(function () {
 });
 
 
-// POP OVER
-document.addEventListener('DOMContentLoaded', function () {
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl)
-    })
-});
 
-// easy-time-picker-bootstrap
-// document.addEventListener('DOMContentLoaded', function () {
-//     jQuery('#start_time, #end_time').timepicker({});
-// });
 
 $(function () {
     $('.profile-lists a:last-child').addClass('pe-4');
@@ -855,6 +857,31 @@ $(function () {
             check_cardusage01_div();
             check_cardusage02_div();
         }
+    })
+
+})
+
+
+$(function () {
+    $("#consAddress_btn").click(function () {
+        $('.consAddress').prop('disabled', function (i, v) { return !v; });
+        // $('.consAddress').toggle(prop, 'disabled');
+        // if ($('.consAddress').prop('disabled')) {
+        //     $('.consAddress').attr('disabled',false);
+        //     $('#consAddress_btn').addClass('active').blur();
+        // } else {
+        //     $('.consAddress').attr('disabled', true);
+        //     $('#consAddress_btn').removeClass('active').focusout();
+        // }
+    })
+
+    $("#consIntro_btn").click(function () {
+        $('.consIntro').prop('disabled', function (i, v) { return !v; });
+        // if ($('.consIntro').prop('disabled')) {
+        //     $('.consIntro').attr('disabled', false);
+        // } else {
+        //     $('.consIntro').attr('disabled', true);
+        // }
     })
 
 })
