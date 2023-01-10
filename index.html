@@ -774,6 +774,20 @@
               </div>
 
               <div class="row mb-3">
+                <label for="" class="col-sm-2 col-form-label fs-17px text-gray300 fw-bold"> 회사주소 </label>
+                <div class="col-sm-10">
+                  <div class="input-group ">
+                    <textarea class="consAddress form-control border" disabled></textarea>
+                    <button type="button" id="consAddress_btn" class="border btn text-gray300 fs-10px shadow-none bg-white">
+                      <i class="fa-light fa-pen"></i>
+                      <span class="ms-1">수정하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row mb-3">
                 <label for="" class="col-sm-2 col-form-label fs-17px text-gray300 fw-bold"> 회사소개 </label>
                 <div class="col-sm-10">
                   <div class="input-group">
@@ -994,7 +1008,11 @@
             </div>
             
             <div id="viewallcontracts-03_div" class="d-none p-3">
-              
+              <div>
+                <div></div>
+                <div class="customized_calendar"></div>
+                <div></div>
+              </div>
             </div>
           
           </div>
@@ -2000,7 +2018,11 @@
                 </div>  
               </form>
             </div>
-  
+
+            <template id="createexposition_template">
+                        
+            </template>
+
             <!-- datatables -->
             <div class="card  border-0">
               <div class="data-table table-responsive p-1 overflow-x-auto text-nowrap">
@@ -2019,9 +2041,46 @@
                       </tr>
                     </thead>
                     <tbody id="createexposition_table_body">
-                      <template id="">
-                        
-                      </template>
+                      <tr>
+                        <td> 브랜드가구 </td>
+                        <td> 시공사이름 </td>
+                        <td> 010-0000-0000 </td>
+                        <td>
+                          <div class="switch-div">
+                            <label class="switch">
+                              <input class="switch-input" type="checkbox" />
+                              <span class='switch-label'  data-off='NO' data-on='YES'></span> 
+                              <span class='switch-handle'></span> 
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="switch-div">
+                            <label class="switch">
+                              <input class="switch-input" type="checkbox" />
+                              <span class="switch-label"  data-off="NO" data-on="YES"></span> 
+                              <span class="switch-handle"></span> 
+                            </label>
+                          </div>
+                        </td>
+                        <td> 
+                          <button type='button' class='btn btn-sm link-dark' data-bs-trigger='focus' data-bs-toggle='popover' data-bs-placement='bottom' title='회사이름' data-bs-content='회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 '>
+                            <i class='fa-solid fa-share'></i>
+                          </button>
+                        </td>
+                        <td> <a href="#">www.youtube.co.kr</a>  </td>
+                        <td> 
+                          <div class="d-flex justify-content-between align-items-center flow-row flex-nowrap">
+                            <ul class="m-0 p-0 d-inline-flex list-unstyled flex-grow-1">
+                              <li class="link-primary mx-1 cursor-pointer">  #단열필름 </li>
+                              <li class="link-primary mx-1 cursor-pointer">  #3M </li>
+                              <li class="link-primary mx-1 cursor-pointer">  #보온스마트플 </li>
+                              <li class="link-primary mx-1 cursor-pointer">  ... </li>
+                            </ul>
+                            <button type="button" class="btn btn-close btn-sm flex-grow-0"> </button>
+                          </div>
+                        </td>
+                      </tr>
                     </tbody>
                 </table>
               </div>

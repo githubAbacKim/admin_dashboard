@@ -1,5 +1,5 @@
 function getData(url, id) {
-    // console.log('im here');
+    var results = null;
     $.ajax({
         method: 'GET',
         url: url + id,
@@ -9,11 +9,9 @@ function getData(url, id) {
         success: function (response) {
             if (response.status === 'OK') {
                 results = response.data;
-                // console.log(results);
             }
         },
         fail: function () {
-            // console.log('error');
         },
     });
     return results;
@@ -129,82 +127,40 @@ function displayExhibitionList(results) {
             }
         }
 
-        var template = "" +
-            "<tr>" +
-                "<td>" + category + "</td>" +
-                "<td>" + constructor + "</td>" +
-                "<td>" + contact + "</td>" +
-                "<td>" +
-                    "<div class='switch-div'>" +
-                        "<label class='switch'>" +
-                        "<input class='switch-input' type='checkbox'" + check_answer(answer) +"/>" +
-                        "<span class='switch-label'  data-off='NO' data-on='YES'></span>" +
-                        "<span class='switch-handle'></span>" +
-                    "</div>" +
-                "</td>" +
-                "<td>" + 
-                    "<div class='switch-div'>" +
-                        "<label class='switch'>" +
-                        "<input class='switch-input' type='checkbox'" + check_pay(pay) + "/>" +
-                        "<span class='switch-label'  data-off='NO' data-on='YES'></span>" +
-                        "<span class='switch-handle'></span>" +
-                    "</div>" +
-                "</td>" +
-                "<td>" + 
-                    "<button type='button' class='btn btn-sm link-dark' data-bs-trigger='focus' data-bs-toggle='popover' data-bs-placement='bottom' title='회사이름' data-bs-content='"+ content +"'>" +
-                        "<i class='fa-solid fa-share'></i>" +
-                    "</button>" +
-                "</td>" +
-                "<td>" + video +"</td>" +
-                "<td>" + tag + "</td>" +
-                "<td> x </td>" +
-            "</tr>"
-            ;
+        // var template = "" +
+        //     "<tr>" +
+        //         "<td>" + category + "</td>" +
+        //         "<td>" + constructor + "</td>" +
+        //         "<td>" + contact + "</td>" +
+        //         "<td>" +
+        //             "<div class='switch-div'>" +
+        //                 "<label class='switch'>" +
+        //                 "<input class='switch-input' type='checkbox'" + check_answer(answer) +"/>" +
+        //                 "<span class='switch-label'  data-off='NO' data-on='YES'></span>" +
+        //                 "<span class='switch-handle'></span>" +
+        //             "</div>" +
+        //         "</td>" +
+        //         "<td>" + 
+        //             "<div class='switch-div'>" +
+        //                 "<label class='switch'>" +
+        //                 "<input class='switch-input' type='checkbox'" + check_pay(pay) + "/>" +
+        //                 "<span class='switch-label'  data-off='NO' data-on='YES'></span>" +
+        //                 "<span class='switch-handle'></span>" +
+        //             "</div>" +
+        //         "</td>" +
+        //         "<td>" + 
+        //             "<button type='button' class='btn btn-sm link-dark' data-bs-trigger='focus' data-bs-toggle='popover' data-bs-placement='bottom' title='회사이름' data-bs-content='"+ content +"'>" +
+        //                 "<i class='fa-solid fa-share'></i>" +
+        //             "</button>" +
+        //         "</td>" +
+        //         "<td>" + video +"</td>" +
+        //         "<td>" + tag + "</td>" +
+        //         "<td> x </td>" +
+        //     "</tr>"
+        //     ;
 
         $('#createexposition_table_body').append(template)
 
         // console.log(template);
     });
 }
-
-
-{/* <tr>
-    <td> 브랜드가구 </td>
-    <td> 시공사이름 </td>
-    <td> 010-0000-0000 </td>
-    <td>
-        <div class='switch-div'>
-            <label class='switch'>
-                <input class='switch-input' type='checkbox' />
-                <span class='switch-label' data-off='NO' data-on='YES'></span>
-                <span class='switch-handle'></span>
-            </label>
-        </div>
-    </td>
-    <td>
-        <div class='switch-div'>
-            <label class='switch'>
-                <input class='switch-input' type='checkbox' />
-                <span class='switch-label' data-off='NO' data-on='YES'></span>
-                <span class='switch-handle'></span>
-            </label>
-        </div>
-    </td>
-    <td>
-        <button type='button' class='btn btn-sm link-dark' data-bs-trigger='focus' data-bs-toggle='popover' data-bs-placement='bottom' title='회사이름' data-bs-content='회사소개회사소개회사소개회사소개회사소개회사소개회사 회사소개회사소개회사소개회사소개회사소개회사소개회사 '>
-            <i class='fa-solid fa-share'></i>
-        </button>
-    </td>
-    <td> <a href='#'>www.youtube.co.kr</a>  </td>
-    <td>
-        <div class='d-flex justify-content-between align-items-center flow-row flex-nowrap'>
-            <ul class='m-0 p-0 d-inline-flex list-unstyled flex-grow-1'>
-                <li class='link-primary mx-1 cursor-pointer'>  #단열필름 </li>
-                <li class='link-primary mx-1 cursor-pointer'>  #3M </li>
-                <li class='link-primary mx-1 cursor-pointer'>  #보온스마트플 </li>
-                <li class='link-primary mx-1 cursor-pointer'>  ... </li>
-            </ul>
-            <button type='button' class='btn btn-close btn-sm flex-grow-0'> </button>
-        </div>
-    </td>
-</tr> */}
