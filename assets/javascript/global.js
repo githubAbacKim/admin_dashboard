@@ -7,6 +7,7 @@ $(function () {
     // getData('http://210.99.223.38:8081/api/constructor/image?constructorId=', session)
 
     displayConstructorImg(); 
-    // displayExhibitionList(getExhibitionData('http://210.99.223.38:8081/api/exhibition/constructor?constructorId=' + session));
+    // getExhibitionData('http://210.99.223.38:8081/api/exhibition/constructor?constructorId=' + session)
+    displayExhibitionList(getExhibitionData('http://210.99.223.38:8081/api/exhibition/constructor?constructorId=' + session));
     // displayExhibitionList(getExhibitionData(results)) ;
 });

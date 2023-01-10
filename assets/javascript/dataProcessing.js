@@ -54,6 +54,7 @@ function getExhibitionData(url) {
         success: function (response) {
             if (response.status === 'OK') {
                 results = response.data;
+                // console.log(results);
                 // $.each(response.data, function (i, result) {
 
                 //     // console.log(response.data);
@@ -101,41 +102,72 @@ function getExhibitionData(url) {
 }
 
 function displayExhibitionList(results) {
+    // console.log(results);
     $.each(results, function (i, result){
-        var category = result['exhibitionCategory']['name'];
+        var category = result.exhibitionCategory['name'];
+        var constructor = result.constructorName;
+        var contact = result.constructorPhoneNumber;
+        var answer = result.answer;
+        var pay = result.pay;
+        var content = result.constructorContent;
+        var video = result.videoLink;
+        var tag = result.tag;
 
-        var constructor = result['constructorName'];
-        var contact = result['constructorPhoneNumber'];
-        var answer = result['answer'];
-        var pay = result['pay'];
-        var video = result['videoLink'];
-        var tag = result['tag'];
+        function check_answer(answer) {
+            if(answer === true) {
+                return 'checked';
+            } else if (answer === false) {
+                return;
+            }
+        }
+
+        function check_pay(pay) {
+            if (pay === true) {
+                return 'checked';
+            } else if (pay === false) {
+                return;
+            }
+        }
 
         var template = "" +
             "<tr>" +
-                "<td> {{ category }} </td>" +
-                "<td> {{ constructor }} </td>" +
-                "<td> {{ contact }} </td>" +
+                "<td>" + category + "</td>" +
+                "<td>" + constructor + "</td>" +
+                "<td>" + contact + "</td>" +
                 "<td>" +
-                    "<div class='switch-div>" +
+                    "<div class='switch-div'>" +
                         "<label class='switch'>" +
-                        "{{ #answer }}" +
-                        "<input class='switch-input' type='checkbox' checked />" +
-                        "{{ /answer }}" +
+                        "<input class='switch-input' type='checkbox'" + check_answer(answer) +"/>" +
+                        "<span class='switch-label'  data-off='NO' data-on='YES'></span>" +
+                        "<span class='switch-handle'></span>" +
                     "</div>" +
                 "</td>" +
-                "<td> {{ category }} </td>" +
-                "<td> {{ constructor }} </td>" +
-                "<td> {{ contact }} </td>" +
-                "<td> {{ category }} </td>" +
+                "<td>" + 
+                    "<div class='switch-div'>" +
+                        "<label class='switch'>" +
+                        "<input class='switch-input' type='checkbox'" + check_pay(pay) + "/>" +
+                        "<span class='switch-label'  data-off='NO' data-on='YES'></span>" +
+                        "<span class='switch-handle'></span>" +
+                    "</div>" +
+                "</td>" +
+                "<td>" + 
+                    "<button type='button' class='btn btn-sm link-dark' data-bs-trigger='focus' data-bs-toggle='popover' data-bs-placement='bottom' title='회사이름' data-bs-content='"+ content +"'>" +
+                        "<i class='fa-solid fa-share'></i>" +
+                    "</button>" +
+                "</td>" +
+                "<td>" + video +"</td>" +
+                "<td>" + tag + "</td>" +
+                "<td> x </td>" +
             "</tr>"
             ;
 
-        $('#createexposition_table_body').append(Mustache.render(template, result))
+        $('#createexposition_table_body').append(template)
 
         // console.log(template);
     });
 }
+
+
 {/* <tr>
     <td> 브랜드가구 </td>
     <td> 시공사이름 </td>
